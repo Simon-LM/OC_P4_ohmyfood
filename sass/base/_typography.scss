@@ -1,3 +1,17 @@
+
+
+.footer__title--font {
+    font-family: $font-logo;
+    color: white;
+    background-color: black;
+}
+
+
+body {
+    font-family: $font-text;
+}
+
+
 ul {
     list-style: none;
 
@@ -5,7 +19,4 @@ ul {
         padding: 0;
     }
 } 
-
-
-
 

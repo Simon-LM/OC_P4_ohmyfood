@@ -1,3 +1,13 @@
+.footer__title--font {
+  font-family: Shrikhand;
+  color: white;
+  background-color: black;
+}
+
+body {
+  font-family: Roboto;
+}
+
 ul {
   list-style: none;
 }
@@ -6,15 +16,11 @@ ul li {
 }
 
 .header__title {
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .main__header__subtitle {
-  color: hsl(187, 59%, 41%);
-}
-
-p {
-  color: blueviolet;
+  font-size: 16px;
 }
 
 /* @import "./utils/variables";
