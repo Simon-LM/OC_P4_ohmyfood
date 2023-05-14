@@ -1,7 +1,7 @@
 
 @import "./utils/variables";
 @import "./base/typography";
-
+@import "./layouts/header";
 
 
 .header__title {
@@ -9,9 +9,8 @@
 }
 
 .main__header__subtitle {
-    font-size: 16px;
+    font-size: 15px;
 }   
-
 
 
 
@@ -24,7 +23,6 @@
 @import "./utils/extensions";
 @import "./base/typography";
 @import "./components/buttons";
-@import "./layouts/header";
 @import "./layouts/nav";
 @import "./layouts/container";
 @import "./layouts/form";

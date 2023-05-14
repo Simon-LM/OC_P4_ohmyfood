@@ -15,12 +15,24 @@ ul li {
   padding: 0;
 }
 
+.header__logo {
+  display: flex;
+  justify-content: center;
+  height: 6vmin;
+}
+
+/* mobile
+font-size: 30px;
+desktop
+width: 200px;
+height: 34.2px;
+ */
 .header__title {
   font-size: 22px;
 }
 
 .main__header__subtitle {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* @import "./utils/variables";
@@ -29,7 +41,6 @@ ul li {
 @import "./utils/extensions";
 @import "./base/typography";
 @import "./components/buttons";
-@import "./layouts/header";
 @import "./layouts/nav";
 @import "./layouts/container";
 @import "./layouts/form";

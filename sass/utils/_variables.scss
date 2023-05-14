@@ -1,10 +1,40 @@
-
 $font-logo: Shrikhand;
 $font-title-restaurants: Shrikhand;
-$font-text: Roboto;
+$font-main: Roboto;
 
+$color-dark-main: #101010;
+$color-light-main: #FFFFFF;
+$color-dark-gray: #353535;
+$color-dark-mid-gray: #7E7E7E;
+$color-light-mid-gray: #EAEAEA; 
+$color-light-gray: #F7F7F7;
 $color-primairy: #9356DC;
 $color-secondary: #FF79DA; 
 $color-tertiary: #99E2D0;
+$color-tertiary-font: #008766;
+$color-dark-blue: #003A68;
+$color-light-blue: #89C8FA;
+
+$color-font-logo__header: $color-dark-main;
+$color-font__main: $color-dark-main;
+$color-font-button__main-header: $color-light-main;
+$color-font-button-number__section-fonctionnement: $color-light-main;
+$color-font__footer: $color-light-main;
+
+$color-background-logo__header: $color-light-main;
+$color-background__main-header-top: $color-light-mid-gray;
+$color-background__main-header-bottom: $color-light-gray;
+$color-background__section-fonctionnement: $color-light-main;
+$color-background__section-restaurant: $color-light-gray;
+$color-background__footer: $color-dark-gray;
+
+
+$color-icons-button__section-fonctionnement: $color-dark-mid-gray;
+$color-icons-button__section-fonctionnement--hover: $color-primairy;
+
+
+
+
+
 
 
