@@ -86,11 +86,23 @@ header, main, footer {
 
 section {
     outline: check_frame-dotted_red(45%);
+    &:checked {
+        outline: check_frame-dotted_red(25%);
+    }
+    //&:hover {
+    //    outline: check_frame-dotted_red(0%);
+    //}
 }
 
 
 div, nav {
-    outline: check_frame-dashed_blue(20%);
+    outline: check_frame-dashed_blue(30%);
+    &:first-child {
+        outline: check_frame-dashed_blue(0%);
+    }
+    &:hover {
+        outline: check_frame-dashed_blue(15%);
+    }
     div {
         outline: check_frame-dashed_blue(30%);
         div {
@@ -101,6 +113,9 @@ div, nav {
 
 article, form {
     outline: check_frame-dotted_blue(25%);
+    &:hover {
+        outline: check_frame-dotted_blue(0%);
+    }
 }
 
 ul {
@@ -128,12 +143,29 @@ h1, h2, h3, h4, h5, h6 {
 
 p, {
     outline: check_frame-dotted_orange(25%);
+   
 }
 
 button {
     outline: check_frame-dotted_orange(25%);
+    &:focus {
+        outline: check_frame-dotted_red(0%);
+    }
     button {
         outline: check_frame-dotted_orange(25%);
     }
 }
+
+
+@import "./checkfonctions";
+
+
+.check-frame_dotted_3_purple + {
+    main {
+    }
+}
+
+
+
+
 

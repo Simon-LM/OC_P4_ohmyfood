@@ -1,13 +1,16 @@
 
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./base/check";
+@import "./check/check";
 @import "./base/base";
 @import "./base/typography";
 @import "./layouts/header";
 @import "./components/buttons";
 
 
+
+
+//@import "./check/test";
 
 
 
@@ -23,4 +26,6 @@
 @import "./pages/work";
 @import "./pages/about";
 @import "./pages/project"; */
+
+
 

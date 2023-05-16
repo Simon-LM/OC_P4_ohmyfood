@@ -13,9 +13,18 @@ header, main, footer {
 section {
   outline: 4px dotted #ffe6e6;
 }
+section:checked {
+  outline: 4px dotted #ff8080;
+}
 
 div, nav {
-  outline: 2px dashed #6666ff;
+  outline: 2px dashed #9999ff;
+}
+div:first-child, nav:first-child {
+  outline: 2px dashed blue;
+}
+div:hover, nav:hover {
+  outline: 2px dashed #4d4dff;
 }
 div div, nav div {
   outline: 2px dashed #9999ff;
@@ -26,6 +35,9 @@ div div div, nav div div {
 
 article, form {
   outline: 2px dotted #8080ff;
+}
+article:hover, form:hover {
+  outline: 2px dotted blue;
 }
 
 ul {
@@ -58,8 +70,75 @@ p {
 button {
   outline: 1px dotted #ffd280;
 }
+button:focus {
+  outline: 4px dotted red;
+}
 button button {
   outline: 1px dotted #ffd280;
+}
+
+.check-frame_dashed_3_brown {
+  outline: dashed 3px brown;
+}
+
+.check-frame_dotted_3_brown {
+  outline: dotted 3px brown;
+}
+
+.check-frame_dashed_3_purple {
+  outline: dashed 3px purple;
+}
+
+.check-frame_dotted_3_purple {
+  outline: dotted 3px purple;
+}
+
+.check-frame_dashed_3_yellow {
+  outline: dashed 3px yellow;
+}
+
+.check-frame_dotted_3_yellow {
+  outline: dotted 3px yellow;
+}
+
+.check-frame_dashed_3_pink {
+  outline: dashed 3px pink;
+}
+
+.check-frame_dotted_3_pink {
+  outline: dotted 3px pink;
+}
+
+.check-frame_dashed_2_red {
+  outline: dashed 2px red;
+}
+
+.check-frame_dotted_2_red {
+  outline: dotted 2px red;
+}
+
+.check-frame_dashed_2_orange {
+  outline: dashed 2px orange;
+}
+
+.check-frame_dotted_2_orange {
+  outline: dotted 2px orange;
+}
+
+.check-frame_dashed_1_blue {
+  outline: dashed 1px blue;
+}
+
+.check-frame_dotted_1_blue {
+  outline: dotted 1px blue;
+}
+
+.check-frame_dashed_1_green {
+  outline: dashed 1px green;
+}
+
+.check-frame_dotted_1_green {
+  outline: dotted 1px green;
 }
 
 body {
