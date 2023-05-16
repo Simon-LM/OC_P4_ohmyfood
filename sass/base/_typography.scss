@@ -1,16 +1,13 @@
-
+* {
+    font-family: $font-main;
+    box-sizing: border-box;
+}
 
 .footer__title--font {
     font-family: $font-logo;
     color: white;
     background-color: black;
 }
-
-
-body {
-    font-family: $font-main;
-}
-
 
 ul {
     list-style: none;

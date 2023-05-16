@@ -1,11 +1,93 @@
+body {
+  outline: 5px dashed #f0c4c4;
+}
+
+.main-container {
+  outline: 5px dotted #db7373;
+}
+
+header, main, footer {
+  outline: 3px dashed #ffe6e6;
+}
+
+section {
+  outline: 4px dotted #ffe6e6;
+}
+
+div, nav {
+  outline: 2px dashed #6666ff;
+}
+div div, nav div {
+  outline: 2px dashed #9999ff;
+}
+div div div, nav div div {
+  outline: 2px dashed #ccccff;
+}
+
+article, form {
+  outline: 2px dotted #8080ff;
+}
+
+ul {
+  outline: 1px dashed green;
+}
+ul li {
+  outline: 1px dashed #4dff4d;
+}
+
+a {
+  outline: 2px dotted #009a00;
+}
+
+span {
+  outline: 4px dotted #ff8080;
+}
+
+i, img {
+  outline: 3px dashed #ffff80;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  outline: 1px dashed #ffe4b3;
+}
+
+p {
+  outline: 1px dotted #ffd280;
+}
+
+button {
+  outline: 1px dotted #ffd280;
+}
+button button {
+  outline: 1px dotted #ffd280;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  /* width: 100%; */
+  max-width: 1440px;
+  /*  padding: 0 50px; */
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
 .footer__title--font {
   font-family: Shrikhand;
   color: white;
   background-color: black;
-}
-
-body {
-  font-family: Roboto;
 }
 
 ul {
@@ -15,29 +97,49 @@ ul li {
   padding: 0;
 }
 
-.header__logo {
+header {
   display: flex;
+  flex-direction: column;
+  margin: 2vmin 0;
+}
+
+nav, div, img {
+  display: flex;
+}
+
+header div {
+  flex: auto;
   justify-content: center;
+}
+
+header nav {
+  flex: auto;
+  justify-content: flex-start;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 1em;
   height: 6vmin;
+  margin-top: -6vmin;
 }
 
-/* mobile
-font-size: 30px;
-desktop
-width: 200px;
-height: 34.2px;
- */
-.header__title {
-  font-size: 22px;
+button {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 2em;
+}
+button i {
+  padding-right: 0em;
 }
 
-.main__header__subtitle {
-  font-size: 15px;
-}
-
+/* Explorer nos restaurants
+Button Gradient
+background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+Shadow/Button
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+transform: matrix(1, 0, 0, -1, 0, 0); */
 /* @import "./utils/variables";
 @import "./utils/functions";
-@import "./utils/mixins";
 @import "./utils/extensions";
 @import "./base/typography";
 @import "./components/buttons";

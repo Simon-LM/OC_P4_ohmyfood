@@ -1,1 +1,18 @@
  
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //flex: auto;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    /* width: 100%; */
+    max-width: 1440px;
+   /*  padding: 0 50px; */
+    box-sizing: border-box;
+}

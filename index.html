@@ -16,12 +16,17 @@
     crossorigin="anonymous" referrerpolicy="no-referrer">
   </head>
   <body>
-    <header class="header__logo">
-      <!-- <img src="/assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"> -->
-      <img src="/assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
+    <div class="main-container">
+    <header> 
+      <div>
+        <img class="header__logo" src="/assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
+      </div>
+      <nav class="header__nav___arrow">
+        <i class="fa-solid fa-arrow-left"></i>
+      </nav>
     </header>
     <main>
-      <header class="main__header">
+      <section class="discovery">
         <form>
           <label><i class="fa-solid fa-location-dot"></i></label>
           <input>
@@ -29,7 +34,7 @@
         <h1>Réservez le menu qui vous convient</h1>
         <p class="main__header__subtitle">Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
         <button>Explorer nos restaurants</button>
-      </header>
+      </section>
     <section class="section-fonctionnement">
       <h2>Fonctionnement</h2>
       <button><i class="fa-solid fa-mobile-screen-button"></i>Choississez un restaurant</button>
@@ -71,5 +76,6 @@
         </ul>
       </nav>
     </footer>
+    </div>
   </body>
 </html>

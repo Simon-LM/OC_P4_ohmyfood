@@ -1,16 +1,11 @@
 
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/check";
+@import "./base/base";
 @import "./base/typography";
 @import "./layouts/header";
-
-
-.header__title {
-    font-size: 22px;
-}
-
-.main__header__subtitle {
-    font-size: 15px;
-}   
+@import "./components/buttons";
 
 
 
@@ -19,7 +14,6 @@
 
 /* @import "./utils/variables";
 @import "./utils/functions";
-@import "./utils/mixins";
 @import "./utils/extensions";
 @import "./base/typography";
 @import "./components/buttons";

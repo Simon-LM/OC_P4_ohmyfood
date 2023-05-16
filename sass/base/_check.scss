@@ -1,0 +1,139 @@
+
+$check_border-color_brown: brown;
+$check_border-color_red: red;
+$check_border-color_blue: blue;
+$check_border-color_green: green;
+$check_border-color_yellow: yellow;
+$check_border-color_orange: orange;
+
+//dotted
+//dashed
+//solid
+
+
+@function check_frame-dashed_brown($check_percentage-color) {
+    $check_result-color: 5px dashed lighten($check_border-color_brown , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dotted_brown($check_percentage-color) {
+    $check_result-color: 5px dotted lighten($check_border-color_brown , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dashed_red($check_percentage-color) {
+    $check_result-color: 3px dashed lighten($check_border-color_red , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dotted_red($check_percentage-color) {
+    $check_result-color: 4px dotted lighten($check_border-color_red , $check_percentage-color);
+    @return $check_result-color
+}
+ 
+@function check_frame-dashed_blue($check_percentage-color) {
+    $check_result-color: 2px dashed lighten($check_border-color_blue , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dotted_blue($check_percentage-color) {
+    $check_result-color: 2px dotted lighten($check_border-color_blue , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dashed_green($check_percentage-color) {
+    $check_result-color: 1px dashed lighten($check_border-color_green , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dotted_green($check_percentage-color) {
+    $check_result-color: 2px dotted lighten($check_border-color_green , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dashed_yellow($check_percentage-color) {
+    $check_result-color: 3px dashed lighten($check_border-color_yellow , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dotted_yellow($check_percentage-color) {
+    $check_result-color: 3px doddet lighten($check_border-color_yellow , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dashed_orange($check_percentage-color) {
+    $check_result-color: 1px dashed lighten($check_border-color_orange , $check_percentage-color);
+    @return $check_result-color
+}
+
+@function check_frame-dotted_orange($check_percentage-color) {
+    $check_result-color: 1px dotted lighten($check_border-color_orange , $check_percentage-color);
+    @return $check_result-color
+}
+
+
+body {
+   outline: check_frame-dashed_brown(45%);
+}   
+
+.main-container {
+    outline: check_frame-dotted_brown(25%);
+}
+
+header, main, footer {
+    outline: check_frame-dashed_red(45%);
+}
+
+section {
+    outline: check_frame-dotted_red(45%);
+}
+
+
+div, nav {
+    outline: check_frame-dashed_blue(20%);
+    div {
+        outline: check_frame-dashed_blue(30%);
+        div {
+            outline: check_frame-dashed_blue(40%);
+        }
+    }
+}
+
+article, form {
+    outline: check_frame-dotted_blue(25%);
+}
+
+ul {
+    outline: check_frame-dashed_green(0%);
+    li {
+        outline: check_frame-dashed_green(40%);
+    }
+}
+
+a {
+    outline: check_frame-dotted_green(5%);
+}
+
+span {
+    outline: check_frame-dotted_red(25%);
+}
+
+i, img {
+    outline: check_frame-dashed_yellow(25%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    outline: check_frame-dashed_orange(35%);
+}
+
+p, {
+    outline: check_frame-dotted_orange(25%);
+}
+
+button {
+    outline: check_frame-dotted_orange(25%);
+    button {
+        outline: check_frame-dotted_orange(25%);
+    }
+}
+
