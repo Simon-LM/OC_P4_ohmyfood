@@ -1,12 +1,29 @@
-* {
+body {
     font-family: $font-main;
-    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.2em;  
+
+    h1, h2 {
+        font-weight: 700;
+        font-size: font-size_px-to-rem(24);
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: font-size_px-to-rem(18);
+    }
+
+    p {
+        font-weight: 300;
+        font-size: font-size_px-to-rem(15.05);
+        line-height: 1.5em; /* For accessibility */
+    }
 }
 
-.footer__title--font {
-    font-family: $font-logo;
-    color: white;
-    background-color: black;
+a {
+    text-decoration: none;
+    color: $color-dark-main;
+    /* width: 100%; */
 }
 
 ul {
@@ -17,3 +34,8 @@ ul {
     }
 } 
 
+.footer__title--font {
+    font-family: $font-logo;
+    color: white;
+    background-color: black;
+}

@@ -2,12 +2,15 @@ $font-logo: Shrikhand;
 $font-title-restaurants: Shrikhand;
 $font-main: Roboto;
 
-$color-dark-main: #101010;
-$color-light-main: #FFFFFF;
-$color-dark-gray: #353535;
-$color-dark-mid-gray: #7E7E7E;
-$color-light-mid-gray: #EAEAEA; 
-$color-light-gray: #F7F7F7;
+$color-dark-main: black; 
+$color-light-main: white;
+
+$grayscale_ref: gray;
+$grayscale-1: darken($grayscale_ref, 29.5%);
+$grayscale-2: darken($grayscale_ref , 0.8%);
+$grayscale-3: lighten($grayscale_ref , 41.5%);
+$grayscale-4: lighten($grayscale_ref , 46.7%);
+
 $color-primairy: #9356DC;
 $color-secondary: #FF79DA; 
 $color-tertiary: #99E2D0;
@@ -22,17 +25,31 @@ $color-font-button-number__section-fonctionnement: $color-light-main;
 $color-font__footer: $color-light-main;
 
 $color-background-logo__header: $color-light-main;
-$color-background__main-header-top: $color-light-mid-gray;
-$color-background__main-header-bottom: $color-light-gray;
+$color-background__main-header-top: $grayscale-3;
+$color-background__main-header-bottom: $grayscale-4;
 $color-background__section-fonctionnement: $color-light-main;
-$color-background__section-restaurant: $color-light-gray;
-$color-background__footer: $color-dark-gray;
+$color-background__section-restaurant: $grayscale-4;
+$color-background__footer: $grayscale-1;
 
-
-$color-icons-button__section-fonctionnement: $color-dark-mid-gray;
+$color-icons-button__section-fonctionnement: $grayscale-2;
 $color-icons-button__section-fonctionnement--hover: $color-primairy;
 
 
+//Gainsboro	DC DC DC	220 220 220
+//LightGrey	D3 D3 D3	211 211 211
+//Silver	C0 C0 C0	192 192 192
+//DarkGray	A9 A9 A9	169 169 169
+//Gray	80 80 80	128 128 128
+//DimGray	69 69 69	105 105 105
+
+//$color-dark-gray: darken( gray, 29.5%);
+//$color-dark-gray:#353535;
+//color-dark-mid-gray: darken( gray , 0.8%);
+//$color-dark-mid-gray: #7E7E7E;
+//$color-light-mid-gray: lighten( gray , 41.5%);
+//$color-light-mid-gray: #EAEAEA; 
+//$color-light-gray: lighten( gray , 46.7%);
+//$color-light-gray: #F7F7F7;
 
 
 

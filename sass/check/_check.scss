@@ -6,10 +6,6 @@ $check_border-color_green: green;
 $check_border-color_yellow: yellow;
 $check_border-color_orange: orange;
 
-//dotted
-//dashed
-//solid
-
 
 @function check_frame-dashed_brown($check_percentage-color) {
     $check_result-color: 5px dashed lighten($check_border-color_brown , $check_percentage-color);
@@ -82,11 +78,14 @@ body {
 
 header, main, footer {
     outline: check_frame-dashed_red(45%);
+    &:active {
+        outline: check_frame-dashed_red(25%);
+    }
 }
 
 section {
     outline: check_frame-dotted_red(45%);
-    &:checked {
+    &:active {
         outline: check_frame-dotted_red(25%);
     }
     //&:hover {

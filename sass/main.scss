@@ -1,7 +1,11 @@
 
 @import "./utils/variables";
+@import "./utils/functions";
+
 @import "./utils/mixins";
-@import "./check/check";
+
+//@import "./check/check";
+
 @import "./base/base";
 @import "./base/typography";
 @import "./layouts/header";

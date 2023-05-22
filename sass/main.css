@@ -1,172 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  outline: 5px dashed #f0c4c4;
+  margin: 0;
+  max-width: 1440px;
 }
 
-.main-container {
-  outline: 5px dotted #db7373;
+body {
+  font-family: Roboto;
+  font-size: 1rem;
+  line-height: 1.2em;
 }
-
-header, main, footer {
-  outline: 3px dashed #ffe6e6;
+body h1, body h2 {
+  font-weight: 700;
+  font-size: font-size_px-to-rem(24);
 }
-
-section {
-  outline: 4px dotted #ffe6e6;
+body h3 {
+  font-weight: 500;
+  font-size: font-size_px-to-rem(18);
 }
-section:checked {
-  outline: 4px dotted #ff8080;
-}
-
-div, nav {
-  outline: 2px dashed #9999ff;
-}
-div:first-child, nav:first-child {
-  outline: 2px dashed blue;
-}
-div:hover, nav:hover {
-  outline: 2px dashed #4d4dff;
-}
-div div, nav div {
-  outline: 2px dashed #9999ff;
-}
-div div div, nav div div {
-  outline: 2px dashed #ccccff;
-}
-
-article, form {
-  outline: 2px dotted #8080ff;
-}
-article:hover, form:hover {
-  outline: 2px dotted blue;
-}
-
-ul {
-  outline: 1px dashed green;
-}
-ul li {
-  outline: 1px dashed #4dff4d;
+body p {
+  font-weight: 300;
+  font-size: font-size_px-to-rem(15.05);
+  line-height: 1.5em; /* For accessibility */
 }
 
 a {
-  outline: 2px dotted #009a00;
-}
-
-span {
-  outline: 4px dotted #ff8080;
-}
-
-i, img {
-  outline: 3px dashed #ffff80;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  outline: 1px dashed #ffe4b3;
-}
-
-p {
-  outline: 1px dotted #ffd280;
-}
-
-button {
-  outline: 1px dotted #ffd280;
-}
-button:focus {
-  outline: 4px dotted red;
-}
-button button {
-  outline: 1px dotted #ffd280;
-}
-
-.check-frame_dashed_3_brown {
-  outline: dashed 3px brown;
-}
-
-.check-frame_dotted_3_brown {
-  outline: dotted 3px brown;
-}
-
-.check-frame_dashed_3_purple {
-  outline: dashed 3px purple;
-}
-
-.check-frame_dotted_3_purple {
-  outline: dotted 3px purple;
-}
-
-.check-frame_dashed_3_yellow {
-  outline: dashed 3px yellow;
-}
-
-.check-frame_dotted_3_yellow {
-  outline: dotted 3px yellow;
-}
-
-.check-frame_dashed_3_pink {
-  outline: dashed 3px pink;
-}
-
-.check-frame_dotted_3_pink {
-  outline: dotted 3px pink;
-}
-
-.check-frame_dashed_2_red {
-  outline: dashed 2px red;
-}
-
-.check-frame_dotted_2_red {
-  outline: dotted 2px red;
-}
-
-.check-frame_dashed_2_orange {
-  outline: dashed 2px orange;
-}
-
-.check-frame_dotted_2_orange {
-  outline: dotted 2px orange;
-}
-
-.check-frame_dashed_1_blue {
-  outline: dashed 1px blue;
-}
-
-.check-frame_dotted_1_blue {
-  outline: dotted 1px blue;
-}
-
-.check-frame_dashed_1_green {
-  outline: dashed 1px green;
-}
-
-.check-frame_dotted_1_green {
-  outline: dotted 1px green;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  flex: auto;
+  text-decoration: none;
+  color: black;
   /* width: 100%; */
-  max-width: 1440px;
-  /*  padding: 0 50px; */
-  box-sizing: border-box;
-}
-
-* {
-  font-family: Roboto;
-  box-sizing: border-box;
-}
-
-.footer__title--font {
-  font-family: Shrikhand;
-  color: white;
-  background-color: black;
 }
 
 ul {
@@ -174,6 +37,12 @@ ul {
 }
 ul li {
   padding: 0;
+}
+
+.footer__title--font {
+  font-family: Shrikhand;
+  color: white;
+  background-color: black;
 }
 
 header {
