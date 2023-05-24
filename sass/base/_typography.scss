@@ -1,21 +1,31 @@
-body {
+/* || TYPOGRAPHY ||  */
+
+* {
     font-family: $font-main;
     font-size: 1rem;
     line-height: 1.2em;  
+    margin: 0;
 
     h1, h2 {
         font-weight: 700;
-        font-size: font-size_px-to-rem(24);
+        font-size: rem(24);
     }
 
     h3 {
-        font-weight: 500;
-        font-size: font-size_px-to-rem(18);
+        font-family: $font-logo;
+        font-weight: 400;
+        font-size:rem(18);
     }
+
+    h4 {
+        font-weight: 500;
+        font-size:rem(18);
+    }
+
 
     p {
         font-weight: 300;
-        font-size: font-size_px-to-rem(15.05);
+        font-size: rem(15.05);
         line-height: 1.5em; /* For accessibility */
     }
 }
@@ -26,16 +36,7 @@ a {
     /* width: 100%; */
 }
 
-ul {
+ul, li {
     list-style: none;
-
-    li {
-        padding: 0;
-    }
+    padding: 0;
 } 
-
-.footer__title--font {
-    font-family: $font-logo;
-    color: white;
-    background-color: black;
-}

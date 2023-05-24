@@ -1,0 +1,54 @@
+/* || FIND A PLACE || */
+
+$font-size_research: rem(16); 
+
+.find-a-place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-background_find-a-place;
+    white-space: nowrap;
+    height: calc(3 * $font-size_research);
+    
+    & form {
+        display: flex;
+        flex: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__location-icon {
+        font-size: 1rem;
+        margin-right: 0.5em;
+    }
+
+    &__research {
+        font-family: $font-main;
+        font-size: $font-size_research;
+        font-weight: 500;
+        color: $grayscale-1;
+        border: none;
+        background-color: transparent;
+        height: 1.5em;
+        width: 8rem;
+        padding-left: 0.5em;
+    }
+
+}
+
+// Location
+// Grey 2
+//background: #EAEAEA;
+
+// IconPin 
+//height: 16px;
+//background: #353535;
+
+// Paris, Belleville
+//width: 109px;
+//height: 19px;
+
+// Button
+//font-weight: 500;
+//font-size: 16px;
+//color: #353535;

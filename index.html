@@ -17,64 +17,95 @@
   </head>
   <body> 
     <!-- <div class="main-container"> -->
-    <header> 
-      <div>
-        <img class="header__logo" src="/assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
+    <header class="visual-identity"> 
+      <div class="visual-identity__master-logo">
+        <img  src="/assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
       </div>
-      <nav class="header__nav___arrow">
-        <i class="fa-solid fa-arrow-left"></i>
+      <nav class="visual-identity__back-arrow">
+        <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
       </nav>
     </header>
     <main>
-      <section class="discovery">
-        <form>
-          <label><i class="fa-solid fa-location-dot"></i></label>
-          <input>
+      <section class="find-a-place">
+        <form method="get" action="/action_file.php">
+          <label class="find-a-place__location-icon"><i class="fa-solid fa-location-dot"></i></label>
+          <input class="find-a-place__research" type="search" name="ville" id="rechercher" placeholder="Quartier, ville" autofocus required>
         </form>
-        <h1>Réservez le menu qui vous convient</h1>
-        <p class="main__header__subtitle">Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
-        <button>Explorer nos restaurants</button>
       </section>
-    <section class="section-fonctionnement">
-      <h2>Fonctionnement</h2>
-      <button><i class="fa-solid fa-mobile-screen-button"></i>Choississez un restaurant</button>
-      <button><i class="fa-solid fa-list-ul"></i>Composez votre menu</button>
-      <button><i class="fa-sharp fa-solid fa-store"></i>Dégustez au restaurant</button>
-    </section>
-    <section class="section-restaurants">
-      <h2>Restaurants</h2>
-      <a>
-      <article>
-        
-        <h4 class="section-restaurants__article__title">La palette du goût</h3>
-        <p class="section-restaurants__article__subtitle">Ménilmontant</p>
-        <i class="fa-regular fa-heart"></i>
-        <i class="fa-sharp fa-solid fa-heart"></i>        
-      </article>
-      </a>
-      <article>
-        <h4 class="section-restaurants__article__title">La note enchantée</h3>
-        <p class="section-restaurants__article__subtitle">Charonne</p>
-      </article>
-      <article>
-        <h4 class="section-restaurants__article__title">À la française</h3>
-        <p class="section-restaurants__article__subtitle">Cité Rouge</p>
-      </article>
-      <article>
-        <h4 class="section-restaurants__article__title">Le délice des sens</h3>
-        <p class="section-restaurants__article__subtitle">Folie-Méricourt</p>
-      </article>
-    </section>
+      <section class="discovery"> 
+        <h1 class="discovery__title">Réservez le menu qui vous convient</h1>
+        <p class="discovery__subtitle">Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
+        <button class="discovery__btn-order">Explorer nos restaurants</button>
+      </section>
+      <section class="explanation">
+        <h2 class="explanation__title">Fonctionnement</h2>
+        <div class="explanation__card"><i class="fa-solid fa-mobile-screen-button"></i>Choississez un restaurant</div>
+        <div class="explanation__card"><i class="fa-solid fa-list-ul"></i>Composez votre menu</div>
+        <div class="explanation__card"><i class="fa-sharp fa-solid fa-store"></i>Dégustez au restaurant</div>
+      </section>
+      <section class="restaurants">
+        <h2 class="restaurants__title">Restaurants</h2>
+        <a>
+          <article class="restaurants__card">    
+            <div class="restaurants__card-text">
+              <h4 class="restaurants__card-title">La palette du goût</h4>
+              <p class="restaurants__card-subtitle">Ménilmontant</p>
+            </div>
+            <div class="restaurants__card-like">
+              <i class="restaurants__heart-empty fa-regular fa-heart"></i>
+              <i class="restaurants__heart-full fa-sharp fa-solid fa-heart"></i>     
+            </div> 
+          </article>
+        </a>
+        <a>
+          <article class="restaurants__card">
+            <div class="restaurants__card-text">
+              <h4 class="restaurants__card-title">La note enchantée</h4>
+              <p class="restaurants__card-subtitle">Charonne</p>
+            </div>
+            <div class="restaurants__card-like">
+              <i class="restaurants__heart-empty fa-regular fa-heart"></i>
+              <i class="restaurants__heart-full fa-sharp fa-solid fa-heart"></i>     
+            </div>          
+          </article>
+        </a>
+        <a>
+          <article class="restaurants__card">
+            <div class="restaurants__card-text">
+              <h4 class="restaurants__card-title">À la française</h4>
+              <p class="restaurants__card-subtitle">Cité Rouge</p>
+            </div>
+            <div class="restaurants__card-like">
+              <i class="restaurants__heart-empty fa-regular fa-heart"></i>
+              <i class="restaurants__heart-full fa-sharp fa-solid fa-heart"></i>     
+            </div>   
+          </article>
+        </a>
+        <a>
+          <article class="restaurants__card">
+            <div class="restaurants__card-text">
+              <h4 class="restaurants__card-title">Le délice des sens</h4>
+              <p class="restaurants__card-subtitle">Folie-Méricourt</p>
+            </div>
+            <!-- <div class="restaurants__card-like"> -->
+              <button class="restaurants__card-like" type="checked">
+              <i class="restaurants__heart-empty fa-regular fa-heart"></i>
+              <i class="restaurants__heart-full fa-sharp fa-solid fa-heart"></i>     
+              </button>
+            <!-- </div>   -->
+          </article>
+        </a>
+      </section>
     </main>
-    <footer>
-    <h3 class="footer__title--font">ohmyfood</h3>
-    <nav class="footer__nav">
-      <ul>
-          <div class="footer__nav__ul-info-pro">
-            <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-            <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
+    <footer class="auxiliary-menu">
+      <h3 class="auxiliary-menu__title">ohmyfood</h3>
+      <nav>
+        <ul class="auxiliary-menu__all">
+          <div class="auxiliary-menu__partnership">
+            <li><i class="auxiliary-menu__icon fa-solid fa-utensils"></i>Proposer un restaurant</li>
+            <li><i class="auxiliary-menu__icon fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
           </div>
-          <div class="footer__nav__ul-info-public">  
+          <div class="auxiliary-menu__support">  
             <li>Mentions légales</li>
             <li>Contact</li>
           </div>

@@ -3,10 +3,18 @@
     box-sizing: border-box;
 }
 
+html {
+    display: flex;
+    justify-content: center; 
+}
+
 body {
+    flex: auto; 
     margin: 0;
     max-width: 1440px;
+    /* width: 100%; */
 }
+
 
 //.main-container {
 //    display: flex;

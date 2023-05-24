@@ -1,15 +1,31 @@
 
 @import "./utils/variables";
 @import "./utils/functions";
-
 @import "./utils/mixins";
 
-//@import "./check/check";
+@import "./check/check";
 
 @import "./base/base";
 @import "./base/typography";
+
+// @import "./components/buttons";
+// @import "./components/like-heart";
+
+.color-visible {
+   columns: $grayscale-1 ;
+   columns: $grayscale-2 ;
+   columns: $grayscale-3 ;
+   columns: $grayscale-4 ;
+}
+
+/*** ||| HOME PAGE ||| ***/
+//@import "./pages/home";
 @import "./layouts/header";
-@import "./components/buttons";
+@import "./layouts/find-a-place";
+@import "./layouts/discovery";
+@import "./layouts/explanation";
+@import "./layouts/restaurants";
+@import "./layouts/footer";
 
 
 
@@ -19,17 +35,16 @@
 
 
 
-/* @import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/extensions";
-@import "./base/typography";
-@import "./components/buttons";
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project"; */
-
+//@import "./utils/variables";
+//@import "./utils/functions";
+//@import "./utils/extensions";
+//@import "./base/typography";
+//@import "./components/buttons";
+//@import "./layouts/nav";
+//@import "./layouts/container";
+//@import "./layouts/form";
+//@import "./pages/work";
+//@import "./pages/about";
+//@import "./pages/project";
 
 

@@ -1,0 +1,43 @@
+/* || FOOTER || */
+
+.auxiliary-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-background_footer;
+    color: $color-font__footer;
+    /* align-items: center; */
+    /* text-align: center; */
+    padding: calc(1em + 1vw) calc(1rem + 1.5vw);
+    gap: 1em;
+
+    nav {
+       /*  flex: auto; */
+    }
+
+    &__all {
+        display: flex;
+        /* flex: auto; */
+        flex-direction: column;
+        gap: 0.5em;
+        /* white-space: nowrap; */
+        /* overflow: hidden; */
+        /* text-overflow: ellipsis; */
+       /*  max-width: 90%; */
+    }
+    
+    &__partnership, &__support{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        white-space: nowrap;
+        /* overflow: hidden; */
+        /* text-overflow: ellipsis; */
+        /* min-width: 10%; */
+        
+    }
+
+    &__icon {
+         width: 2em;
+    }
+}
+

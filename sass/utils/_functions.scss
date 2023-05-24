@@ -1,4 +1,4 @@
- 
+
 @function rem($value_px, $font-size_ref: 16) {
     $result_rem: calc(($value_px * 1) / $font-size_ref)+rem;
     @return $result_rem
@@ -13,7 +13,6 @@
     $result_height-vmin: calc(($measured-height * 100) / $widht-screen-ref)+vmin;
     @return $result_height-vmin
 }
-
 
 
 //@function color-frame($percentage_border-color) {

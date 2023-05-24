@@ -1,49 +1,43 @@
+/* || HEADER || */
 
+$default-height-for-olde-brothers: rem(30);
+$logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
 
-
-header {
+.visual-identity {
     display: flex;
     flex-direction: column;
-    margin: 2vmin 0 ;
-    
-    
-}
-
-
-nav, div, img {
-    display: flex;
-}
-
-header div {
-    flex: auto;
     justify-content: center;
-}
-
-// height: 6vmin;
-//header img {
-//    //@include height-mobile ;
-//    
-//}
-
-
-
-
-header nav {
-    flex: auto;
-    justify-content: flex-start ;
-    align-items: center;
-    vertical-align: middle;
-    font-size: 1em;
-    height: 6vmin;
-    margin-top: -6vmin;
-}
-
-
-// <i class="fa-solid fa-arrow-left"></i> */
-// mobile
-// font-size: 30px;
-// desktop
-// width: 200px;
-// height: 34.2px;
+    background-color: $color-background_header;
+    height: 113px;
+    height: calc($logo-height * 3);
  
+    &__master-logo {
+        display: flex;
+        justify-content: center;
+        height: $default-height-for-olde-brothers; /* For old brothers */
+        height: $logo-height;
+    }
 
+    &__back-arrow {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-left: 1em;
+        height: $default-height-for-olde-brothers; /* For old brothers */
+        height: $logo-height;
+        margin-top: -$default-height-for-olde-brothers; /* For old brothers */
+        margin-top: calc($logo-height * -1); // Up arrow in the center of logo
+
+        &--hidden {
+            visibility: hidden;
+        }
+    }
+}
+
+// Header
+//height: 113px;
+
+// logo ohmyfood 
+// mobile font-size: 30px;
+// desktop height: 34.2px;

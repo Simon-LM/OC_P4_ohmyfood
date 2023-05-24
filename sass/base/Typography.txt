@@ -1,4 +1,14 @@
 
+// HEADER //
+// ohmyfood 
+font-family: 'Shrikhand';
+font-style: italic;
+font-weight: 400;
+font-size: 30px;
+color: #101010;
+
+
+
 // INPUT
 // Paris, Belleville
 font-family: 'Roboto';
@@ -42,7 +52,20 @@ line-height: 28px;
 color: #000000;
 
 
+
 // H3 //
+// Title FOOTER
+// ohmyfood 
+font-family: 'Shrikhand';
+font-style: italic;
+font-weight: 400;
+font-size: 18px;
+line-height: 26px;
+color: #FFFFFF;
+
+
+
+// H4 //
 // Fricassée d'escargots
 // Foie gras de canard mi-cuit
 // Œuf au plat

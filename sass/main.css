@@ -1,28 +1,125 @@
+@charset "UTF-8";
+body {
+  outline: 5px dashed #f0c4c4;
+}
+
+.main-container {
+  outline: 5px dotted #db7373;
+}
+
+header, main, footer {
+  outline: 3px dashed #ffe6e6;
+}
+header:active, main:active, footer:active {
+  outline: 3px dashed #ff8080;
+}
+
+section {
+  outline: 4px dotted #ffe6e6;
+}
+section:active {
+  outline: 4px dotted #ff8080;
+}
+
+div, nav {
+  outline: 2px dashed #9999ff;
+}
+div:first-child, nav:first-child {
+  outline: 2px dashed blue;
+}
+div:hover, nav:hover {
+  outline: 2px dashed #4d4dff;
+}
+div div, nav div {
+  outline: 2px dashed #9999ff;
+}
+div div div, nav div div {
+  outline: 2px dashed #ccccff;
+}
+
+article, form {
+  outline: 2px dotted #8080ff;
+}
+article:hover, form:hover {
+  outline: 2px dotted blue;
+}
+
+ul {
+  outline: 1px dashed green;
+}
+ul li {
+  outline: 1px dashed #4dff4d;
+}
+
+a {
+  outline: 2px dotted #009a00;
+}
+
+span {
+  outline: 4px dotted #ff8080;
+}
+
+i, img {
+  outline: 3px dashed #ffff80;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  outline: 1px dashed #ffe4b3;
+}
+
+p {
+  outline: 1px dotted #ffd280;
+}
+
+button {
+  outline: 1px dotted #ffd280;
+}
+button:focus {
+  outline: 4px dotted red;
+}
+button button {
+  outline: 1px dotted #ffd280;
+}
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  max-width: 1440px;
+html {
+  display: flex;
+  justify-content: center;
 }
 
 body {
+  flex: auto;
+  margin: 0;
+  max-width: 1440px;
+  /* width: 100%; */
+}
+
+/* || TYPOGRAPHY ||  */
+* {
   font-family: Roboto;
   font-size: 1rem;
   line-height: 1.2em;
+  margin: 0;
 }
-body h1, body h2 {
+* h1, * h2 {
   font-weight: 700;
-  font-size: font-size_px-to-rem(24);
+  font-size: 1.5rem;
 }
-body h3 {
+* h3 {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+* h4 {
   font-weight: 500;
-  font-size: font-size_px-to-rem(18);
+  font-size: 1.125rem;
 }
-body p {
+* p {
   font-weight: 300;
-  font-size: font-size_px-to-rem(15.05);
+  font-size: 0.940625rem;
   line-height: 1.5em; /* For accessibility */
 }
 
@@ -32,68 +129,157 @@ a {
   /* width: 100%; */
 }
 
-ul {
+ul, li {
   list-style: none;
-}
-ul li {
   padding: 0;
 }
 
-.footer__title--font {
-  font-family: Shrikhand;
-  color: white;
-  background-color: black;
+.color-visible {
+  -moz-columns: #353535;
+       columns: #353535;
+  -moz-columns: #7e7e7e;
+       columns: #7e7e7e;
+  -moz-columns: #eaeaea;
+       columns: #eaeaea;
+  -moz-columns: #f7f7f7;
+       columns: #f7f7f7;
 }
 
-header {
+/*** ||| HOME PAGE ||| ***/
+/* || HEADER || */
+.visual-identity {
   display: flex;
   flex-direction: column;
-  margin: 2vmin 0;
+  justify-content: center;
+  background-color: white;
+  height: 113px;
+  height: calc(clamp(1.5rem, 5.4545454545vmin, 2.125rem) * 3);
 }
-
-nav, div, img {
+.visual-identity__master-logo {
   display: flex;
+  justify-content: center;
+  height: 1.875rem; /* For old brothers */
+  height: clamp(1.5rem, 5.4545454545vmin, 2.125rem);
+}
+.visual-identity__back-arrow {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 1em;
+  height: 1.875rem; /* For old brothers */
+  height: clamp(1.5rem, 5.4545454545vmin, 2.125rem);
+  margin-top: -1.875rem; /* For old brothers */
+  margin-top: calc(clamp(1.5rem, 5.4545454545vmin, 2.125rem) * -1);
+}
+.visual-identity__back-arrow--hidden {
+  visibility: hidden;
 }
 
-header div {
+/* || FIND A PLACE || */
+.find-a-place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  white-space: nowrap;
+  height: calc(3 * 1rem);
+}
+.find-a-place form {
+  display: flex;
   flex: auto;
+  align-items: center;
   justify-content: center;
 }
+.find-a-place__location-icon {
+  font-size: 1rem;
+  margin-right: 0.5em;
+}
+.find-a-place__research {
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #353535;
+  border: none;
+  background-color: transparent;
+  height: 1.5em;
+  width: 8rem;
+  padding-left: 0.5em;
+}
 
-header nav {
-  flex: auto;
-  justify-content: flex-start;
+/* || DISCOVERY || */
+.discovery {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  vertical-align: middle;
-  font-size: 1em;
-  height: 6vmin;
-  margin-top: -6vmin;
+  text-align: center;
+  padding: 2em 1em;
+  gap: 1em;
+}
+.discovery__subtitle {
+  font-size: 1.125rem;
+  color: #353535;
 }
 
-button {
-  display: inline-flex;
-  flex-direction: row;
-  gap: 2em;
-}
-button i {
-  padding-right: 0em;
+/* || FONCTIONNEMENT / EXPLANATION || */
+.explanation {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /*  text-align: center; */
+  padding: 2em 1em;
+  gap: 1em;
 }
 
-/* Explorer nos restaurants
-Button Gradient
-background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-Shadow/Button
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-border-radius: 25px;
-transform: matrix(1, 0, 0, -1, 0, 0); */
-/* @import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/extensions";
-@import "./base/typography";
-@import "./components/buttons";
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project"; *//*# sourceMappingURL=main.css.map */
+/* || RESTAURANTS || */
+.restaurants {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  padding: 2em 1em;
+  gap: 1em;
+}
+.restaurants__card {
+  display: flex;
+  /* align-items: center; */
+  /* text-align: center; */
+}
+
+/* || FOOTER || */
+.auxiliary-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  /* align-items: center; */
+  /* text-align: center; */
+  padding: calc(1em + 1vw) calc(1rem + 1.5vw);
+  gap: 1em;
+}
+.auxiliary-menu nav {
+  /*  flex: auto; */
+}
+.auxiliary-menu__all {
+  display: flex;
+  /* flex: auto; */
+  flex-direction: column;
+  gap: 0.5em;
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /*  max-width: 90%; */
+}
+.auxiliary-menu__partnership, .auxiliary-menu__support {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  white-space: nowrap;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* min-width: 10%; */
+}
+.auxiliary-menu__icon {
+  width: 2em;
+}/*# sourceMappingURL=main.css.map */

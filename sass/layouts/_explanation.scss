@@ -1,0 +1,11 @@
+/* || FONCTIONNEMENT / EXPLANATION || */
+
+.explanation {
+    background-color: $color-background_explanation;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+   /*  text-align: center; */
+    padding: 2em 1em;
+    gap: 1em;
+}

@@ -1,0 +1,38 @@
+/* .fa-heart {
+    display: block;
+} */
+/* [type="checkbox"]:checked */
+
+button {
+    &[type="checkbox"]:checked {
+        background-color: blue;   
+    }
+}
+
+.restaurants {
+    
+    &__card-like {
+        &:active {
+           color: red;
+        }
+    }
+
+    &__heart-empty {
+        display: block;
+        color: $color-font__main;
+        font-size: 1rem;
+        &:active {
+           display: none;
+        }    
+    }
+
+    &__heart-full {
+        display: none;
+        font-size: 1rem;
+        /* color: transparent; */
+        &:active {
+            display: block;
+            color: purple;
+        }    
+    }
+}
