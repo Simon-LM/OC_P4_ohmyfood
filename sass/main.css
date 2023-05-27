@@ -1,86 +1,4 @@
 @charset "UTF-8";
-body {
-  outline: 5px dashed #f0c4c4;
-}
-
-.main-container {
-  outline: 5px dotted #db7373;
-}
-
-header, main, footer {
-  outline: 3px dashed #ffe6e6;
-}
-header:active, main:active, footer:active {
-  outline: 3px dashed #ff8080;
-}
-
-section {
-  outline: 4px dotted #ffe6e6;
-}
-section:active {
-  outline: 4px dotted #ff8080;
-}
-
-div, nav {
-  outline: 2px dashed #9999ff;
-}
-div:first-child, nav:first-child {
-  outline: 2px dashed blue;
-}
-div:hover, nav:hover {
-  outline: 2px dashed #4d4dff;
-}
-div div, nav div {
-  outline: 2px dashed #9999ff;
-}
-div div div, nav div div {
-  outline: 2px dashed #ccccff;
-}
-
-article, form {
-  outline: 2px dotted #8080ff;
-}
-article:hover, form:hover {
-  outline: 2px dotted blue;
-}
-
-ul {
-  outline: 1px dashed green;
-}
-ul li {
-  outline: 1px dashed #4dff4d;
-}
-
-a {
-  outline: 2px dotted #009a00;
-}
-
-span {
-  outline: 4px dotted #ff8080;
-}
-
-i, img {
-  outline: 3px dashed #ffff80;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  outline: 1px dashed #ffe4b3;
-}
-
-p {
-  outline: 1px dotted #ffd280;
-}
-
-button {
-  outline: 1px dotted #ffd280;
-}
-button:focus {
-  outline: 4px dotted red;
-}
-button button {
-  outline: 1px dotted #ffd280;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -126,7 +44,9 @@ body {
 a {
   text-decoration: none;
   color: black;
-  /* width: 100%; */
+}
+a[class^=auxiliary-menu] {
+  color: white;
 }
 
 ul, li {
@@ -134,15 +54,64 @@ ul, li {
   padding: 0;
 }
 
-.color-visible {
-  -moz-columns: #353535;
-       columns: #353535;
-  -moz-columns: #7e7e7e;
-       columns: #7e7e7e;
-  -moz-columns: #eaeaea;
-       columns: #eaeaea;
-  -moz-columns: #f7f7f7;
-       columns: #f7f7f7;
+button {
+  font-size: 1em;
+  transition: all 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+  transition: all 0.3s;
+}
+
+input:hover, a:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.order-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(0.49turn, #FF79DA, #9356DC);
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  height: 4rem;
+  width: 50%;
+}
+
+.restaurants__heart-like {
+  display: flex;
+}
+.restaurants__like {
+  height: 0;
+  width: 0;
+}
+.restaurants__heart {
+  color: black;
+  font-size: 1rem;
+  font-weight: 100 !important;
+  text-align: center;
+  width: 1.1em;
+  transition: 0.4s, color 1s;
+}
+.restaurants__heart:hover {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.restaurants__like + .heart [class$=heart] {
+  /* transition: background 0.9s; */
+}
+.restaurants__like:checked + .heart [class$=heart] {
+  font-weight: 900 !important;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /*** ||| HOME PAGE ||| ***/
@@ -171,6 +140,13 @@ ul, li {
   height: clamp(1.5rem, 5.4545454545vmin, 2.125rem);
   margin-top: -1.875rem; /* For old brothers */
   margin-top: calc(clamp(1.5rem, 5.4545454545vmin, 2.125rem) * -1);
+}
+.visual-identity__back-arrow i {
+  transition: all 0.3s;
+}
+.visual-identity__back-arrow i:hover {
+  cursor: pointer;
+  font-size: 1.2em;
 }
 .visual-identity__back-arrow--hidden {
   visibility: hidden;
@@ -232,6 +208,12 @@ ul, li {
   padding: 2em 1em;
   gap: 1em;
 }
+.explanation__card {
+  display: flex;
+}
+.explanation__card i {
+  width: 1.5em;
+}
 
 /* || RESTAURANTS || */
 .restaurants {
@@ -243,8 +225,8 @@ ul, li {
 }
 .restaurants__card {
   display: flex;
-  /* align-items: center; */
-  /* text-align: center; */
+  align-items: center;
+  gap: 0.5em;
 }
 
 /* || FOOTER || */

@@ -37,6 +37,11 @@ $check_border-color_orange: orange;
     @return $check_result-color
 }
 
+@function check_frame-solid_green($check_percentage-color) {
+    $check_result-color: 2px solid lighten($check_border-color_green , $check_percentage-color);
+    @return $check_result-color
+}
+
 @function check_frame-dashed_green($check_percentage-color) {
     $check_result-color: 1px dashed lighten($check_border-color_green , $check_percentage-color);
     @return $check_result-color
@@ -47,13 +52,18 @@ $check_border-color_orange: orange;
     @return $check_result-color
 }
 
+@function check_frame-solid_yellow($check_percentage-color) {
+    $check_result-color: 2px solid lighten($check_border-color_yellow , $check_percentage-color);
+    @return $check_result-color
+}
+
 @function check_frame-dashed_yellow($check_percentage-color) {
-    $check_result-color: 3px dashed lighten($check_border-color_yellow , $check_percentage-color);
+    $check_result-color: 2px dashed lighten($check_border-color_yellow , $check_percentage-color);
     @return $check_result-color
 }
 
 @function check_frame-dotted_yellow($check_percentage-color) {
-    $check_result-color: 3px doddet lighten($check_border-color_yellow , $check_percentage-color);
+    $check_result-color: 2px dotted lighten($check_border-color_yellow , $check_percentage-color);
     @return $check_result-color
 }
 
@@ -66,7 +76,6 @@ $check_border-color_orange: orange;
     $check_result-color: 1px dotted lighten($check_border-color_orange , $check_percentage-color);
     @return $check_result-color
 }
-
 
 body {
    outline: check_frame-dashed_brown(45%);
@@ -83,6 +92,17 @@ header, main, footer {
     }
 }
 
+button:hover, a:hover, input:hover, label[class*="heart"]:hover {
+    outline: check_frame-solid_yellow(5%);
+}
+
+label {
+    outline: check_frame-dotted_orange(25%);
+    &:active {
+        outline: check_frame-dotted_orange(0%);
+    }
+}
+
 section {
     outline: check_frame-dotted_red(45%);
     &:active {
@@ -93,47 +113,66 @@ section {
     //}
 }
 
+div {
+    outline: check_frame-dashed_blue(20%);
 
-div, nav {
-    outline: check_frame-dashed_blue(30%);
-    &:first-child {
-        outline: check_frame-dashed_blue(0%);
-    }
-    &:hover {
-        outline: check_frame-dashed_blue(15%);
-    }
     div {
         outline: check_frame-dashed_blue(30%);
         div {
             outline: check_frame-dashed_blue(40%);
+            div {
+                outline: check_frame-dashed_blue(50%);              
+            }
         }
     }
 }
 
+div[class*="like"]:hover, nav div:hover {
+    outline: none;
+}
+
 article, form {
     outline: check_frame-dotted_blue(25%);
-    &:hover {
+    /* &:hover {
         outline: check_frame-dotted_blue(0%);
-    }
+    } */
 }
 
 ul {
-    outline: check_frame-dashed_green(0%);
+    outline: check_frame-dashed_green(20%);
+    &:active {
+        outline: check_frame-solid_green(20%);
+    }
+
     li {
-        outline: check_frame-dashed_green(40%);
+        outline: check_frame-dashed_green(30%);
+        &:active {
+            outline: check_frame-solid_green(30%);
+        }
     }
 }
 
-a {
-    outline: check_frame-dotted_green(5%);
+nav {
+    outline: check_frame-dotted_yellow(25%);
+    &:active {
+        outline: check_frame-dashed_yellow(25%);
+    }
 }
+
 
 span {
     outline: check_frame-dotted_red(25%);
 }
 
-i, img {
-    outline: check_frame-dashed_yellow(25%);
+i {
+    outline: check_frame-dotted_green(5%);
+    &:active {
+        outline: check_frame-solid_green(5%);
+    }
+}
+
+img {
+    outline: check_frame-dashed_green(10%);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -144,26 +183,6 @@ p, {
     outline: check_frame-dotted_orange(25%);
    
 }
-
-button {
-    outline: check_frame-dotted_orange(25%);
-    &:focus {
-        outline: check_frame-dotted_red(0%);
-    }
-    button {
-        outline: check_frame-dotted_orange(25%);
-    }
-}
-
-
-//@import "./checkfonctions";
-
-
-//.check-frame_dotted_3_purple + {
-//    main {
-//    }
-//}
-
 
 
 

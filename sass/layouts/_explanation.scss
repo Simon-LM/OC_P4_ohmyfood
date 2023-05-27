@@ -8,4 +8,15 @@
    /*  text-align: center; */
     padding: 2em 1em;
     gap: 1em;
+
+    &__card {
+    display: flex;
+
+    i {
+        width: 1.5em;
+    }
+
+    }
+    
+
 }

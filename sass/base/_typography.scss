@@ -32,11 +32,16 @@
 
 a {
     text-decoration: none;
-    color: $color-dark-main;
-    /* width: 100%; */
+    color: $color-font__main;
+
+    &[class^="auxiliary-menu"] {
+        color: $color-font__footer;
+    }   
 }
 
 ul, li {
     list-style: none;
     padding: 0;
 } 
+
+

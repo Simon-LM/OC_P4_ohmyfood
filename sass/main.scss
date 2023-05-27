@@ -3,20 +3,16 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 
-@import "./check/check";
+//@import "./check/check";
 
 @import "./base/base";
 @import "./base/typography";
 
-// @import "./components/buttons";
-// @import "./components/like-heart";
+@import "./components/buttons";
+@import "./components/order-button";
+@import "./components/like-heart";
 
-.color-visible {
-   columns: $grayscale-1 ;
-   columns: $grayscale-2 ;
-   columns: $grayscale-3 ;
-   columns: $grayscale-4 ;
-}
+
 
 /*** ||| HOME PAGE ||| ***/
 //@import "./pages/home";

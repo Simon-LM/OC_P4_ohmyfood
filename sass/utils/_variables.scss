@@ -13,6 +13,8 @@ $grayscale-4: lighten($grayscale_ref , 46.7%);
 
 $color-primairy: #9356DC;
 $color-secondary: #FF79DA; 
+$color-primairy-to-secondary: linear-gradient($color-primairy, $color-secondary);
+$color-secondary-to-primairy: linear-gradient(.49turn, $color-secondary, $color-primairy);
 $color-tertiary: #99E2D0;
 $color-tertiary-font: #008766;
 $color-dark-blue: #003A68;
@@ -20,9 +22,12 @@ $color-light-blue: #89C8FA;
 
 $color-font-logo__header: $color-dark-main;
 $color-font__main: $color-dark-main;
-$color-font-button__main-header: $color-light-main;
-$color-font-button-number__section-fonctionnement: $color-light-main;
+$color-font-order-btn: $color-light-main;
 $color-font__footer: $color-light-main;
+
+$color-icons-button__section-fonctionnement: $grayscale-2;
+$color-icons-button__section-fonctionnement--hover: $color-primairy;
+$color-icons-heart-like: $color-primairy-to-secondary;
 
 $color-background_header: $color-light-main;
 $color-background_find-a-place: $grayscale-3;
@@ -30,9 +35,6 @@ $color-background_discovery: $grayscale-4;
 $color-background_explanation: $color-light-main;
 $color-background_restaurants: $grayscale-4;
 $color-background_footer: $grayscale-1;
-
-$color-icons-button__section-fonctionnement: $grayscale-2;
-$color-icons-button__section-fonctionnement--hover: $color-primairy;
 
 
 //Gainsboro	DC DC DC	220 220 220

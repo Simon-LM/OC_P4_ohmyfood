@@ -1,38 +1,41 @@
-/* .fa-heart {
-    display: block;
-} */
-/* [type="checkbox"]:checked */
-
-button {
-    &[type="checkbox"]:checked {
-        background-color: blue;   
-    }
-}
 
 .restaurants {
     
-    &__card-like {
-        &:active {
-           color: red;
-        }
+    &__heart-like {
+      display: flex;
     }
 
-    &__heart-empty {
-        display: block;
+    &__like {
+        height: 0;
+        width: 0;        
+    } 
+
+    &__heart {
         color: $color-font__main;
         font-size: 1rem;
-        &:active {
-           display: none;
-        }    
+        font-weight: 100 !important;
+        text-align: center;
+        width: 1.1em;
+        transition:  0.4s, color 1s;
+        &:hover {
+           cursor: pointer; 
+           font-size: 1.2em;
+       }   
     }
 
-    &__heart-full {
-        display: none;
-        font-size: 1rem;
-        /* color: transparent; */
-        &:active {
-            display: block;
-            color: purple;
-        }    
-    }
-}
+    &__like + .heart [class$="heart"] {
+           
+        /* transition: background 0.9s; */
+    }     
+
+    &__like:checked + .heart [class$="heart"] {
+              
+        font-weight: 900 !important;        
+        background: $color-icons-heart-like;
+        background-clip: text;        
+        -webkit-background-clip: text;
+        color: transparent;
+    }    
+
+}    
+

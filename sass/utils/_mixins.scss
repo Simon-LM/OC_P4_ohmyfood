@@ -1,4 +1,10 @@
 
+@mixin hover-links{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+
 
 
 //@mixin check_color-frame_red {
@@ -48,9 +54,4 @@
 
 // $color-dark-mid-gray: #7E7E7E; // lighten($color-dark-gray, 33%)  
 // $color-light-mid-gray: #EAEAEA; // *darken($color-light-gray, 33%) 
-
-
-
-
-
 

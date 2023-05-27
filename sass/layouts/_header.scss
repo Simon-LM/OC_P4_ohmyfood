@@ -28,6 +28,14 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
         height: $logo-height;
         margin-top: -$default-height-for-olde-brothers; /* For old brothers */
         margin-top: calc($logo-height * -1); // Up arrow in the center of logo
+                
+        & i {
+            transition: all 0.3s;
+            &:hover {
+                cursor: pointer; 
+                font-size: 1.2em;
+            }
+       }   
 
         &--hidden {
             visibility: hidden;
