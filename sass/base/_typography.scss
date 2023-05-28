@@ -22,13 +22,35 @@
         font-size:rem(18);
     }
 
-
     p {
         font-weight: 300;
-        font-size: rem(15.05);
         line-height: 1.5em; /* For accessibility */
+
+        &[class="discovery__subtitle"] {
+            font-size: rem(18);
+            line-height: 1.2em;
+            color: $grayscale-1;
+        }
+
+        &[class="explanation__text"] {
+            font-weight: 500;
+            line-height: 1.2em;
+        }
+
+        /* font-size: rem(15.05); */
     }
 }
+
+span {
+    &[class="explanation__circle"] {
+        color: $color-font_explanation-circle;
+        font-size: rem(12);
+        font-weight: 500;
+    }
+
+}
+
+
 
 a {
     text-decoration: none;

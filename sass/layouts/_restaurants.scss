@@ -3,14 +3,74 @@
 .restaurants {
     background-color: $color-background_discovery;
     display: flex;
+    flex: auto;
     flex-direction: column;
-    padding: 2em 1em;
     gap: 1em;
+    @include padding_section;
+
+    &__all-cards {
+        /* background: red; */
+        display: flex;
+        /* flex: auto; */
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2em;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            flex-direction: column;
+        
+            @media (min-width:1024px) {
+                flex-direction: row;              
+            }
+        }
+        a {
+            display: flex;
+            flex: auto
+        }
+    }
 
     &__card {
-        display: flex;
+        @include cards;
+        flex-direction: column;
         align-items: center;
-        gap: 0.5em;
+        //max-width: 100%;
+        /* width: 100% ;  */
+        //min-width: calc(50% - 1rem); 
+        /* width: clamp(49%, 100vw, 98%); */
+        max-width: calc((100%) - 2em);
+        width: calc(22em + 1vw);
+        min-width: calc((100% / 2) - 1em);
+
+        img {
+            border-radius: 1.2em 1.2em 0 0;
+            /* flex: auto; */
+            width: 100%;
+            height: height_mm-to-vmin(100);
+            @media (min-width: 768px) {
+                height: height_mm-to-vmin(100);
+            
+                @media (min-width:1024px) {
+                    height: height_mm-to-vw(30, 253);
+                }
+            }
+        }
+
+        &-comment {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            padding: 0.5em 1em;
+
+            [class$="text"] {
+                flex: initial;
+            }
+
+            [class$="like"] {
+                flex: auto;
+                margin-right: 0.5em;
+            }
+        }
     }
 }
 

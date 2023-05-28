@@ -1,6 +1,29 @@
+
+/***** MARGIN | PADDING | GAP  *****/
+
+/*** SECTIONS ***/
+$padding_section-mobile: calc(1em + 1vw) calc(1rem + 1.5vw); // MOBILE
+$padding_section-tablet: 2em height_mm-to-vw(32 , 253); // TABLET
+$padding_section-desktop: 3em height_mm-to-vw(32 , 253); // DESKTOP
+
+
+/*** FOOTER  ***/
+
+$padding_footer-mobile: calc(1em + 1vw) calc(1rem + 1.5vw); // MOBILE
+$padding_footer-tablet: calc(1em + 1vw) calc(1rem + 1.5vw); // TABLET
+$padding_footer-mdesktop: 2em 2rem; // DESKTOP
+
+
+
+/***** FONT & COLOR *****/
+
+/*** FONT ***/
+
 $font-logo: Shrikhand;
 $font-title-restaurants: Shrikhand;
 $font-main: Roboto;
+
+/*** COLOR ***/
 
 $color-dark-main: black; 
 $color-light-main: white;
@@ -20,14 +43,21 @@ $color-tertiary-font: #008766;
 $color-dark-blue: #003A68;
 $color-light-blue: #89C8FA;
 
+
+/*** FONT COLOR ***/
+
 $color-font-logo__header: $color-dark-main;
 $color-font__main: $color-dark-main;
 $color-font-order-btn: $color-light-main;
+$color-font_explanation-circle: $color-light-main;
 $color-font__footer: $color-light-main;
 
-$color-icons-button__section-fonctionnement: $grayscale-2;
-$color-icons-button__section-fonctionnement--hover: $color-primairy;
+$color-icons_explanation-drab: $grayscale-2;
+$color-icons_explanation-bright: $color-primairy;
 $color-icons-heart-like: $color-primairy-to-secondary;
+
+
+/*** BACKGROUND COLOR ***/
 
 $color-background_header: $color-light-main;
 $color-background_find-a-place: $grayscale-3;
@@ -36,22 +66,6 @@ $color-background_explanation: $color-light-main;
 $color-background_restaurants: $grayscale-4;
 $color-background_footer: $grayscale-1;
 
-
-//Gainsboro	DC DC DC	220 220 220
-//LightGrey	D3 D3 D3	211 211 211
-//Silver	C0 C0 C0	192 192 192
-//DarkGray	A9 A9 A9	169 169 169
-//Gray	80 80 80	128 128 128
-//DimGray	69 69 69	105 105 105
-
-//$color-dark-gray: darken( gray, 29.5%);
-//$color-dark-gray:#353535;
-//color-dark-mid-gray: darken( gray , 0.8%);
-//$color-dark-mid-gray: #7E7E7E;
-//$color-light-mid-gray: lighten( gray , 41.5%);
-//$color-light-mid-gray: #EAEAEA; 
-//$color-light-gray: lighten( gray , 46.7%);
-//$color-light-gray: #F7F7F7;
 
 
 

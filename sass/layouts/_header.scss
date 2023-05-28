@@ -21,7 +21,6 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
     &__back-arrow {
         display: flex;
         align-items: center;
-        cursor: pointer;
         font-size: 1rem;
         margin-left: 1em;
         height: $default-height-for-olde-brothers; /* For old brothers */
@@ -32,8 +31,8 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
         & i {
             transition: all 0.3s;
             &:hover {
-                cursor: pointer; 
                 font-size: 1.2em;
+                margin-left: -0.3em;
             }
        }   
 

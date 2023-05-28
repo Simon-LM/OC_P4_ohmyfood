@@ -15,6 +15,15 @@ body {
     /* width: 100%; */
 }
 
+img {
+    background-size: cover;
+
+    [class*="heart"] {
+        background-size: none;
+    }
+}
+
+
 
 //.main-container {
 //    display: flex;

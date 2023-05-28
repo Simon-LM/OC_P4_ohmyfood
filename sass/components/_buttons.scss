@@ -8,12 +8,17 @@ button {
 button:hover {
     @include hover-links;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    font-size: 1.2em;
+    font-size: 1.1em;
     transition: all  0.3s;
 }
 
 input:hover, a:hover {
-   @include hover-links;
+    @include hover-links;
+   
+    &[class$="research"]:hover {
+        cursor: text;
+    }
+
 }
 
 

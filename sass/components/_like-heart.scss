@@ -1,4 +1,8 @@
 
+
+$heart_font-size: 1rem;
+$heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addition than the original size */
+
 .restaurants {
     
     &__heart-like {
@@ -12,15 +16,16 @@
 
     &__heart {
         color: $color-font__main;
-        font-size: 1rem;
+        font-size: $heart_font-size;
         font-weight: 100 !important;
         text-align: center;
         width: 1.1em;
         transition:  0.4s, color 1s;
         &:hover {
-           cursor: pointer; 
-           font-size: 1.2em;
-       }   
+            cursor: pointer; 
+            font-size: calc($heart_font-size + $heart_desired-expansion);
+            margin: calc($heart_desired-expansion / -2);
+        }   
     }
 
     &__like + .heart [class$="heart"] {

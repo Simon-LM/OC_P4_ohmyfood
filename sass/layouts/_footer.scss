@@ -7,7 +7,7 @@
     color: $color-font__footer;
     /* align-items: center; */
     /* text-align: center; */
-    padding: calc(1em + 1vw) calc(1rem + 1.5vw);
+    padding: $padding_footer-mobile;
     gap: 1em;
 
     nav {

@@ -19,10 +19,10 @@
     <!-- <div class="main-container"> -->
     <header class="visual-identity"> 
       <div class="visual-identity__master-logo">
-        <img  src="/assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
+        <img  src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
       </div>
       <nav class="visual-identity__back-arrow">
-        <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="#" title="Page d'aceui"><i class="fa-solid fa-arrow-left"></i></a>
       </nav>
     </header>
     <main>
@@ -38,69 +38,97 @@
         <button class="order-btn">Explorer nos restaurants</button>
       </section>
       <section class="explanation">
-        <h2 class="explanation__title">Fonctionnement</h2>
-        <div class="explanation__card"><i class="fa-solid fa-mobile-screen-button"></i>Choississez un restaurant</div>
-        <div class="explanation__card"><i class="fa-solid fa-list-ul"></i>Composez votre menu</div>
-        <div class="explanation__card"><i class="fa-sharp fa-solid fa-store"></i>Dégustez au restaurant</div>
+        <h2 class="explanation__title">Fonctionnement</h2> 
+        <div class="explanation__all-cards">
+          <div class="explanation__card">
+            <span class="explanation__circle">1</span>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <p class="explanation__text">Choississez un restaurant</p>
+          </div>
+          <div class="explanation__card">
+            <span class="explanation__circle">2</span>
+            <i class="fa-solid fa-list-ul"></i>
+            <p class="explanation__text">Composez votre menu</p>
+          </div>
+          <div class="explanation__card">
+            <span class="explanation__circle">3</span>
+            <i class="fa-sharp fa-solid fa-store"></i>
+            <p class="explanation__text">Dégustez au restaurant</p>
+          </div>
+        </div>
       </section>
       <section class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
-        <a>
-          <article class="restaurants__card">    
-            <div class="restaurants__card-text">
-              <h4 class="restaurants__card-title">La palette du goût</h4>
-              <p class="restaurants__card-subtitle">Ménilmontant</p>
-            </div>
-            <div class="restaurants__heart-like">              
-              <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like"> 
-              <label for="like_la-palette-du-gout" class="heart">
-              <i class="restaurants__heart fa-regular fa-heart"></i>
-              </label>
-            </div>   
-          </article>
-        </a>
-        <a>
-          <article class="restaurants__card">
-            <div class="restaurants__card-text">
-              <h4 class="restaurants__card-title">La note enchantée</h4>
-              <p class="restaurants__card-subtitle">Charonne</p>
-            </div>
-            <div class="restaurants__heart-like">              
-              <input type="checkbox" name="heart" id="like_la-note-enchantee" class="restaurants__like"> 
-              <label for="like_la-note-enchantee" class="heart">
-              <i class="restaurants__heart fa-regular fa-heart"></i>
-              </label>
-            </div>   
-          </article>
-        </a>
-        <a>
-          <article class="restaurants__card">
-            <div class="restaurants__card-text">
-              <h4 class="restaurants__card-title">À la française</h4>
-              <p class="restaurants__card-subtitle">Cité Rouge</p>
-            </div>
-            <div class="restaurants__heart-like">              
-              <input type="checkbox" name="heart" id="like_a-la-francaise" class="restaurants__like"> 
-              <label for="like_a-la-francaise" class="heart">
-              <i class="restaurants__heart fa-regular fa-heart"></i>
-              </label>
-            </div>   
-          </article>
-        </a>
-        <a>
-          <article class="restaurants__card">
-            <div class="restaurants__card-text">
-              <h4 class="restaurants__card-title">Le délice des sens</h4>
-              <p class="restaurants__card-subtitle">Folie-Méricourt</p>
-            </div>
-            <div class="restaurants__heart-like">              
-              <input type="checkbox" name="heart" id="like_le-delice-des-sens" class="restaurants__like"> 
-              <label for="like_le-delice-des-sens" class="heart">
-              <i class="restaurants__heart fa-regular fa-heart"></i>
-              </label>
-            </div>   
-          </article>
-        </a>
+        <div class="restaurants__all-cards">
+          <a>
+            <article class="restaurants__card"> 
+              <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+              <div class="restaurants__card-comment">
+                <div class="restaurants__card-text">
+                  <h4 class="restaurants__card-title">La palette du goût</h4>
+                  <p class="restaurants__card-subtitle">Ménilmontant</p>
+                </div>
+                <div class="restaurants__heart-like">              
+                  <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like"> 
+                  <label for="like_la-palette-du-gout" class="heart">
+                  <i class="restaurants__heart fa-regular fa-heart"></i>
+                  </label>
+                </div> 
+              </div> 
+            </article>
+          </a>
+          <a>
+            <article class="restaurants__card">
+              <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+              <div class="restaurants__card-comment">
+                <div class="restaurants__card-text">
+                  <h4 class="restaurants__card-title">La note enchantée</h4>
+                  <p class="restaurants__card-subtitle">Charonne</p>
+                </div>
+                <div class="restaurants__heart-like">              
+                  <input type="checkbox" name="heart" id="like_la-note-enchantee" class="restaurants__like"> 
+                  <label for="like_la-note-enchantee" class="heart">
+                  <i class="restaurants__heart fa-regular fa-heart"></i>
+                  </label>
+                </div>   
+              </div>  
+            </article>
+          </a>
+          <a>
+            <article class="restaurants__card">
+              <img src="./assets/images/restaurants//toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+              <div class="restaurants__card-comment">
+                <div class="restaurants__card-text">
+                  <h4 class="restaurants__card-title">À la française</h4>
+                  <p class="restaurants__card-subtitle">Cité Rouge</p>
+                </div>
+                <div class="restaurants__heart-like">              
+                  <input type="checkbox" name="heart" id="like_a-la-francaise" class="restaurants__like"> 
+                  <label for="like_a-la-francaise" class="heart">
+                  <i class="restaurants__heart fa-regular fa-heart"></i>
+                  </label>
+                </div>   
+              </div> 
+            </article>
+          </a>
+          <a>
+            <article class="restaurants__card">
+              <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+              <div class="restaurants__card-comment">
+                <div class="restaurants__card-text">
+                  <h4 class="restaurants__card-title">Le délice des sens</h4>
+                  <p class="restaurants__card-subtitle">Folie-Méricourt</p>
+                </div>
+                <div class="restaurants__heart-like">              
+                  <input type="checkbox" name="heart" id="like_le-delice-des-sens" class="restaurants__like"> 
+                  <label for="like_le-delice-des-sens" class="heart">
+                   <i class="restaurants__heart fa-regular fa-heart"></i>
+                  </label>
+                </div>   
+              </div>
+            </article>
+          </a>
+        </div>
       </section>
     </main>
     <footer class="auxiliary-menu">
