@@ -12,6 +12,7 @@ $circli-size: 1.35rem;
     &__all-cards {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         gap: 2em;
         flex-direction: column;
         @media (min-width: 768px) {
@@ -28,6 +29,16 @@ $circli-size: 1.35rem;
         align-items: center;
         background: $color-background_discovery;
         height: 4em;
+        @media (min-width: 768px) {
+       
+            @media (min-width:1024px) {
+                //max-width: 100%;
+                //width: initial;
+                //width: calc(22em + 1vw);
+                max-width: calc((100% / 2) - 1em);
+                min-width: calc((100% / 3) - 1.5em);
+            }
+        }
 
         [class$="circle"] {
             display: flex;

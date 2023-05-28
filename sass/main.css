@@ -19,106 +19,6 @@
         }
     }
 } */
-body {
-  outline: 5px dashed #f0c4c4;
-}
-
-.main-container {
-  outline: 5px dotted #db7373;
-}
-
-header, main, footer {
-  outline: 3px dashed #ffe6e6;
-}
-header:active, main:active, footer:active {
-  outline: 3px dashed #ff8080;
-}
-
-button:hover, a:hover, input:hover, label[class*=heart]:hover {
-  outline: 2px solid #ffff1a;
-}
-
-label {
-  outline: 1px dotted #ffd280;
-}
-label:active {
-  outline: 1px dotted orange;
-}
-
-section {
-  outline: 4px dotted #ffe6e6;
-}
-section:active {
-  outline: 4px dotted #ff8080;
-}
-
-div {
-  outline: 2px dashed #6666ff;
-}
-div div {
-  outline: 2px dashed #9999ff;
-}
-div div div {
-  outline: 2px dashed #ccccff;
-}
-div div div div {
-  outline: 2px dashed white;
-}
-
-div[class*=like]:hover, nav div:hover {
-  outline: none;
-}
-
-article, form {
-  outline: 2px dotted #8080ff;
-  /* &:hover {
-      outline: check_frame-dotted_blue(0%);
-  } */
-}
-
-ul {
-  outline: 1px dashed #00e600;
-}
-ul:active {
-  outline: 2px solid #00e600;
-}
-ul li {
-  outline: 1px dashed #1aff1a;
-}
-ul li:active {
-  outline: 2px solid #1aff1a;
-}
-
-nav {
-  outline: 2px dotted #ffff80;
-}
-nav:active {
-  outline: 2px dashed #ffff80;
-}
-
-span {
-  outline: 4px dotted #ff8080;
-}
-
-i {
-  outline: 2px dotted #009a00;
-}
-i:active {
-  outline: 2px solid #009a00;
-}
-
-img {
-  outline: 1px dashed #00b300;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  outline: 1px dashed #ffe4b3;
-}
-
-p {
-  outline: 1px dotted #ffd280;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -370,6 +270,7 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 .explanation__all-cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 2em;
   flex-direction: column;
 }
@@ -391,6 +292,12 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   align-items: center;
   background: #f7f7f7;
   height: 4em;
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .explanation__card {
+    max-width: calc(50% - 1em);
+    min-width: calc(33.3333333333% - 1.5em);
+  }
 }
 .explanation__card [class$=circle] {
   display: flex;
@@ -460,10 +367,6 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
     flex-direction: row;
   }
 }
-.restaurants__all-cards a {
-  display: flex;
-  flex: auto;
-}
 .restaurants__card {
   display: flex;
   flex: auto;
@@ -471,11 +374,20 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   flex-direction: column;
   align-items: center;
-  /* width: 100% ;  */
-  /* width: clamp(49%, 100vw, 98%); */
-  max-width: calc(100% - 2em);
-  width: calc(22em + 1vw);
-  min-width: calc(50% - 1em);
+  width: 100%;
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .restaurants__card {
+    max-width: 100%;
+    width: initial;
+    min-width: calc(50% - 1em);
+  }
+}
+.restaurants__card a {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  width: 100%;
 }
 .restaurants__card img {
   border-radius: 1.2em 1.2em 0 0;
@@ -495,6 +407,7 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 }
 .restaurants__card-comment {
   display: flex;
+  flex: auto;
   flex-direction: row;
   align-items: center;
   width: 100%;
