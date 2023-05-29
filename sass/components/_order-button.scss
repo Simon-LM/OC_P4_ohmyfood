@@ -1,6 +1,8 @@
-$height_order-btn: 3; // magnification percentage compared to the font-size
+
 $font-size_order-btn: 1rem;
 $btn_desired-expansion: 0.1rem;
+$height_order-btn: 3; // magnification percentage compared to the font-size
+$vertical-margin_order-btn: 1em; // The horizontal margirin is necessarly 0 !
 
 .order-btn {
     display: flex;
@@ -16,13 +18,13 @@ $btn_desired-expansion: 0.1rem;
     height: calc($height_order-btn * $font-size_order-btn);
     min-width: 50%;
     padding: 0 1em;  
-    margin: 1em 0;
+    margin: $vertical-margin_order-btn 0;
     transition: all  0.3s;
     &:hover {
         @include hover-links;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         font-size: calc($font-size_order-btn + $btn_desired-expansion);
-        margin: calc((($btn_desired-expansion * $height_order-btn) / -2) + 1em) 0;
+        margin: calc((($btn_desired-expansion * $height_order-btn) / -2) + ($vertical-margin_order-btn + $btn_desired-expansion)) 0;
         transition: all  0.3s;
     }
 
