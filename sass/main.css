@@ -120,7 +120,6 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   cursor: text;
 }
 
-/* magnification percentage compared to the font-size */
 .order-btn {
   display: flex;
   justify-content: center;
