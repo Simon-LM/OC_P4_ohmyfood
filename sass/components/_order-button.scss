@@ -3,6 +3,7 @@ $font-size_order-btn: 1rem;
 
 .order-btn {
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: $font-size_order-btn;
     font-weight: 500;
@@ -14,6 +15,7 @@ $font-size_order-btn: 1rem;
     height: calc(3 * $font-size_order-btn);
     min-width: 50%;
     padding: 0 1em;  
+    margin: 1em 0;
     @media (min-width:1024px) {
         min-width: initial;
         padding: 0 2em;

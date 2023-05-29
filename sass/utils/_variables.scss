@@ -2,8 +2,8 @@
 /***** MARGIN | PADDING | GAP  *****/
 
 /*** SECTIONS ***/
-$padding_section-mobile: calc(1em + 1vw) calc(1rem + 1.5vw); // MOBILE
-$padding_section-tablet: 2em height_mm-to-vw(32 , 253); // TABLET
+$padding_section-mobile: calc(2em + 2vw) calc(1rem + 1.5vw) calc(3em + 2vw) calc(1rem + 1.5vw); // MOBILE
+$padding_section-tablet: calc(1em + 1vw) calc(1rem + 1.5vw); // TABLET
 $padding_section-desktop: 3em height_mm-to-vw(32 , 253); // DESKTOP
 
 
