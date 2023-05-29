@@ -1,8 +1,8 @@
-$font-size_order-btn: 1rem;
+/* $font-size_order-btn: 1rem;
 $btn_desired-expansion: 0.15em;
 
 button {
-    font-size: 1em;
+    font-size: $font-size_order-btn;
     transition: all  0.3s;
     &:hover {
     @include hover-links;
@@ -11,7 +11,7 @@ button {
     margin: calc($btn_desired-expansion / -2);
     transition: all  0.3s;
     }
-}
+} */
 
 input:hover, a:hover {
     @include hover-links;
