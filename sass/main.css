@@ -36,7 +36,9 @@ body {
 }
 
 img {
-  background-size: cover;
+  /* background-size: cover; */
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 img [class*=heart] {
   background-size: none;
@@ -306,7 +308,7 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   justify-content: center;
   align-items: center;
   background: #9356DC;
-  border-radius: 1.35rem;
+  border-radius: 50%;
   height: 1.35rem;
   width: 1.35rem;
   margin-left: -0.675rem;

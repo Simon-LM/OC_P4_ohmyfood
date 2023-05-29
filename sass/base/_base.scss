@@ -16,7 +16,8 @@ body {
 }
 
 img {
-    background-size: cover;
+    /* background-size: cover; */
+    object-fit: cover;
 
     [class*="heart"] {
         background-size: none;
