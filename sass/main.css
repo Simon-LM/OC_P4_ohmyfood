@@ -19,6 +19,106 @@
         }
     }
 } */
+body {
+  outline: 5px dashed #f0c4c4;
+}
+
+.main-container {
+  outline: 5px dotted #db7373;
+}
+
+header, main, footer {
+  outline: 3px dashed #ffe6e6;
+}
+header:active, main:active, footer:active {
+  outline: 3px dashed #ff8080;
+}
+
+button:hover, a:hover, input:hover, label[class*=heart]:hover {
+  outline: 2px solid #ffff1a;
+}
+
+label {
+  outline: 1px dotted #ffd280;
+}
+label:active {
+  outline: 1px dotted orange;
+}
+
+section {
+  outline: 4px dotted #ffe6e6;
+}
+section:active {
+  outline: 4px dotted #ff8080;
+}
+
+div {
+  outline: 2px dashed #6666ff;
+}
+div div {
+  outline: 2px dashed #9999ff;
+}
+div div div {
+  outline: 2px dashed #ccccff;
+}
+div div div div {
+  outline: 2px dashed white;
+}
+
+div[class*=like]:hover, nav div:hover {
+  outline: none;
+}
+
+article, form {
+  outline: 2px dotted #8080ff;
+  /* &:hover {
+      outline: check_frame-dotted_blue(0%);
+  } */
+}
+
+ul {
+  outline: 1px dashed #00e600;
+}
+ul:active {
+  outline: 2px solid #00e600;
+}
+ul li {
+  outline: 1px dashed #1aff1a;
+}
+ul li:active {
+  outline: 2px solid #1aff1a;
+}
+
+nav {
+  outline: 2px dotted #ffff80;
+}
+nav:active {
+  outline: 2px dashed #ffff80;
+}
+
+span {
+  outline: 4px dotted #ff8080;
+}
+
+i {
+  outline: 2px dotted #009a00;
+}
+i:active {
+  outline: 2px solid #009a00;
+}
+
+img {
+  outline: 1px dashed #00b300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  outline: 1px dashed #ffe4b3;
+}
+
+p {
+  outline: 1px dotted #ffd280;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -39,8 +139,18 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-img [class*=heart], img [src$=".svg"] {
+img[class*=heart], img[src$=".svg"] {
   background-size: none;
+}
+img[src*=restaurants] {
+  /* object-fit: cover; */
+  /* background-size: cover; */
+  /*  clip-path: circle(200px at 50% 60%); */
+  /* margin-top: -2em; */
+  /* margin-bottom: -2em; */
+  /*  overflow: hidden;
+     margin-top: -5em;
+  */
 }
 
 /* || TYPOGRAPHY ||  */
@@ -197,13 +307,52 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 
 /* USE em or rem | Enlargement desired in addition than the original size */
 .restaurants {
-  /*  &__like + .heart [class$="heart"] {
+  /*  
+   &__heart-like {
+       &--opacity {
+           display: flex;
+       }
 
-       transition: background 0.9s;
-   }    */
+       &__like--opacity {
+         height: 0;
+         width: 0;  
+         opacity: 0;      
+       } 
+
+       &__heart--opacity {
+          color: $color-font__main;
+          font-size: $heart_font-size;
+          font-weight: 100 !important;
+          text-align: center;
+          width: 1.1em;
+          transition:  0.4s ease-in-out, color 1s ease-in-out;
+
+           &:hover {
+               cursor: pointer; 
+               transform: scale(1.2);
+           }   
+       }
+
+
+       &__like:checked--opacity + .heart--opacity [class$="heart--opacity"] {
+
+           font-weight: 900 !important;        
+           background: $color-icons-heart-like;
+           background-clip: text;        
+           -webkit-background-clip: text;
+           color: transparent;
+       } 
+   }   */
+}
+.restaurants__card:hover [class=heart] {
+  color: white;
 }
 .restaurants__heart-like {
-  display: flex;
+  z-index: 5;
+  position: absolute;
+  right: 1.25em;
+  bottom: 1.25em;
+  opacity: 1 !important;
 }
 .restaurants__like {
   height: 0;
@@ -211,7 +360,6 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   opacity: 0;
 }
 .restaurants__heart {
-  color: black;
   font-size: 1rem;
   font-weight: 100 !important;
   text-align: center;
@@ -220,9 +368,7 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 }
 .restaurants__heart:hover {
   cursor: pointer;
-  /*  font-size: calc($heart_font-size + $heart_desired-expansion); */
-  /*  margin: calc($heart_desired-expansion / -2); */
-  transform: scale(1.2);
+  transform: scale(1.25);
 }
 .restaurants__like:checked + .heart [class$=heart] {
   font-weight: 900 !important;
@@ -259,6 +405,59 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
+}
+
+body {
+  position: relative;
+  z-index: 0;
+}
+
+/* div {
+    color: blue;
+} */
+header, main, footer {
+  /* z-index: 1; */
+  /*  visibility: collapse; */
+  /* opacity: 0; */
+}
+
+.loader {
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  /*  color: blue; */
+  /* background: yellow; */
+}
+.loader__background {
+  position: absolute;
+  z-index: 11;
+  height: 100vh;
+  width: 100%;
+  background: #99E2D0;
+  opacity: 0.5;
+}
+.loader__title {
+  position: absolute;
+  z-index: 12;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0.25turn, #FF79DA, #9356DC);
+  font-family: Shrikhand;
+  font-size: 15vw;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.loader__title:hover {
+  color: rgba(255, 255, 255, 0.8);
+  transform-origin: margin-left;
+  transition: color 3s ease-in-out;
+  /* transform: scale(2); */
 }
 
 /* || HEADER || */
@@ -607,20 +806,24 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   flex: auto;
   border-radius: 1.2em;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  transition: all 0.4s ease-in-out;
+  overflow: hidden;
 }
-.restaurants__card:hover {
-  transition: transform 330ms ease-in-out;
-  transform: translate(0, -0.5rem);
+.restaurants__card:hover [class$=card-comment] {
+  opacity: 0;
+}
+.restaurants__card:hover [class$=card-comment--opacity] {
+  opacity: 1;
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .restaurants__card {
     max-width: 100%;
     width: initial;
     min-width: calc(50% - 1em);
+    /* height: 12.5em; */
   }
 }
 .restaurants__card a {
@@ -630,18 +833,22 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   width: 100%;
 }
 .restaurants__card img {
-  /* z-index: 1; */
-  /* margin-top: -2em; */
+  z-index: 1;
+  margin-top: -4em;
   border-radius: 1.2em 1.2em 0 0;
+  border-bottom-right-radius: 1.2em;
+  border-bottom-left-radius: 1.2em;
   /* flex: auto; */
   width: 100%;
+  /* height: 12.5em; */
+  /* height: 100%; */
   height: 45.4545454545vmin;
+  /* height: calcl(height_mm-to-vmin(100) + 1em); */
   transition: all 0.4s ease-in-out;
 }
 .restaurants__card img:hover {
-  /* transform-origin: 50% 100%; */
-  /* transform: translate(0, -2rem); */
-  /* height: 12rem;    */
+  /*  transform-origin: 50% 100%; */
+  /*  transform: translate(0, -2rem); */
 }
 @media (min-width: 768px) {
   .restaurants__card img {
@@ -650,16 +857,46 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .restaurants__card img {
-    height: 11.8577075099vw;
+    height: calc(11.0671936759vw + 4em + 4em);
+    /* max-height: 13rem ; */
   }
 }
 .restaurants__card-comment {
+  z-index: 2;
+  position: absolute;
+  bottom: 0em;
   display: flex;
   flex: auto;
   flex-direction: row;
   align-items: center;
+  background-color: white;
+  border-bottom-right-radius: 1.2em;
+  border-bottom-left-radius: 1.2em;
   width: 100%;
   padding: 0.5em 1em;
+  transition: opacity 0.6s ease-in-out;
+  /* &--opacity {
+      z-index: 2;
+      position: absolute;
+      bottom: 0em;
+      display: flex;
+      flex: auto;
+      flex-direction: row;
+      align-items: center;
+      border-bottom-right-radius: 1.2em;
+      border-bottom-left-radius: 1.2em;
+      width: 100%;
+      padding: 0.5em 1em;
+      background-color: none;
+      color : $color-font__cards-opacity;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+      [class*="text"] {
+          background: transparentize($color: $color-background_footer, $amount: 0.6);
+          padding: 0.25em;
+          border-radius: 0.5em;
+      }
+  } */
 }
 .restaurants__card-comment [class$=text] {
   flex: initial;
@@ -669,20 +906,36 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   margin-right: 0.5em;
 }
 .restaurants__thumbnail-new {
+  z-index: 3;
+  position: absolute;
+  top: 1em;
+  right: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #99E2D0;
   color: #008766;
-  width: 80px;
-  height: 29px;
+  padding: 0.25em 0.5em;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
-  z-index: 2;
-  position: relative;
-  top: 2em;
+  transition: transform 0.4s 0.4s ease-in-out;
+}
+.restaurants__card:hover [class$=thumbnail-new] {
+  transform: scale(1.1);
 }
 
+/* [cards]:hover {
+
+    background-color: none;
+    color : $color-font__cards-opacity;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    [class*="text"] {
+        background: transparentize($color: $color-background_footer, $amount: 0.6);
+        padding: 0.25em;
+        border-radius: 0.5em;
+    }
+} */
 /* || FOOTER || */
 .auxiliary-menu {
   display: flex;
@@ -693,9 +946,14 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   /* text-align: center; */
   padding: calc(1em + 1vw) calc(1rem + 1.5vw);
   gap: 1em;
-  /* nav {
-      flex: auto;
-  } */
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .auxiliary-menu {
+    align-items: end;
+    height: 7rem;
+    flex-direction: row-reverse;
+    gap: 6rem;
+  }
 }
 .auxiliary-menu__all {
   display: flex;
@@ -707,6 +965,12 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   /* text-overflow: ellipsis; */
   /*  max-width: 90%; */
 }
+@media (min-width: 768px) and (min-width: 1024px) {
+  .auxiliary-menu__all {
+    flex-direction: row;
+    gap: 3em;
+  }
+}
 .auxiliary-menu__partnership, .auxiliary-menu__support {
   display: flex;
   flex-direction: column;
@@ -716,6 +980,21 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   /* text-overflow: ellipsis; */
   /* min-width: 10%; */
 }
+@media (min-width: 768px) and (min-width: 1024px) {
+  .auxiliary-menu__partnership, .auxiliary-menu__support {
+    flex-direction: row;
+    gap: 1.5em;
+  }
+  .auxiliary-menu__partnership a, .auxiliary-menu__support a {
+    display: flex;
+    gap: 0.5em;
+  }
+}
 .auxiliary-menu__icon {
   width: 2em;
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .auxiliary-menu__icon {
+    width: initial;
+  }
 }/*# sourceMappingURL=main.css.map */

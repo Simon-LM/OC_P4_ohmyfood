@@ -4,9 +4,18 @@ $heart_font-size: 1rem;
 $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addition than the original size */
 
 .restaurants {
-    
+    &__card:hover {
+        & [class="heart"] {
+            color: $color-font__cards-opacity;
+        }
+    }
+
     &__heart-like {
-      display: flex;
+        z-index: 5;
+        position: absolute;
+        right: 1.25em;
+        bottom: 1.25em;
+        opacity: 1 !important;
     }
 
     &__like {
@@ -16,24 +25,20 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
     } 
 
     &__heart {
-        color: $color-font__main;
         font-size: $heart_font-size;
         font-weight: 100 !important;
         text-align: center;
         width: 1.1em;
         transition:  0.4s ease-in-out, color 1s ease-in-out;
+        
         &:hover {
             cursor: pointer; 
-           /*  font-size: calc($heart_font-size + $heart_desired-expansion); */
-           /*  margin: calc($heart_desired-expansion / -2); */
-           transform: scale(1.2);
+            transform: scale(1.25);
+           
         }   
     }
 
-   /*  &__like + .heart [class$="heart"] {
-           
-        transition: background 0.9s;
-    }    */  
+   
 
     &__like:checked + .heart [class$="heart"] {
               
@@ -42,7 +47,52 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
         background-clip: text;        
         -webkit-background-clip: text;
         color: transparent;
-    }    
+    }
+  
+    
 
-}    
+
+    
+    // OPACITY //
+
+   /*  
+    &__heart-like {
+        &--opacity {
+            display: flex;
+        }
+  
+        &__like--opacity {
+          height: 0;
+          width: 0;  
+          opacity: 0;      
+        } 
+  
+        &__heart--opacity {
+           color: $color-font__main;
+           font-size: $heart_font-size;
+           font-weight: 100 !important;
+           text-align: center;
+           width: 1.1em;
+           transition:  0.4s ease-in-out, color 1s ease-in-out;
+          
+            &:hover {
+                cursor: pointer; 
+                transform: scale(1.2);
+            }   
+        }
+       
+  
+        &__like:checked--opacity + .heart--opacity [class$="heart--opacity"] {
+                
+            font-weight: 900 !important;        
+            background: $color-icons-heart-like;
+            background-clip: text;        
+            -webkit-background-clip: text;
+            color: transparent;
+        } 
+    }   */
+}
+
+
+    
 

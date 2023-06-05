@@ -17,10 +17,22 @@ body {
 
 img {
     object-fit: cover;
-    [class*="heart"], [src$=".svg"] {
+    &[class*="heart"], &[src$=".svg"] {
         background-size: none;
     }
 
+    &[src*="restaurants"] {
+        /* object-fit: cover; */
+        /* background-size: cover; */
+        
+   /*  clip-path: circle(200px at 50% 60%); */
+    /* margin-top: -2em; */
+    /* margin-bottom: -2em; */
+
+   /*  overflow: hidden;
+    margin-top: -5em;
+ */
+    }
 }
 
 

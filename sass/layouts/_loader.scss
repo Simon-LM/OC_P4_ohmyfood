@@ -1,0 +1,58 @@
+body {
+    position: relative;
+    z-index: 0;
+}
+
+/* div {
+    color: blue;
+} */
+
+header, main, footer {
+    /* z-index: 1; */
+   /*  visibility: collapse; */
+    /* opacity: 0; */
+}
+
+.loader {
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+   /*  color: blue; */
+    /* background: yellow; */
+    &__background {
+        position: absolute;
+        z-index: 11;
+        height: 100vh;
+        width: 100%;
+        background: $color-tertiary;
+        opacity: 0.5;
+    } 
+    &__title {
+        position: absolute;
+        z-index: 12;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $color-secondary-to-primairy_h;
+        font-family: $font-logo;
+        font-size: 15vw;
+        background-clip: text;        
+        -webkit-background-clip: text;
+        color: transparent;
+        
+        &:hover {
+            color: transparentize($color: white, $amount: 0.2);
+            transform-origin: margin-left;
+            transition: color 3s ease-in-out;
+            /* transform: scale(2); */
+        }        
+    }
+}
+
+
+
+

@@ -37,6 +37,7 @@ $grayscale-4: lighten($grayscale_ref , 46.7%);
 $color-primairy: #9356DC;
 $color-secondary: #FF79DA; 
 $color-primairy-to-secondary: linear-gradient($color-primairy, $color-secondary);
+$color-secondary-to-primairy_h: linear-gradient(.25turn, $color-secondary, $color-primairy);
 $color-secondary-to-primairy: linear-gradient(.49turn, $color-secondary, $color-primairy);
 $color-tertiary: #99E2D0;
 $color-tertiary-font: #008766;
@@ -51,6 +52,7 @@ $color-font__main: $color-dark-main;
 $color-font-order-btn: $color-light-main;
 $color-font_explanation-circle: $color-light-main;
 $color-font_thumbnail-new: $color-tertiary-font;
+$color-font__cards-opacity: $color-light-main;
 $color-font__footer: $color-light-main;
 
 $color-icons_explanation-drab: $grayscale-2;
@@ -60,6 +62,7 @@ $color-icons-heart-like: $color-primairy-to-secondary;
 
 /*** BACKGROUND COLOR ***/
 
+$color-background_main: $color-light-main;
 $color-background_header: $color-light-main;
 $color-background_find-a-place: $grayscale-3;
 $color-background_discovery: $grayscale-4;

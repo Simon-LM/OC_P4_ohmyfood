@@ -9,10 +9,17 @@
     /* text-align: center; */
     padding: $padding_footer-mobile;
     gap: 1em;
+    @media (min-width: 768px) {
+           
+        @media (min-width:1024px) {
+            align-items: end;
+            height: 7rem;
+            flex-direction: row-reverse;
+            gap: 6rem;
+        }
+    }
 
-    /* nav {
-        flex: auto;
-    } */
+    
 
     &__all {
         display: flex;
@@ -23,6 +30,13 @@
         /* overflow: hidden; */
         /* text-overflow: ellipsis; */
        /*  max-width: 90%; */
+        @media (min-width: 768px) {
+           
+            @media (min-width:1024px) {
+                flex-direction: row;
+                gap: 3em;
+            }
+        }
     }
     
     &__partnership, &__support{
@@ -32,12 +46,29 @@
         white-space: nowrap;
         /* overflow: hidden; */
         /* text-overflow: ellipsis; */
-        /* min-width: 10%; */
-        
+        /* min-width: 10%; */ 
+        @media (min-width: 768px) {
+           
+            @media (min-width:1024px) {
+                flex-direction: row;
+                gap: 1.5em;
+                
+                a {
+                    display: flex;
+                    gap: 0.5em;
+                }
+            }
+        }
     }
 
     &__icon {
-         width: 2em;
+        width: 2em;
+        @media (min-width: 768px) {
+           
+            @media (min-width:1024px) {
+                width: initial;
+            }
+        }
     }
 }
 
