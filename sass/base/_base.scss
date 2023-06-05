@@ -16,12 +16,11 @@ body {
 }
 
 img {
-    /* background-size: cover; */
     object-fit: cover;
-
-    [class*="heart"] {
+    [class*="heart"], [src$=".svg"] {
         background-size: none;
     }
+
 }
 
 
@@ -35,3 +34,13 @@ img {
 //   /*  padding: 0 50px; */
 //    box-sizing: border-box;
 //}
+
+
+
+
+
+
+
+
+
+

@@ -14,8 +14,12 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
     &__master-logo {
         display: flex;
         justify-content: center;
-        height: $default-height-for-olde-brothers; /* For old brothers */
-        height: $logo-height;
+       /*  height: $default-height-for-olde-brothers; */ /* For old brothers */
+        /* height: $logo-height; */
+        img {
+            height: $default-height-for-olde-brothers; /* For old brothers */
+            height: $logo-height;
+        }
     }
 
     &__back-arrow {
@@ -28,13 +32,22 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
         margin-top: -$default-height-for-olde-brothers; /* For old brothers */
         margin-top: calc($logo-height * -1); // Up arrow in the center of logo
                 
-        & i {
-            transition: all 0.3s;
+        & a {
+            transition: all 0.3s ease-in-out;
             &:hover {
-                font-size: 1.2em;
-                margin-left: -0.3em;
+               transform: scale(1.2);
+               & i {
+                    transition: all 0.3s 0.1s ease-in-out;
+                    transform: translate(-0.75em, 0);
+               }
             }
-       }   
+
+           
+              
+            /* font-size: 1.2em; */
+            /*   margin-left: -0.3em; */
+            
+        }   
 
         &--hidden {
             visibility: hidden;

@@ -11,7 +11,8 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
 
     &__like {
         height: 0;
-        width: 0;        
+        width: 0;  
+        opacity: 0;      
     } 
 
     &__heart {
@@ -20,18 +21,19 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
         font-weight: 100 !important;
         text-align: center;
         width: 1.1em;
-        transition:  0.4s, color 1s;
+        transition:  0.4s ease-in-out, color 1s ease-in-out;
         &:hover {
             cursor: pointer; 
-            font-size: calc($heart_font-size + $heart_desired-expansion);
-            margin: calc($heart_desired-expansion / -2);
+           /*  font-size: calc($heart_font-size + $heart_desired-expansion); */
+           /*  margin: calc($heart_desired-expansion / -2); */
+           transform: scale(1.2);
         }   
     }
 
-    &__like + .heart [class$="heart"] {
+   /*  &__like + .heart [class$="heart"] {
            
-        /* transition: background 0.9s; */
-    }     
+        transition: background 0.9s;
+    }    */  
 
     &__like:checked + .heart [class$="heart"] {
               

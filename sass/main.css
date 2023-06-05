@@ -36,11 +36,10 @@ body {
 }
 
 img {
-  /* background-size: cover; */
   -o-object-fit: cover;
      object-fit: cover;
 }
-img [class*=heart] {
+img [class*=heart], img [src$=".svg"] {
   background-size: none;
 }
 
@@ -133,17 +132,61 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   height: 3rem;
   min-width: 50%;
+  padding: 0 2em;
   margin: 1rem 0;
-  transition: all 0.3s;
+  transition: all 0.35s ease-in-out, font-size 0.25s 0.1s ease;
+  /* &:nth-child(0n+3) {
+      background: blue;
+      &:hover {
+      @include hover-links;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      font-size: calc($font-size_order-btn + ($btn_desired-expansion * 1rem));
+      height: calc(($height_order-btn * $font-size_order-btn) + (($btn_desired-expansion * 1rem) * $height_order-btn));
+
+      }
+  } */
+  /* &:nth-child(0n+4) {
+      background: lightblue;
+      &:hover {
+          @include hover-links;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+          font-size: calc($font-size_order-btn + ($btn_desired-expansion * 1rem));
+          height: calc(($height_order-btn * $font-size_order-btn) + (($btn_desired-expansion * 1rem) * $height_order-btn));
+          margin: calc((($height_order-btn * ($btn_desired-expansion * 1rem)) / -2) + $vertical-margin_order-btn) 0;
+
+      }
+  } */
+  /* &:nth-child(0n+5) { 
+  background: green;
+  transition: all  0.35s ease-in-out;
+      &:hover {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      font-size: calc($font-size_order-btn + ($btn_desired-expansion * 1rem));
+      transform: scale(1.2);
+
+      }
+  } */
+  /* &:last-child{
+      background: yellowgreen;
+      transition: all  0.35s ease-in-out ;
+      &:hover {
+          font-size: initial;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+          transform: scale(1.2);
+
+          margin: calc((($height_order-btn * ($btn_desired-expansion * 1rem)) / -2) + $vertical-margin_order-btn) 0;
+
+      }    
+  } */
 }
 .order-btn:hover {
   cursor: pointer;
   opacity: 0.9;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  font-size: 1.1rem;
-  height: 3.3rem;
-  margin: 0.85rem 0;
-  transition: all 0.3s;
+  /* font-size: calc($font-size_order-btn + ($btn_desired-expansion * 1rem)); */
+  /* height: calc(($height_order-btn * $font-size_order-btn) + (($btn_desired-expansion * 1rem) * $height_order-btn)); */
+  /* margin: calc((($height_order-btn * ($btn_desired-expansion * 1rem)) / -2) + $vertical-margin_order-btn) 0; */
+  transform: scale(1.15);
 }
 @media (min-width: 1024px) {
   .order-btn {
@@ -153,12 +196,19 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 }
 
 /* USE em or rem | Enlargement desired in addition than the original size */
+.restaurants {
+  /*  &__like + .heart [class$="heart"] {
+
+       transition: background 0.9s;
+   }    */
+}
 .restaurants__heart-like {
   display: flex;
 }
 .restaurants__like {
   height: 0;
   width: 0;
+  opacity: 0;
 }
 .restaurants__heart {
   color: black;
@@ -166,15 +216,13 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   font-weight: 100 !important;
   text-align: center;
   width: 1.1em;
-  transition: 0.4s, color 1s;
+  transition: 0.4s ease-in-out, color 1s ease-in-out;
 }
 .restaurants__heart:hover {
   cursor: pointer;
-  font-size: calc(1rem + 0.2em);
-  margin: -0.1em;
-}
-.restaurants__like + .heart [class$=heart] {
-  /* transition: background 0.9s; */
+  /*  font-size: calc($heart_font-size + $heart_desired-expansion); */
+  /*  margin: calc($heart_desired-expansion / -2); */
+  transform: scale(1.2);
 }
 .restaurants__like:checked + .heart [class$=heart] {
   font-weight: 900 !important;
@@ -185,6 +233,34 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 }
 
 /*** ||| HOME PAGE ||| ***/
+/*** ||| HOME PAGE ||| ***/
+.btn-oc {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-oc2 {
+  border-radius: 1rem;
+  background-color: #15DEA5;
+  position: relative;
+  z-index: 1;
+}
+.btn-oc2:hover .btn-oc2__bg {
+  opacity: 1;
+}
+.btn-oc2__bg {
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #13c794;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+
 /* || HEADER || */
 .visual-identity {
   display: flex;
@@ -197,6 +273,10 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 .visual-identity__master-logo {
   display: flex;
   justify-content: center;
+  /*  height: $default-height-for-olde-brothers; */ /* For old brothers */
+  /* height: $logo-height; */
+}
+.visual-identity__master-logo img {
   height: 1.875rem; /* For old brothers */
   height: clamp(1.5rem, 5.4545454545vmin, 2.125rem);
 }
@@ -210,12 +290,17 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   margin-top: -1.875rem; /* For old brothers */
   margin-top: calc(clamp(1.5rem, 5.4545454545vmin, 2.125rem) * -1);
 }
-.visual-identity__back-arrow i {
-  transition: all 0.3s;
+.visual-identity__back-arrow a {
+  transition: all 0.3s ease-in-out;
+  /* font-size: 1.2em; */
+  /*   margin-left: -0.3em; */
 }
-.visual-identity__back-arrow i:hover {
-  font-size: 1.2em;
-  margin-left: -0.3em;
+.visual-identity__back-arrow a:hover {
+  transform: scale(1.2);
+}
+.visual-identity__back-arrow a:hover i {
+  transition: all 0.3s 0.1s ease-in-out;
+  transform: translate(-0.75em, 0);
 }
 .visual-identity__back-arrow--hidden {
   visibility: hidden;
@@ -224,17 +309,91 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 /* || FIND A PLACE || */
 .find-a-place {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #eaeaea;
   white-space: nowrap;
   height: calc(3 * 1rem);
+  /*  label + i:hover {
+      input[class*="research"] {
+      background-color: transparent;
+      }
+  } */
+  /* &:not(:focus):valid {
+       background: $color-tertiary;
+       border: 2px solid $color-primairy;
+       color: $color-primairy;
+   } */
+  /*  &:not(:focus):invalid {
+       background: $color-secondary;
+       border: 2px solid $color-primairy;
+       color: $color-primairy;
+   } */
+  /*  &:hover {
+       @keyframes identifier {
+
+       }
+  } */
 }
 .find-a-place form {
   display: flex;
-  flex: auto;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1.1em;
+}
+.find-a-place form span[class=research-1] {
+  transition: all 1.25s 0.1s ease-in-out;
+}
+.find-a-place form:hover {
+  /* transition: all 0.9s 1.9s ease-out;
+  transform: translate(50vw, 0); */
+  /*  background-color: blue; */
+}
+.find-a-place form label:active {
+  /* transform-origin: 50% 100%; */
+  transform: scale(3.3);
+  transition: transform 1.6s cubic-bezier(0.68, 0, 0.05, 0.19);
+}
+.find-a-place form label:active span[class=location] {
+  transition: opacity 0.15s 1.95s ease-out;
+  opacity: 0;
+}
+.find-a-place form label:active i {
+  transition: transform 1.25s 0.8s cubic-bezier(0.88, 0.71, 0, 0.92);
+  transform: scale(2.6, 0.75);
+}
+.find-a-place form label:active + span[class=research-1] {
+  /*  transition: all 0.3s 1.5s ease-out;
+   transform: translate(20%, 0); */
+  transition: all 1.25s 1.125s cubic-bezier(0.85, 0.5, 1, -0.3);
+  transform: translate(60vw, 0);
+  /* background-color: green; */
+  /* transform: translate(50vw, 0); */
+  /* &:last-child {
+      transition: all 0.9s 2.9s ease-out;
+      transform: translate(50vw, 0);
+
+      background-color: red; 
+
+      span[class="research-3"] {
+          transform: translate(10%, 0);
+
+          background-color: blue;
+
+          span[class="research-4"] {
+              transition: all 0.6s 1.125s ease-in-out;
+
+              background-color: yellow;    
+
+
+          }
+
+
+      }
+
+
+  }  */
 }
 .find-a-place__location-icon {
   font-size: 1rem;
@@ -250,6 +409,68 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   height: 1.5em;
   width: 8rem;
   padding-left: 0.5em;
+  transition: all 0.5s ease-in-out;
+}
+.find-a-place__research:focus {
+  background-color: #e8f9f5;
+}
+
+.balloon-dot {
+  position: relative;
+  right: 4.2em;
+  top: 0.4em;
+  opacity: 0.2;
+}
+.balloon-dot > :hover {
+  opacity: 1;
+}
+.balloon-dot__1 {
+  margin-right: -0.6em;
+  color: red;
+}
+.balloon-dot__2 {
+  margin-right: -0.2em;
+  color: orangered;
+}
+.balloon-dot__3 {
+  margin-right: -0.2em;
+  color: orange;
+}
+.balloon-dot__4 {
+  margin-right: -0.2em;
+  color: yellow;
+}
+.balloon-dot__5 {
+  margin-right: -0.2em;
+  color: yellowgreen;
+}
+.balloon-dot__6 {
+  margin-right: -0.2em;
+  color: green;
+}
+.balloon-dot__7 {
+  margin-right: -0.2em;
+  color: turquoise;
+}
+.balloon-dot__8 {
+  margin-right: -0.2em;
+  color: lightblue;
+}
+.balloon-dot__9 {
+  margin-right: -0.2em;
+  color: blue;
+}
+.balloon-dot__10 {
+  margin-right: -0.2em;
+  color: darkblue;
+}
+.balloon-dot__11 {
+  margin-right: -0.2em;
+  color: rebeccapurple;
+}
+.balloon-dot__12 {
+  margin-right: -0.2em;
+  color: blueviolet;
 }
 
 /* || DISCOVERY || */
@@ -389,6 +610,11 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+.restaurants__card:hover {
+  transition: transform 330ms ease-in-out;
+  transform: translate(0, -0.5rem);
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .restaurants__card {
@@ -404,10 +630,18 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   width: 100%;
 }
 .restaurants__card img {
+  /* z-index: 1; */
+  /* margin-top: -2em; */
   border-radius: 1.2em 1.2em 0 0;
   /* flex: auto; */
   width: 100%;
   height: 45.4545454545vmin;
+  transition: all 0.4s ease-in-out;
+}
+.restaurants__card img:hover {
+  /* transform-origin: 50% 100%; */
+  /* transform: translate(0, -2rem); */
+  /* height: 12rem;    */
 }
 @media (min-width: 768px) {
   .restaurants__card img {
@@ -434,6 +668,20 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   flex: auto;
   margin-right: 0.5em;
 }
+.restaurants__thumbnail-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  z-index: 2;
+  position: relative;
+  top: 2em;
+}
 
 /* || FOOTER || */
 .auxiliary-menu {
@@ -445,9 +693,9 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   /* text-align: center; */
   padding: calc(1em + 1vw) calc(1rem + 1.5vw);
   gap: 1em;
-}
-.auxiliary-menu nav {
-  /*  flex: auto; */
+  /* nav {
+      flex: auto;
+  } */
 }
 .auxiliary-menu__all {
   display: flex;

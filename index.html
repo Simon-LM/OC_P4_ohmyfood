@@ -20,6 +20,7 @@
     <header class="visual-identity"> 
       <div class="visual-identity__master-logo">
         <img  src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
+        <!-- <img  src="./assets/images/logo/ohmyfood.png" alt="logo de ohmyfood"> -->
       </div>
       <nav class="visual-identity__back-arrow">
         <a href="#" title="Page d'aceui"><i class="fa-solid fa-arrow-left"></i></a>
@@ -27,15 +28,23 @@
     </header>
     <main>
       <section class="find-a-place">
+        <!-- <form method="get" action="/action_file.php"> -->
+          <div class="balloon-dot">
+          <span class="balloon-dot__1">.</span><span class="balloon-dot__2">.</span><span class="balloon-dot__3">.</span><span class="balloon-dot__4">.</span><span class="balloon-dot__5">.</span><span class="balloon-dot__6">.</span><span class="balloon-dot__7">.</span><span class="balloon-dot__8">.</span><span class="balloon-dot__9">.</span><span class="balloon-dot__10">.</span><span class="balloon-dot__11">.</span><span class="balloon-dot__12">.</span>
+          </div>
         <form method="get" action="/action_file.php">
-          <label class="find-a-place__location-icon"><i class="fa-solid fa-location-dot"></i></label>
-          <input class="find-a-place__research" type="search" name="ville" id="rechercher" placeholder="Quartier, ville" autofocus required>
+          <label class="find-a-place__location-icon" title="Pressez-moi !"><span class="location"><i class="fa-solid fa-location-dot"></span></i></label>
+          <span class="research-1"><span class="research-2"><span class="research-3"><span class="research-4"><input class="find-a-place__research" type="search" name="ville" id="rechercher"  title="&#x2190; Pressez l'icône !" placeholder="Quartier, ville" autofocus required></span></span></span></span>
         </form>
       </section>
       <section class="discovery"> 
         <h1 class="discovery__title">Réservez le menu qui vous convient</h1>
         <p class="discovery__subtitle">Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
         <button class="order-btn">Explorer nos restaurants</button>
+       <!--  <button class="order-btn btn-1">height + font-size</button>
+        <button class="order-btn btn-2">height + font-size + negative margin</button>
+        <button class="order-btn btn-3">Scale()</button>
+        <button class="order-btn btn-4">Scale() + negative margin</button> -->
       </section>
       <section class="explanation">
         <h2 class="explanation__title">Fonctionnement</h2> 
@@ -61,7 +70,9 @@
         <h2 class="restaurants__title">Restaurants</h2>
         <div class="restaurants__all-cards">
           <article class="restaurants__card">
-            <a>   
+            <span class="restaurants__thumbnail-new">Nouveau</span>
+            <a> 
+             <!--  <span class="restaurants__thumbnail-new">Nouveau</span> -->  
               <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
                 <div class="restaurants__card-text">
@@ -122,7 +133,8 @@
                   <div class="restaurants__heart-like">              
                     <input type="checkbox" name="heart" id="like_le-delice-des-sens" class="restaurants__like"> 
                     <label for="like_le-delice-des-sens" class="heart">
-                     <i class="restaurants__heart fa-regular fa-heart"></i>
+                      <i class="restaurants__heart fa-regular fa-heart"></i>
+                      <!-- <i class="restaurants__heart fa-solid fa-heart"></i> -->
                     </label>
                   </div>   
                 </div>
