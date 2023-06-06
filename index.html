@@ -15,13 +15,23 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
   </head>
-  <!-- <div class="loader">ohmyfoodd</div> -->
   <body> 
     <!-- <div class="main-container"> -->
     <div class="loader">
-      <div class="loader__background"></div>
-      <span class="loader__title">ohmyfood</span>
-      <div></div> 
+      <div class="loader__background">
+        <div class="loader__background-top"></div>
+        <div class="loader__background-middle">
+          <div class="loader__background-middle-left"></div>
+          <div class="loader__background-middle-center">
+            <div class="loader__progress-bar"></div> 
+            <img  class="nocolor" src="./assets/images/logo/ohmyfood_nocolor@2x.svg" alt="logo de ohmyfood">
+          </div>  
+          <div class="loader__background-middle-right"></div>
+        </div>
+        <div class="loader__background-bottom"></div> 
+      </div>
+      <!-- <div class="loader__progress-bar"></div>    -->
+      <!-- <img  class="nocolor" src="./assets/images/logo/ohmyfood_nocolor@2x.svg" alt="logo de ohmyfood">      -->
     </div>
     <header class="visual-identity"> 
       <div class="visual-identity__master-logo">
@@ -85,7 +95,7 @@
                 <i class="restaurants__heart fa-regular fa-heart"></i>
                 </label>
               </div> 
-              <!-- </div> -->
+              
             </a> 
           </article>
           <article class="restaurants__card">
@@ -104,7 +114,7 @@
                 <i class="restaurants__heart fa-regular fa-heart"></i>
                 </label>
               </div>   
-              <!-- </div> -->
+             
             </a>      
           </article>
           <article class="restaurants__card">
@@ -122,7 +132,7 @@
                 <i class="restaurants__heart fa-regular fa-heart"></i>
                 </label>
               </div>   
-              <!-- </div>  -->
+              
             </a>
           </article>
           <article class="restaurants__card">
@@ -138,10 +148,10 @@
                 <input type="checkbox" name="heart" id="like_le-delice-des-sens" class="restaurants__like"> 
                 <label for="like_le-delice-des-sens" class="heart">
                   <i class="restaurants__heart fa-regular fa-heart"></i>
-                  <!-- <i class="restaurants__heart fa-solid fa-heart"></i> -->
+                  <i class="restaurants__heart fa-solid fa-heart"></i>
                 </label>
               </div>   
-             <!--  </div> -->
+             
             </a>    
           </article>
         </div>

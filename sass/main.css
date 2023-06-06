@@ -19,106 +19,6 @@
         }
     }
 } */
-body {
-  outline: 5px dashed #f0c4c4;
-}
-
-.main-container {
-  outline: 5px dotted #db7373;
-}
-
-header, main, footer {
-  outline: 3px dashed #ffe6e6;
-}
-header:active, main:active, footer:active {
-  outline: 3px dashed #ff8080;
-}
-
-button:hover, a:hover, input:hover, label[class*=heart]:hover {
-  outline: 2px solid #ffff1a;
-}
-
-label {
-  outline: 1px dotted #ffd280;
-}
-label:active {
-  outline: 1px dotted orange;
-}
-
-section {
-  outline: 4px dotted #ffe6e6;
-}
-section:active {
-  outline: 4px dotted #ff8080;
-}
-
-div {
-  outline: 2px dashed #6666ff;
-}
-div div {
-  outline: 2px dashed #9999ff;
-}
-div div div {
-  outline: 2px dashed #ccccff;
-}
-div div div div {
-  outline: 2px dashed white;
-}
-
-div[class*=like]:hover, nav div:hover {
-  outline: none;
-}
-
-article, form {
-  outline: 2px dotted #8080ff;
-  /* &:hover {
-      outline: check_frame-dotted_blue(0%);
-  } */
-}
-
-ul {
-  outline: 1px dashed #00e600;
-}
-ul:active {
-  outline: 2px solid #00e600;
-}
-ul li {
-  outline: 1px dashed #1aff1a;
-}
-ul li:active {
-  outline: 2px solid #1aff1a;
-}
-
-nav {
-  outline: 2px dotted #ffff80;
-}
-nav:active {
-  outline: 2px dashed #ffff80;
-}
-
-span {
-  outline: 4px dotted #ff8080;
-}
-
-i {
-  outline: 2px dotted #009a00;
-}
-i:active {
-  outline: 2px solid #009a00;
-}
-
-img {
-  outline: 1px dashed #00b300;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  outline: 1px dashed #ffe4b3;
-}
-
-p {
-  outline: 1px dotted #ffd280;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -424,42 +324,124 @@ header, main, footer {
 .loader {
   position: absolute;
   z-index: 10;
-  height: 100vh;
+  height: 100%;
+  /* overflow: clip; */
   width: 100%;
   display: flex;
-  /*  color: blue; */
-  /* background: yellow; */
+}
+.loader:hover [class*=background] {
+  opacity: 0;
+  transition: opacity 2s 3s ease-in-out;
+}
+.loader:hover [class*=background] > [class*=progress-bar] {
+  transform-origin: 100% 50%;
+  animation: progress-bar-kf 3s ease-in-out;
+  transition: opacity 0.2s 2.8s ease-in;
+  opacity: 0;
+}
+.loader:hover [class*=nocolor] {
+  opacity: 0;
+  transition: opacity 2s 3s ease-in-out;
 }
 .loader__background {
   position: absolute;
   z-index: 11;
-  height: 100vh;
-  width: 100%;
-  background: #99E2D0;
-  opacity: 0.5;
-}
-.loader__title {
-  position: absolute;
-  z-index: 12;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(0.25turn, #FF79DA, #9356DC);
-  font-family: Shrikhand;
-  font-size: 15vw;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  flex-direction: column;
+  opacity: 1;
 }
-.loader__title:hover {
-  color: rgba(255, 255, 255, 0.8);
-  transform-origin: margin-left;
-  transition: color 3s ease-in-out;
-  /* transform: scale(2); */
+.loader__background-top {
+  z-index: 11;
+  /* flex: auto; */
+  height: 50vh;
+  width: 100%;
+  background: white;
+  /* background: yellowgreen; */
+  opacity: 1;
+}
+.loader__background-middle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: initial;
+  margin: -1px;
+}
+.loader__background-middle-left {
+  position: relative;
+  z-index: 11;
+  flex: auto;
+  height: 15vw;
+  max-height: 220px;
+  background: white;
+  /* background: blue; */
+  opacity: 1;
+}
+.loader__background-middle-center {
+  z-index: 11;
+  height: 15vw;
+  max-height: 220px;
+  margin-left: -1px;
+  opacity: 1;
+}
+.loader__background-middle-right {
+  position: relative;
+  z-index: 11;
+  flex: auto;
+  height: 15vw;
+  max-height: 220px;
+  background: white;
+  /* background: red; */
+  opacity: 1;
+}
+.loader__background-bottom {
+  z-index: 11;
+  flex: auto;
+  background: white;
+  /* background: yellow; */
+}
+.loader__progress-bar {
+  position: absolute;
+  z-index: 11;
+  /* top: 1px; */
+  /* flex: initial; */
+  height: 14.9vw;
+  max-height: 220px;
+  max-width: 1340px;
+  width: 100%;
+  /* width: 70.55%; */
+  /*  top: 45.1%; */
+  /* left: 14.8%; */
+  background: linear-gradient(0.25turn, #FF79DA, #9356DC);
+  margin: 1px;
+  /* &:hover {           
+      transform-origin: 100% 50%;
+      animation: progress-bar-kf 3s ease-in-out;
+  } */
+}
+.loader .nocolor {
+  z-index: 13;
+  position: relative;
+  height: 15vw;
+  max-height: 220px;
+  max-width: 1340px;
+  flex: initial;
+  /*  border: 4px solid orange; */
+  /* width: 100%; */
+  /* top: 45%; */
+  /* left: 14.7%; */
+  opacity: 1;
 }
 
+@keyframes progress-bar-kf {
+  0% {
+    transform: scalex(1);
+  }
+  100% {
+    transform: scalex(0);
+  }
+}
 /* || HEADER || */
 .visual-identity {
   display: flex;

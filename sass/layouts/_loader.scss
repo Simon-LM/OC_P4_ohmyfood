@@ -16,43 +16,138 @@ header, main, footer {
 .loader {
     position: absolute;
     z-index: 10;
-    height: 100vh;
+    height: 100%;
+    /* overflow: clip; */
     width: 100%;
     display: flex;
-   /*  color: blue; */
-    /* background: yellow; */
+    &:hover {
+        [class*="background"] {
+            opacity: 0;
+            transition: opacity 2s 3s ease-in-out;
+        
+            > [class*="progress-bar"] {        
+                transform-origin: 100% 50%;
+                animation: progress-bar-kf 3s ease-in-out;
+                transition: opacity 0.2s 2.8s ease-in;
+                opacity: 0;
+            }
+        }
+        [class*="nocolor"] {
+            opacity: 0;
+            transition: opacity 2s 3s ease-in-out;
+        }
+
+    }
+   
     &__background {
         position: absolute;
         z-index: 11;
-        height: 100vh;
-        width: 100%;
-        background: $color-tertiary;
-        opacity: 0.5;
-    } 
-    &__title {
-        position: absolute;
-        z-index: 12;
-        height: 100vh;
+        height: 100%;
         width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background: $color-secondary-to-primairy_h;
-        font-family: $font-logo;
-        font-size: 15vw;
-        background-clip: text;        
-        -webkit-background-clip: text;
-        color: transparent;
+        flex-direction: column;               
+        opacity: 1;
+        &-top {   
+            z-index: 11;  
+            /* flex: auto; */
+            height: 50vh;
+            width: 100%;      
+            background: $color-light-main;
+            /* background: yellowgreen; */
+            opacity: 1;
+        }
+
+        &-middle {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex: initial;            
+            margin: -1px;
+
+            &-left {   
+                position: relative;
+                z-index: 11;
+                flex: auto;  
+                height: 15vw;
+                max-height: 220px;
+                background: $color-light-main;
+                /* background: blue; */
+                opacity: 1;
+            }
+
+            &-center {
+                z-index: 11;
+                height: 15vw;
+                max-height: 220px;
+                margin-left: -1px;
+                opacity: 1; 
+            }       
+
+            &-right {   
+                position: relative;
+                z-index: 11;  
+                flex: auto;
+                height: 15vw;
+                max-height: 220px;
+                background: $color-light-main;
+                /* background: red; */
+                opacity: 1;
+            }        
+        }
+
+        &-bottom {
+            z-index: 11;
+            flex: auto;
+            background: $color-light-main;
+            /* background: yellow; */
+        }
         
-        &:hover {
-            color: transparentize($color: white, $amount: 0.2);
-            transform-origin: margin-left;
-            transition: color 3s ease-in-out;
-            /* transform: scale(2); */
-        }        
-    }
+    } 
+
+    &__progress-bar {
+        position: absolute;
+        z-index: 11;
+        /* top: 1px; */
+        /* flex: initial; */
+        height: 14.9vw;
+        max-height: 220px;
+        max-width: 1340px;
+        width: 100%;
+        /* width: 70.55%; */
+       /*  top: 45.1%; */
+        /* left: 14.8%; */
+        background: $color-secondary-to-primairy_h;
+        margin:1px;
+        /* &:hover {           
+            transform-origin: 100% 50%;
+            animation: progress-bar-kf 3s ease-in-out;
+        } */
+    }   
+
+    .nocolor {
+        z-index: 13;
+        position: relative;       
+        height: 15vw;
+        max-height: 220px;
+        max-width: 1340px;
+        flex: initial;
+       /*  border: 4px solid orange; */
+        /* width: 100%; */
+        /* top: 45%; */
+        /* left: 14.7%; */
+        opacity: 1;                     
+    }     
 }
 
+@keyframes progress-bar-kf{
+    0% {
+       
+        transform: scalex(1);        
+    }
 
+    100% {
+        transform: scalex(0);
+    }
+}
 
 
