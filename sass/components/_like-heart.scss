@@ -6,38 +6,75 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
 .restaurants {
     &__card:hover {
         & [class="heart"] {
-            color: $color-font__cards-opacity;
+           /*  background: white;
+            padding: 10rem;
+            clip-path: circle(4%);   */       
         }
     }
 
     &__heart-like {
         z-index: 5;
         position: absolute;
-        right: 1.25em;
-        bottom: 1.25em;
+        right: 1.25rem;
+        bottom: 1.25rem;
         opacity: 1 !important;
+        background: green;
+        height: 0;
+        width: 0;       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 0.4rem 0;
+        clip-path: circle(45%); */
     }
 
     &__like {
         height: 0;
         width: 0;  
-        opacity: 0;      
+        opacity: 0;
+
     } 
 
     &__heart {
+        display: flex;
+        flex: auto;
+        align-items: center;
+        vertical-align: middle;
         font-size: $heart_font-size;
         font-weight: 100 !important;
         text-align: center;
-        width: 1.1em;
+        /* width: 100%;
+        height: initial; */
+        margin-top: 0.0em;
         transition:  0.4s ease-in-out, color 1s ease-in-out;
+        /* background: $color-background_main; */
+       /*  padding: 0.5rem;
+        clip-path: circle(45%); */
+        /* margin-top: 0; */
+       /*  background: blue; */
         
-        &:hover {
+        
+        /* &:hover {
             cursor: pointer; 
             transform: scale(1.25);
            
-        }   
+        }   */
     }
 
+    &__like + .heart [class$="heart"] {
+        
+       /*  padding: 5rem; */
+        /* padding-top: 5.2rem; */
+        /* clip-path: circle(6%); */
+        /* background: violet; */
+        
+        &:hover {
+           
+           /*  background: blueviolet; */
+            cursor: pointer; 
+            transform: scale(1.25);
+        }   
+    }
    
 
     &__like:checked + .heart [class$="heart"] {
@@ -47,8 +84,28 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
         background-clip: text;        
         -webkit-background-clip: text;
         color: transparent;
+
     }
   
+    &__circle {
+        z-index: 4;
+        position: absolute;
+        right: 0.24rem;
+        bottom: 0.22rem;    
+        background: $color-background_main;
+        /* background: palevioletred; */
+        padding: 1rem;
+        clip-path: circle(42%);
+        @media (min-width: 768px) {
+           
+        
+            @media (min-width:1024px) {
+                right: 0.24rem;
+                bottom: 0.22rem; 
+            }
+        }
+
+    }
     
 
 
@@ -96,3 +153,8 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
 
     
 
+/* i {
+    display: block;
+    justify-content: center;
+    align-items: center;
+} */

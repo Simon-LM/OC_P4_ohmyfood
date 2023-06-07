@@ -245,14 +245,24 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
    }   */
 }
 .restaurants__card:hover [class=heart] {
-  color: white;
+  /*  background: white;
+   padding: 10rem;
+   clip-path: circle(4%);   */
 }
 .restaurants__heart-like {
   z-index: 5;
   position: absolute;
-  right: 1.25em;
-  bottom: 1.25em;
+  right: 1.25rem;
+  bottom: 1.25rem;
   opacity: 1 !important;
+  background: green;
+  height: 0;
+  width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0.4rem 0;
+  clip-path: circle(45%); */
 }
 .restaurants__like {
   height: 0;
@@ -260,13 +270,36 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   opacity: 0;
 }
 .restaurants__heart {
+  display: flex;
+  flex: auto;
+  align-items: center;
+  vertical-align: middle;
   font-size: 1rem;
   font-weight: 100 !important;
   text-align: center;
-  width: 1.1em;
+  /* width: 100%;
+  height: initial; */
+  margin-top: 0em;
   transition: 0.4s ease-in-out, color 1s ease-in-out;
+  /* background: $color-background_main; */
+  /*  padding: 0.5rem;
+   clip-path: circle(45%); */
+  /* margin-top: 0; */
+  /*  background: blue; */
+  /* &:hover {
+      cursor: pointer; 
+      transform: scale(1.25);
+
+  }   */
 }
-.restaurants__heart:hover {
+.restaurants__like + .heart [class$=heart] {
+  /*  padding: 5rem; */
+  /* padding-top: 5.2rem; */
+  /* clip-path: circle(6%); */
+  /* background: violet; */
+}
+.restaurants__like + .heart [class$=heart]:hover {
+  /*  background: blueviolet; */
   cursor: pointer;
   transform: scale(1.25);
 }
@@ -277,7 +310,29 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   -webkit-background-clip: text;
   color: transparent;
 }
+.restaurants__circle {
+  z-index: 4;
+  position: absolute;
+  right: 0.24rem;
+  bottom: 0.22rem;
+  background: white;
+  /* background: palevioletred; */
+  padding: 1rem;
+  -webkit-clip-path: circle(42%);
+          clip-path: circle(42%);
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .restaurants__circle {
+    right: 0.24rem;
+    bottom: 0.22rem;
+  }
+}
 
+/* i {
+    display: block;
+    justify-content: center;
+    align-items: center;
+} */
 /*** ||| HOME PAGE ||| ***/
 /*** ||| HOME PAGE ||| ***/
 .btn-oc {
@@ -307,39 +362,40 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   transition: opacity 250ms;
 }
 
+/* || LOADER || */
 body {
   position: relative;
   z-index: 0;
-}
-
-/* div {
-    color: blue;
-} */
-header, main, footer {
-  /* z-index: 1; */
-  /*  visibility: collapse; */
-  /* opacity: 0; */
 }
 
 .loader {
   position: absolute;
   z-index: 10;
   height: 100%;
-  /* overflow: clip; */
   width: 100%;
   display: flex;
+  transform-origin: 50% 50%;
+  animation: loader-kf 0.5s 5s;
+  animation-fill-mode: both;
+  /* &:hover { */
+  /* } */
 }
-.loader:hover [class*=background] {
+.loader [class*=background] {
   opacity: 0;
   transition: opacity 2s 3s ease-in-out;
 }
-.loader:hover [class*=background] > [class*=progress-bar] {
+.loader [class*=background] > [class*=progress-bar] {
   transform-origin: 100% 50%;
   animation: progress-bar-kf 3s ease-in-out;
+  animation-fill-mode: both;
   transition: opacity 0.2s 2.8s ease-in;
   opacity: 0;
 }
-.loader:hover [class*=nocolor] {
+.loader [class*=background] > [src*=restaurants] {
+  opacity: 0;
+  transition: opacity 0.4s 2.8s ease-in;
+}
+.loader [class*=nocolor] {
   opacity: 0;
   transition: opacity 2s 3s ease-in-out;
 }
@@ -354,11 +410,9 @@ header, main, footer {
 }
 .loader__background-top {
   z-index: 11;
-  /* flex: auto; */
-  height: 50vh;
+  height: 40vh;
   width: 100%;
   background: white;
-  /* background: yellowgreen; */
   opacity: 1;
 }
 .loader__background-middle {
@@ -374,13 +428,14 @@ header, main, footer {
   flex: auto;
   height: 15vw;
   max-height: 220px;
+  width: 100%;
   background: white;
-  /* background: blue; */
   opacity: 1;
 }
 .loader__background-middle-center {
   z-index: 11;
   height: 15vw;
+  width: 100%;
   max-height: 220px;
   margin-left: -1px;
   opacity: 1;
@@ -391,34 +446,33 @@ header, main, footer {
   flex: auto;
   height: 15vw;
   max-height: 220px;
+  width: 100%;
   background: white;
-  /* background: red; */
   opacity: 1;
 }
 .loader__background-bottom {
   z-index: 11;
   flex: auto;
   background: white;
-  /* background: yellow; */
 }
 .loader__progress-bar {
   position: absolute;
   z-index: 11;
-  /* top: 1px; */
-  /* flex: initial; */
   height: 14.9vw;
   max-height: 220px;
   max-width: 1340px;
   width: 100%;
-  /* width: 70.55%; */
-  /*  top: 45.1%; */
-  /* left: 14.8%; */
   background: linear-gradient(0.25turn, #FF79DA, #9356DC);
   margin: 1px;
-  /* &:hover {           
-      transform-origin: 100% 50%;
-      animation: progress-bar-kf 3s ease-in-out;
-  } */
+}
+.loader img[src*=restaurant] {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: -2px;
+  margin-top: -1em;
+  opacity: 1;
 }
 .loader .nocolor {
   z-index: 13;
@@ -427,19 +481,36 @@ header, main, footer {
   max-height: 220px;
   max-width: 1340px;
   flex: initial;
-  /*  border: 4px solid orange; */
-  /* width: 100%; */
-  /* top: 45%; */
-  /* left: 14.7%; */
   opacity: 1;
+  margin-left: -3px;
 }
 
 @keyframes progress-bar-kf {
   0% {
     transform: scalex(1);
   }
+  33% {
+    transform: scalex(0.85);
+  }
+  66% {
+    transform: scalex(0.33);
+  }
+  75% {
+    transform: scalex(0.23);
+  }
+  85% {
+    transform: scalex(0.23);
+  }
   100% {
     transform: scalex(0);
+  }
+}
+@keyframes loader-kf {
+  0% {
+    transform: scalex(1) translatex(0);
+  }
+  100% {
+    transform: scalex(0) translatex(100%);
   }
 }
 /* || HEADER || */
@@ -727,17 +798,20 @@ header, main, footer {
 }
 .explanation__card i {
   color: #7e7e7e;
+  /* &[class*="store"] {
+      color: $color-icons_explanation-bright;
+  } */
   margin-left: 1em;
   width: 2em;
-}
-.explanation__card i[class*=store] {
-  color: #9356DC;
 }
 @media (min-width: 1024px) {
   .explanation__card i {
     margin-left: calc(0.5em + 0.25vw);
     width: initial;
   }
+}
+.explanation__card:hover > i {
+  color: #9356DC;
 }
 @media (min-width: 1024px) {
   .explanation__card [class$=text] {
@@ -765,9 +839,7 @@ header, main, footer {
   }
 }
 .restaurants__all-cards {
-  /* background: red; */
   display: flex;
-  /* flex: auto; */
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2em;
@@ -805,7 +877,6 @@ header, main, footer {
     max-width: 100%;
     width: initial;
     min-width: calc(50% - 1em);
-    /* height: 12.5em; */
   }
 }
 .restaurants__card a {
@@ -820,17 +891,9 @@ header, main, footer {
   border-radius: 1.2em 1.2em 0 0;
   border-bottom-right-radius: 1.2em;
   border-bottom-left-radius: 1.2em;
-  /* flex: auto; */
   width: 100%;
-  /* height: 12.5em; */
-  /* height: 100%; */
   height: 45.4545454545vmin;
-  /* height: calcl(height_mm-to-vmin(100) + 1em); */
   transition: all 0.4s ease-in-out;
-}
-.restaurants__card img:hover {
-  /*  transform-origin: 50% 100%; */
-  /*  transform: translate(0, -2rem); */
 }
 @media (min-width: 768px) {
   .restaurants__card img {
@@ -857,28 +920,6 @@ header, main, footer {
   width: 100%;
   padding: 0.5em 1em;
   transition: opacity 0.6s ease-in-out;
-  /* &--opacity {
-      z-index: 2;
-      position: absolute;
-      bottom: 0em;
-      display: flex;
-      flex: auto;
-      flex-direction: row;
-      align-items: center;
-      border-bottom-right-radius: 1.2em;
-      border-bottom-left-radius: 1.2em;
-      width: 100%;
-      padding: 0.5em 1em;
-      background-color: none;
-      color : $color-font__cards-opacity;
-      opacity: 0;
-      transition: opacity 0.6s ease-in-out;
-      [class*="text"] {
-          background: transparentize($color: $color-background_footer, $amount: 0.6);
-          padding: 0.25em;
-          border-radius: 0.5em;
-      }
-  } */
 }
 .restaurants__card-comment [class$=text] {
   flex: initial;
@@ -902,22 +943,85 @@ header, main, footer {
   border-radius: 2px;
   transition: transform 0.4s 0.4s ease-in-out;
 }
-.restaurants__card:hover [class$=thumbnail-new] {
-  transform: scale(1.1);
+
+main :only-of-type [class$=thumbnail-new] {
+  animation-name: thumbnail-new-kf;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+  animation-delay: 5.4s;
+}
+main :first-child > [class$=thumbnail-new] {
+  animation-name: thumbnail-new-kf;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+  animation-delay: 5.6s;
+}
+main :nth-of-type(0n+2) [class$=thumbnail-new] {
+  animation-name: thumbnail-new-kf;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+  animation-delay: 5.2s;
+}
+main :nth-of-type(0n+3) [class$=thumbnail-new] {
+  animation-name: thumbnail-new-kf;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+  animation-delay: 5.8s;
+}
+main :nth-last-of-type(0n+3) [class$=thumbnail-new] {
+  animation-name: thumbnail-new-kf;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+  animation-delay: 6.2s;
+}
+main :nth-last-of-type(0n+2) [class$=thumbnail-new] {
+  animation-name: thumbnail-new-kf;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+  animation-delay: 5.3s;
+}
+main :last-child > [class$=thumbnail-new] {
+  animation-name: thumbnail-new-kf;
+  animation-duration: 1.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+  animation-delay: 5.9s;
 }
 
-/* [cards]:hover {
-
-    background-color: none;
-    color : $color-font__cards-opacity;
-    opacity: 0;
-    transition: opacity 0.6s ease-in-out;
-    [class*="text"] {
-        background: transparentize($color: $color-background_footer, $amount: 0.6);
-        padding: 0.25em;
-        border-radius: 0.5em;
-    }
-} */
+@keyframes thumbnail-new-kf {
+  0% {
+    transform: scale(1) translate(0 0);
+  }
+  33% {
+    transform: scale(1.2) translate(-0.5rem, 0.25rem);
+  }
+  66% {
+    transform: scale(1.25) translate(-0.5rem, 0.25rem);
+  }
+  100% {
+    transform: scale(1) translate(0 0);
+  }
+}
 /* || FOOTER || */
 .auxiliary-menu {
   display: flex;

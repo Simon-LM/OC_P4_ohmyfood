@@ -53,9 +53,11 @@ $circli-size: 1.35rem;
 
         i {
             color: $color-icons_explanation-drab;
-            &[class*="store"] {
+            
+            
+            /* &[class*="store"] {
                 color: $color-icons_explanation-bright;
-            }
+            } */
             
             margin-left: 1em;
             width: 2em;
@@ -63,6 +65,10 @@ $circli-size: 1.35rem;
                 margin-left: calc(0.5em + 0.25vw);
                 width: initial;
             }
+        }
+
+        &:hover > i {
+            color: $color-icons_explanation-bright;
         }
 
         [class$="text"] {
