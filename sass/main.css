@@ -249,13 +249,22 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
    padding: 10rem;
    clip-path: circle(4%);   */
 }
+.restaurants label {
+  z-index: 5;
+  position: absolute;
+  display: block;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 0;
+}
 .restaurants__heart-like {
   z-index: 5;
   position: absolute;
-  right: 1.25rem;
-  bottom: 1.25rem;
+  right: 2rem;
+  bottom: 2rem;
   opacity: 1 !important;
-  background: green;
+  background: red;
   height: 0;
   width: 0;
   display: flex;
@@ -268,6 +277,7 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   height: 0;
   width: 0;
   opacity: 0;
+  visibility: collapse;
 }
 .restaurants__heart {
   display: flex;
@@ -299,6 +309,7 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   /* background: violet; */
 }
 .restaurants__like + .heart [class$=heart]:hover {
+  transform-origin: 50% 50%;
   /*  background: blueviolet; */
   cursor: pointer;
   transform: scale(1.25);
@@ -311,20 +322,21 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   color: transparent;
 }
 .restaurants__circle {
-  z-index: 4;
+  z-index: 3;
   position: absolute;
-  right: 0.24rem;
-  bottom: 0.22rem;
+  padding: 0.8rem;
+  margin: -3.27rem;
+  margin-bottom: -3.45rem;
+  right: 2rem;
+  bottom: 2rem;
   background: white;
-  /* background: palevioletred; */
-  padding: 1rem;
-  -webkit-clip-path: circle(42%);
-          clip-path: circle(42%);
+  border-radius: 50%;
+  /* clip-path: circle(20%); */
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .restaurants__circle {
-    right: 0.24rem;
-    bottom: 0.22rem;
+    /*  right: 2rem;
+     bottom: 2rem; */
   }
 }
 
@@ -392,8 +404,11 @@ body {
   opacity: 0;
 }
 .loader [class*=background] > [src*=restaurants] {
-  opacity: 0;
-  transition: opacity 0.4s 2.8s ease-in;
+  /* opacity: 0;
+  transition: opacity 0.4s 2.8s ease-in; */
+  animation-name: img-loader-kf;
+  animation-duration: 2.8s;
+  animation-delay: 0.5s;
 }
 .loader [class*=nocolor] {
   opacity: 0;
@@ -413,6 +428,7 @@ body {
   height: 40vh;
   width: 100%;
   background: white;
+  background: yellowgreen;
   opacity: 1;
 }
 .loader__background-middle {
@@ -430,6 +446,7 @@ body {
   max-height: 220px;
   width: 100%;
   background: white;
+  Background: blue;
   opacity: 1;
 }
 .loader__background-middle-center {
@@ -437,8 +454,49 @@ body {
   height: 15vw;
   width: 100%;
   max-height: 220px;
-  margin-left: -1px;
   opacity: 1;
+  margin: -1px;
+}
+.loader__background-middle-center [class*=progress-bar] {
+  position: absolute;
+  z-index: 11;
+  height: 14.9vw;
+  max-height: 220px;
+  max-width: 1340px;
+  width: 100%;
+  background: linear-gradient(0.25turn, #FF79DA, #9356DC);
+  /* margin:0px; */
+}
+.loader__background-middle-center img[src*=restaurant] {
+  z-index: 10;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-width: 1340px;
+  height: 100%;
+  opacity: 0;
+  margin-top: -0.25rem;
+}
+@media (min-width: 768px) {
+  .loader__background-middle-center img[src*=restaurant] {
+    margin-top: -0.5rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .loader__background-middle-center img[src*=restaurant] {
+    margin-top: -1rem;
+  }
+}
+.loader__background-middle-center .nocolor {
+  z-index: 13;
+  position: relative;
+  height: 15vw;
+  max-height: 220px;
+  max-width: 1340px;
+  flex: initial;
+  opacity: 1;
+  margin-left: -2px;
 }
 .loader__background-middle-right {
   position: relative;
@@ -448,41 +506,15 @@ body {
   max-height: 220px;
   width: 100%;
   background: white;
+  background: red;
   opacity: 1;
+  margin-left: -1px;
 }
 .loader__background-bottom {
   z-index: 11;
   flex: auto;
   background: white;
-}
-.loader__progress-bar {
-  position: absolute;
-  z-index: 11;
-  height: 14.9vw;
-  max-height: 220px;
-  max-width: 1340px;
-  width: 100%;
-  background: linear-gradient(0.25turn, #FF79DA, #9356DC);
-  margin: 1px;
-}
-.loader img[src*=restaurant] {
-  z-index: 10;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: -2px;
-  margin-top: -1em;
-  opacity: 1;
-}
-.loader .nocolor {
-  z-index: 13;
-  position: relative;
-  height: 15vw;
-  max-height: 220px;
-  max-width: 1340px;
-  flex: initial;
-  opacity: 1;
-  margin-left: -3px;
+  background: yellow;
 }
 
 @keyframes progress-bar-kf {
@@ -507,10 +539,24 @@ body {
 }
 @keyframes loader-kf {
   0% {
-    transform: scalex(1) translatex(0);
+    transform: scale(1);
   }
   100% {
-    transform: scalex(0) translatex(100%);
+    transform: scale(0);
+  }
+}
+@keyframes img-loader-kf {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /* || HEADER || */
@@ -746,7 +792,7 @@ body {
 }
 @media (min-width: 768px) {
   .explanation {
-    padding: calc(1em + 1vw) calc(1rem + 1.5vw);
+    padding: calc(1em + 1vw) calc((100% - 750px) / 2 + 1rem);
   }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
@@ -825,12 +871,13 @@ body {
   display: flex;
   flex: auto;
   flex-direction: column;
+  justify-content: center;
   gap: 1em;
   padding: calc(2em + 2vw) calc(1rem + 1.5vw) calc(3em + 2vw) calc(1rem + 1.5vw);
 }
 @media (min-width: 768px) {
   .restaurants {
-    padding: calc(1em + 1vw) calc(1rem + 1.5vw);
+    padding: calc(1em + 1vw) calc((100% - 750px) / 2 + 1rem);
   }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
@@ -842,6 +889,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 2em;
   flex-direction: column;
 }
@@ -852,6 +900,8 @@ body {
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .restaurants__all-cards {
+    /*  flex-wrap: wrap;
+     justify-content: space-between; */
     flex-direction: row;
   }
 }
@@ -865,6 +915,12 @@ body {
   align-items: center;
   width: 100%;
   overflow: hidden;
+  /* @media (min-width: 768px) {
+      max-width: 750px;        
+      @media (min-width:1024px) {
+         max-width: initial;        
+      }
+  } */
 }
 .restaurants__card:hover [class$=card-comment] {
   opacity: 0;
@@ -892,18 +948,21 @@ body {
   border-bottom-right-radius: 1.2em;
   border-bottom-left-radius: 1.2em;
   width: 100%;
+  min-height: 20rem;
   height: 45.4545454545vmin;
+  max-height: 320px;
   transition: all 0.4s ease-in-out;
 }
 @media (min-width: 768px) {
   .restaurants__card img {
+    min-height: initial;
     height: 45.4545454545vmin;
   }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .restaurants__card img {
     height: calc(11.0671936759vw + 4em + 4em);
-    /* max-height: 13rem ; */
+    max-height: 288px;
   }
 }
 .restaurants__card-comment {
@@ -943,8 +1002,7 @@ body {
   border-radius: 2px;
   transition: transform 0.4s 0.4s ease-in-out;
 }
-
-main :only-of-type [class$=thumbnail-new] {
+.restaurants:hover:only-of-type [class$=thumbnail-new] {
   animation-name: thumbnail-new-kf;
   animation-duration: 1.8s;
   animation-fill-mode: both;
@@ -953,7 +1011,7 @@ main :only-of-type [class$=thumbnail-new] {
   animation-iteration-count: 1;
   animation-delay: 5.4s;
 }
-main :first-child > [class$=thumbnail-new] {
+.restaurants:hover:first-child > [class$=thumbnail-new] {
   animation-name: thumbnail-new-kf;
   animation-duration: 1.8s;
   animation-fill-mode: both;
@@ -962,7 +1020,7 @@ main :first-child > [class$=thumbnail-new] {
   animation-iteration-count: 1;
   animation-delay: 5.6s;
 }
-main :nth-of-type(0n+2) [class$=thumbnail-new] {
+.restaurants:hover:nth-of-type(0n+2) [class$=thumbnail-new] {
   animation-name: thumbnail-new-kf;
   animation-duration: 1.8s;
   animation-fill-mode: both;
@@ -971,7 +1029,7 @@ main :nth-of-type(0n+2) [class$=thumbnail-new] {
   animation-iteration-count: 1;
   animation-delay: 5.2s;
 }
-main :nth-of-type(0n+3) [class$=thumbnail-new] {
+.restaurants:hover:nth-of-type(0n+3) [class$=thumbnail-new] {
   animation-name: thumbnail-new-kf;
   animation-duration: 1.8s;
   animation-fill-mode: both;
@@ -980,7 +1038,7 @@ main :nth-of-type(0n+3) [class$=thumbnail-new] {
   animation-iteration-count: 1;
   animation-delay: 5.8s;
 }
-main :nth-last-of-type(0n+3) [class$=thumbnail-new] {
+.restaurants:hover:nth-last-of-type(0n+3) [class$=thumbnail-new] {
   animation-name: thumbnail-new-kf;
   animation-duration: 1.8s;
   animation-fill-mode: both;
@@ -989,7 +1047,7 @@ main :nth-last-of-type(0n+3) [class$=thumbnail-new] {
   animation-iteration-count: 1;
   animation-delay: 6.2s;
 }
-main :nth-last-of-type(0n+2) [class$=thumbnail-new] {
+.restaurants:hover:nth-last-of-type(0n+2) [class$=thumbnail-new] {
   animation-name: thumbnail-new-kf;
   animation-duration: 1.8s;
   animation-fill-mode: both;
@@ -998,7 +1056,7 @@ main :nth-last-of-type(0n+2) [class$=thumbnail-new] {
   animation-iteration-count: 1;
   animation-delay: 5.3s;
 }
-main :last-child > [class$=thumbnail-new] {
+.restaurants:hover:last-child > [class$=thumbnail-new] {
   animation-name: thumbnail-new-kf;
   animation-duration: 1.8s;
   animation-fill-mode: both;
@@ -1008,6 +1066,71 @@ main :last-child > [class$=thumbnail-new] {
   animation-delay: 5.9s;
 }
 
+@media (min-width: 1024px) {
+  main :only-of-type [class$=thumbnail-new] {
+    animation-name: thumbnail-new-kf;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-delay: 5.4s;
+  }
+  main :first-child > [class$=thumbnail-new] {
+    animation-name: thumbnail-new-kf;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-delay: 5.6s;
+  }
+  main :nth-of-type(0n+2) [class$=thumbnail-new] {
+    animation-name: thumbnail-new-kf;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-delay: 5.2s;
+  }
+  main :nth-of-type(0n+3) [class$=thumbnail-new] {
+    animation-name: thumbnail-new-kf;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-delay: 5.8s;
+  }
+  main :nth-last-of-type(0n+3) [class$=thumbnail-new] {
+    animation-name: thumbnail-new-kf;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-delay: 6.2s;
+  }
+  main :nth-last-of-type(0n+2) [class$=thumbnail-new] {
+    animation-name: thumbnail-new-kf;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-delay: 5.3s;
+  }
+  main :last-child > [class$=thumbnail-new] {
+    animation-name: thumbnail-new-kf;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-delay: 5.9s;
+  }
+}
 @keyframes thumbnail-new-kf {
   0% {
     transform: scale(1) translate(0 0);
@@ -1031,7 +1154,18 @@ main :last-child > [class$=thumbnail-new] {
   /* align-items: center; */
   /* text-align: center; */
   padding: calc(1em + 1vw) calc(1rem + 1.5vw);
+  /* padding: $padding_footer-mobile; */
   gap: 1em;
+}
+@media (min-width: 768px) {
+  .auxiliary-menu {
+    padding: calc(1em + 1vw) calc((100% - 750px) / 2 + 1rem);
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .auxiliary-menu {
+    padding: 2em 2rem;
+  }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .auxiliary-menu {

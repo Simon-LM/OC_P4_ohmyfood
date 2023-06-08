@@ -5,6 +5,7 @@
     display: flex;
     flex: auto;
     flex-direction: column;
+    justify-content: center;
     gap: 1em;
     @include padding_section;
 
@@ -12,11 +13,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
         gap: 2em;
         flex-direction: column;
         @media (min-width: 768px) {
             flex-direction: column;        
             @media (min-width:1024px) {
+               /*  flex-wrap: wrap;
+                justify-content: space-between; */
                 flex-direction: row;              
             }
         }        
@@ -29,6 +33,12 @@
         align-items: center;
         width: 100%;
         overflow: hidden;
+        /* @media (min-width: 768px) {
+            max-width: 750px;        
+            @media (min-width:1024px) {
+               max-width: initial;        
+            }
+        } */
         &:hover {
             [class$="card-comment"] {
                 opacity: 0;
@@ -59,16 +69,21 @@
             border-radius: 1.2em 1.2em 0 0;
             border-bottom-right-radius: 1.2em;
             border-bottom-left-radius: 1.2em;           
-            width: 100%;         
+            width: 100%;
+            min-height: 20rem;         
             height: height_mm-to-vmin(100);
+            max-height: 320px;
             transition: all 0.4s ease-in-out;           
 
             @media (min-width: 768px) {
+                min-height: initial; 
                 height: height_mm-to-vmin(100);
+            
             
                 @media (min-width:1024px) {
                     height: calc(height_mm-to-vw(28, 253) + 4em + 4em);
-                    /* max-height: 13rem ; */
+                    //max-height: 18rem ;
+                    max-height: 288px;
                 }
             }
         }
@@ -114,46 +129,90 @@
         border-radius: 2px;
         transition: transform 0.4s 0.4s ease-in-out;        
     }
-}   
-    
-main {
-    :only-of-type [class$="thumbnail-new"] {
-        //background-color: lightblue;
-        @include anim_thumbnail-new;
-        animation-delay:5.4s;        
+
+    &:hover {
+        &:only-of-type [class$="thumbnail-new"] {
+            //background-color: lightblue;
+            @include anim_thumbnail-new;
+            animation-delay:5.4s;        
+        }
+        &:first-child > [class$="thumbnail-new"] {
+            //background-color: orangered;
+            @include anim_thumbnail-new;
+            animation-delay:5.6s;        
+        }
+        &:nth-of-type(0n+2) [class$="thumbnail-new"] {
+            //background-color:orange;
+            @include anim_thumbnail-new;
+            animation-delay:5.2s;
+        }
+        &:nth-of-type(0n+3) [class$="thumbnail-new"] {     
+            //background-color: peru;
+            @include anim_thumbnail-new;
+            animation-delay:5.8s;
+        }
+        &:nth-last-of-type(0n+3) [class$="thumbnail-new"] {       
+            //background-color: pink;
+            @include anim_thumbnail-new;
+            animation-delay:6.2s;
+        }
+        &:nth-last-of-type(0n+2) [class$="thumbnail-new"] {       
+            //background-color: lightcoral;
+            @include anim_thumbnail-new;
+            animation-delay:5.3s;
+        }
+        &:last-child > [class$="thumbnail-new"] {
+            //background-color: palevioletred;
+            @include anim_thumbnail-new;
+            animation-delay:5.9s;
+        }  
     }
-    :first-child > [class$="thumbnail-new"] {
-        //background-color: orangered;
-        @include anim_thumbnail-new;
-        animation-delay:5.6s;        
-    }
-    :nth-of-type(0n+2) [class$="thumbnail-new"] {
-        //background-color:orange;
-        @include anim_thumbnail-new;
-        animation-delay:5.2s;
-    }
-    :nth-of-type(0n+3) [class$="thumbnail-new"] {     
-        //background-color: peru;
-        @include anim_thumbnail-new;
-        animation-delay:5.8s;
-    }
-    :nth-last-of-type(0n+3) [class$="thumbnail-new"] {       
-        //background-color: pink;
-        @include anim_thumbnail-new;
-        animation-delay:6.2s;
-    }
-    :nth-last-of-type(0n+2) [class$="thumbnail-new"] {       
-        //background-color: lightcoral;
-        @include anim_thumbnail-new;
-        animation-delay:5.3s;
-    }
-    :last-child > [class$="thumbnail-new"] {
-        //background-color: palevioletred;
-        @include anim_thumbnail-new;
-        animation-delay:5.9s;
-    }  
 }  
-   
+
+@media (min-width:1024px) {
+    main {
+        :only-of-type [class$="thumbnail-new"] {
+            //background-color: lightblue;
+            @include anim_thumbnail-new;
+            animation-delay:5.4s;        
+        }
+        :first-child > [class$="thumbnail-new"] {
+            //background-color: orangered;
+            @include anim_thumbnail-new;
+            animation-delay:5.6s;        
+        }
+        :nth-of-type(0n+2) [class$="thumbnail-new"] {
+            //background-color:orange;
+            @include anim_thumbnail-new;
+            animation-delay:5.2s;
+        }
+        :nth-of-type(0n+3) [class$="thumbnail-new"] {     
+            //background-color: peru;
+            @include anim_thumbnail-new;
+            animation-delay:5.8s;
+        }
+        :nth-last-of-type(0n+3) [class$="thumbnail-new"] {       
+            //background-color: pink;
+            @include anim_thumbnail-new;
+            animation-delay:6.2s;
+        }
+        :nth-last-of-type(0n+2) [class$="thumbnail-new"] {       
+            //background-color: lightcoral;
+            @include anim_thumbnail-new;
+            animation-delay:5.3s;
+        }
+        :last-child > [class$="thumbnail-new"] {
+            //background-color: palevioletred;
+            @include anim_thumbnail-new;
+            animation-delay:5.9s;
+        }  
+    }
+}
+
+
+
+
+
 @keyframes thumbnail-new-kf{
 
     0% {

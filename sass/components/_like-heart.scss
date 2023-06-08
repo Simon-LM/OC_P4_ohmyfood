@@ -12,13 +12,26 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
         }
     }
 
+    label {
+        z-index: 5;
+        position: absolute;
+       
+        display: block;
+        padding: 0;
+        margin: 0;
+        height: 0;
+        width:0;
+
+    }
+
     &__heart-like {
         z-index: 5;
         position: absolute;
-        right: 1.25rem;
-        bottom: 1.25rem;
+        right: 2rem;
+        bottom: 2rem;
+       
         opacity: 1 !important;
-        background: green;
+        background: red;
         height: 0;
         width: 0;       
         display: flex;
@@ -32,7 +45,7 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
         height: 0;
         width: 0;  
         opacity: 0;
-
+        visibility: collapse;
     } 
 
     &__heart {
@@ -69,7 +82,7 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
         /* background: violet; */
         
         &:hover {
-           
+           transform-origin: 50% 50%;
            /*  background: blueviolet; */
             cursor: pointer; 
             transform: scale(1.25);
@@ -88,20 +101,26 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
     }
   
     &__circle {
-        z-index: 4;
+        z-index: 3;
         position: absolute;
-        right: 0.24rem;
-        bottom: 0.22rem;    
+        padding: 0.8rem;
+        margin: -3.27rem;
+        margin-bottom: -3.45rem;
+        right: 2rem;
+        bottom: 2rem; 
         background: $color-background_main;
-        /* background: palevioletred; */
-        padding: 1rem;
-        clip-path: circle(42%);
+        //background: green;
+        border-radius: 50%;
+
+        /* clip-path: circle(20%); */
+
+
         @media (min-width: 768px) {
            
         
             @media (min-width:1024px) {
-                right: 0.24rem;
-                bottom: 0.22rem; 
+               /*  right: 2rem;
+                bottom: 2rem; */ 
             }
         }
 

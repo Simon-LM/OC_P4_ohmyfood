@@ -39,6 +39,20 @@
     }
 }
 
+@mixin padding_footer{
+    padding: $padding_footer-mobile;
+
+    @media (min-width: 768px) {
+        padding: $padding_footer-tablet;
+
+        @media (min-width:1024px) {
+            padding: $padding_footer-desktop;
+        }
+    }
+}
+
+
+
 @mixin anim_thumbnail-new {
     animation-name: thumbnail-new-kf; 
     animation-duration: 1.8s;

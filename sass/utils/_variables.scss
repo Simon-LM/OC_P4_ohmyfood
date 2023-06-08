@@ -3,15 +3,15 @@
 
 /*** SECTIONS ***/
 $padding_section-mobile: calc(2em + 2vw) calc(1rem + 1.5vw) calc(3em + 2vw) calc(1rem + 1.5vw); // MOBILE
-$padding_section-tablet: calc(1em + 1vw) calc(1rem + 1.5vw); // TABLET
+$padding_section-tablet: calc(1em + 1vw) calc(((100% - 750px) / 2) + 1rem) ; // TABLET
 $padding_section-desktop: 3em height_mm-to-vw(32 , 253); // DESKTOP
 
 
 /*** FOOTER  ***/
 
 $padding_footer-mobile: calc(1em + 1vw) calc(1rem + 1.5vw); // MOBILE
-$padding_footer-tablet: calc(1em + 1vw) calc(1rem + 1.5vw); // TABLET
-$padding_footer-mdesktop: 2em 2rem; // DESKTOP
+$padding_footer-tablet: calc(1em + 1vw) calc(((100% - 750px) / 2) + 1rem); // TABLET
+$padding_footer-desktop: 2em 2rem; // DESKTOP
 
 
 
