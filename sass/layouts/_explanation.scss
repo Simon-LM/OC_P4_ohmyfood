@@ -6,6 +6,7 @@ $circli-size: 1.35rem;
     background-color: $color-background_explanation;
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 2em;
     @include padding_section;
 

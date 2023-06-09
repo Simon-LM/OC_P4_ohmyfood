@@ -32,7 +32,11 @@ body {
   flex: auto;
   margin: 0;
   max-width: 1440px;
-  /* width: 100%; */
+  width: 100%;
+}
+
+main {
+  width: 100%;
 }
 
 img {
@@ -346,35 +350,7 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
     align-items: center;
 } */
 /*** ||| HOME PAGE ||| ***/
-/*** ||| HOME PAGE ||| ***/
-.btn-oc {
-  display: flex;
-  justify-content: center;
-}
-
-.btn-oc2 {
-  border-radius: 1rem;
-  background-color: #15DEA5;
-  position: relative;
-  z-index: 1;
-}
-.btn-oc2:hover .btn-oc2__bg {
-  opacity: 1;
-}
-.btn-oc2__bg {
-  position: absolute;
-  border-radius: 1rem;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #13c794;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-}
-
-/* || LOADER || */
+/*** ||| HOME PAGE ||| ***/ /* || LOADER || */
 body {
   position: relative;
   z-index: 0;
@@ -383,7 +359,7 @@ body {
 .loader {
   position: absolute;
   z-index: 10;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   transform-origin: 50% 50%;
@@ -391,6 +367,11 @@ body {
   animation-fill-mode: both;
   /* &:hover { */
   /* } */
+}
+@media (min-width: 1024px) {
+  .loader {
+    max-height: 100%;
+  }
 }
 .loader [class*=background] {
   opacity: 0;
@@ -404,8 +385,8 @@ body {
   opacity: 0;
 }
 .loader [class*=background] > [src*=restaurants] {
-  /* opacity: 0;
-  transition: opacity 0.4s 2.8s ease-in; */
+  opacity: 0;
+  /* transform: scale(0); */
   animation-name: img-loader-kf;
   animation-duration: 2.8s;
   animation-delay: 0.5s;
@@ -417,7 +398,7 @@ body {
 .loader__background {
   position: absolute;
   z-index: 11;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -428,7 +409,6 @@ body {
   height: 40vh;
   width: 100%;
   background: white;
-  background: yellowgreen;
   opacity: 1;
 }
 .loader__background-middle {
@@ -446,7 +426,6 @@ body {
   max-height: 220px;
   width: 100%;
   background: white;
-  Background: blue;
   opacity: 1;
 }
 .loader__background-middle-center {
@@ -506,7 +485,6 @@ body {
   max-height: 220px;
   width: 100%;
   background: white;
-  background: red;
   opacity: 1;
   margin-left: -1px;
 }
@@ -514,7 +492,6 @@ body {
   z-index: 11;
   flex: auto;
   background: white;
-  background: yellow;
 }
 
 @keyframes progress-bar-kf {
@@ -547,15 +524,19 @@ body {
 }
 @keyframes img-loader-kf {
   0% {
+    /* transform: scale(0); */
     opacity: 0;
   }
   1% {
+    /* transform: scale(1); */
     opacity: 1;
   }
   99% {
+    /* transform: scale(1); */
     opacity: 1;
   }
   100% {
+    /* transform: scale(0); */
     opacity: 0;
   }
 }
@@ -566,6 +547,7 @@ body {
   justify-content: center;
   background-color: white;
   height: 113px;
+  width: 100%;
   height: calc(clamp(1.5rem, 5.4545454545vmin, 2.125rem) * 3);
 }
 .visual-identity__master-logo {
@@ -611,8 +593,9 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #eaeaea;
-  white-space: nowrap;
   height: calc(3 * 1rem);
+  width: 100%;
+  white-space: nowrap;
   /*  label + i:hover {
       input[class*="research"] {
       background-color: transparent;
@@ -710,7 +693,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 .find-a-place__research:focus {
-  background-color: #e8f9f5;
+  background-color: #ece1f9;
 }
 
 .balloon-dot {
@@ -778,6 +761,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
   padding: 2em 1em;
   gap: 1em;
 }
@@ -787,6 +771,7 @@ body {
   background-color: white;
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 2em;
   padding: calc(2em + 2vw) calc(1rem + 1.5vw) calc(3em + 2vw) calc(1rem + 1.5vw);
 }
@@ -798,6 +783,11 @@ body {
 @media (min-width: 768px) and (min-width: 1024px) {
   .explanation {
     padding: 3em 12.6482213439vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) and (min-width: 1440px) {
+  .explanation {
+    padding: 3em 8%;
   }
 }
 .explanation__all-cards {
@@ -867,13 +857,20 @@ body {
 
 /* || RESTAURANTS || */
 .restaurants {
+  animation-name: donwnload-restaurants;
+  animation-duration: 3s;
   background-color: #f7f7f7;
   display: flex;
   flex: auto;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
   gap: 1em;
   padding: calc(2em + 2vw) calc(1rem + 1.5vw) calc(3em + 2vw) calc(1rem + 1.5vw);
+}
+.restaurants img {
+  animation-name: donwnload-img;
+  animation-duration: 6s;
 }
 @media (min-width: 768px) {
   .restaurants {
@@ -883,6 +880,11 @@ body {
 @media (min-width: 768px) and (min-width: 1024px) {
   .restaurants {
     padding: 3em 12.6482213439vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) and (min-width: 1440px) {
+  .restaurants {
+    padding: 3em 8%;
   }
 }
 .restaurants__all-cards {
@@ -948,19 +950,24 @@ body {
   border-bottom-right-radius: 1.2em;
   border-bottom-left-radius: 1.2em;
   width: 100%;
-  min-height: 20rem;
+  min-height: 15rem;
   height: 45.4545454545vmin;
   max-height: 320px;
   transition: all 0.4s ease-in-out;
 }
-@media (min-width: 768px) {
+@media (min-width: 420px) {
   .restaurants__card img {
-    min-height: initial;
+    min-height: 18rem;
+  }
+}
+@media (min-width: 420px) and (min-width: 768px) {
+  .restaurants__card img {
     height: 45.4545454545vmin;
   }
 }
-@media (min-width: 768px) and (min-width: 1024px) {
+@media (min-width: 420px) and (min-width: 768px) and (min-width: 1024px) {
   .restaurants__card img {
+    min-height: 15rem;
     height: calc(11.0671936759vw + 4em + 4em);
     max-height: 288px;
   }
@@ -1145,16 +1152,36 @@ body {
     transform: scale(1) translate(0 0);
   }
 }
+@keyframes donwnload-restaurants {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes donwnload-img {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* || FOOTER || */
 .auxiliary-menu {
   display: flex;
   flex-direction: column;
   background-color: #353535;
   color: white;
-  /* align-items: center; */
-  /* text-align: center; */
+  width: 100%;
   padding: calc(1em + 1vw) calc(1rem + 1.5vw);
-  /* padding: $padding_footer-mobile; */
   gap: 1em;
 }
 @media (min-width: 768px) {

@@ -5,10 +5,8 @@
     flex-direction: column;
     background-color: $color-background_footer;
     color: $color-font__footer;
-    /* align-items: center; */
-    /* text-align: center; */
+    width: 100%;    
     @include padding_footer;
-    /* padding: $padding_footer-mobile; */
     gap: 1em;
     @media (min-width: 768px) {
            

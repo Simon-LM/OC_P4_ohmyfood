@@ -1,37 +1,9 @@
 /*** ||| HOME PAGE ||| ***/
 
 
-.btn-oc {
-    display: flex;
-    justify-content: center;
-}
 
 
 
 
-$border-rad: 1rem;
-$clr-btn: #15DEA5;
-.btn-oc2 {
-    border-radius: $border-rad;
-    background-color: $clr-btn;
-    position: relative;
-    z-index: 1;
-    &:hover {
-        & .btn-oc2__bg {
-            opacity: 1;
-        }
-    }
-    &__bg {
-        position: absolute;
-        border-radius: $border-rad;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: darken($clr-btn, 5);
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-    }
-}
+
 

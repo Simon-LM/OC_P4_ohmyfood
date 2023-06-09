@@ -9,6 +9,7 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
     justify-content: center;
     background-color: $color-background_header;
     height: 113px;
+    width: 100%;
     height: calc($logo-height * 3);
  
     &__master-logo {
