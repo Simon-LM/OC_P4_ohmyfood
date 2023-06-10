@@ -350,7 +350,14 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
     align-items: center;
 } */
 /*** ||| HOME PAGE ||| ***/
-/*** ||| HOME PAGE ||| ***/ /* || LOADER || */
+/*** ||| HOME PAGE ||| ***/
+#home-page {
+  width: 100%;
+  height: 100%;
+  overflow-y: visible;
+}
+
+/* || LOADER || */
 body {
   position: relative;
   z-index: 0;

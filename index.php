@@ -16,8 +16,30 @@
     crossorigin="anonymous" referrerpolicy="no-referrer">
   </head>
   <body> 
-    <!-- <div class="main-container"> -->
-    <div class="loader">
+    
+  
+
+
+    <!-- <header class="visual-identity"> 
+      <div class="visual-identity__master-logo">
+        <img  src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
+      </div>
+      <nav class="visual-identity__back-arrow">
+        <a href="#" title="Page d'aceui"><i class="fa-solid fa-arrow-left"></i></a>
+      </nav>
+    </header> -->
+
+
+<!-- 
+<?php 
+include "./objects/header.php"
+?>
+ -->
+
+
+
+
+    <aside class="loader">
       <div class="loader__background">
         <div class="loader__background-top"></div>
         <div class="loader__background-middle">
@@ -31,15 +53,9 @@
         </div>
         <div class="loader__background-bottom"></div> 
       </div>
-     </div>
-    <header class="visual-identity"> 
-      <div class="visual-identity__master-logo">
-        <img  src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
-      </div>
-      <nav class="visual-identity__back-arrow">
-        <a href="#" title="Page d'aceui"><i class="fa-solid fa-arrow-left"></i></a>
-      </nav>
-    </header>
+    </aside>
+             
+
     <main>
       <section class="find-a-place">
           <div class="balloon-dot">
@@ -88,7 +104,7 @@
                   <p class="restaurants__card-subtitle">Ménilmontant</p>
                 </div>
               </div>
-              <!-- <span class="restaurants__circle"></span> --> 
+             
               <div class="restaurants__heart-like">
                 <span class="restaurants__circle"></span> 
                 <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like"> 
@@ -109,7 +125,7 @@
                   <p class="restaurants__card-subtitle">Charonne</p>
                 </div>
               </div>
-              <!-- <span class="restaurants__circle"></span> -->
+              
               <div class="restaurants__heart-like"> 
                 <span class="restaurants__circle"></span>              
                 <input type="checkbox" name="heart" id="like_la-note-enchantee" class="restaurants__like"> 
@@ -121,7 +137,7 @@
             </a>      
           </article>
           <article class="restaurants__card">
-              <!-- <span class="restaurants__thumbnail-new">Nouveau</span> -->
+              
             <a>
               <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
@@ -130,7 +146,7 @@
                   <p class="restaurants__card-subtitle">Cité Rouge</p>
                 </div>
               </div>
-              <!-- <span class="restaurants__circle"></span> -->
+              
               <div class="restaurants__heart-like">    
                 <span class="restaurants__circle"></span>           
                 <input type="checkbox" name="heart" id="like_a-la-francaise" class="restaurants__like"> 
@@ -142,7 +158,7 @@
             </a>
           </article>
           <article class="restaurants__card">
-           <!--  <span class="restaurants__thumbnail-new">Nouveau</span> -->
+           
             <a>  
               <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
@@ -151,7 +167,7 @@
                   <p class="restaurants__card-subtitle">Folie-Méricourt</p>
                 </div>
               </div>
-              <!-- <span class="restaurants__circle"></span> -->
+             
               <div class="restaurants__heart-like">     
                 <span class="restaurants__circle"></span>          
                 <input type="checkbox" name="heart" id="like_le-delice-des-sens" class="restaurants__like"> 
@@ -163,88 +179,21 @@
             </a>    
           </article>
 
-          <!-- <article class="restaurants__card">
-            <span class="restaurants__thumbnail-new">Nouveau</span>
-            <a>
-              <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-              <div class="restaurants__card-comment">
-                <div class="restaurants__card-text">
-                  <h4 class="restaurants__card-title">La palette du goût</h4>
-                  <p class="restaurants__card-subtitle">Ménilmontant</p>
-                </div>
-              </div>
-              <div class="restaurants__heart-like">              
-                <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like"> 
-                <label for="like_la-palette-du-gout" class="heart">
-                <i class="restaurants__heart fa-regular fa-heart"></i>
-                </label>
-              </div> 
-              
-            </a> 
-          </article>
-          <article class="restaurants__card">
-            <span class="restaurants__thumbnail-new">Nouveau</span>
-            <a>
-              <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
-              <div class="restaurants__card-comment">
-                <div class="restaurants__card-text">
-                  <h4 class="restaurants__card-title">La note enchantée</h4>
-                  <p class="restaurants__card-subtitle">Charonne</p>
-                </div>
-              </div>
-              <div class="restaurants__heart-like">              
-                <input type="checkbox" name="heart" id="like_la-note-enchantee" class="restaurants__like"> 
-                <label for="like_la-note-enchantee" class="heart">
-                <i class="restaurants__heart fa-regular fa-heart"></i>
-                </label>
-              </div>   
-             
-            </a>      
-          </article>
-          <article class="restaurants__card">
-            <span class="restaurants__thumbnail-new">Nouveau</span>
-            <a>
-              <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
-              <div class="restaurants__card-comment">
-                <div class="restaurants__card-text">
-                  <h4 class="restaurants__card-title">À la française</h4>
-                  <p class="restaurants__card-subtitle">Cité Rouge</p>
-                </div>
-              </div>
-              <div class="restaurants__heart-like">              
-                <input type="checkbox" name="heart" id="like_a-la-francaise" class="restaurants__like"> 
-                <label for="like_a-la-francaise" class="heart">
-                <i class="restaurants__heart fa-regular fa-heart"></i>
-                </label>
-              </div>   
-              
-            </a>
-          </article>
-          <article class="restaurants__card">
-            <span class="restaurants__thumbnail-new">Nouveau</span>
-            <a>  
-              <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-              <div class="restaurants__card-comment">
-                <div class="restaurants__card-text">
-                  <h4 class="restaurants__card-title">Le délice des sens</h4>
-                  <p class="restaurants__card-subtitle">Folie-Méricourt</p>
-                </div>
-              </div>
-              <div class="restaurants__heart-like">              
-                <input type="checkbox" name="heart" id="like_le-delice-des-sens" class="restaurants__like"> 
-                <label for="like_le-delice-des-sens" class="heart">
-                  <i class="restaurants__heart fa-regular fa-heart"></i>
-                </label>
-              </div>   
-             
-            </a>    
-          </article> -->
 
 
         </div>
       </section>
     </main>
-    <footer class="auxiliary-menu">
+
+
+
+  <!--   <?php 
+    include "./objects/footer.php"
+    ?>
+     -->
+
+
+    <!-- <footer class="auxiliary-menu">
       <h3 class="auxiliary-menu__title">ohmyfood</h3>
       <nav>
         <ul class="auxiliary-menu__all">
@@ -258,7 +207,8 @@
           </div>
         </ul>
       </nav>
-    </footer>
-    <!-- </div> -->
+    </footer> -->
+   
   </body>
 </html>
+ 
