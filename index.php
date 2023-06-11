@@ -17,20 +17,18 @@
   </head>
   <body> 
   
-     <header class="visual-identity"> 
+     <!-- <header class="visual-identity"> 
       <div class="visual-identity__master-logo">
         <img  src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
       </div>
       <nav class="visual-identity__back-arrow">
         <a href="#" title="Page d'aceui"><i class="fa-solid fa-arrow-left"></i></a>
       </nav>
-    </header> 
+    </header>  -->
 
-<!-- 
-<?php 
-include "./objects/header.php"
-?>
--->
+    <?php 
+    include "./objects/header.php"
+    ?>
 
     <aside class="loader">
       <div class="loader__background">
@@ -95,16 +93,14 @@ include "./objects/header.php"
                   <h4 class="restaurants__card-title">La palette du goût</h4>
                   <p class="restaurants__card-subtitle">Ménilmontant</p>
                 </div>
-              </div>
-             
+              </div>             
               <div class="restaurants__heart-like">
                 <span class="restaurants__circle"></span> 
                 <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like"> 
                 <label for="like_la-palette-du-gout" class="heart">
                 <i class="restaurants__heart fa-regular fa-heart"></i>
                 </label>
-              </div> 
-              
+              </div>               
             </a> 
           </article>
           <article class="restaurants__card">
@@ -166,13 +162,11 @@ include "./objects/header.php"
       </section>
     </main>
 
-
-  <!--   <?php 
+    <?php 
     include "./objects/footer.php"
     ?>
-     -->
-
-    <footer class="auxiliary-menu">
+    
+    <!-- <footer class="auxiliary-menu">
       <h3 class="auxiliary-menu__title">ohmyfood</h3>
       <nav>
         <ul class="auxiliary-menu__all">
@@ -186,7 +180,7 @@ include "./objects/header.php"
           </div>
         </ul>
       </nav>
-    </footer>
+    </footer> -->
        
   </body>
 </html>
