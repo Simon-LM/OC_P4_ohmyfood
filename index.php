@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
   </head>
-  <body> 
+  <body>  -->
   
      <!-- <header class="visual-identity"> 
       <div class="visual-identity__master-logo">
@@ -86,7 +86,7 @@
         <div class="restaurants__all-cards">
           <article class="restaurants__card">
             <span class="restaurants__thumbnail-new">Nouveau</span>
-            <a>
+            <a href="./pages-restaurants.php">
               <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
                 <div class="restaurants__card-text">
@@ -182,6 +182,6 @@
       </nav>
     </footer> -->
        
-  </body>
-</html>
+  <!-- </body>
+</html> -->
  

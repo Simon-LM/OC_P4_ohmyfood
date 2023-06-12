@@ -7,6 +7,7 @@
 /*** COLOR ***/
 /*** FONT COLOR ***/
 /*** BACKGROUND COLOR ***/
+/***IMG RESTAURANTS ***/
 /***** RESPONSIVE *****/
 /* @mixin flex-direction_explanation{
     flex-direction: column;
@@ -76,6 +77,11 @@ img[src*=restaurants] {
 * h4 {
   font-weight: 500;
   font-size: 1.125rem;
+}
+* h5 {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 1.75rem;
 }
 * p {
   font-weight: 300;
@@ -1251,4 +1257,631 @@ body {
   .auxiliary-menu__icon {
     width: initial;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*** ||| PAGES RESTAURANTS ||| ***/
+.menu-restaurants__img-top {
+  background-image: url(/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  /* content: map-get($restaurant-nbr, "img"); */
+}
+.menu-restaurants .name-restaurants__title::after {
+  content: "La palette du goût";
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+.menu-restaurants .entries {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants .entries-1 .heavy::after {
+  content: "Fricassée d'escargots";
+}
+.menu-restaurants .entries-1 .thin::after {
+  content: "Au piment d'Espelette";
+}
+.menu-restaurants .entries-1 .price::after {
+  content: "25€";
+}
+.menu-restaurants .entries-2 .heavy::after {
+  content: "Foie gras de canard mi-cuit";
+}
+.menu-restaurants .entries-2 .thin::after {
+  content: "Et ses copeaux de truffe noire";
+}
+.menu-restaurants .entries-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants .entries-3 .heavy::after {
+  content: "Œuf au plat";
+}
+.menu-restaurants .entries-3 .thin::after {
+  content: "Assaisonné à la truffe sur lit de caviar";
+}
+.menu-restaurants .entries-3 .price::after {
+  content: "20€";
+}
+.menu-restaurants .main-course {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants .main-course-1 .heavy::after {
+  content: "Filet de bœuf aux herbes";
+}
+.menu-restaurants .main-course-1 .thin::after {
+  content: "Accompagné de sa ribambelle de légumes";
+}
+.menu-restaurants .main-course-1 .price::after {
+  content: "40€";
+}
+.menu-restaurants .main-course-2 .heavy::after {
+  content: "Parmentier de queue de bœuf";
+}
+.menu-restaurants .main-course-2 .thin::after {
+  content: "À la truffe noire sur sa purée de panais";
+}
+.menu-restaurants .main-course-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants .main-course-3 .heavy::after {
+  content: "Filet de turbot";
+}
+.menu-restaurants .main-course-3 .thin::after {
+  content: "Aux agrumes";
+}
+.menu-restaurants .main-course-3 .price::after {
+  content: "44€";
+}
+.menu-restaurants .desserts {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants .desserts-1 .heavy::after {
+  content: "Paris-Brest";
+}
+.menu-restaurants .desserts-1 .thin::after {
+  content: "Revisité";
+}
+.menu-restaurants .desserts-1 .price::after {
+  content: "18€";
+}
+.menu-restaurants .desserts-2 .heavy::after {
+  content: "Macaron au chocolat d'exception";
+}
+.menu-restaurants .desserts-2 .thin::after {
+  content: "Et glace à la vanille de Madagascar";
+}
+.menu-restaurants .desserts-2 .price::after {
+  content: "22€";
+}
+.menu-restaurants .desserts-3 .heavy::after {
+  content: "Mousse au chocolat";
+}
+.menu-restaurants .desserts-3 .thin::after {
+  content: "Au piment d'Espelette et à la truffe noire";
+}
+.menu-restaurants .desserts-3 .price::after {
+  content: "23€";
+}
+.menu-restaurants-1__img-top {
+  background-image: url(/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  /* content: map-get($restaurant-nbr, "img"); */
+}
+.menu-restaurants-1 .name-restaurants__title::after {
+  content: "La palette du goût";
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+.menu-restaurants-1 .entries {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-1 .entries-1 .heavy::after {
+  content: "Fricassée d'escargots";
+}
+.menu-restaurants-1 .entries-1 .thin::after {
+  content: "Au piment d'Espelette";
+}
+.menu-restaurants-1 .entries-1 .price::after {
+  content: "25€";
+}
+.menu-restaurants-1 .entries-2 .heavy::after {
+  content: "Foie gras de canard mi-cuit";
+}
+.menu-restaurants-1 .entries-2 .thin::after {
+  content: "Et ses copeaux de truffe noire";
+}
+.menu-restaurants-1 .entries-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants-1 .entries-3 .heavy::after {
+  content: "Œuf au plat";
+}
+.menu-restaurants-1 .entries-3 .thin::after {
+  content: "Assaisonné à la truffe sur lit de caviar";
+}
+.menu-restaurants-1 .entries-3 .price::after {
+  content: "20€";
+}
+.menu-restaurants-1 .main-course {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-1 .main-course-1 .heavy::after {
+  content: "Filet de bœuf aux herbes";
+}
+.menu-restaurants-1 .main-course-1 .thin::after {
+  content: "Accompagné de sa ribambelle de légumes";
+}
+.menu-restaurants-1 .main-course-1 .price::after {
+  content: "40€";
+}
+.menu-restaurants-1 .main-course-2 .heavy::after {
+  content: "Parmentier de queue de bœuf";
+}
+.menu-restaurants-1 .main-course-2 .thin::after {
+  content: "À la truffe noire sur sa purée de panais";
+}
+.menu-restaurants-1 .main-course-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants-1 .main-course-3 .heavy::after {
+  content: "Filet de turbot";
+}
+.menu-restaurants-1 .main-course-3 .thin::after {
+  content: "Aux agrumes";
+}
+.menu-restaurants-1 .main-course-3 .price::after {
+  content: "44€";
+}
+.menu-restaurants-1 .desserts {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-1 .desserts-1 .heavy::after {
+  content: "Paris-Brest";
+}
+.menu-restaurants-1 .desserts-1 .thin::after {
+  content: "Revisité";
+}
+.menu-restaurants-1 .desserts-1 .price::after {
+  content: "18€";
+}
+.menu-restaurants-1 .desserts-2 .heavy::after {
+  content: "Macaron au chocolat d'exception";
+}
+.menu-restaurants-1 .desserts-2 .thin::after {
+  content: "Et glace à la vanille de Madagascar";
+}
+.menu-restaurants-1 .desserts-2 .price::after {
+  content: "22€";
+}
+.menu-restaurants-1 .desserts-3 .heavy::after {
+  content: "Mousse au chocolat";
+}
+.menu-restaurants-1 .desserts-3 .thin::after {
+  content: "Au piment d'Espelette et à la truffe noire";
+}
+.menu-restaurants-1 .desserts-3 .price::after {
+  content: "23€";
+}
+.menu-restaurants-3__img-top {
+  background-image: url(/assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  /* content: map-get($restaurant-nbr, "img"); */
+}
+.menu-restaurants-3 .name-restaurants__title::after {
+  content: "Le délice des sens";
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+.menu-restaurants-3 .entries {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-3 .entries-1 .heavy::after {
+  content: "Tartare de thon";
+}
+.menu-restaurants-3 .entries-1 .thin::after {
+  content: "Assaisonné au yuzu";
+}
+.menu-restaurants-3 .entries-1 .price::after {
+  content: "25€";
+}
+.menu-restaurants-3 .entries-2 .heavy::after {
+  content: "Bouchée de homard croustillant";
+}
+.menu-restaurants-3 .entries-2 .thin::after {
+  content: "Et sa farandole de petits légumes";
+}
+.menu-restaurants-3 .entries-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants-3 .entries-3 .heavy::after {
+  content: "Velouté de cèpes";
+}
+.menu-restaurants-3 .entries-3 .thin::after {
+  content: "Aux truffes";
+}
+.menu-restaurants-3 .entries-3 .price::after {
+  content: "20€";
+}
+.menu-restaurants-3 .main-course {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-3 .main-course-1 .heavy::after {
+  content: "Poulet rôti aux herbes de Provence";
+}
+.menu-restaurants-3 .main-course-1 .thin::after {
+  content: "Et sa crème de truffe";
+}
+.menu-restaurants-3 .main-course-1 .price::after {
+  content: "40€";
+}
+.menu-restaurants-3 .main-course-2 .heavy::after {
+  content: "Langouste rôtie";
+}
+.menu-restaurants-3 .main-course-2 .thin::after {
+  content: "Et ses légumes de saison";
+}
+.menu-restaurants-3 .main-course-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants-3 .main-course-3 .heavy::after {
+  content: "Côte de bœuf Angus";
+}
+.menu-restaurants-3 .main-course-3 .thin::after {
+  content: "Et sa purée de panais";
+}
+.menu-restaurants-3 .main-course-3 .price::after {
+  content: "44€";
+}
+.menu-restaurants-3 .desserts {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-3 .desserts-1 .heavy::after {
+  content: "Farandole de desserts";
+}
+.menu-restaurants-3 .desserts-1 .thin::after {
+  content: "Du chef";
+}
+.menu-restaurants-3 .desserts-1 .price::after {
+  content: "18€";
+}
+.menu-restaurants-3 .desserts-2 .heavy::after {
+  content: "Crème brulée";
+}
+.menu-restaurants-3 .desserts-2 .thin::after {
+  content: "Revisitée";
+}
+.menu-restaurants-3 .desserts-2 .price::after {
+  content: "22€";
+}
+.menu-restaurants-3 .desserts-3 .heavy::after {
+  content: "Tiramisu";
+}
+.menu-restaurants-3 .desserts-3 .thin::after {
+  content: "À la noisette";
+}
+.menu-restaurants-3 .desserts-3 .price::after {
+  content: "23€";
+}
+.menu-restaurants-2__img-top {
+  background-image: url(/assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  /* content: map-get($restaurant-nbr, "img"); */
+}
+.menu-restaurants-2 .name-restaurants__title::after {
+  content: "La note enchantée";
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+.menu-restaurants-2 .entries {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-2 .entries-1 .heavy::after {
+  content: "Ravioles de foie gras";
+}
+.menu-restaurants-2 .entries-1 .thin::after {
+  content: "Accompagnées de leur crème à la truffe";
+}
+.menu-restaurants-2 .entries-1 .price::after {
+  content: "25€";
+}
+.menu-restaurants-2 .entries-2 .heavy::after {
+  content: "Caviar osciètre";
+}
+.menu-restaurants-2 .entries-2 .thin::after {
+  content: "Sur blini à la farine de blé noir";
+}
+.menu-restaurants-2 .entries-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants-2 .entries-3 .heavy::after {
+  content: "Homard et espuma de potiron";
+}
+.menu-restaurants-2 .entries-3 .thin::after {
+  content: "Marinés aux zestes d'orange";
+}
+.menu-restaurants-2 .entries-3 .price::after {
+  content: "20€";
+}
+.menu-restaurants-2 .entries-4 .heavy::after {
+  content: "Foie gras de canard cuit entier";
+}
+.menu-restaurants-2 .entries-4 .thin::after {
+  content: "Confiture de figue et pain toasté";
+}
+.menu-restaurants-2 .entries-4 .price::after {
+  content: "35€";
+}
+.menu-restaurants-2 .main-course {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-2 .main-course-1 .heavy::after {
+  content: "Noix de coquilles Saint-Jacques";
+}
+.menu-restaurants-2 .main-course-1 .thin::after {
+  content: "Sur lit de purée de céleri-rave";
+}
+.menu-restaurants-2 .main-course-1 .price::after {
+  content: "40€";
+}
+.menu-restaurants-2 .main-course-2 .heavy::after {
+  content: "Langoustine poêlée";
+}
+.menu-restaurants-2 .main-course-2 .thin::after {
+  content: "Purée de patate douce";
+}
+.menu-restaurants-2 .main-course-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants-2 .main-course-3 .heavy::after {
+  content: "Mijoté de queue de bœuf";
+}
+.menu-restaurants-2 .main-course-3 .thin::after {
+  content: "Et riz sauvage aux zestes de citron";
+}
+.menu-restaurants-2 .main-course-3 .price::after {
+  content: "44€";
+}
+.menu-restaurants-2 .desserts {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-2 .desserts-1 .heavy::after {
+  content: "Macaron noisette et chocolat";
+}
+.menu-restaurants-2 .desserts-1 .thin::after {
+  content: "Glace au caramel brun et sel de Guérande";
+}
+.menu-restaurants-2 .desserts-1 .price::after {
+  content: "18€";
+}
+.menu-restaurants-2 .desserts-2 .heavy::after {
+  content: "Baba au rhum revisité";
+}
+.menu-restaurants-2 .desserts-2 .thin::after {
+  content: "Avec son coulis de citron";
+}
+.menu-restaurants-2 .desserts-2 .price::after {
+  content: "22€";
+}
+.menu-restaurants-2 .desserts-3 .heavy::after {
+  content: "Tarte au citron meringuée";
+}
+.menu-restaurants-2 .desserts-3 .thin::after {
+  content: "Déstructurée";
+}
+.menu-restaurants-2 .desserts-3 .price::after {
+  content: "23€";
+}
+.menu-restaurants-4__img-top {
+  background-image: url(/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  /* content: map-get($restaurant-nbr, "img"); */
+}
+.menu-restaurants-4 .name-restaurants__title::after {
+  content: "À la française";
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+}
+.menu-restaurants-4 .entries {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-4 .entries-1 .heavy::after {
+  content: "Tartare de poulpe acidulé";
+}
+.menu-restaurants-4 .entries-1 .thin::after {
+  content: "Aux zestes d'orange";
+}
+.menu-restaurants-4 .entries-1 .price::after {
+  content: "25€";
+}
+.menu-restaurants-4 .entries-2 .heavy::after {
+  content: "Velouté de légumes d'antan";
+}
+.menu-restaurants-4 .entries-2 .thin::after {
+  content: "Carotte, panais, topinambour";
+}
+.menu-restaurants-4 .entries-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants-4 .entries-3 .heavy::after {
+  content: "Soupe à l'oignon";
+}
+.menu-restaurants-4 .entries-3 .thin::after {
+  content: "Revisitée";
+}
+.menu-restaurants-4 .entries-3 .price::after {
+  content: "20€";
+}
+.menu-restaurants-4 .main-course {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-4 .main-course-1 .heavy::after {
+  content: "Coquilles Saint-Jacques";
+}
+.menu-restaurants-4 .main-course-1 .thin::after {
+  content: "Accompagnées d'une purée de panais";
+}
+.menu-restaurants-4 .main-course-1 .price::after {
+  content: "40€";
+}
+.menu-restaurants-4 .main-course-2 .heavy::after {
+  content: "Magret de canard";
+}
+.menu-restaurants-4 .main-course-2 .thin::after {
+  content: "Et parmentier de pommes de terre";
+}
+.menu-restaurants-4 .main-course-2 .price::after {
+  content: "35€";
+}
+.menu-restaurants-4 .main-course-3 .heavy::after {
+  content: "Pigeonneau d’Ille-et-Vilaine";
+}
+.menu-restaurants-4 .main-course-3 .thin::after {
+  content: "Sur son lit de gnocchis aux légumes";
+}
+.menu-restaurants-4 .main-course-3 .price::after {
+  content: "44€";
+}
+.menu-restaurants-4 .desserts {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.menu-restaurants-4 .desserts-1 .heavy::after {
+  content: "Pétales de violettes glacés";
+}
+.menu-restaurants-4 .desserts-1 .thin::after {
+  content: "Et purée de noisettes";
+}
+.menu-restaurants-4 .desserts-1 .price::after {
+  content: "18€";
+}
+.menu-restaurants-4 .desserts-2 .heavy::after {
+  content: "Fondant au chocolat";
+}
+.menu-restaurants-4 .desserts-2 .thin::after {
+  content: "Revisité";
+}
+.menu-restaurants-4 .desserts-2 .price::after {
+  content: "22€";
+}
+.menu-restaurants-4 .desserts-3 .heavy::after {
+  content: "Millefeuille croustillant";
+}
+.menu-restaurants-4 .desserts-3 .thin::after {
+  content: "Myrtilles et pâte d’amande";
+}
+.menu-restaurants-4 .desserts-3 .price::after {
+  content: "23€";
+}
+/* STYLE RESTAURANTS */
+.menu-restaurants__img-top {
+  padding: 0;
+  max-width: 100%;
+  width: 100vw;
+  max-height: calc(max-width / 3 * 2);
+  height: 66.6666666667VW;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+}
+
+.menu-restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  background: #f7f7f7;
+  gap: 2rem 4em;
+  padding: 2rem;
+}
+.menu-restaurants__cards {
+  display: flex;
+  flex: auto;
+  border-radius: 1.2em;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: white;
+  padding: 1em;
+}
+.menu-restaurants .name-restaurants__title {
+  /*  content: map-get($restaurant-1, "name-restaurant"); */
+}
+.menu-restaurants__underline-title {
+  border-bottom: 3px solid #99E2D0;
+  width: 5rem;
+}
+.menu-restaurants .heavy {
+  font-weight: 700;
+}
+.menu-restaurants .entries {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  gap: 1em 0;
+}
+.menu-restaurants .entries__title {
+  text-transform: uppercase;
+}
+.menu-restaurants .main-course {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  gap: 1em 0;
+}
+.menu-restaurants .main-course__title {
+  text-transform: uppercase;
+}
+.menu-restaurants .desserts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  gap: 1em 0;
+}
+.menu-restaurants .desserts__title {
+  text-transform: uppercase;
+}
+
+/* .header__menu-restaurants {
+    content: url($img-header_menu-restaurants);
+    max-width: 100%;
+    width: 100vw;
+    max-height: calc(( max-width / 3) * 2);
+    height: calc((100VW / 3) * 2);
+    object-fit: cover;
+} *//*# sourceMappingURL=main.css.map */

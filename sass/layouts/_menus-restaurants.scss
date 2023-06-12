@@ -1,0 +1,77 @@
+/* STYLE RESTAURANTS */
+
+.menu-restaurants__img-top {   
+    padding: 0;    
+    max-width: 100%;
+    width: 100vw;        
+    max-height: calc(( max-width / 3) * 2);
+    height: calc((100VW / 3) * 2);
+    object-fit: cover;
+    background-size: cover;
+}
+
+.menu-restaurants {
+    @include flex-column;
+    background: $color-background_restaurants;
+    gap: 2rem 4em;
+    padding: 2rem;
+    
+    &__cards {
+        @include cards;
+        background: $color-background_restaurants-cards;
+        padding: 1em;
+        
+    }
+
+    .name-restaurants {
+     
+        &__title {      
+            
+            
+           /*  content: map-get($restaurant-1, "name-restaurant"); */
+        }   
+          
+    }
+
+    &__underline-title {
+        border-bottom: 3px solid $color-underline_menu-restaurants;
+        width: 5rem;
+    }
+
+    .heavy {
+        font-weight: 700;
+    }
+    .entries {
+        @include flex-column;
+        gap: 1em 0;
+
+        &__title {
+            text-transform: uppercase;
+        }
+        
+       
+    }
+
+    .main-course {
+        @include flex-column;
+        gap: 1em 0;
+
+        &__title {
+            text-transform: uppercase;
+        }
+      
+    }
+
+    .desserts {
+        @include flex-column;
+        gap: 1em 0;
+
+        &__title {
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
+

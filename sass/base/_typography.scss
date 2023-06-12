@@ -22,6 +22,12 @@
         font-size:rem(18);
     }
 
+    h5 {
+        font-family: $font-logo;
+        font-weight: 400;
+        font-size:rem(28);
+    }
+
     p {
         font-weight: 300;
         line-height: 1.5em; /* For accessibility */

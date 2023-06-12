@@ -1,0 +1,174 @@
+
+@mixin each-page-of-restaurants-menus ($restaurant-nbr: $restaurant-1){
+    &__img-top {
+       background-image: #{map-get($restaurant-nbr, "img")};
+       /* content: map-get($restaurant-nbr, "img"); */
+    }
+    .name-restaurants {      
+        &__title::after {         
+            content: map-get($restaurant-nbr, "name-restaurant");
+            user-select: text;
+            
+        }   
+    }   
+    .entries {    
+        user-select: none;
+        &-1 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "entries-1", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "entries-1", "thin" );
+            }
+                .price::after {
+                content: map-get($restaurant-nbr, "entries-1", "price" );
+            }
+        }        
+        &-2 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "entries-2", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "entries-2", "thin" );
+            }
+                .price::after {
+                content: map-get($restaurant-nbr, "entries-2", "price" );
+            }
+        }
+        &-3 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "entries-3", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "entries-3", "thin" );
+            }
+                .price::after {
+                content: map-get($restaurant-nbr, "entries-3", "price" );
+            }
+        }
+        &-4 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "entries-4", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "entries-4", "thin" );
+            }
+                .price::after {
+                content: map-get($restaurant-nbr, "entries-4", "price" );
+            }
+        }
+    }
+    .main-course {
+        user-select: none;
+        &-1 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "main-course-1", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "main-course-1", "thin" );
+            }
+            .price::after {
+            content: map-get($restaurant-nbr, "main-course-1", "price" );
+            }
+        }
+        &-2 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "main-course-2", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "main-course-2", "thin" );
+            }
+            .price::after {
+                content: map-get($restaurant-nbr, "main-course-2", "price" );
+            }
+        }
+        &-3 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "main-course-3", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "main-course-3", "thin" );
+            }
+            .price::after {
+                content: map-get($restaurant-nbr, "main-course-3", "price" );
+            }
+        }
+        &-4 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "main-course-4", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "main-course-4", "thin" );
+            }
+            .price::after {
+                content: map-get($restaurant-nbr, "main-course-4", "price" );
+            }
+        }       
+    }
+    .desserts {
+        user-select: none;
+        &-1 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "desserts-1", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "desserts-1", "thin" );
+            }
+            .price::after {
+            content: map-get($restaurant-nbr, "desserts-1", "price" );
+            }
+        }
+        &-2 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "desserts-2", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "desserts-2", "thin" );
+            }
+            .price::after {
+            content: map-get($restaurant-nbr, "desserts-2", "price" );
+            }
+        }
+        &-3 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "desserts-3", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "desserts-3", "thin" );
+            }
+            .price::after {
+            content: map-get($restaurant-nbr, "desserts-3", "price" );
+            }
+        }
+        &-4 {
+            .heavy::after {
+                content: map-get($restaurant-nbr, "desserts-4", "heavy" );
+            }
+            .thin::after {
+                content: map-get($restaurant-nbr, "desserts-4", "thin" );
+            }
+            .price::after {
+            content: map-get($restaurant-nbr, "desserts-4", "price" );
+            }
+        }
+    }
+}
+
+
+.menu-restaurants  {
+    @include each-page-of-restaurants-menus;
+}
+
+
+.menu-restaurants-1 {
+    @include each-page-of-restaurants-menus($restaurant-nbr: $restaurant-1);
+}
+.menu-restaurants-3  {
+    @include each-page-of-restaurants-menus($restaurant-nbr: $restaurant-2);
+}
+.menu-restaurants-2  {
+    @include each-page-of-restaurants-menus($restaurant-nbr: $restaurant-3);
+}
+.menu-restaurants-4  {
+    @include each-page-of-restaurants-menus($restaurant-nbr: $restaurant-4);
+}
