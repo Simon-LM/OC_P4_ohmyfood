@@ -22,9 +22,7 @@
       <div class="visual-identity__master-logo">
         <img  src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
       </div>
-    <!-- </header>
-    <header class="visual-identity"> --> 
-      <nav class="visual-identity__back-arrow--hidden">
+      <nav class="visual-identity__back-arrow">
         <a href="index.php" title="Page d'accueil"><i class="fa-solid fa-arrow-left"></i></a>
       </nav>
     </header>

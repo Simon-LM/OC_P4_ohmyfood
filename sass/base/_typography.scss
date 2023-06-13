@@ -28,6 +28,12 @@
         font-size:rem(28);
     }
 
+    h6 {
+        font-weight: 300;
+        font-size:rem(16);
+        text-transform: uppercase;
+    }
+
     p {
         font-weight: 300;
         line-height: 1.5em; /* For accessibility */
@@ -45,7 +51,22 @@
 
         /* font-size: rem(15.05); */
     }
-}
+    
+    .menu-restaurants {        
+        [class$="menu-heavy"] {
+            font-size: rem(18);
+            font-weight: 700;
+        }    
+        [class$="menu-thin"] {
+            font-size: rem(15.0431);
+            font-weight: 300;
+        }
+        [class$="price"] {
+            font-size: rem(15.0431);
+            font-weight: 700;
+        }        
+    }   
+}   
 
 span {
     &[class="explanation__circle"] {

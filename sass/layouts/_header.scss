@@ -41,15 +41,9 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
                     transition: all 0.3s 0.1s ease-in-out;
                     transform: translate(-0.75em, 0);
                }
-            }
-
-           
-              
-            /* font-size: 1.2em; */
-            /*   margin-left: -0.3em; */
-            
+            }            
         }   
-
+        
         &--hidden {
             visibility: hidden;
         }

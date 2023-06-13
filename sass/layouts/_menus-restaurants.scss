@@ -7,7 +7,16 @@
     max-height: calc(( max-width / 3) * 2);
     height: calc((100VW / 3) * 2);
     object-fit: cover;
-    background-size: cover;
+    background-size: cover;   
+}
+
+.name-restaurants {
+    position: relative;
+    @include flex-row;
+    justify-content: space-between;
+    €__title{
+        margin-top: 1em;
+    }
 }
 
 .menu-restaurants {
@@ -15,60 +24,64 @@
     background: $color-background_restaurants;
     gap: 2rem 4em;
     padding: 2rem;
-    
-    &__cards {
-        @include cards;
-        background: $color-background_restaurants-cards;
-        padding: 1em;
-        
-    }
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    margin-top: -3rem;
 
-    .name-restaurants {
-     
-        &__title {      
+    .entries, .main-course, .desserts {
+        @include flex-column;
+        gap: 1em 0;
+
+        &__title-and-underline  {
+            @include flex-column;
+            align-items: start;
+
+            [class$="underline"] {
+                border-bottom: 3px solid $color-underline_menu-restaurants;
+                width: 4ch;
+            }
+        } 
+
+        &__cards {
+            @include flex-row;
+           /*  flex: auto;
+            height: 100%;      */
+            justify-content: space-between;   
+            @include cards;
+            background: $color-background_restaurants-cards;
             
-            
-           /*  content: map-get($restaurant-1, "name-restaurant"); */
-        }   
-          
-    }
+            > p {
+                display: flex;
+                flex: auto;
+                margin-bottom: -1em;
+                //background: blue;                
 
-    &__underline-title {
-        border-bottom: 3px solid $color-underline_menu-restaurants;
-        width: 5rem;
-    }
-
-    .heavy {
-        font-weight: 700;
-    }
-    .entries {
-        @include flex-column;
-        gap: 1em 0;
-
-        &__title {
-            text-transform: uppercase;
+                &::after { 
+                    display: flex;
+                    flex: auto;  
+                    justify-content: end;
+                    align-items: end;            
+                    height: 100%;
+                    padding-right: 1rem;
+                    margin-bottom: -1em;
+                    //background: lightblue;  
+                }
+            }
+            div p::after { 
+                display: flex;
+                padding-left: 1rem;
+                //background: red; 
+            }        
+            [class$="heavy"]::after {
+                padding-top: 1rem;
+                //background: yellow;
+            }    
+            [class$="thin"]::after {
+               padding-bottom: 1rem;
+               //background: greenyellow;
+            }               
         }
-        
-       
-    }
 
-    .main-course {
-        @include flex-column;
-        gap: 1em 0;
-
-        &__title {
-            text-transform: uppercase;
-        }
-      
-    }
-
-    .desserts {
-        @include flex-column;
-        gap: 1em 0;
-
-        &__title {
-            text-transform: uppercase;
-        }
     }
 }
 
