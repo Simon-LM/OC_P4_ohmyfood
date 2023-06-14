@@ -6,7 +6,8 @@
     <main class="menu-restaurants">
       <section class="name-restaurants">
         <h5 class="name-restaurants__title"></h5>
-        <div class="restaurants__heart-like">       
+        <div class="restaurants__heart-like">
+        <span class="material-symbols-outlined">favorite</span>  
           <span class="restaurants__circle"></span>          
           <input type="checkbox" name="heart" id="like_le-delice-des-sens" class="restaurants__like"> 
           <label for="like_le-delice-des-sens" class="heart">
@@ -19,12 +20,15 @@
           <h6 class="entries__title">Entrées</h6>
           <div class="entries__underline"></div>
         </div>  
-          <div class="entries__cards entries-1">
+        <div class="entries__cards entries-1">
           <div class="entries__menu">
             <p class="entries__menu-heavy"></p>
             <p class="entries__menu-thin"></p>
           </div>
-            <p class="entries__price"></p>
+          <div><p class="entries__price"></p></div>
+          <div class="entries__menu-selected">
+            <span class="material-symbols-outlined"></span>
+          </div>
         </div>
         <div class="entries__cards entries-2">
         <div class="entries__menu">
@@ -41,11 +45,14 @@
             <p class="entries__price"></p>
         </div>
         <div class="entries__cards entries-4">
-        <div class="entries__menu">
+          <div class="entries__menu">
             <p class="entries__menu-heavy"></p>
             <p class="entries__menu-thin"></p>
           </div>
-            <p class="entries__price"></p>
+          <div><p class="entries__price"></p></div>
+          <div class="entries__menu-selected">
+            <span class="material-symbols-outlined"></span>
+          </div>  
         </div>
       </section>
       <section  class="main-course">

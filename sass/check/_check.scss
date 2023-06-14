@@ -127,6 +127,36 @@ div {
     }
 }
 
+div::after {
+    outline: check_frame-dashed_red(20%);
+
+    div::after {
+        outline: check_frame-dashed_red(30%);
+        div::after {
+            outline: check_frame-dashed_red(40%);
+            div::after {
+                outline: check_frame-dashed_red(50%);              
+            }
+        }
+    }
+}
+
+p::after {
+    outline: check_frame-dashed_red(20%);
+
+    p::after {
+        outline: check_frame-dashed_red(30%);
+        p::after {
+            outline: check_frame-dashed_red(40%);
+            p::after {
+                outline: check_frame-dashed_red(50%);              
+            }
+        }
+    }
+}
+
+
+
 div[class*="like"]:hover, nav div:hover {
     outline: none;
 }

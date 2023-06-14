@@ -16,10 +16,13 @@
                 content: map-get($restaurant-nbr, "entries-1", "heavy" );
             }
             [class$="thin"]::after {
-                content: map-get($restaurant-nbr, "entries-1", "thin" );
+                content: map-get($restaurant-nbr, "entries-1", "thin" ); 
             }
             [class$="price"]::after {
                 content: map-get($restaurant-nbr, "entries-1", "price" );
+            }
+            [class$="material-symbols-outlined"]::after {
+                content: "check_circle" ;
             }
         }        
         &-2 {
@@ -54,6 +57,9 @@
             }
             [class$="price"]::after {
                 content: map-get($restaurant-nbr, "entries-4", "price" );
+            }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "entries-5", "price" );
             }
         }
     }
