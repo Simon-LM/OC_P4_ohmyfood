@@ -9,14 +9,16 @@ html {
 }
 
 body {
-    flex: auto; 
+    @include flex-column;
+    //flex: auto; 
     margin: 0;
     max-width: 1440px;
-    width: 100%;
+    //width: 100%;
 }
 
 main {
-    width: 100%;
+    @include flex-column;
+    //width: 100%;
 }
 
 img {

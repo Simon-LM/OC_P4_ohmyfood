@@ -9,17 +9,138 @@
 /*** BACKGROUND COLOR ***/
 /***IMG RESTAURANTS ***/
 /***** RESPONSIVE *****/
-/* @mixin flex-direction_explanation{
-    flex-direction: column;
-
-    @media (min-width: 768px) {
-        flex-direction: column;
-
-        @media (min-width:1024px) {
-            flex-direction: row;
-        }
-    }
-} */
+@keyframes img-and-name-restaurant {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.66;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heart-resto {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  33% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  66% {
+    opacity: 0.8;
+    transform: scale(5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes translatex-menu-title {
+  0% {
+    transform: translatex(-25vh);
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.66;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+@keyframes loading-menu {
+  0% {
+    transform: translatey(100vh);
+    opacity: 0;
+  }
+  66% {
+    opacity: 0.33;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+@keyframes translatex-button {
+  0% {
+    transform: translatex(-25vh);
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.66;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+@keyframes finger-check {
+  0% {
+    transform: translate(25vh, 40vw);
+    opacity: 0;
+  }
+  33% {
+    transform: translatey(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+  }
+  66% {
+    transform: translatey(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(25vh, 40vw);
+    opacity: 0;
+  }
+}
+@keyframes finger-check-menu {
+  0% {
+    transform-origin: 0%;
+    opacity: 0;
+  }
+  33% {
+    transform: translatex(0%);
+    opacity: 1;
+    margin: 0;
+  }
+  66% {
+    transform: translatex(0%);
+    opacity: 1;
+    margin: 0;
+  }
+  100% {
+    transform: initial;
+    opacity: 0;
+  }
+}
+@keyframes check-menu-focus {
+  0% {
+    transform-origin: 0%;
+    opacity: 0;
+  }
+  33% {
+    transform: translatex(0%);
+    opacity: 1;
+    margin: 0;
+  }
+  66% {
+    transform: translatex(0%);
+    opacity: 1;
+    margin: 0;
+  }
+  100% {
+    transform: initial;
+    opacity: 0;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -30,13 +151,22 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex: auto;
+  width: 100%;
   margin: 0;
   max-width: 1440px;
-  width: 100%;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
   width: 100%;
 }
 
@@ -172,57 +302,11 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   padding: 0 2em;
   margin: 1rem 0;
   transition: all 0.35s ease-in-out, font-size 0.25s 0.1s ease;
-  /* &:nth-child(0n+3) {
-      background: blue;
-      &:hover {
-      @include hover-links;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      font-size: calc($font-size_order-btn + ($btn_desired-expansion * 1rem));
-      height: calc(($height_order-btn * $font-size_order-btn) + (($btn_desired-expansion * 1rem) * $height_order-btn));
-
-      }
-  } */
-  /* &:nth-child(0n+4) {
-      background: lightblue;
-      &:hover {
-          @include hover-links;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-          font-size: calc($font-size_order-btn + ($btn_desired-expansion * 1rem));
-          height: calc(($height_order-btn * $font-size_order-btn) + (($btn_desired-expansion * 1rem) * $height_order-btn));
-          margin: calc((($height_order-btn * ($btn_desired-expansion * 1rem)) / -2) + $vertical-margin_order-btn) 0;
-
-      }
-  } */
-  /* &:nth-child(0n+5) { 
-  background: green;
-  transition: all  0.35s ease-in-out;
-      &:hover {
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-      font-size: calc($font-size_order-btn + ($btn_desired-expansion * 1rem));
-      transform: scale(1.2);
-
-      }
-  } */
-  /* &:last-child{
-      background: yellowgreen;
-      transition: all  0.35s ease-in-out ;
-      &:hover {
-          font-size: initial;
-          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-          transform: scale(1.2);
-
-          margin: calc((($height_order-btn * ($btn_desired-expansion * 1rem)) / -2) + $vertical-margin_order-btn) 0;
-
-      }    
-  } */
 }
 .order-btn:hover {
   cursor: pointer;
   opacity: 0.9;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  /* font-size: calc($font-size_order-btn + ($btn_desired-expansion * 1rem)); */
-  /* height: calc(($height_order-btn * $font-size_order-btn) + (($btn_desired-expansion * 1rem) * $height_order-btn)); */
-  /* margin: calc((($height_order-btn * ($btn_desired-expansion * 1rem)) / -2) + $vertical-margin_order-btn) 0; */
   transform: scale(1.15);
 }
 @media (min-width: 1024px) {
@@ -234,6 +318,28 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
 
 /* USE em or rem | Enlargement desired in addition than the original size */
 .restaurants {
+  /* iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
+  /* iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
+  /* &__like + .heart [class$="heart"] {
+
+
+      &:hover {
+         transform-origin: 50% 50%;
+
+          cursor: pointer; 
+          transform: scale(1.25);
+      }   
+  } */
+  /* 
+      &__like:checked + .heart [class$="heart"] {
+
+          font-weight: 900 !important;        
+          background: $color-icons-heart-like;
+          background-clip: text;        
+          -webkit-background-clip: text;
+          color: transparent;     
+
+      } */
   /*  
    &__heart-like {
        &--opacity {
@@ -271,39 +377,54 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
        } 
    }   */
 }
-.restaurants__card:hover [class=heart] {
-  /*  background: white;
-   padding: 10rem;
-   clip-path: circle(4%);   */
-}
 .restaurants label {
   z-index: 5;
   position: absolute;
   display: block;
-  padding: 0;
-  margin: 0;
-  height: 0;
-  width: 0;
+  /*  height: 1.5rem;
+   width: 1.5rem;   */
+  /* &:focus {
+      background: blue;
+      outline: 1px solid red;
+  } */
 }
 .restaurants__heart-like {
-  z-index: 5;
+  z-index: 10;
   position: absolute;
-  right: 2rem;
-  bottom: 2rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
   opacity: 1 !important;
-  background: red;
-  height: 0;
-  width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   /* padding: 0.4rem 0;
   clip-path: circle(45%); */
+  transition: all 0.4s 0.2s ease-in-out;
+}
+.restaurants__heart-like:hover, .restaurants__heart-like:focus {
+  transform-origin: 50% 50%;
+  transform: scale(1.25);
 }
 .restaurants__like {
-  height: 0;
-  width: 0;
+  position: absolute;
+  z-index: -1;
+  bottom: -0.75rem;
+  height: 1.6em;
+  width: 1.6em;
   opacity: 0;
+}
+.restaurants__like:focus {
+  opacity: 1;
+  color: transparent;
+  background: transparent;
+  border: none;
+}
+.restaurants__like:hover {
+  opacity: 0 !important;
+  visibility: collapse;
+}
+.restaurants__like:focus:hover {
+  opacity: 0 !important;
   visibility: collapse;
 }
 .restaurants__heart {
@@ -311,52 +432,68 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
   flex: auto;
   align-items: center;
   vertical-align: middle;
-  font-size: 1rem;
-  font-weight: 100 !important;
+  /* font-weight: 100 !important; */
   text-align: center;
-  /* width: 100%;
-  height: initial; */
-  margin-top: 0em;
-  transition: 0.4s ease-in-out, color 1s ease-in-out;
-  /* background: $color-background_main; */
-  /*  padding: 0.5rem;
-   clip-path: circle(45%); */
-  /* margin-top: 0; */
-  /*  background: blue; */
+}
+.restaurants__heart {
+  font-size: 1.5rem !important;
   /* &:hover {
+      transform-origin: 50% 50%;
       cursor: pointer; 
       transform: scale(1.25);
-
-  }   */
+  }  */
 }
-.restaurants__like + .heart [class$=heart] {
-  /*  padding: 5rem; */
-  /* padding-top: 5.2rem; */
-  /* clip-path: circle(6%); */
-  /* background: violet; */
-}
-.restaurants__like + .heart [class$=heart]:hover {
-  transform-origin: 50% 50%;
-  /*  background: blueviolet; */
+.restaurants__heart:hover {
   cursor: pointer;
-  transform: scale(1.25);
 }
-.restaurants__like:checked + .heart [class$=heart] {
-  font-weight: 900 !important;
+.restaurants__heart--background {
+  height: 1.6rem;
+  width: 1.6rem;
+  position: absolute;
+  z-index: -1;
+  color: white !important;
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" -25, "opsz" 48;
+  /* Modification of opacity for .menu-restaurant page down*/
+}
+.restaurants__heart--empty {
+  height: 1.6rem;
+  width: 1.6rem;
+  position: absolute;
+  z-index: 2; /* Modification of z-index for .menu-restaurant page down*/
+  color: black !important;
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" -25, "opsz" 48;
+}
+.restaurants__heart--full {
+  height: 1.6rem;
+  width: 1.6rem;
+  position: relative;
+  z-index: 11;
+  background-color: linear-gradient(#9356DC, #FF79DA);
+  /* color: red; */
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 48;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
+.restaurants__like + .heart, .restaurants__like:focus + .heart {
+  opacity: 0;
+  transform-origin: center bottom;
+  transition: opacity 1s ease-in;
+}
+.restaurants__like:checked + .heart, .restaurants__like:checked:focus + .heart {
+  opacity: 1;
+}
 .restaurants__circle {
   z-index: 3;
   position: absolute;
+  right: 1rem;
+  bottom: 1rem;
   padding: 0.8rem;
-  margin: -3.27rem;
-  margin-bottom: -3.45rem;
-  right: 2rem;
-  bottom: 2rem;
+  height: 1.6rem;
+  width: 1.6rem;
   background: white;
+  background: navajowhite;
   border-radius: 50%;
   /* clip-path: circle(20%); */
 }
@@ -365,6 +502,16 @@ input:hover[class$=research]:hover, a:hover[class$=research]:hover {
     /*  right: 2rem;
      bottom: 2rem; */
   }
+}
+
+.menu-restaurants .restaurants__like {
+  bottom: 0.1rem;
+}
+.menu-restaurants .restaurants__heart--background {
+  opacity: 0 !important;
+}
+.menu-restaurants .restaurants__heart--empty {
+  z-index: -1 !important;
 }
 
 /* i {
@@ -721,7 +868,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 .find-a-place__research:focus {
-  background-color: #ece1f9;
+  background-color: #f2eafb;
 }
 
 .balloon-dot {
@@ -824,6 +971,9 @@ body {
   justify-content: space-between;
   gap: 2em;
   flex-direction: column;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @media (min-width: 768px) {
   .explanation__all-cards {
@@ -935,6 +1085,19 @@ body {
     flex-direction: row;
   }
 }
+.restaurants__all-cards a {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  width: 100%;
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .restaurants__all-cards a {
+    max-width: 100%;
+    width: initial;
+    min-width: calc(50% - 1em);
+  }
+}
 .restaurants__card {
   display: flex;
   flex: auto;
@@ -945,31 +1108,13 @@ body {
   align-items: center;
   width: 100%;
   overflow: hidden;
-  /* @media (min-width: 768px) {
-      max-width: 750px;        
-      @media (min-width:1024px) {
-         max-width: initial;        
-      }
-  } */
+  background: #99E2D0;
 }
 .restaurants__card:hover [class$=card-comment] {
   opacity: 0;
 }
 .restaurants__card:hover [class$=card-comment--opacity] {
   opacity: 1;
-}
-@media (min-width: 768px) and (min-width: 1024px) {
-  .restaurants__card {
-    max-width: 100%;
-    width: initial;
-    min-width: calc(50% - 1em);
-  }
-}
-.restaurants__card a {
-  display: flex;
-  flex-direction: column;
-  flex: auto;
-  width: 100%;
 }
 .restaurants__card img {
   z-index: 1;
@@ -1036,6 +1181,9 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   transition: transform 0.4s 0.4s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .restaurants:hover:only-of-type [class$=thumbnail-new] {
   animation-name: thumbnail-new-kf;
@@ -1102,7 +1250,15 @@ body {
 }
 
 @media (min-width: 1024px) {
+  main {
+    /* :last-child > [class$="thumbnail-new"] {
+        background-color: palevioletred;
+        @include anim_thumbnail-new;
+        animation-delay:5.9s;
+    }   */
+  }
   main :only-of-type [class$=thumbnail-new] {
+    background-color: lightblue;
     animation-name: thumbnail-new-kf;
     animation-duration: 1.8s;
     animation-fill-mode: both;
@@ -1112,6 +1268,7 @@ body {
     animation-delay: 5.4s;
   }
   main :first-child > [class$=thumbnail-new] {
+    background-color: orangered;
     animation-name: thumbnail-new-kf;
     animation-duration: 1.8s;
     animation-fill-mode: both;
@@ -1121,6 +1278,7 @@ body {
     animation-delay: 5.6s;
   }
   main :nth-of-type(0n+2) [class$=thumbnail-new] {
+    background-color: orange;
     animation-name: thumbnail-new-kf;
     animation-duration: 1.8s;
     animation-fill-mode: both;
@@ -1130,6 +1288,7 @@ body {
     animation-delay: 5.2s;
   }
   main :nth-of-type(0n+3) [class$=thumbnail-new] {
+    background-color: peru;
     animation-name: thumbnail-new-kf;
     animation-duration: 1.8s;
     animation-fill-mode: both;
@@ -1139,6 +1298,7 @@ body {
     animation-delay: 5.8s;
   }
   main :nth-last-of-type(0n+3) [class$=thumbnail-new] {
+    background-color: pink;
     animation-name: thumbnail-new-kf;
     animation-duration: 1.8s;
     animation-fill-mode: both;
@@ -1148,6 +1308,7 @@ body {
     animation-delay: 6.2s;
   }
   main :nth-last-of-type(0n+2) [class$=thumbnail-new] {
+    background-color: lightcoral;
     animation-name: thumbnail-new-kf;
     animation-duration: 1.8s;
     animation-fill-mode: both;
@@ -1155,15 +1316,6 @@ body {
     animation-play-state: running;
     animation-iteration-count: 1;
     animation-delay: 5.3s;
-  }
-  main :last-child > [class$=thumbnail-new] {
-    animation-name: thumbnail-new-kf;
-    animation-duration: 1.8s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    animation-play-state: running;
-    animation-iteration-count: 1;
-    animation-delay: 5.9s;
   }
 }
 @keyframes thumbnail-new-kf {
@@ -1310,6 +1462,9 @@ body {
 .menu-restaurants .entries-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants .entries-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants .entries-3 [class$=heavy]::after {
   content: "Œuf au plat";
 }
@@ -1318,6 +1473,9 @@ body {
 }
 .menu-restaurants .entries-3 [class$=price]::after {
   content: "20€";
+}
+.menu-restaurants .entries-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants .main-course {
   -webkit-user-select: none;
@@ -1333,6 +1491,9 @@ body {
 .menu-restaurants .main-course-1 [class$=price]::after {
   content: "40€";
 }
+.menu-restaurants .main-course-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants .main-course-2 [class$=heavy]::after {
   content: "Parmentier de queue de bœuf";
 }
@@ -1342,6 +1503,9 @@ body {
 .menu-restaurants .main-course-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants .main-course-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants .main-course-3 [class$=heavy]::after {
   content: "Filet de turbot";
 }
@@ -1350,6 +1514,9 @@ body {
 }
 .menu-restaurants .main-course-3 [class$=price]::after {
   content: "44€";
+}
+.menu-restaurants .main-course-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants .desserts {
   -webkit-user-select: none;
@@ -1365,6 +1532,9 @@ body {
 .menu-restaurants .desserts-1 [class$=price]::after {
   content: "18€";
 }
+.menu-restaurants .desserts-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants .desserts-2 [class$=heavy]::after {
   content: "Macaron au chocolat d'exception";
 }
@@ -1374,6 +1544,9 @@ body {
 .menu-restaurants .desserts-2 [class$=price]::after {
   content: "22€";
 }
+.menu-restaurants .desserts-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants .desserts-3 [class$=heavy]::after {
   content: "Mousse au chocolat";
 }
@@ -1382,6 +1555,9 @@ body {
 }
 .menu-restaurants .desserts-3 [class$=price]::after {
   content: "23€";
+}
+.menu-restaurants .desserts-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-1__img-top {
   background-image: url(/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -1418,6 +1594,9 @@ body {
 .menu-restaurants-1 .entries-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants-1 .entries-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-1 .entries-3 [class$=heavy]::after {
   content: "Œuf au plat";
 }
@@ -1426,6 +1605,9 @@ body {
 }
 .menu-restaurants-1 .entries-3 [class$=price]::after {
   content: "20€";
+}
+.menu-restaurants-1 .entries-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-1 .main-course {
   -webkit-user-select: none;
@@ -1441,6 +1623,9 @@ body {
 .menu-restaurants-1 .main-course-1 [class$=price]::after {
   content: "40€";
 }
+.menu-restaurants-1 .main-course-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-1 .main-course-2 [class$=heavy]::after {
   content: "Parmentier de queue de bœuf";
 }
@@ -1450,6 +1635,9 @@ body {
 .menu-restaurants-1 .main-course-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants-1 .main-course-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-1 .main-course-3 [class$=heavy]::after {
   content: "Filet de turbot";
 }
@@ -1458,6 +1646,9 @@ body {
 }
 .menu-restaurants-1 .main-course-3 [class$=price]::after {
   content: "44€";
+}
+.menu-restaurants-1 .main-course-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-1 .desserts {
   -webkit-user-select: none;
@@ -1473,6 +1664,9 @@ body {
 .menu-restaurants-1 .desserts-1 [class$=price]::after {
   content: "18€";
 }
+.menu-restaurants-1 .desserts-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-1 .desserts-2 [class$=heavy]::after {
   content: "Macaron au chocolat d'exception";
 }
@@ -1482,6 +1676,9 @@ body {
 .menu-restaurants-1 .desserts-2 [class$=price]::after {
   content: "22€";
 }
+.menu-restaurants-1 .desserts-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-1 .desserts-3 [class$=heavy]::after {
   content: "Mousse au chocolat";
 }
@@ -1490,6 +1687,9 @@ body {
 }
 .menu-restaurants-1 .desserts-3 [class$=price]::after {
   content: "23€";
+}
+.menu-restaurants-1 .desserts-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-3__img-top {
   background-image: url(/assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
@@ -1526,6 +1726,9 @@ body {
 .menu-restaurants-3 .entries-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants-3 .entries-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-3 .entries-3 [class$=heavy]::after {
   content: "Velouté de cèpes";
 }
@@ -1534,6 +1737,9 @@ body {
 }
 .menu-restaurants-3 .entries-3 [class$=price]::after {
   content: "20€";
+}
+.menu-restaurants-3 .entries-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-3 .main-course {
   -webkit-user-select: none;
@@ -1549,6 +1755,9 @@ body {
 .menu-restaurants-3 .main-course-1 [class$=price]::after {
   content: "40€";
 }
+.menu-restaurants-3 .main-course-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-3 .main-course-2 [class$=heavy]::after {
   content: "Langouste rôtie";
 }
@@ -1558,6 +1767,9 @@ body {
 .menu-restaurants-3 .main-course-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants-3 .main-course-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-3 .main-course-3 [class$=heavy]::after {
   content: "Côte de bœuf Angus";
 }
@@ -1566,6 +1778,9 @@ body {
 }
 .menu-restaurants-3 .main-course-3 [class$=price]::after {
   content: "44€";
+}
+.menu-restaurants-3 .main-course-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-3 .desserts {
   -webkit-user-select: none;
@@ -1581,6 +1796,9 @@ body {
 .menu-restaurants-3 .desserts-1 [class$=price]::after {
   content: "18€";
 }
+.menu-restaurants-3 .desserts-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-3 .desserts-2 [class$=heavy]::after {
   content: "Crème brulée";
 }
@@ -1590,6 +1808,9 @@ body {
 .menu-restaurants-3 .desserts-2 [class$=price]::after {
   content: "22€";
 }
+.menu-restaurants-3 .desserts-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-3 .desserts-3 [class$=heavy]::after {
   content: "Tiramisu";
 }
@@ -1598,6 +1819,9 @@ body {
 }
 .menu-restaurants-3 .desserts-3 [class$=price]::after {
   content: "23€";
+}
+.menu-restaurants-3 .desserts-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-2__img-top {
   background-image: url(/assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
@@ -1634,6 +1858,9 @@ body {
 .menu-restaurants-2 .entries-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants-2 .entries-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-2 .entries-3 [class$=heavy]::after {
   content: "Homard et espuma de potiron";
 }
@@ -1643,6 +1870,9 @@ body {
 .menu-restaurants-2 .entries-3 [class$=price]::after {
   content: "20€";
 }
+.menu-restaurants-2 .entries-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-2 .entries-4 [class$=heavy]::after {
   content: "Foie gras de canard cuit entier";
 }
@@ -1651,6 +1881,9 @@ body {
 }
 .menu-restaurants-2 .entries-4 [class$=price]::after {
   content: "35€";
+}
+.menu-restaurants-2 .entries-4 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-2 .main-course {
   -webkit-user-select: none;
@@ -1666,6 +1899,9 @@ body {
 .menu-restaurants-2 .main-course-1 [class$=price]::after {
   content: "40€";
 }
+.menu-restaurants-2 .main-course-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-2 .main-course-2 [class$=heavy]::after {
   content: "Langoustine poêlée";
 }
@@ -1675,6 +1911,9 @@ body {
 .menu-restaurants-2 .main-course-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants-2 .main-course-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-2 .main-course-3 [class$=heavy]::after {
   content: "Mijoté de queue de bœuf";
 }
@@ -1683,6 +1922,9 @@ body {
 }
 .menu-restaurants-2 .main-course-3 [class$=price]::after {
   content: "44€";
+}
+.menu-restaurants-2 .main-course-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-2 .desserts {
   -webkit-user-select: none;
@@ -1698,6 +1940,9 @@ body {
 .menu-restaurants-2 .desserts-1 [class$=price]::after {
   content: "18€";
 }
+.menu-restaurants-2 .desserts-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-2 .desserts-2 [class$=heavy]::after {
   content: "Baba au rhum revisité";
 }
@@ -1707,6 +1952,9 @@ body {
 .menu-restaurants-2 .desserts-2 [class$=price]::after {
   content: "22€";
 }
+.menu-restaurants-2 .desserts-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-2 .desserts-3 [class$=heavy]::after {
   content: "Tarte au citron meringuée";
 }
@@ -1715,6 +1963,9 @@ body {
 }
 .menu-restaurants-2 .desserts-3 [class$=price]::after {
   content: "23€";
+}
+.menu-restaurants-2 .desserts-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-4__img-top {
   background-image: url(/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
@@ -1751,6 +2002,9 @@ body {
 .menu-restaurants-4 .entries-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants-4 .entries-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-4 .entries-3 [class$=heavy]::after {
   content: "Soupe à l'oignon";
 }
@@ -1759,6 +2013,9 @@ body {
 }
 .menu-restaurants-4 .entries-3 [class$=price]::after {
   content: "20€";
+}
+.menu-restaurants-4 .entries-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-4 .main-course {
   -webkit-user-select: none;
@@ -1774,6 +2031,9 @@ body {
 .menu-restaurants-4 .main-course-1 [class$=price]::after {
   content: "40€";
 }
+.menu-restaurants-4 .main-course-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-4 .main-course-2 [class$=heavy]::after {
   content: "Magret de canard";
 }
@@ -1783,6 +2043,9 @@ body {
 .menu-restaurants-4 .main-course-2 [class$=price]::after {
   content: "35€";
 }
+.menu-restaurants-4 .main-course-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-4 .main-course-3 [class$=heavy]::after {
   content: "Pigeonneau d’Ille-et-Vilaine";
 }
@@ -1791,6 +2054,9 @@ body {
 }
 .menu-restaurants-4 .main-course-3 [class$=price]::after {
   content: "44€";
+}
+.menu-restaurants-4 .main-course-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-4 .desserts {
   -webkit-user-select: none;
@@ -1806,6 +2072,9 @@ body {
 .menu-restaurants-4 .desserts-1 [class$=price]::after {
   content: "18€";
 }
+.menu-restaurants-4 .desserts-1 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 .menu-restaurants-4 .desserts-2 [class$=heavy]::after {
   content: "Fondant au chocolat";
 }
@@ -1814,6 +2083,9 @@ body {
 }
 .menu-restaurants-4 .desserts-2 [class$=price]::after {
   content: "22€";
+}
+.menu-restaurants-4 .desserts-2 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
 }
 .menu-restaurants-4 .desserts-3 [class$=heavy]::after {
   content: "Millefeuille croustillant";
@@ -1824,10 +2096,10 @@ body {
 .menu-restaurants-4 .desserts-3 [class$=price]::after {
   content: "23€";
 }
+.menu-restaurants-4 .desserts-3 [class$=material-symbols-outlined]::after {
+  content: "check_circle";
+}
 /* STYLE RESTAURANTS */
-/* body {
-    position: absolute;
-} */
 .menu-restaurants__img-top {
   padding: 0;
   max-width: 100%;
@@ -1849,8 +2121,8 @@ body {
   width: 100%;
   justify-content: space-between;
 }
-.name-restaurants €__title {
-  margin-top: 1em;
+.name-restaurants__title {
+  margin-bottom: 1em;
 }
 
 .menu-restaurants {
@@ -1862,15 +2134,40 @@ body {
   align-items: center;
   flex: auto;
   width: 100%;
+  justify-content: center;
   background: #f7f7f7;
-  /* background: red; */
-  gap: 2rem 4em;
-  padding: 2rem;
+  padding: calc(2em + 2vw) calc(1rem + 1.5vw) calc(3em + 2vw) calc(1rem + 1.5vw);
+  max-width: 1055px;
+  gap: 1em 4rem;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
   margin-top: -3rem;
 }
-.menu-restaurants .entries, .menu-restaurants .main-course, .menu-restaurants .desserts {
+@media (min-width: 768px) {
+  .menu-restaurants {
+    padding: calc(1em + 1vw) calc((100% - 750px) / 2 + 1rem);
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .menu-restaurants {
+    padding: 3em 12.6482213439vw;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) and (min-width: 1440px) {
+  .menu-restaurants {
+    padding: 3em 8%;
+  }
+}
+.menu-restaurants__all-meal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  gap: 2rem 0;
+}
+.menu-restaurants__all-meal .entries, .menu-restaurants__all-meal .main-course, .menu-restaurants__all-meal .desserts {
   isolation: isolate;
   position: relative;
   z-index: 5;
@@ -1882,8 +2179,11 @@ body {
   flex: auto;
   width: 100%;
   gap: 1em 0;
+  /*  .touch_app {
+       font-size: 3rem;
+   } */
 }
-.menu-restaurants .entries__title-and-underline, .menu-restaurants .main-course__title-and-underline, .menu-restaurants .desserts__title-and-underline {
+.menu-restaurants__all-meal .entries__title-and-underline, .menu-restaurants__all-meal .main-course__title-and-underline, .menu-restaurants__all-meal .desserts__title-and-underline {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1892,11 +2192,11 @@ body {
   width: 100%;
   align-items: start;
 }
-.menu-restaurants .entries__title-and-underline [class$=underline], .menu-restaurants .main-course__title-and-underline [class$=underline], .menu-restaurants .desserts__title-and-underline [class$=underline] {
+.menu-restaurants__all-meal .entries__title-and-underline [class$=underline], .menu-restaurants__all-meal .main-course__title-and-underline [class$=underline], .menu-restaurants__all-meal .desserts__title-and-underline [class$=underline] {
   border-bottom: 3px solid #99E2D0;
   width: 4ch;
 }
-.menu-restaurants .entries__cards, .menu-restaurants .main-course__cards, .menu-restaurants .desserts__cards {
+.menu-restaurants__all-meal .entries__cards, .menu-restaurants__all-meal .main-course__cards, .menu-restaurants__all-meal .desserts__cards {
   isolation: isolate;
   position: relative;
   z-index: -1;
@@ -1914,47 +2214,29 @@ body {
   background: white;
   height: 100%;
   overflow: hidden;
-  margin: 6px;
-  -webkit-clip-path: margin-box;
-          clip-path: margin-box;
-  /* [class$="menu-selected"]::after {
-      position: relative;
-      z-index: 15;
-      background: green;
-  } */
 }
-.menu-restaurants .entries__cards div, .menu-restaurants .main-course__cards div, .menu-restaurants .desserts__cards div {
+.menu-restaurants__all-meal .entries__cards div, .menu-restaurants__all-meal .main-course__cards div, .menu-restaurants__all-meal .desserts__cards div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: auto;
   width: 100%;
-  /* height: 100%; */
-  /* justify-content: space-between;  */
   max-width: 80%;
-  /* min-width: 0%; */
 }
-.menu-restaurants .entries__cards div:nth-of-type(1), .menu-restaurants .main-course__cards div:nth-of-type(1), .menu-restaurants .desserts__cards div:nth-of-type(1) {
+.menu-restaurants__all-meal .entries__cards div:nth-of-type(1), .menu-restaurants__all-meal .main-course__cards div:nth-of-type(1), .menu-restaurants__all-meal .desserts__cards div:nth-of-type(1) {
   max-width: 80%;
-  /* white-space: nowrap; */
   overflow: hidden;
 }
-.menu-restaurants .entries__cards div:nth-of-type(2), .menu-restaurants .main-course__cards div:nth-of-type(2), .menu-restaurants .desserts__cards div:nth-of-type(2) {
+.menu-restaurants__all-meal .entries__cards div:nth-of-type(2), .menu-restaurants__all-meal .main-course__cards div:nth-of-type(2), .menu-restaurants__all-meal .desserts__cards div:nth-of-type(2) {
   flex: content;
-  /* width: 100%; */
 }
-.menu-restaurants .entries__cards div p, .menu-restaurants .main-course__cards div p, .menu-restaurants .desserts__cards div p {
-  /* display: flex;
-  flex: auto; */
+.menu-restaurants__all-meal .entries__cards div p, .menu-restaurants__all-meal .main-course__cards div p, .menu-restaurants__all-meal .desserts__cards div p {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-.menu-restaurants .entries__cards div p::after, .menu-restaurants .main-course__cards div p::after, .menu-restaurants .desserts__cards div p::after {
-  /*  display: flex;
-   flex: auto;
-   width: 99%; */
+.menu-restaurants__all-meal .entries__cards div p::after, .menu-restaurants__all-meal .main-course__cards div p::after, .menu-restaurants__all-meal .desserts__cards div p::after {
   display: inline-block;
   max-width: 85%;
   height: 100%;
@@ -1962,14 +2244,13 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-restaurants .entries__cards div [class$=price], .menu-restaurants .main-course__cards div [class$=price], .menu-restaurants .desserts__cards div [class$=price] {
+.menu-restaurants__all-meal .entries__cards div [class$=price], .menu-restaurants__all-meal .main-course__cards div [class$=price], .menu-restaurants__all-meal .desserts__cards div [class$=price] {
   display: flex;
   justify-content: flex-end;
-  /* flex: auto; */
   margin-bottom: -1em;
   height: 100%;
 }
-.menu-restaurants .entries__cards div [class$=price]::after, .menu-restaurants .main-course__cards div [class$=price]::after, .menu-restaurants .desserts__cards div [class$=price]::after {
+.menu-restaurants__all-meal .entries__cards div [class$=price]::after, .menu-restaurants__all-meal .main-course__cards div [class$=price]::after, .menu-restaurants__all-meal .desserts__cards div [class$=price]::after {
   display: flex;
   flex: auto;
   justify-content: end;
@@ -1979,12 +2260,40 @@ body {
   padding-right: 1rem;
   margin-bottom: -1em;
 }
-.menu-restaurants .entries__cards:hover [class$=menu-selected], .menu-restaurants .main-course__cards:hover [class$=menu-selected], .menu-restaurants .desserts__cards:hover [class$=menu-selected] {
+.menu-restaurants__all-meal .entries__cards:hover [class$=menu-selected], .menu-restaurants__all-meal .entries__cards:focus [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards:hover [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards:focus [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards:hover [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards:focus [class$=menu-selected] {
   cursor: pointer;
   transform: translatex(0%);
   margin: 0;
+  opacity: 0.5;
 }
-.menu-restaurants .entries__cards [class$=menu-selected], .menu-restaurants .main-course__cards [class$=menu-selected], .menu-restaurants .desserts__cards [class$=menu-selected] {
+.menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked + [class$=menu-selected] {
+  transform: translatex(0%);
+  margin: 0;
+  opacity: 1;
+}
+.menu-restaurants__all-meal .entries__cards .menu-choice-selected:focus + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:focus + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:focus + [class$=menu-selected] {
+  transform: translatex(66%);
+  margin: 0;
+  opacity: 0.5;
+  border-left: 3px solid #008766;
+}
+.menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked:focus + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked:focus + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked:focus + [class$=menu-selected] {
+  transform: translatex(0%);
+  margin: 0;
+  opacity: 1;
+}
+.menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked:focus:hover + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked:focus:hover + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked:focus:hover + [class$=menu-selected] {
+  transform: translatex(0%);
+  margin: 0;
+  opacity: 1;
+}
+.menu-restaurants__all-meal .entries__cards input, .menu-restaurants__all-meal .main-course__cards input, .menu-restaurants__all-meal .desserts__cards input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+.menu-restaurants__all-meal .entries__cards [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards [class$=menu-selected] {
   isolation: isolate;
   position: relative;
   z-index: 2;
@@ -2000,13 +2309,14 @@ body {
   border-top-right-radius: 1.2rem;
   border-bottom-right-radius: 1.2rem;
   height: 100%;
-  width: 8rem;
+  min-width: 5rem;
+  width: 16.6666666667%;
   max-width: 8rem;
-  margin-right: calc(-8rem - 6px);
+  margin-right: calc(-1 * clamp(5rem, 16.6666666667%, 8rem));
   transform-origin: 0%;
-  transition: all 1.5s 0.25s ease-in-out, opacity 1s ease-in, transform 1.5s 0.25s ease-in-out;
+  transition: all 1.5s 0.25s ease-in-out, opacity 1s ease-in, transform 1.5s 0.25s ease-in-out, border 0s;
 }
-.menu-restaurants .entries__cards [class$=menu-selected] .material-symbols-outlined, .menu-restaurants .main-course__cards [class$=menu-selected] .material-symbols-outlined, .menu-restaurants .desserts__cards [class$=menu-selected] .material-symbols-outlined {
+.menu-restaurants__all-meal .entries__cards [class$=menu-selected] .material-symbols-outlined, .menu-restaurants__all-meal .main-course__cards [class$=menu-selected] .material-symbols-outlined, .menu-restaurants__all-meal .desserts__cards [class$=menu-selected] .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
   color: white;
   font-size: 2rem;
@@ -2019,7 +2329,7 @@ body {
   flex: content;
   height: 100%;
 }
-.menu-restaurants .entries__cards [class$=menu-selected] .material-symbols-outlined::after, .menu-restaurants .main-course__cards [class$=menu-selected] .material-symbols-outlined::after, .menu-restaurants .desserts__cards [class$=menu-selected] .material-symbols-outlined::after {
+.menu-restaurants__all-meal .entries__cards [class$=menu-selected] .material-symbols-outlined::after, .menu-restaurants__all-meal .main-course__cards [class$=menu-selected] .material-symbols-outlined::after, .menu-restaurants__all-meal .desserts__cards [class$=menu-selected] .material-symbols-outlined::after {
   isolation: isolate;
   position: relative;
   z-index: -1;
@@ -2033,26 +2343,17 @@ body {
   height: 100%;
   padding: 2rem 1rem;
 }
-.menu-restaurants .entries__cards div p::after, .menu-restaurants .main-course__cards div p::after, .menu-restaurants .desserts__cards div p::after {
+.menu-restaurants__all-meal .entries__cards div p::after, .menu-restaurants__all-meal .main-course__cards div p::after, .menu-restaurants__all-meal .desserts__cards div p::after {
   width: 100%;
   padding-left: 1rem;
 }
-.menu-restaurants .entries__cards [class$=heavy]::after, .menu-restaurants .main-course__cards [class$=heavy]::after, .menu-restaurants .desserts__cards [class$=heavy]::after {
+.menu-restaurants__all-meal .entries__cards [class$=heavy]::after, .menu-restaurants__all-meal .main-course__cards [class$=heavy]::after, .menu-restaurants__all-meal .desserts__cards [class$=heavy]::after {
   padding-top: 1rem;
 }
-.menu-restaurants .entries__cards [class$=thin]::after, .menu-restaurants .main-course__cards [class$=thin]::after, .menu-restaurants .desserts__cards [class$=thin]::after {
+.menu-restaurants__all-meal .entries__cards [class$=thin]::after, .menu-restaurants__all-meal .main-course__cards [class$=thin]::after, .menu-restaurants__all-meal .desserts__cards [class$=thin]::after {
   padding-bottom: 1rem;
 }
 
-/* @keyframes menu-selected {
-    0% {
-        transform: translateX(105%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-} */
 /* .header__menu-restaurants {
     content: url($img-header_menu-restaurants);
     max-width: 100%;
@@ -2060,4 +2361,152 @@ body {
     max-height: calc(( max-width / 3) * 2);
     height: calc((100VW / 3) * 2);
     object-fit: cover;
-} *//*# sourceMappingURL=main.css.map */
+} */
+.name-restaurants__title {
+  animation-name: img-and-name-restaurant;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+.name-restaurants__heart-like {
+  animation-delay: 8s;
+  animation-name: heart-resto;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+}
+
+.menu-restaurants__img-top {
+  animation-name: img-and-name-restaurant;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+.menu-restaurants .entries .touch_app {
+  position: absolute;
+  z-index: 20;
+  top: 12rem;
+  right: 20%;
+  font-size: 3rem;
+  animation-name: finger-check;
+  animation-fill-mode: both;
+  animation-duration: 8s;
+  animation-delay: 6s;
+}
+.menu-restaurants .entries .entries-2 [class$=menu-selected] {
+  animation-name: finger-check-menu;
+  animation-fill-mode: backwards;
+  animation-duration: 6s;
+  animation-delay: 8s;
+}
+.menu-restaurants .entries__title {
+  animation-name: translatex-menu-title;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+.menu-restaurants .entries__underline {
+  animation-name: translatex-menu-title;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-delay: 1.25s;
+}
+.menu-restaurants .entries__cards:nth-of-type(1) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+.menu-restaurants .entries__cards:nth-of-type(2) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 1.25s;
+}
+.menu-restaurants .entries__cards:nth-of-type(3) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 1.75s;
+}
+.menu-restaurants .entries__cards:nth-of-type(4) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 2.25s;
+}
+.menu-restaurants .main-course__title {
+  animation-name: translatex-menu-title;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-delay: 3.5s;
+}
+.menu-restaurants .main-course__underline {
+  animation-name: translatex-menu-title;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-delay: 4.25s;
+}
+.menu-restaurants .main-course__cards:nth-of-type(1) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 4s;
+}
+.menu-restaurants .main-course__cards:nth-of-type(2) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 4.25s;
+}
+.menu-restaurants .main-course__cards:nth-of-type(3) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 4.75s;
+}
+.menu-restaurants .main-course__cards:nth-of-type(4) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 5.25s;
+}
+.menu-restaurants .desserts__title {
+  animation-name: translatex-menu-title;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-delay: 6.5s;
+}
+.menu-restaurants .desserts__underline {
+  animation-name: translatex-menu-title;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-delay: 7.25s;
+}
+.menu-restaurants .desserts__cards:nth-of-type(1) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 7s;
+}
+.menu-restaurants .desserts__cards:nth-of-type(2) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 7.25s;
+}
+.menu-restaurants .desserts__cards:nth-of-type(3) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 7.75s;
+}
+.menu-restaurants .desserts__cards:nth-of-type(3) {
+  animation-name: loading-menu;
+  animation-duration: 3.5s;
+  animation-fill-mode: both;
+  animation-delay: 8.25s;
+}
+.menu-restaurants button {
+  animation-name: translatex-button;
+  animation-duration: 3.5s;
+  animation-fill-mode: backwards;
+  animation-delay: 12s;
+}/*# sourceMappingURL=main.css.map */

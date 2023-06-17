@@ -1,0 +1,127 @@
+
+.name-restaurants {
+    &__title {
+        @include img-and-name-restaurant;        
+    }
+    &__heart-like {
+        animation-delay: 8s; 
+        animation-name: heart-resto;
+        animation-duration: 5s;
+        animation-fill-mode: both;        
+    }
+}
+
+.menu-restaurants {
+    &__img-top {
+        @include img-and-name-restaurant; 
+    }
+    .entries {
+
+        .touch_app {
+            position: absolute;
+            z-index: 20;
+            top: 12rem;
+            right: 20%;
+            font-size: 3rem;
+            animation-name: finger-check;
+            animation-fill-mode: both; 
+            animation-duration: 8s;
+            animation-delay: 6s;
+            
+        }
+        
+        .entries-2 {
+            [class$="menu-selected"] {    
+                @include finger-check-menu;
+                &:check {
+                    
+                } 
+            }
+        }
+        
+        &__title {
+            @include translatex-menu-title;
+            animation-delay: 0.5s;
+        }
+        &__underline {
+            @include translatex-menu-title;
+            animation-delay: 1.25s;
+        }
+
+        &__cards:nth-of-type(1) {
+            @include loading-menu;
+            animation-delay: 1s;
+        }
+        &__cards:nth-of-type(2) {
+            @include loading-menu;
+            animation-delay: 1.25s;
+        }
+        &__cards:nth-of-type(3) {
+            @include loading-menu;
+            animation-delay: 1.75s;
+        }
+        &__cards:nth-of-type(4) {
+            @include loading-menu;
+            animation-delay: 2.25s;
+        }
+    }    
+    
+    .main-course {
+                
+        &__title {
+            @include translatex-menu-title;
+            animation-delay: 3.5s;
+        }
+        &__underline {
+            @include translatex-menu-title;
+            animation-delay: 4.25s;
+        }
+        &__cards:nth-of-type(1) {
+            @include loading-menu;
+            animation-delay: 4s;
+        }
+        &__cards:nth-of-type(2) {
+            @include loading-menu;
+            animation-delay: 4.25s;
+        }
+        &__cards:nth-of-type(3) {
+            @include loading-menu;
+            animation-delay: 4.75s;
+        }
+        &__cards:nth-of-type(4) {
+            @include loading-menu;
+            animation-delay: 5.25s;
+        }
+    }   
+    
+    .desserts {        
+        &__title {
+            @include translatex-menu-title;
+            animation-delay: 6.5s;
+        }
+        &__underline {
+            @include translatex-menu-title;
+            animation-delay: 7.25s;
+        }
+        &__cards:nth-of-type(1) {
+            @include loading-menu;
+            animation-delay: 7s;
+        }
+        &__cards:nth-of-type(2) {
+            @include loading-menu;
+            animation-delay: 7.25s;
+        }
+        &__cards:nth-of-type(3) {
+            @include loading-menu;
+            animation-delay: 7.75s;
+        }
+        &__cards:nth-of-type(3) {
+            @include loading-menu;
+            animation-delay: 8.25s;
+        }
+    }
+    button {
+        @include translatex-button;
+        animation-delay: 12s;
+    }
+}

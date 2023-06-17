@@ -16,6 +16,7 @@ $circli-size: 1.35rem;
         justify-content: space-between;
         gap: 2em;
         flex-direction: column;
+        user-select: none;
         @media (min-width: 768px) {
             flex-direction: column;
         

@@ -16,9 +16,6 @@
     width: 100%;
 }
 
-
-
-
 @mixin cards{
     display: flex;
     flex: auto;
@@ -33,20 +30,6 @@
 
 /***** RESPONSIVE *****/
 
-/* @mixin flex-direction_explanation{
-    flex-direction: column;
-
-    @media (min-width: 768px) {
-        flex-direction: column;
-
-        @media (min-width:1024px) {
-            flex-direction: row;
-        }
-    }
-} */
-
-
-
 @mixin padding_section{
     padding: $padding_section-mobile;
     
@@ -55,6 +38,7 @@
 
         @media (min-width:1024px) {
             padding: $padding_section-desktop;
+            
             @media (min-width:1440px) {
                 padding: $padding_section-desktop-xxl;   
             }

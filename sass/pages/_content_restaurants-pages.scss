@@ -22,7 +22,7 @@
                 content: map-get($restaurant-nbr, "entries-1", "price" );
             }
             [class$="material-symbols-outlined"]::after {
-                content: "check_circle" ;
+                content: map-get($restaurant-nbr, "entries-1", "icon" ) ;
             }
         }        
         &-2 {
@@ -34,6 +34,9 @@
             }
             [class$="price"]::after {
                 content: map-get($restaurant-nbr, "entries-2", "price" );
+            }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "entries-2", "icon" ) ;
             }
         }
         &-3 {
@@ -47,6 +50,9 @@
             [class$="price"]::after {
                 content: map-get($restaurant-nbr, "entries-3", "price" );
             }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "entries-3", "icon" ) ;
+            }
         }
         &-4 {
             [class$="heavy"]::after {
@@ -59,7 +65,7 @@
                 content: map-get($restaurant-nbr, "entries-4", "price" );
             }
             [class$="material-symbols-outlined"]::after {
-                content: map-get($restaurant-nbr, "entries-5", "price" );
+                content: map-get($restaurant-nbr, "entries-4", "icon" ) ;
             }
         }
     }
@@ -75,6 +81,9 @@
             [class$="price"]::after {
             content: map-get($restaurant-nbr, "main-course-1", "price" );
             }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "main-course-1", "icon" ) ;
+            }
         }
         &-2 {
             [class$="heavy"]::after {
@@ -85,6 +94,9 @@
             }
             [class$="price"]::after {
                 content: map-get($restaurant-nbr, "main-course-2", "price" );
+            }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "main-course-2", "icon" ) ;
             }
         }
         &-3 {
@@ -97,6 +109,9 @@
             [class$="price"]::after {
                 content: map-get($restaurant-nbr, "main-course-3", "price" );
             }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "main-course-3", "icon" ) ;
+            }
         }
         &-4 {
             [class$="heavy"]::after {
@@ -107,6 +122,9 @@
             }
             [class$="price"]::after {
                 content: map-get($restaurant-nbr, "main-course-4", "price" );
+            }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "main-course-4", "icon" ) ;
             }
         }       
     }
@@ -122,6 +140,9 @@
             [class$="price"]::after {
             content: map-get($restaurant-nbr, "desserts-1", "price" );
             }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "desserts-1", "icon" ) ;
+            }
         }
         &-2 {
             [class$="heavy"]::after {
@@ -132,6 +153,9 @@
             }
             [class$="price"]::after {
             content: map-get($restaurant-nbr, "desserts-2", "price" );
+            }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "desserts-2", "icon" ) ;
             }
         }
         &-3 {
@@ -144,6 +168,9 @@
             [class$="price"]::after {
             content: map-get($restaurant-nbr, "desserts-3", "price" );
             }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "desserts-3", "icon" ) ;
+            }
         }
         &-4 {
             [class$="heavy"]::after {
@@ -154,6 +181,9 @@
             }
             [class$="price"]::after {
             content: map-get($restaurant-nbr, "desserts-4", "price" );
+            }
+            [class$="material-symbols-outlined"]::after {
+                content: map-get($restaurant-nbr, "desserts-4", "icon" ) ;
             }
         }
     }

@@ -1,30 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=1 interactive-widget=overlays-content">
-    <title>ohmyfood</title>
-    <meta name="description" content="Commandez vos repas en ligne avec ohmyfood. Composez vos propres menus et reservez un horaire dans notre selection de restaurant gastronomiques. Rapide et simple, vos plats seront déja préparés et cela vous fera économiser du temps.">
-    <META NAME="robots" CONTENT="index, follow">
-    <link rel="stylesheet" href="./sass/main.css">    
-    <base target="_parent">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-  </head>
-  <body>  -->
-  
-     <!-- <header class="visual-identity"> 
-      <div class="visual-identity__master-logo">
-        <img  src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
-      </div>
-      <nav class="visual-identity__back-arrow">
-        <a href="#" title="Page d'aceui"><i class="fa-solid fa-arrow-left"></i></a>
-      </nav>
-    </header>  -->
 
     <?php 
     include "./objects/header.php"
@@ -83,105 +56,99 @@
       </section>
       <section class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
-        <div class="restaurants__all-cards">
+        <nav class="restaurants__all-cards">
+          <a href="./pages-restaurants.php">
           <article class="restaurants__card">
             <span class="restaurants__thumbnail-new">Nouveau</span>
-            <a href="./pages-restaurants.php">
-              <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+              <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
               <div class="restaurants__card-comment">
                 <div class="restaurants__card-text">
                   <h4 class="restaurants__card-title">La palette du goût</h4>
                   <p class="restaurants__card-subtitle">Ménilmontant</p>
                 </div>
-              </div>             
-              <div class="restaurants__heart-like">
-                <span class="restaurants__circle"></span> 
-                <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like"> 
-                <label for="like_la-palette-du-gout" class="heart">
-                <i class="restaurants__heart fa-regular fa-heart"></i>
+              </div>     
+              <!-- Like and unlike Restaurants | Heart empty or full -->
+              <div class="restaurants__heart-like">               
+                <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like" aria-label="L'utilisation de la tabulation, ne permet pas de likez le restaurant sur cette page, mais uniquments sur la page du restaurant."> 
+                <label for="like_la-palette-du-gout" class="heart">                  
+                  <i class="restaurants__heart restaurants__heart--full material-symbols-outlined">favorite</i>              
                 </label>
-              </div>               
-            </a> 
-          </article>
-          <article class="restaurants__card">
+                <i class="restaurants__heart restaurants__heart--empty material-symbols-outlined">favorite</i>
+                <i class="restaurants__heart restaurants__heart--background material-symbols-outlined">favorite</i>               
+              </div>                
+              <!-- End | Heart empty or full  -->  
+            </article>
+          </a> 
+          <a>
+            <article class="restaurants__card">
             <span class="restaurants__thumbnail-new">Nouveau</span>
-            <a>
               <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
                 <div class="restaurants__card-text">
                   <h4 class="restaurants__card-title">La note enchantée</h4>
                   <p class="restaurants__card-subtitle">Charonne</p>
                 </div>
-              </div>              
-              <div class="restaurants__heart-like"> 
-                <span class="restaurants__circle"></span>              
+              </div>
+              <!-- Like and unlike Restaurants | Heart empty or full -->
+              <div class="restaurants__heart-like">               
                 <input type="checkbox" name="heart" id="like_la-note-enchantee" class="restaurants__like"> 
-                <label for="like_la-note-enchantee" class="heart">
-                <i class="restaurants__heart fa-regular fa-heart"></i>
+                <label for="like_la-note-enchantee" class="heart">                  
+                  <i class="restaurants__heart restaurants__heart--full material-symbols-outlined">favorite</i>              
                 </label>
+                <i class="restaurants__heart restaurants__heart--empty material-symbols-outlined">favorite</i>
+                <i class="restaurants__heart restaurants__heart--background material-symbols-outlined">favorite</i>               
               </div>                
-            </a>      
-          </article>
-          <article class="restaurants__card">              
-            <a>
+              <!-- End | Heart empty or full  -->
+            </article>
+          </a>
+          <a>
+            <article class="restaurants__card">    
               <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
                 <div class="restaurants__card-text">
                   <h4 class="restaurants__card-title">À la française</h4>
                   <p class="restaurants__card-subtitle">Cité Rouge</p>
                 </div>
-              </div>              
-              <div class="restaurants__heart-like">    
-                <span class="restaurants__circle"></span>           
+              </div>
+               <!-- Like and unlike Restaurants | Heart empty or full -->
+               <div class="restaurants__heart-like">               
                 <input type="checkbox" name="heart" id="like_a-la-francaise" class="restaurants__like"> 
-                <label for="like_a-la-francaise" class="heart">
-                <i class="restaurants__heart fa-regular fa-heart"></i>
+                <label for="like_a-la-francaise" class="heart">                  
+                  <i class="restaurants__heart restaurants__heart--full material-symbols-outlined">favorite</i>              
                 </label>
-              </div>                 
-            </a>
-          </article>
-          <article class="restaurants__card">           
-            <a>  
+                <i class="restaurants__heart restaurants__heart--empty material-symbols-outlined">favorite</i>
+                <i class="restaurants__heart restaurants__heart--background material-symbols-outlined">favorite</i>               
+              </div>                
+              <!-- End | Heart empty or full  -->        
+            </article>
+          </a>
+          <a>
+            <article class="restaurants__card">   
               <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
                 <div class="restaurants__card-text">
                   <h4 class="restaurants__card-title">Le délice des sens</h4>
                   <p class="restaurants__card-subtitle">Folie-Méricourt</p>
                 </div>
-              </div>             
-              <div class="restaurants__heart-like">     
-                <span class="restaurants__circle"></span>          
+              </div>      
+              <!-- Like and unlike Restaurants | Heart empty or full -->
+              <div class="restaurants__heart-like">               
                 <input type="checkbox" name="heart" id="like_le-delice-des-sens" class="restaurants__like"> 
-                <label for="like_le-delice-des-sens" class="heart">
-                  <i class="restaurants__heart fa-regular fa-heart"></i>
+                <label for="like_le-delice-des-sens" class="heart">                  
+                  <i class="restaurants__heart restaurants__heart--full material-symbols-outlined">favorite</i>              
                 </label>
+                <i class="restaurants__heart restaurants__heart--empty material-symbols-outlined">favorite</i>
+                <i class="restaurants__heart restaurants__heart--background material-symbols-outlined">favorite</i>               
               </div>                
-            </a>    
-          </article>
-        </div>
+              <!-- End | Heart empty or full  -->         
+            </article>
+          </a> 
+        </nav>
       </section>
     </main>
 
     <?php 
     include "./objects/footer.php"
     ?>
-    
-    <!-- <footer class="auxiliary-menu">
-      <h3 class="auxiliary-menu__title">ohmyfood</h3>
-      <nav>
-        <ul class="auxiliary-menu__all">
-          <div class="auxiliary-menu__partnership">
-            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer" ref="noopener"><i class="auxiliary-menu__icon fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer" ref="noopener"><i class="auxiliary-menu__icon fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
-          </div>
-          <div class="auxiliary-menu__support">  
-            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer" ref="noopener">Mentions légales</a></li>
-            <li><a class="auxiliary-menu__link" href="mailto:simon.lm.dev@pm.me?subject=Contact%20depuis%20ohmyfood&body=Message%20predefini" target="_blank" rel="noreferrer" ref="noopener">Contact</a></li>
-          </div>
-        </ul>
-      </nav>
-    </footer> -->
-       
-  <!-- </body>
-</html> -->
+   
  
