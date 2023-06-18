@@ -52,12 +52,9 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        overflow: hidden;
+        overflow: hidden;       
         
-        background: $color-tertiary;
-       
-        
-        &:hover {
+        &:hover, &:focus {
             [class$="card-comment"] {
                 opacity: 0;
             }
@@ -177,48 +174,57 @@
     }
 }  
 
+
+
+$lag-btwn-thumbnail: 0.5;
+$time-befor-start: 7;
+
 @media (min-width:1024px) {
-    main {
+    main {        
         :only-of-type [class$="thumbnail-new"] {
-            background-color: lightblue;
+            //background-color: lightblue;
             @include anim_thumbnail-new;
-            animation-delay:5.4s;        
+            animation-delay: calc($time-befor-start + (3 * $lag-btwn-thumbnail))+s;        
         }
-        :first-child > [class$="thumbnail-new"] {
-            background-color: orangered;
+        :nth-of-type(3n+5) [class$="thumbnail-new"] {     
+            //background-color: thistle;
             @include anim_thumbnail-new;
-            animation-delay:5.6s;        
+            animation-delay: calc($time-befor-start + (4 * $lag-btwn-thumbnail))+s;
         }
-        :nth-of-type(0n+2) [class$="thumbnail-new"] {
-            background-color:orange;
+        :nth-last-of-type(3n+4) [class$="thumbnail-new"] {       
+            //background-color: olive;
             @include anim_thumbnail-new;
-            animation-delay:5.2s;
+            animation-delay:  calc($time-befor-start + (2 * $lag-btwn-thumbnail))+s;
         }
-        :nth-of-type(0n+3) [class$="thumbnail-new"] {     
-            background-color: peru;
+        :nth-of-type(2)  [class$="thumbnail-new"] {
+            //background-color:orangered;
             @include anim_thumbnail-new;
-            animation-delay:5.8s;
+            animation-delay: calc($time-befor-start + (2.5 * $lag-btwn-thumbnail))+s;
         }
-        :nth-last-of-type(0n+3) [class$="thumbnail-new"] {       
-            background-color: pink;
+        :nth-of-type(3) [class$="thumbnail-new"] {
+            //background-color:peru;
             @include anim_thumbnail-new;
-            animation-delay:6.2s;
+            animation-delay:  calc($time-befor-start + (1 * $lag-btwn-thumbnail))+s;
         }
-        :nth-last-of-type(0n+2) [class$="thumbnail-new"] {       
-            background-color: lightcoral;
+        :nth-last-of-type(3) [class$="thumbnail-new"] {       
+            //background-color: pink;
             @include anim_thumbnail-new;
-            animation-delay:5.3s;
+            animation-delay:  calc($time-befor-start + (5 * $lag-btwn-thumbnail))+s;
         }
-        /* :last-child > [class$="thumbnail-new"] {
-            background-color: palevioletred;
+        :nth-last-of-type(2) [class$="thumbnail-new"] {       
+            //background-color: palevioletred;
             @include anim_thumbnail-new;
-            animation-delay:5.9s;
-        }   */
+            animation-delay: calc($time-befor-start + (6 * $lag-btwn-thumbnail))+s;
+        }
+        [class*="thumbnail-new start-lag" i] {
+            //background-color: orange;
+            @include anim_thumbnail-new;
+            animation-delay: calc($time-befor-start)+s;
+        }  
     }
 }
 
-
-@keyframes thumbnail-new-kf{
+@keyframes thumbnail-new{
 
     0% {
         transform: scale(1) translate(0 0);       

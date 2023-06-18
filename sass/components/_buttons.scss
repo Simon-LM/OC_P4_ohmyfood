@@ -13,7 +13,7 @@ button {
     }
 } */
 
-input:hover, a:hover {
+input:hover, input:focus, a:hover, a:focus {
     @include hover-links;
    
     &[class$="research"]:hover {

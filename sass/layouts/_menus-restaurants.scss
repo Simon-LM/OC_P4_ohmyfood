@@ -1,7 +1,5 @@
 /* STYLE RESTAURANTS */
 
-
-
 .menu-restaurants__img-top {   
     padding: 0;    
     max-width: 100%;
@@ -13,12 +11,31 @@
 }
 
 .name-restaurants {
-    position: relative;    
+    position: relative; 
+    z-index: 5;   
     @include flex-row;
     justify-content: space-between;
+    //align-items: flex-start;
+    margin-bottom: 1em;
+    @media (min-width: 768px) {
+        margin: 1em 0;
+        @media (min-width:1024px) {
+            justify-content: center;
+            margin-top: 0;
+        }
+    }    
+
     &__title{
+       //@include flex-row;
+        //flex: content;
         //margin-top: 0.5em;
-        margin-bottom: 1em;
+        //margin-bottom: 1em;
+        
+        &::after {
+            //@include flex-row;
+            //flex: content;
+            //outline: 2px solid greenyellow;
+        }
     }
 }
 
@@ -45,7 +62,7 @@
             position: relative;
             z-index: 5;
 
-            z-index: 15;
+            //z-index: 15;
             @include flex-column;
             gap: 1em 0;
 
@@ -59,7 +76,7 @@
 
                 [class$="underline"] {
                     border-bottom: 3px solid $color-underline_menu-restaurants;
-                    width: 4ch;
+                    width: 4ch !important;
                 }
             } 
 
@@ -89,18 +106,14 @@
 
                     &:nth-of-type(1) {
                         max-width: 80%;
-
                         overflow: hidden;                    
                     }
 
                     &:nth-of-type(2) {
-
-                        flex: content ;
-                    
+                        flex: content ;                   
                     }
                 
-                    p {
-                    
+                    p {    
                         display: inline-block;
                         width: 100%;
                         height: 100%;
@@ -158,8 +171,8 @@
                 }
 
                 .menu-choice-selected:focus + [class$="menu-selected"] {
-                    transform: translatex(66%);
-                    margin: 0;
+                    transform: translatex(33%);
+                    margin: calc((-1 * clamp( 5rem, (100% / 6), 8rem)) / 3);
                     opacity: 0.5;
                     border-left: 3px solid $color-tertiary-font;                   
                 }

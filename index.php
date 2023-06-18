@@ -3,23 +3,24 @@
     include "./objects/header.php"
     ?>
 
-    <aside class="loader">
-      <div class="loader__background">
-        <div class="loader__background-top"></div>
-        <div class="loader__background-middle">
-          <div class="loader__background-middle-left"></div>
-          <div class="loader__background-middle-center">
-            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-            <div class="loader__progress-bar"></div> 
-            <img  class="nocolor" src="./assets/images/logo/ohmyfood_nocolor@2x.svg" alt="logo de ohmyfood">
-          </div>  
-          <div class="loader__background-middle-right"></div>
+
+      <aside class="loader">
+        <div class="loader__background">
+          <div class="loader__background-top"></div>
+          <div class="loader__background-middle">
+            <div class="loader__background-middle-left"></div>
+            <div class="loader__background-middle-center">
+              <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+              <div class="loader__progress-bar"></div> 
+              <img  class="nocolor" src="./assets/images/logo/ohmyfood_nocolor@2x.svg" alt="logo de ohmyfood">
+            </div>  
+            <div class="loader__background-middle-right"></div>
+          </div>
+          <div class="loader__background-bottom"></div> 
         </div>
-        <div class="loader__background-bottom"></div> 
-      </div>
-    </aside>
-             
-    <main>
+      </aside>
+    
+    <main>         
       <section class="find-a-place">
           <div class="balloon-dot">
           <span class="balloon-dot__1">.</span><span class="balloon-dot__2">.</span><span class="balloon-dot__3">.</span><span class="balloon-dot__4">.</span><span class="balloon-dot__5">.</span><span class="balloon-dot__6">.</span><span class="balloon-dot__7">.</span><span class="balloon-dot__8">.</span><span class="balloon-dot__9">.</span><span class="balloon-dot__10">.</span><span class="balloon-dot__11">.</span><span class="balloon-dot__12">.</span>
@@ -57,9 +58,9 @@
       <section class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <nav class="restaurants__all-cards">
-          <a href="./pages-restaurants.php">
-          <article class="restaurants__card">
-            <span class="restaurants__thumbnail-new">Nouveau</span>
+          <a href="./pages-restaurants.php" tabindex="-1">
+          <article class="restaurants__card" tabindex="0" >
+            <span class="restaurants__thumbnail-new start-lag">Nouveau</span>
               <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
               <div class="restaurants__card-comment">
                 <div class="restaurants__card-text">
@@ -79,8 +80,8 @@
               <!-- End | Heart empty or full  -->  
             </article>
           </a> 
-          <a>
-            <article class="restaurants__card">
+          <a href="./pages-restaurants.php" tabindex="-1">
+            <article class="restaurants__card" tabindex="0">
             <span class="restaurants__thumbnail-new">Nouveau</span>
               <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
@@ -101,8 +102,8 @@
               <!-- End | Heart empty or full  -->
             </article>
           </a>
-          <a>
-            <article class="restaurants__card">    
+          <a href="./pages-restaurants.php" tabindex="-1">
+            <article class="restaurants__card" tabindex="0">  
               <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
                 <div class="restaurants__card-text">
@@ -122,8 +123,8 @@
               <!-- End | Heart empty or full  -->        
             </article>
           </a>
-          <a>
-            <article class="restaurants__card">   
+          <a href="./pages-restaurants.php" tabindex="-1">
+            <article class="restaurants__card" tabindex="0"> 
               <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
               <div class="restaurants__card-comment">
                 <div class="restaurants__card-text">

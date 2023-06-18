@@ -14,12 +14,6 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
         //height: 0;
         //width:0;
 
-       /*  height: 1.5rem;
-        width: 1.5rem;   */
-        /* &:focus {
-            background: blue;
-            outline: 1px solid red;
-        } */
     }
 
     &__heart-like {
@@ -87,8 +81,6 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
     }
 
 
-    /* iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
-
     &__heart {
         font-size: $heart_font-size !important;
         &:hover {
@@ -105,6 +97,7 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
             //right: -1.25rem;
             //bottom: -1.25rem;  
             color: white !important;
+            opacity: 0.66;
             font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' -25, 'opsz' 48;
             /* Modification of opacity for .menu-restaurant page down*/   
         }
@@ -138,11 +131,7 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
             //transform-origin: 50% 50%;
             //transform: scale(1.04); 
         }    
-        /* &:hover {
-            transform-origin: 50% 50%;
-            cursor: pointer; 
-            transform: scale(1.25);
-        }  */
+       
     }    
     &__like + .heart, &__like:focus + .heart /* [class$="empty"] */ {
         opacity: 0;
@@ -159,42 +148,6 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
         
     }
 
-   
-
-
-
-
-
-    /* iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
-
-
-   
-
-
-
-    
-
-    /* &__like + .heart [class$="heart"] {
-            
-        
-        &:hover {
-           transform-origin: 50% 50%;
-           
-            cursor: pointer; 
-            transform: scale(1.25);
-        }   
-    } */
-   
-/* 
-    &__like:checked + .heart [class$="heart"] {
-              
-        font-weight: 900 !important;        
-        background: $color-icons-heart-like;
-        background-clip: text;        
-        -webkit-background-clip: text;
-        color: transparent;     
-
-    } */
   
     &__circle {
         z-index: 3;
@@ -273,6 +226,25 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
 
 .menu-restaurants {
     .restaurants {
+       /*  label {
+            z-index: 5;
+            position: relative;           
+        }
+ */
+
+    &__heart-like {
+        //display: inline-block;
+        //@include flex-row;
+        //display: inline-flex;
+        //flex: content;
+        //z-index: 10;
+        position: relative;
+        right: initial;
+        bottom: initial;
+        padding: 0 1.5rem;
+    } 
+
+
         &__like {
             bottom: 0.1rem;
         }
@@ -288,10 +260,4 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
 }
 
 
-    
-
-/* i {
-    display: block;
-    justify-content: center;
-    align-items: center;
-} */
+   

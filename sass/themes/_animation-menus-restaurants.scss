@@ -26,102 +26,71 @@
             animation-name: finger-check;
             animation-fill-mode: both; 
             animation-duration: 8s;
-            animation-delay: 6s;
-            
+            animation-delay: 6s;            
         }
         
         .entries-2 {
             [class$="menu-selected"] {    
-                @include finger-check-menu;
-                &:check {
-                    
-                } 
+                @include finger-check-menu;                
+            }
+            .menu-choice-selected:checked + [class$="menu-selected"] {
+                animation-duration: 0s;
+                animation-delay: 0s;                            
             }
         }
-        
-        &__title {
-            @include translatex-menu-title;
-            animation-delay: 0.5s;
-        }
-        &__underline {
-            @include translatex-menu-title;
-            animation-delay: 1.25s;
-        }
-
-        &__cards:nth-of-type(1) {
-            @include loading-menu;
-            animation-delay: 1s;
-        }
-        &__cards:nth-of-type(2) {
-            @include loading-menu;
-            animation-delay: 1.25s;
-        }
-        &__cards:nth-of-type(3) {
-            @include loading-menu;
-            animation-delay: 1.75s;
-        }
-        &__cards:nth-of-type(4) {
-            @include loading-menu;
-            animation-delay: 2.25s;
-        }
-    }    
-    
-    .main-course {
-                
-        &__title {
-            @include translatex-menu-title;
-            animation-delay: 3.5s;
-        }
-        &__underline {
-            @include translatex-menu-title;
-            animation-delay: 4.25s;
-        }
-        &__cards:nth-of-type(1) {
-            @include loading-menu;
-            animation-delay: 4s;
-        }
-        &__cards:nth-of-type(2) {
-            @include loading-menu;
-            animation-delay: 4.25s;
-        }
-        &__cards:nth-of-type(3) {
-            @include loading-menu;
-            animation-delay: 4.75s;
-        }
-        &__cards:nth-of-type(4) {
-            @include loading-menu;
-            animation-delay: 5.25s;
-        }
     }   
-    
-    .desserts {        
-        &__title {
-            @include translatex-menu-title;
-            animation-delay: 6.5s;
+
+    $delay-title: 0.25;
+    $lag-btwn-title-and-underline: 0.25;
+    $max-nbr-of-menu: 5;
+    $time-lag: 0.75;
+
+    @for $order-place from 1 through $max-nbr-of-menu {
+        .entries {
+            &__title {
+                @include translatex-menu-title;
+                animation-delay: calc($delay-title)+s;
+            }
+            &__underline {
+                @include translatex-menu-title;
+                animation-delay:  calc($delay-title + $lag-btwn-title-and-underline)+s;
+            }
+            .animations-time-lag:nth-of-type(#{$order-place}) {
+                @include loading-menu;
+                animation-delay: calc($order-place * $time-lag)+s;    
+            }
         }
-        &__underline {
-            @include translatex-menu-title;
-            animation-delay: 7.25s;
+        .main-course {
+            &__title {
+                @include translatex-menu-title;
+                animation-delay:  calc($delay-title + ($max-nbr-of-menu * $time-lag))+s;
+            }
+            &__underline {
+                @include translatex-menu-title;
+                animation-delay: calc($delay-title + $lag-btwn-title-and-underline + ($max-nbr-of-menu * $time-lag))+s;
+            }
+            .animations-time-lag:nth-of-type(#{$order-place}) {
+                @include loading-menu;
+                animation-delay: calc(($max-nbr-of-menu * $time-lag) + $order-place * $time-lag)+s;    
+            }
         }
-        &__cards:nth-of-type(1) {
-            @include loading-menu;
-            animation-delay: 7s;
+        .desserts {
+            &__title {
+                @include translatex-menu-title;
+                animation-delay: calc($delay-title + (($max-nbr-of-menu * $time-lag) * 2))+s;
+            }
+            &__underline {
+                @include translatex-menu-title;
+                animation-delay: calc($delay-title + $lag-btwn-title-and-underline + (($max-nbr-of-menu * $time-lag) * 2))+s;
+            }
+            .animations-time-lag:nth-of-type(#{$order-place}) {
+                @include loading-menu;
+                animation-delay: calc((($max-nbr-of-menu * $time-lag) * 2) + $order-place * $time-lag)+s;    
+            }
         }
-        &__cards:nth-of-type(2) {
-            @include loading-menu;
-            animation-delay: 7.25s;
+        button {
+            @include translatex-button;
+            animation-delay: calc((($max-nbr-of-menu * $time-lag) * 3) + ($delay-title + $lag-btwn-title-and-underline))+s;
         }
-        &__cards:nth-of-type(3) {
-            @include loading-menu;
-            animation-delay: 7.75s;
-        }
-        &__cards:nth-of-type(3) {
-            @include loading-menu;
-            animation-delay: 8.25s;
-        }
-    }
-    button {
-        @include translatex-button;
-        animation-delay: 12s;
-    }
+    } 
 }

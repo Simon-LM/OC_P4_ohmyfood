@@ -7,7 +7,7 @@ body {
 
 .loader {
     position: absolute;
-    z-index: 10;
+    z-index: 20;
     min-height: 100vh;
     @media (min-width:1024px) {
         max-height: 100%;
@@ -15,36 +15,20 @@ body {
     width: 100%;
     display: flex;
     transform-origin: 50% 50%;
-    animation: loader-kf 0.5s 5s ;
+    animation: loader-kf 0.25s 5s ;
     animation-fill-mode: both;
-    /* &:hover { */
-        [class*="background"] {
-            opacity: 0;
-            transition: opacity 2s 3s ease-in-out;
+    
+
+    [class*="background"] {
+        //opacity: 0;
+        animation-name: opacity;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+        animation-delay: 4s;
+        //transition: opacity 2s 3s ease-in-out;      
         
-            > [class*="progress-bar"] {        
-                transform-origin: 100% 50%;
-                animation: progress-bar-kf 3s ease-in-out;
-                animation-fill-mode: both;
-                transition: opacity 0.2s 2.8s ease-in;
-                opacity: 0;
-            }
-            > [src*="restaurants"] {      
-                opacity: 0;                
-                /* transform: scale(0); */
-                animation-name: img-loader-kf;
-                animation-duration: 2.8s;
-                animation-delay: 0.5s;
+    }
 
-            }
-        }
-        [class*="nocolor"] {
-            opacity: 0;
-            transition: opacity 2s 3s ease-in-out;
-        }
-
-    /* } */
-   
     &__background {
         position: absolute;
         z-index: 11;
@@ -98,27 +82,43 @@ body {
                     width: 100%;
                     background: $color-secondary-to-primairy_h;
                     /* margin:0px; */
+                }
+                > [class*="progress-bar"] {        
+                    transform-origin: 100% 50%;
+                    animation-name: progress-bar-kf;
+                    animation-fill-mode: both;
+                    animation-duration: 2.75s;
+                    animation-delay: 1.25s;
+                    //transition: opacity 0.2s 2.8s ease-in;
+                    //opacity: 0;
                 }   
             
                 img[src*="restaurant"] {
-                    z-index: 10;
+                    z-index: -1;
                     position: absolute;
                     object-fit: cover;  
                     width: 100%;
                     max-width: 1340px;     
                     height: 100%;
-                    opacity: 0;  
-                    margin-top: -0.25rem;
+                    
+                    //opacity: 0;  
+                    //margin-top: -0.25rem;
                     
                     
                     @media (min-width: 768px) {
-                        margin-top: -0.5rem;
+                        //margin-top: -0.5rem;
             
                         @media (min-width:1024px) {
-                            margin-top: -1rem;
+                            //margin-top: -1rem;
                         }
                     }                 
                 } 
+                > [src*="restaurants"] {      
+                    animation-name: opacity;
+                    animation-fill-mode: both;
+                    animation-duration: 1s;
+                    animation-delay: 3.75s;        
+                }
             
                 .nocolor {
                     z-index: 13;
@@ -130,7 +130,12 @@ body {
                     opacity: 1;     
                     margin-left: -2px;                
                 }     
-
+                [class*="nocolor"] {
+                    animation-name:  opacity;
+                    animation-fill-mode: both;
+                    animation-duration: 1s;
+                    animation-delay: 4s;
+                }
             }       
 
             &-right {   
@@ -187,21 +192,13 @@ body {
     }
 }
 
-@keyframes img-loader-kf{
+@keyframes opacity{
     0% {
-        /* transform: scale(0); */
-        opacity: 0;       
-    }
-    1% {
-        /* transform: scale(1); */
         opacity: 1;       
     }
-    99% {
-        /* transform: scale(1); */
-        opacity: 1;       
-    }
+
     100% {
-        /* transform: scale(0); */
         opacity: 0;
     }
 }
+

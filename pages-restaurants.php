@@ -16,12 +16,12 @@
         <!-- End | Heart empty or full  -->   
       </section>
       <section  class="menu-restaurants__all-meal">
-        <ul class="entries">
+        <ul class="entries animations-time-lag">
           <div class="entries__title-and-underline">
             <h6 class="entries__title">Entrées</h6>
             <div class="entries__underline"></div>
           </div>  
-          <li class="entries__cards entries-1" >
+          <li class="entries__cards entries-1 animations-time-lag" >
             <div class="entries__menu">
               <p class="entries__menu-heavy"></p>
               <p class="entries__menu-thin"></p>
@@ -34,7 +34,7 @@
               <span class="material-symbols-outlined"></span>
             </div>
           </li>
-          <li class="entries__cards entries-2" tabindex="0">
+          <li class="entries__cards entries-2 animations-time-lag">
             <div class="entries__menu">
               <p class="entries__menu-heavy"></p>
               <p class="entries__menu-thin"></p>
@@ -48,7 +48,7 @@
             </div>
           </li>
           <span class="material-symbols-outlined touch_app">touch_app</span>
-          <li class="entries__cards entries-3" tabindex="0">
+          <li class="entries__cards entries-3 animations-time-lag">
             <div class="entries__menu">
               <p class="entries__menu-heavy"></p>
               <p class="entries__menu-thin"></p>
@@ -61,7 +61,7 @@
               <span class="material-symbols-outlined"></span>
             </div>
           </li>
-          <li class="entries__cards entries-4" tabindex="0">
+          <li class="entries__cards entries-4 animations-time-lag">
             <div class="entries__menu">
               <p class="entries__menu-heavy"></p>
               <p class="entries__menu-thin"></p>
@@ -75,12 +75,12 @@
             </div>
           </li>
         </ul>
-        <ul class="main-course">
+        <ul class="main-course animations-time-lag">
           <div class="main-course__title-and-underline">
             <h6 class="main-course__title">Plats</h6>
             <div class="main-course__underline"></div>
           </div>
-          <li class="main-course__cards main-course-1" tabindex="0">
+          <li class="main-course__cards main-course-1 animations-time-lag">
             <div class="main-course__menu">
               <p class="main-course__menu-heavy"></p>
               <p class="main-course__menu-thin"></p>
@@ -93,7 +93,7 @@
               <span class="material-symbols-outlined"></span>
             </div>
           </li>
-          <li class="main-course__cards main-course-2" tabindex="0">
+          <li class="main-course__cards main-course-2 animations-time-lag">
             <div class="main-course__menu">
               <p class="main-course__menu-heavy"></p>
               <p class="main-course__menu-thin"></p>
@@ -106,7 +106,7 @@
               <span class="material-symbols-outlined"></span>
             </div>
           </li>
-          <li class="main-course__cards main-course-3" tabindex="0">
+          <li class="main-course__cards main-course-3 animations-time-lag">
             <div class="main-course__menu">
               <p class="main-course__menu-heavy"></p>
               <p class="main-course__menu-thin"></p>
@@ -119,7 +119,7 @@
               <span class="material-symbols-outlined"></span>
             </div>
           </li>
-          <li class="main-course__cards main-course-4" tabindex="0">
+          <li class="main-course__cards main-course-4 animations-time-lag">
             <div class="main-course__menu">
               <p class="main-course__menu-heavy"></p>
               <p class="main-course__menu-thin"></p>
@@ -138,7 +138,7 @@
             <h6 class="desserts__title">Desserts</h6>
             <div class="desserts__underline"></div>
           </div>
-          <li class="desserts__cards desserts-1" tabindex="0">
+          <li class="desserts__cards desserts-1 animations-time-lag">
             <div class="desserts__menu">
               <p class="desserts__menu-heavy"></p>
               <p class="desserts__menu-thin"></p>
@@ -151,7 +151,7 @@
               <span class="material-symbols-outlined"></span>
             </div>
           </li>
-          <li class="desserts__cards desserts-2" tabindex="0">
+          <li class="desserts__cards desserts-2 animations-time-lag">
             <div class="desserts__menu">
               <p class="desserts__menu-heavy"></p>
               <p class="desserts__menu-thin"></p>
@@ -164,7 +164,7 @@
               <span class="material-symbols-outlined"></span>
             </div>
           </li>
-          <li class="desserts__cards desserts-3" tabindex="0">
+          <li class="desserts__cards desserts-3 animations-time-lag">
             <div class="desserts__menu">
               <p class="desserts__menu-heavy"></p>
               <p class="desserts__menu-thin"></p>
@@ -177,7 +177,7 @@
               <span class="material-symbols-outlined"></span>
             </div>
           </li>
-          <li class="desserts__cards desserts-4" tabindex="0">
+          <li class="desserts__cards desserts-4 animations-time-lag">
             <div class="desserts__menu">
               <p class="desserts__menu-heavy"></p>
               <p class="desserts__menu-thin"></p>
@@ -192,7 +192,7 @@
           </li>
         </ul>  
       </section>
-      <button class="order-btn">Commander</button>     
+      <button class="order-btn animations-time-lag">Commander</button>     
     </main>
 
 <?php include "./objects/footer.php" ?>

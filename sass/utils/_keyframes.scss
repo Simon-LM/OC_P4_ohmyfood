@@ -81,12 +81,12 @@
 
 @mixin translatex-button {
     animation-name: translatex-button;
-    animation-duration: 3.5s;
+    animation-duration: 6s;
     animation-fill-mode: backwards;
 }
 @keyframes translatex-button {
     0% {
-        transform: translatex(-25vh);
+        transform: translatex(-30vh);
         opacity: 0;
     }
     33%{
