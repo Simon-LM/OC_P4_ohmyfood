@@ -42,7 +42,16 @@
                     width: initial;
                     min-width: calc((100% / 2) - 1em);
                 }
-            }  
+            } 
+            //  FOCUS | For not use tabindex="-1" on <a> with tabindex="0" on article
+            &:focus {
+                [class$="card-comment"] {
+                    opacity: 0;
+                }
+                [class$="card-comment--opacity"] {
+                    opacity: 1;
+                }
+            } 
         }       
     }    
 
@@ -61,7 +70,8 @@
             [class$="card-comment--opacity"] {
                 opacity: 1;
             }
-        } 
+        }
+
     
         img {
             z-index: 1;

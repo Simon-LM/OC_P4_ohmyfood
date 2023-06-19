@@ -1053,6 +1053,12 @@ body {
     min-width: calc(50% - 1em);
   }
 }
+.restaurants__all-cards a:focus [class$=card-comment] {
+  opacity: 0;
+}
+.restaurants__all-cards a:focus [class$=card-comment--opacity] {
+  opacity: 1;
+}
 .restaurants__card {
   display: flex;
   flex: auto;
