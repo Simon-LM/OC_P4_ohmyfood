@@ -1,7 +1,5 @@
-<?php include "./objects/header-with-arrow.php" ?>
 
-    <div class="menu-restaurants__img-top"></div>
-    <main class="menu-restaurants">
+      <!-- <main> -->
       <section class="name-restaurants">
         <h5 class="name-restaurants__title"></h5>
         <!-- Like and unlike Restaurants | Heart empty or full -->
@@ -193,9 +191,8 @@
         </ul>  
       </section>
       <button class="order-btn animations-time-lag">Commander</button>     
-    </main>
+   <!--  </main> -->
 
-<?php include "./objects/footer.php" ?>
     
 
 

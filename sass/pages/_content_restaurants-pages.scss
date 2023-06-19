@@ -198,10 +198,10 @@
 .menu-restaurants-1 {
     @include each-page-of-restaurants-menus($restaurant-nbr: $restaurant-1);
 }
-.menu-restaurants-3  {
+.menu-restaurants-2  {
     @include each-page-of-restaurants-menus($restaurant-nbr: $restaurant-2);
 }
-.menu-restaurants-2  {
+.menu-restaurants-3  {
     @include each-page-of-restaurants-menus($restaurant-nbr: $restaurant-3);
 }
 .menu-restaurants-4  {

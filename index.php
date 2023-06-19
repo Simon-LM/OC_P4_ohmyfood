@@ -58,7 +58,7 @@
       <section class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <nav class="restaurants__all-cards">
-          <a href="./pages-restaurants.php" title="Vers la page des menus du restaurants">
+          <a href="./la-palette-du-gout.php" title="Vers la page des menus du restaurants">
           <article class="restaurants__card">
             <span class="restaurants__thumbnail-new start-lag">Nouveau</span>
               <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'une entrée proposé par ce restaurant">
@@ -80,7 +80,7 @@
               <!-- End | Heart empty or full  -->  
             </article>
           </a> 
-          <a href="./pages-restaurants.php" title="Vers la page des menus du restaurants">
+          <a href="./la-note-enchantee.php" title="Vers la page des menus du restaurants">
             <article class="restaurants__card">
             <span class="restaurants__thumbnail-new">Nouveau</span>
               <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un plats de resitatance proposé par ce restaurant">
@@ -102,7 +102,7 @@
               <!-- End | Heart empty or full  -->
             </article>
           </a>
-          <a href="./pages-restaurants.php" title="Vers la page des menus du restaurants">
+          <a href="./a-la-francaise.php" title="Vers la page des menus du restaurants">
             <article class="restaurants__card"">  
               <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un dessert avec de la chantilly proposé par ce restaurant">
               <div class="restaurants__card-comment">
@@ -123,7 +123,7 @@
               <!-- End | Heart empty or full  -->        
             </article>
           </a>
-          <a href="./pages-restaurants.php" title="Vers la page des menus du restaurants">
+          <a href="./le-delice-des-sens.php" title="Vers la page des menus du restaurants">
             <article class="restaurants__card"> 
               <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'un plats de poison proposé par ce restaurant">
               <div class="restaurants__card-comment">
