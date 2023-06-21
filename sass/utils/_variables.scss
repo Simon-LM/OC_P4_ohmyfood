@@ -25,15 +25,23 @@ $font-main: Roboto;
 
 /*** COLOR ***/
 
+// LIGHT
 $color-dark-main: black; 
 $color-light-main: white;
 
+// DARK
+$color-dark-main_dark: lighten(black , 20%) ;
+$color-light-main_dark: darken(white, 20%);
+
+// LIGHT
 $grayscale_ref: gray;
 $grayscale-1: darken($grayscale_ref, 29.5%);
 $grayscale-2: darken($grayscale_ref , 0.8%);
 $grayscale-3: lighten($grayscale_ref , 41.5%);
 $grayscale-4: lighten($grayscale_ref , 46.7%);
 
+
+// LIGHT
 $color-primairy: #9356DC;
 $color-secondary: #FF79DA; 
 $color-primairy-to-secondary: linear-gradient($color-primairy, $color-secondary);
@@ -45,8 +53,12 @@ $color-dark-blue: #003A68;
 $color-light-blue: #89C8FA;
 
 
+
+
+
 /*** FONT COLOR ***/
 
+// LIGHT
 $color-font-logo__header: $color-dark-main;
 $color-font__main: $color-dark-main;
 $color-font-order-btn: $color-light-main;
@@ -54,6 +66,9 @@ $color-font_explanation-circle: $color-light-main;
 $color-font_thumbnail-new: $color-tertiary-font;
 $color-font__cards-opacity: $color-light-main;
 $color-font__footer: $color-light-main;
+$color-font-research: $grayscale-1;
+
+$color-caret-research: $color-primairy;
 
 $color-icons_explanation-drab: $grayscale-2;
 $color-icons_explanation-bright: $color-primairy;
@@ -64,6 +79,7 @@ $color-icons_menu-restaurants-selected: $color-light-main;
 
 /*** BACKGROUND COLOR ***/
 
+// LIGHT
 $color-background_main: $color-light-main;
 $color-background_header: $color-light-main;
 $color-background_find-a-place: $grayscale-3;

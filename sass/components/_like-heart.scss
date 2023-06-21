@@ -1,55 +1,39 @@
 
-
-$heart_font-size: 1.5rem;
-$heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addition than the original size */
-
+$heart_font-size: 1.5rem; /* Only rem */
+$heart_desired-expansion: 1.2; /* For scale */
 .restaurants {
-
     label {
         z-index: 5;
         position: absolute;       
         display: block;
-        //padding: 0;
-        //margin: 0;
-        //height: 0;
-        //width:0;
-
     }
-
     &__heart-like {
         z-index: 10;
         position: absolute;
         right: 1.5rem;
         bottom: 1.5rem;       
         opacity: 1 !important;
-        //background: red;  /* ??? */
-        //height: 0;
-        //width: 0;       
         display: flex;
         justify-content: center;
         align-items: center;
-        /* padding: 0.4rem 0;
-        clip-path: circle(45%); */
         transition: all 0.4s 0.2s ease-in-out;
-
-        &:hover, &:focus {
+        &:hover {
             transform-origin: 50% 50%;
-            //cursor: pointer; 
-            transform: scale(1.25);
-            
-            
-        } 
-    
+            transform: scale($heart_desired-expansion);
+        }     
     }
-
-    &__like {
+    &__like /* input */{
+        appearance: none;
         position: absolute;
         z-index: -1;
         bottom: -0.75rem;
         height: 1.6em;
         width: 1.6em;  
         opacity: 0;
-        //visibility: hidden;
+        
+        &:not([class$="all-meal"]){
+            border-radius: 50%;
+        }       
         &:focus {           
             opacity: 1;
             color: transparent;
@@ -64,40 +48,21 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
             opacity: 0 !important;
             visibility: collapse;
         }
-
-
-    } 
-
-    &__heart {
-        display: flex;
-        flex: auto;
-        align-items: center;
-        vertical-align: middle;
-        //font-size: $heart_font-size;
-        /* font-weight: 100 !important; */
-        text-align: center;
-        //margin-top: 0.0em;
-        //transition:  0.4s ease-in-out, color 1s ease-in-out;
     }
-
-
     &__heart {
+        @include flex-column;
         font-size: $heart_font-size !important;
         &:hover {
-            //transform-origin: 50% 50%;
             cursor: pointer; 
-           //transform: scale(1.25);
         } 
-
         &--background {
             height: 1.6rem;
             width: 1.6rem; 
             position: absolute;
-            z-index: -1;
-            //right: -1.25rem;
-            //bottom: -1.25rem;  
+            z-index: -1; 
             color: white !important;
             opacity: 0.66;
+            text-shadow: 0.1em 0 0.25em white, -0.1em 0 0.25em white, 0 0.1em 0.25em white, 0 -0.1em 0.25em  white, 0.1em 0.1em 0.25em white, -0.1em -0.1em 0.25em white, 0.1em -0.1em 0.25em white, -0.1em 0.1em 0.25em white;
             font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' -25, 'opsz' 48;
             /* Modification of opacity for .menu-restaurant page down*/   
         }
@@ -105,9 +70,7 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
             height: 1.6rem;
             width: 1.6rem; 
             position: absolute;
-            z-index: 2; /* Modification of z-index for .menu-restaurant page down*/
-            //right: -1.25rem;
-            //bottom: -1.25rem;  
+            z-index: 2; /* Modification of z-index for .menu-restaurant page down*/ 
             color: $color-icons-heart-unlike !important;
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' -25, 'opsz' 48;   
         }
@@ -116,139 +79,37 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
             width: 1.6rem; 
             position: relative;
             z-index: 11;
-            //right: -0.71rem;
-            //bottom: -0.76rem;
             background-color: $color-icons-heart-like;
-            /* color: red; */
-            font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 0, 'opsz' 48;
-           
-            
+            font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 0, 'opsz' 48;       
             background: $color-icons-heart-like;
             background-clip: text;        
             -webkit-background-clip: text;
-            color: transparent;     
-        
-            //transform-origin: 50% 50%;
-            //transform: scale(1.04); 
-        }    
-       
+            color: transparent;   
+        }           
     }    
     &__like + .heart, &__like:focus + .heart /* [class$="empty"] */ {
         opacity: 0;
         transform-origin: center bottom;  
         transition: opacity 1s ease-in;        
     }
-
-    &__like:checked + .heart, &__like:checked:focus + .heart /* [class$="full"] */ {
+    &__like:checked + .heart, &__like:checked:focus + .heart  {
         opacity: 1;
-       
-        //transform-origin: center bottom; 
-        
-        //@include heart-like;
-        
     }
-
-  
-    &__circle {
-        z-index: 3;
-        position: absolute;
-        right: 1rem;
-        bottom: 1rem;
-        padding: 0.8rem;
-        height: 1.6rem;
-        width: 1.6rem;
-        //margin: -3.27rem;
-        //margin-bottom: -3rem;
-       // right: 3rem;
-        //bottom: 3rem; 
-        background: $color-background_main;
-        background: navajowhite;
-        //background: green;
-        border-radius: 50%;
-
-        /* clip-path: circle(20%); */
-
-
-        @media (min-width: 768px) {
-           
-        
-            @media (min-width:1024px) {
-               /*  right: 2rem;
-                bottom: 2rem; */ 
-            }
-        }
-
-    }
-    
-
-
-    
-    // OPACITY //
-
-   /*  
-    &__heart-like {
-        &--opacity {
-            display: flex;
-        }
-  
-        &__like--opacity {
-          height: 0;
-          width: 0;  
-          opacity: 0;      
-        } 
-  
-        &__heart--opacity {
-           color: $color-font__main;
-           font-size: $heart_font-size;
-           font-weight: 100 !important;
-           text-align: center;
-           width: 1.1em;
-           transition:  0.4s ease-in-out, color 1s ease-in-out;
-          
-            &:hover {
-                cursor: pointer; 
-                transform: scale(1.2);
-            }   
-        }
-       
-  
-        &__like:checked--opacity + .heart--opacity [class$="heart--opacity"] {
-                
-            font-weight: 900 !important;        
-            background: $color-icons-heart-like;
-            background-clip: text;        
-            -webkit-background-clip: text;
-            color: transparent;
-        } 
-    }   */
 }
-
-
+/* Heart modifications for restaurant menu pages */
 .menu-restaurants {
     .restaurants {
-       /*  label {
-            z-index: 5;
-            position: relative;           
-        }
- */
-
-    &__heart-like {
-        //display: inline-block;
-        //@include flex-row;
-        //display: inline-flex;
-        //flex: content;
-        //z-index: 10;
-        position: relative;
-        right: initial;
-        bottom: initial;
-        padding: 0 1.5rem;
-    } 
-
-
+        &__heart-like {
+            position: relative;
+            right: initial;
+            bottom: initial;
+            padding: 0 1.5rem;
+        } 
         &__like {
             bottom: 0.1rem;
         }
         &__heart {
+            text-shadow: initial;
             &--background {
                 opacity: 0 !important;
             }
@@ -257,7 +118,4 @@ $heart_desired-expansion: 0.2em; /* USE em or rem | Enlargement desired in addit
             }
         }
     }
-}
-
-
-   
+}   

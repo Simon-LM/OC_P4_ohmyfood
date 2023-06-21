@@ -2,7 +2,6 @@
 
 $font-size_research: rem(16); 
 
-
 .find-a-place {
     display: flex;
     flex-direction: column;
@@ -18,126 +17,47 @@ $font-size_research: rem(16);
         align-items: center;
         justify-content: center;
         margin-bottom: 1.1em;
-        &  span[class="research-1"] {
+        & span[class="research-1"] {
             transition: all 1.25s 0.1s ease-in-out;
         }
-        &:hover {
-            /* transition: all 0.9s 1.9s ease-out;
-            transform: translate(50vw, 0); */
-           /*  background-color: blue; */
-        }
-
         label:active{
-            /* transform-origin: 50% 100%; */
             transform: scale(3.3);    
-            transition: transform 1.6s cubic-bezier(.68,0,.05,.19);                      
-
+            transition: transform 1.6s cubic-bezier(.68,0,.05,.19);
             span[class="location"] {
                 transition: opacity 0.15s 1.95s ease-out;
                 opacity: 0;
-            }
-        
+            }        
             i { 
                 transition: transform 1.25s 0.8s cubic-bezier(.88,.71,0,.92);
                 transform: scale(2.6, 0.75);               
             }
-
             & + span[class="research-1"]{
-               /*  transition: all 0.3s 1.5s ease-out;
-                transform: translate(20%, 0); */
-
                 transition: all 1.25s 1.125s cubic-bezier(.85,.5,1,-0.30);
-                transform: translate(60vw, 0);
-                /* background-color: green; */
-                /* transform: translate(50vw, 0); */
-            
-                //span[class="research-2"]
-                 /* &:last-child {
-                    transition: all 0.9s 2.9s ease-out;
-                    transform: translate(50vw, 0);
-                       
-                    background-color: red; 
-
-                    span[class="research-3"] {
-                        transform: translate(10%, 0);
-                        
-                        background-color: blue;
-
-                        span[class="research-4"] {
-                            transition: all 0.6s 1.125s ease-in-out;
-                                          
-                            background-color: yellow;    
-                                
-    
-                        }
-
-
-                    }
-
-
-                }  */
+                transform: translate(60vw, 0);  
             }
         }
-
     }
-
-
     &__location-icon {
         font-size: 1rem;
         margin-right: 0.5em;
     }
-
     &__research {
         font-family: $font-main;
         font-size: $font-size_research;
         font-weight: 500;
-        color: $grayscale-1;
+        color: $color-font-research;
+        caret-color: $color-caret-research;
         border: none;
         background-color: transparent;
         height: 1.5em;
         width: 8rem;
         padding-left: 0.5em;
-        transition: all 0.5s ease-in-out;
+        transition: background 0.5s ease-in-out;
         &:focus {
-            background-color: lighten($color-primairy, 35%);
+            background: lighten($color-primairy, 35%);
         }
-    }   
-
-    /*  label + i:hover {
-        input[class*="research"] {
-        background-color: transparent;
-        }
-    } */
-    
-
-
-
-    /* &:not(:focus):valid {
-         background: $color-tertiary;
-         border: 2px solid $color-primairy;
-         color: $color-primairy;
-     } */
-    /*  &:not(:focus):invalid {
-         background: $color-secondary;
-         border: 2px solid $color-primairy;
-         color: $color-primairy;
-     } */
-    /*  &:hover {
-         @keyframes identifier {
-             
-         }
-    } */
-    
-
-
-
-
-
-
-
-
+    }  
 }
-
 
 .balloon-dot {
     position:relative;
@@ -146,8 +66,7 @@ $font-size_research: rem(16);
     opacity: 0.2;
     > :hover{
         opacity: 1;
-    }
-      
+    }      
     &__1 {
         margin-right: -0.6em;
         color: red;
@@ -196,29 +115,4 @@ $font-size_research: rem(16);
         margin-right: -0.2em;
         color: blueviolet;
     }
-
-
-
-
 }
-
-
-
-
-
-// Location
-// Grey 2
-//background: #EAEAEA;
-
-// IconPin 
-//height: 16px;
-//background: #353535;
-
-// Paris, Belleville
-//width: 109px;
-//height: 19px;
-
-// Button
-//font-weight: 500;
-//font-size: 16px;
-//color: #353535;

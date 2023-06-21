@@ -32,7 +32,7 @@
       <div class="visual-identity__master-logo">
         <img  src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
       </div>
-      <nav class="visual-identity__back-arrow">
+      <nav class="visual-identity__back-arrow if-prefers-reduced-motion">
         <a href="index.php" title="Page d'accueil"><i class="fa-solid fa-arrow-left"></i></a>
       </nav>
     </header>

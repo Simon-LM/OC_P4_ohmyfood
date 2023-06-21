@@ -3,7 +3,7 @@
       <section class="name-restaurants">
         <h5 class="name-restaurants__title"></h5>
         <!-- Like and unlike Restaurants | Heart empty or full -->
-        <div class="restaurants__heart-like">               
+        <div class="restaurants__heart-like if-prefers-reduced-motion">               
           <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like" aria-label="Cochez pour enregistrer ce restaurant dans vos favoris"> 
           <label for="like_la-palette-du-gout" class="heart" >                  
             <i class="restaurants__heart restaurants__heart--full material-symbols-outlined" aria-hidden="true">favorite</i>              
@@ -16,10 +16,10 @@
       <section  class="menu-restaurants__all-meal">
         <ul class="entries animations-time-lag">
           <div class="entries__title-and-underline">
-            <h6 class="entries__title">Entrées</h6>
+            <h6 class="entries__title if-prefers-reduced-motion">Entrées</h6>
             <div class="entries__underline"></div>
           </div>  
-          <li class="entries__cards entries-1 animations-time-lag" >
+          <li class="entries__cards entries-1 animations-time-lag if-prefers-reduced-motion">
             <div class="entries__menu">
               <p class="entries__menu-heavy"></p>
               <p class="entries__menu-thin"></p>
@@ -32,7 +32,7 @@
               <span class="material-symbols-outlined" aria-hidden="true"></span>
             </div>
           </li>
-          <li class="entries__cards entries-2 animations-time-lag">
+          <li class="entries__cards entries-2 animations-time-lag if-prefers-reduced-motion">
             <div class="entries__menu">
               <p class="entries__menu-heavy"></p>
               <p class="entries__menu-thin"></p>
@@ -46,7 +46,7 @@
             </div>
           </li>
           <span class="material-symbols-outlined touch_app">touch_app</span>
-          <li class="entries__cards entries-3 animations-time-lag">
+          <li class="entries__cards entries-3 animations-time-lag if-prefers-reduced-motion">
             <div class="entries__menu">
               <p class="entries__menu-heavy"></p>
               <p class="entries__menu-thin"></p>
@@ -59,7 +59,7 @@
               <span class="material-symbols-outlined" aria-hidden="true"></span>
             </div>
           </li>
-          <li class="entries__cards entries-4 animations-time-lag">
+          <li class="entries__cards entries-4 animations-time-lag if-prefers-reduced-motion">
             <div class="entries__menu">
               <p class="entries__menu-heavy"></p>
               <p class="entries__menu-thin"></p>
@@ -75,10 +75,10 @@
         </ul>
         <ul class="main-course animations-time-lag">
           <div class="main-course__title-and-underline">
-            <h6 class="main-course__title">Plats</h6>
+            <h6 class="main-course__title if-prefers-reduced-motion">Plats</h6>
             <div class="main-course__underline"></div>
           </div>
-          <li class="main-course__cards main-course-1 animations-time-lag">
+          <li class="main-course__cards main-course-1 animations-time-lag if-prefers-reduced-motion">
             <div class="main-course__menu">
               <p class="main-course__menu-heavy"></p>
               <p class="main-course__menu-thin"></p>
@@ -91,7 +91,7 @@
               <span class="material-symbols-outlined" aria-hidden="true"></span>
             </div>
           </li>
-          <li class="main-course__cards main-course-2 animations-time-lag">
+          <li class="main-course__cards main-course-2 animations-time-lag if-prefers-reduced-motion">
             <div class="main-course__menu">
               <p class="main-course__menu-heavy"></p>
               <p class="main-course__menu-thin"></p>
@@ -104,7 +104,7 @@
               <span class="material-symbols-outlined" aria-hidden="true"></span>
             </div>
           </li>
-          <li class="main-course__cards main-course-3 animations-time-lag">
+          <li class="main-course__cards main-course-3 animations-time-lag if-prefers-reduced-motion">
             <div class="main-course__menu">
               <p class="main-course__menu-heavy"></p>
               <p class="main-course__menu-thin"></p>
@@ -117,7 +117,7 @@
               <span class="material-symbols-outlined" aria-hidden="true"></span>
             </div>
           </li>
-          <li class="main-course__cards main-course-4 animations-time-lag">
+          <li class="main-course__cards main-course-4 animations-time-lag if-prefers-reduced-motion">
             <div class="main-course__menu">
               <p class="main-course__menu-heavy"></p>
               <p class="main-course__menu-thin"></p>
@@ -132,11 +132,11 @@
           </li>
         </ul>
         <ul  class="desserts">
-          <div class="desserts__title-and-underline">
-            <h6 class="desserts__title">Desserts</h6>
+          <div class="desserts__title-and-underline  if-prefers-reduced-motion">
+            <h6 class="desserts__title if-prefers-reduced-motion">Desserts</h6>
             <div class="desserts__underline"></div>
           </div>
-          <li class="desserts__cards desserts-1 animations-time-lag">
+          <li class="desserts__cards desserts-1 animations-time-lag if-prefers-reduced-motion">
             <div class="desserts__menu">
               <p class="desserts__menu-heavy"></p>
               <p class="desserts__menu-thin"></p>
@@ -149,7 +149,7 @@
               <span class="material-symbols-outlined" aria-hidden="true"></span>
             </div>
           </li>
-          <li class="desserts__cards desserts-2 animations-time-lag">
+          <li class="desserts__cards desserts-2 animations-time-lag if-prefers-reduced-motion">
             <div class="desserts__menu">
               <p class="desserts__menu-heavy"></p>
               <p class="desserts__menu-thin"></p>
@@ -162,7 +162,7 @@
               <span class="material-symbols-outlined" aria-hidden="true"></span>
             </div>
           </li>
-          <li class="desserts__cards desserts-3 animations-time-lag">
+          <li class="desserts__cards desserts-3 animations-time-lag if-prefers-reduced-motion">
             <div class="desserts__menu">
               <p class="desserts__menu-heavy"></p>
               <p class="desserts__menu-thin"></p>
@@ -175,7 +175,7 @@
               <span class="material-symbols-outlined" aria-hidden="true"></span>
             </div>
           </li>
-          <li class="desserts__cards desserts-4 animations-time-lag">
+          <li class="desserts__cards desserts-4 animations-time-lagif-prefers-reduced-motion">
             <div class="desserts__menu">
               <p class="desserts__menu-heavy"></p>
               <p class="desserts__menu-thin"></p>
@@ -183,14 +183,14 @@
             <div>
               <p class="desserts__price"></p>
             </div>
-            <input type="checkbox" name="menu-choice" id="desserts-04" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <input type="checkbox" name="menu-choice" id="desserts-04 if-prefers-reduced-motion" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
             <div class="desserts__menu-selected" for="desserts-04">
               <span class="material-symbols-outlined" aria-hidden="true"></span>
             </div>
           </li>
         </ul>  
       </section>
-      <button class="order-btn animations-time-lag">Commander</button>     
+      <button class="order-btn animations-time-lag if-prefers-reduced-motion">Commander</button>     
    <!--  </main> -->
 
     
