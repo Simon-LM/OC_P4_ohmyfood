@@ -48,7 +48,7 @@ $color-primairy-to-secondary: linear-gradient($color-primairy, $color-secondary)
 $color-secondary-to-primairy_h: linear-gradient(.25turn, $color-secondary, $color-primairy);
 $color-secondary-to-primairy: linear-gradient(.49turn, $color-secondary, $color-primairy);
 $color-tertiary: #99E2D0;
-$color-tertiary-font: #008766;
+$color-tertiary-font:  darken(#008766, 6%); // 6%
 $color-dark-blue: #003A68;
 $color-light-blue: #89C8FA;
 

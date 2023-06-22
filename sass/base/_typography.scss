@@ -5,6 +5,7 @@
     font-size: 1rem;
     line-height: 1.2em;  
     margin: 0;
+    @include font_main;
 
     h1, h2 {
         font-weight: 700;
@@ -15,6 +16,7 @@
         font-family: $font-logo;
         font-weight: 400;
         font-size:rem(18);
+        @include font_footer;
     }
 
     h4 {
@@ -41,7 +43,8 @@
         &[class="discovery__subtitle"] {
             font-size: rem(18);
             line-height: 1.2em;
-            color: $grayscale-1;
+            //color: $grayscale-1;
+            @include font_discovery-subtitle;
         }
 
         &[class="explanation__text"] {
@@ -70,7 +73,8 @@
 
 span {
     &[class="explanation__circle"] {
-        color: $color-font_explanation-circle;
+        //color: $color-font_explanation-circle;
+        @include font-explanation-circle;
         font-size: rem(12);
         font-weight: 500;
     }
@@ -81,10 +85,12 @@ span {
 
 a {
     text-decoration: none;
-    color: $color-font__main;
+    //color: $color-font__main;
+    @include font_main;
 
     &[class^="auxiliary-menu"] {
-        color: $color-font__footer;
+        //color: $color-font__footer;
+        @include font_footer;
     }   
 }
 
@@ -92,5 +98,7 @@ ul, li {
     list-style: none;
     padding: 0;
 } 
-
-
+/* 
+footer {
+    //@include  font_footer;
+} */

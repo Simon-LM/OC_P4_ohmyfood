@@ -1,7 +1,8 @@
 /* || DISCOVERY || */
 
 .discovery {
-    background-color: $color-background_discovery;
+    //background-color: $color-background_discovery;
+    @include background_discovery ;
     display: flex;
     flex-direction: column;
     align-items: center;

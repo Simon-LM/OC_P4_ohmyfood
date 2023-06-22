@@ -21,6 +21,7 @@ body {
     margin: 0;
     max-width: 1440px;
     //width: 100%;
+    @include background_main;
 }
 
 main {
@@ -48,17 +49,6 @@ img {
     }
 }
 
-
-
-//.main-container {
-//    display: flex;
-//    flex-direction: column;
-//    flex: auto;
-//    /* width: 100%; */
-//    max-width: 1440px;
-//   /*  padding: 0 50px; */
-//    box-sizing: border-box;
-//}
 
 
 

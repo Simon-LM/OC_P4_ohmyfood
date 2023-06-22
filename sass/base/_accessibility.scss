@@ -103,12 +103,12 @@
 /* .day   { background: #eee; color: black; }
 .night { background: #333; color: white; } */
 
-@media (prefers-color-scheme: dark) {
+//@media (prefers-color-scheme: dark) {
   /* .day.dark-scheme   { background:  #333; color: white; }
   .night.dark-scheme { background: black; color:  #ddd; } */
 
 
-  body {
+  /* body {
     color: $color-light-main_dark !important;
     background: $color-dark-main_dark !important;
 
@@ -141,11 +141,11 @@
     }
 
 
-  }
+  } */
 
-}
+//}
 
-@media (prefers-color-scheme: light) {
+//@media (prefers-color-scheme: light) {
   /* .day.light-scheme   { background: white; color:  #555; }
   .night.light-scheme { background:  #eee; color: black; } */
 
@@ -157,7 +157,7 @@
  /*  $color-dark-main: grey; 
   $color-light-main:pink; */
 
-}
+//}
 
 
 
@@ -190,11 +190,11 @@
 //Cette valeur indique que le système a été configuré afin d'avoir un niveau de contraste plus faible.
 
 // NOT OPERA (Jun2023)
-@media (prefers-contrast: more) {
-  /* .contrast {
-    outline: 2px solid black;
-  } */
-}
+//@media (prefers-contrast: more) {
+//  /* .contrast {
+//    outline: 2px solid black;
+//  } */
+//}
 
 
 // WHITE OR BLACK //
@@ -209,9 +209,9 @@
 //white-on-black
 //Cette valeur indique que les règles suivantes seront appliquées lorsque le système utilise un mode de contraste élevé avec une dominante blanc sur noir.
 
-@media screen and (-ms-high-contrast: active) {
-    /* Toutes les règles appliquées en contraste élevé */
-}
+//@media screen and (-ms-high-contrast: active) {
+//    /* Toutes les règles appliquées en contraste élevé */
+//}
 
 
 //inverted-colors | SAFARI ONLY
@@ -228,18 +228,18 @@
 //Les couleurs des pixels de la zone affichée ont été inversées. */
 
 // SAFARI ONLY
-@media (inverted-colors: inverted) {
-  /* p {
-    background: black;
-    color: yellow;
-  } */
-}  
-@media (inverted-colors: none) {
- /*  p {
-    background: #eee;
-    color: red;
-  } */
-}
+//@media (inverted-colors: inverted) {
+//  /* p {
+//    background: black;
+//    color: yellow;
+//  } */
+//}  
+//@media (inverted-colors: none) {
+// /*  p {
+//    background: #eee;
+//    color: red;
+//  } */
+//}
 
 
 // MONOCHROME //

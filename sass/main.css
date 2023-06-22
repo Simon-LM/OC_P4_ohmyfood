@@ -8,6 +8,9 @@
 /*** FONT COLOR ***/
 /*** BACKGROUND COLOR ***/
 /***IMG RESTAURANTS ***/
+/*** COLOR ***/
+/*** FONT COLOR ***/
+/*** BACKGROUND COLOR ***/
 /***** RESPONSIVE *****/
 @keyframes img-and-name-restaurant {
   0% {
@@ -166,6 +169,27 @@ body {
   width: 100%;
   margin: 0;
   max-width: 1440px;
+  background: white;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  body {
+    background: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  body {
+    background: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  body {
+    background: black;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  body {
+    background: #212121;
+  }
 }
 
 main {
@@ -201,6 +225,32 @@ img[src*=restaurants] {
   font-size: 1rem;
   line-height: 1.2em;
   margin: 0;
+  color: black;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  * {
+    color: black;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  * {
+    color: #212121;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  * {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  * {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  * {
+    color: whitesmoke;
+  }
 }
 * h1, * h2 {
   font-weight: 700;
@@ -210,6 +260,27 @@ img[src*=restaurants] {
   font-family: Shrikhand;
   font-weight: 400;
   font-size: 1.125rem;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  * h3 {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  * h3 {
+    color: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  * h3 {
+    color: black;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  * h3 {
+    color: #212121;
+  }
 }
 * h4 {
   font-weight: 500;
@@ -235,6 +306,16 @@ img[src*=restaurants] {
   line-height: 1.2em;
   color: #353535;
 }
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  * p[class=discovery__subtitle] {
+    color: #353535;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  * p[class=discovery__subtitle] {
+    color: #f7f7f7;
+  }
+}
 * p[class=explanation__text] {
   font-weight: 500;
   line-height: 1.2em;
@@ -257,20 +338,88 @@ span[class=explanation__circle] {
   font-size: 0.75rem;
   font-weight: 500;
 }
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  span[class=explanation__circle] {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  span[class=explanation__circle] {
+    color: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  span[class=explanation__circle] {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  span[class=explanation__circle] {
+    color: whitesmoke;
+  }
+}
 
 a {
   text-decoration: none;
   color: black;
 }
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  a {
+    color: black;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  a {
+    color: #212121;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  a {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  a {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  a {
+    color: whitesmoke;
+  }
+}
 a[class^=auxiliary-menu] {
   color: white;
 }
-
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  a[class^=auxiliary-menu] {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  a[class^=auxiliary-menu] {
+    color: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  a[class^=auxiliary-menu] {
+    color: black;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  a[class^=auxiliary-menu] {
+    color: #212121;
+  }
+}
 ul, li {
   list-style: none;
   padding: 0;
 }
 
+/* 
+footer {
+    //@include  font_footer;
+} */
 /* $font-size_order-btn: 1rem;
 $btn_desired-expansion: 0.15em;
 
@@ -299,8 +448,8 @@ input:hover[class$=research]:hover, input:focus[class$=research]:hover, a:hover[
   align-items: center;
   font-size: 1rem;
   font-weight: 500;
+  background: #9356DC;
   color: white;
-  background: linear-gradient(0.49turn, #FF79DA, #9356DC);
   border: none;
   border-radius: 2rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -309,6 +458,46 @@ input:hover[class$=research]:hover, input:focus[class$=research]:hover, a:hover[
   padding: 0 2em;
   margin: 1rem 0;
   transition: all 0.35s ease-in-out, font-size 0.25s 0.1s ease;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .order-btn {
+    background: linear-gradient(0.49turn, #FF79DA, #9356DC);
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: more) {
+  .order-btn {
+    background: #9356DC;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .order-btn {
+    background: linear-gradient(0.49turn, #FF79DA, #9356DC);
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .order-btn {
+    background: #9356DC;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .order-btn {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .order-btn {
+    color: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .order-btn {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .order-btn {
+    color: whitesmoke;
+  }
 }
 .order-btn:hover, .order-btn:focus {
   cursor: pointer;
@@ -440,6 +629,11 @@ input:hover[class$=research]:hover, input:focus[class$=research]:hover, a:hover[
 }
 .menu-restaurants .restaurants__heart--background {
   opacity: 0 !important;
+}
+@media only screen and (prefers-color-scheme: dark) {
+  .menu-restaurants .restaurants__heart--background {
+    opacity: 1 !important;
+  }
 }
 .menu-restaurants .restaurants__heart--empty {
   z-index: -1 !important;
@@ -627,10 +821,30 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: white;
+  background: white;
   height: 113px;
   width: 100%;
   height: calc(clamp(1.5rem, 5.4545454545vmin, 2.125rem) * 3);
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .visual-identity {
+    background: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .visual-identity {
+    background: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .visual-identity {
+    background: #212121;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .visual-identity {
+    background: #212121;
+  }
 }
 .visual-identity__master-logo {
   display: flex;
@@ -641,6 +855,21 @@ body {
 .visual-identity__master-logo img {
   height: 1.875rem; /* For old brothers */
   height: clamp(1.5rem, 5.4545454545vmin, 2.125rem);
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .visual-identity__master-logo img {
+    filter: invert(5%);
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .visual-identity__master-logo img {
+    filter: invert(100%);
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .visual-identity__master-logo img {
+    filter: invert(95%);
+  }
 }
 .visual-identity__back-arrow {
   display: flex;
@@ -676,10 +905,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #eaeaea;
+  background: #eaeaea;
   height: calc(3 * 1rem);
   width: 100%;
   white-space: nowrap;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .find-a-place {
+    background: #eaeaea;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .find-a-place {
+    background: #7e7e7e;
+  }
 }
 .find-a-place form {
   display: flex;
@@ -722,6 +961,16 @@ body {
   width: 8rem;
   padding-left: 0.5em;
   transition: background 0.5s ease-in-out;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .find-a-place__research {
+    color: #353535;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .find-a-place__research {
+    color: #f7f7f7;
+  }
 }
 .find-a-place__research:focus {
   background: #f2eafb;
@@ -787,7 +1036,7 @@ body {
 
 /* || DISCOVERY || */
 .discovery {
-  background-color: #f7f7f7;
+  background: #f7f7f7;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -796,15 +1045,44 @@ body {
   padding: 2em 1em;
   gap: 1em;
 }
-
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .discovery {
+    background: #f7f7f7;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .discovery {
+    background: #353535;
+  }
+}
 /* || FONCTIONNEMENT / EXPLANATION || */
 .explanation {
-  background-color: white;
+  background: white;
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 2em;
   padding: calc(2em + 2vw) calc(1rem + 1.5vw) calc(3em + 2vw) calc(1rem + 1.5vw);
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .explanation {
+    background: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .explanation {
+    background: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .explanation {
+    background: #212121;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .explanation {
+    background: #212121;
+  }
 }
 @media (min-width: 768px) {
   .explanation {
@@ -850,6 +1128,16 @@ body {
   background: #f7f7f7;
   height: 4em;
 }
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .explanation__card {
+    background: #f7f7f7;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .explanation__card {
+    background: #353535;
+  }
+}
 @media (min-width: 768px) and (min-width: 1024px) {
   .explanation__card {
     max-width: calc(50% - 1em);
@@ -866,13 +1154,35 @@ body {
   width: 1.35rem;
   margin-left: -0.675rem;
 }
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .explanation__card [class$=circle] {
+    background: #9356DC;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .explanation__card [class$=circle] {
+    background: #9356DC;
+  }
+}
 .explanation__card i {
   color: #7e7e7e;
-  /* &[class*="store"] {
-      color: $color-icons_explanation-bright;
-  } */
   margin-left: 1em;
   width: 2em;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .explanation__card i {
+    color: #7e7e7e;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .explanation__card i {
+    color: #717171;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .explanation__card i {
+    color: #eaeaea;
+  }
 }
 @media (min-width: 1024px) {
   .explanation__card i {
@@ -882,6 +1192,16 @@ body {
 }
 .explanation__card:hover > i {
   color: #9356DC;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .explanation__card:hover > i {
+    color: #9356DC;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .explanation__card:hover > i {
+    color: #9356DC;
+  }
 }
 @media (min-width: 1024px) {
   .explanation__card [class$=text] {
@@ -893,7 +1213,7 @@ body {
 .restaurants {
   animation-name: donwnload-restaurants;
   animation-duration: 3s;
-  background-color: #f7f7f7;
+  background: #f7f7f7;
   display: flex;
   flex: auto;
   flex-direction: column;
@@ -905,6 +1225,16 @@ body {
 .restaurants img {
   animation-name: donwnload-img;
   animation-duration: 6s;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .restaurants {
+    background: #f7f7f7;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .restaurants {
+    background: #353535;
+  }
 }
 @media (min-width: 768px) {
   .restaurants {
@@ -947,13 +1277,6 @@ body {
   flex: auto;
   border-radius: 1.2em;
   width: 100%;
-  /* &:focus-visible {
-      [class$="card-comment"] {
-          //opacity: 1;
-          background: transparent; 
-      }
-
-  }  */
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .restaurants__all-cards a {
@@ -973,9 +1296,15 @@ body {
   width: 100%;
   overflow: hidden;
   animation-timing-function: ease-in-out;
+  /*  &:hover {
+       [class$="card-comment"] {
+           background: transparent;
+           //@import background_restaurants-cards-hover;                
+       }       
+   } */
 }
-.restaurants__card:hover [class$=card-comment] {
-  background: transparent;
+.restaurants__card:hover [class*=card-comment] {
+  background: transparent !important;
 }
 .restaurants__card img {
   z-index: 1;
@@ -1014,18 +1343,50 @@ body {
   flex: auto;
   flex-direction: row;
   align-items: center;
-  background: white;
   border-bottom-right-radius: 1.2em;
   border-bottom-left-radius: 1.2em;
   width: 100%;
   padding: 0.5em 1em;
+  background: white;
   transition: background 0.4s ease-in-out;
+  /*   h4 {
+        text-shadow: 0.2em 0 0.4em white, -0.2em 0 0.4em white, 0 0.2em 0.4em white, 0 -0.2em 0.4em white, 0.2em 0.2em 0.4em  white, -0.2em -0.2em 0.4em white, 0.2em -0.2em 0.4em white, -0.2em 0.2em 0.4em white;
+    }
+    p {
+        text-shadow: 0.1em 0 0.25em white, -0.1em 0 0.25em white, 0 0.1em 0.25em white, 0 -0.1em 0.25em  white, 0.1em 0.1em 0.25em white, -0.1em -0.1em 0.25em white, 0.1em -0.1em 0.25em white, -0.1em 0.1em 0.25em white;
+    } */
 }
-.restaurants__card-comment h4 {
-  text-shadow: 0.2em 0 0.4em white, -0.2em 0 0.4em white, 0 0.2em 0.4em white, 0 -0.2em 0.4em white, 0.2em 0.2em 0.4em white, -0.2em -0.2em 0.4em white, 0.2em -0.2em 0.4em white, -0.2em 0.2em 0.4em white;
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .restaurants__card-comment {
+    background: white;
+  }
 }
-.restaurants__card-comment p {
-  text-shadow: 0.1em 0 0.25em white, -0.1em 0 0.25em white, 0 0.1em 0.25em white, 0 -0.1em 0.25em white, 0.1em 0.1em 0.25em white, -0.1em -0.1em 0.25em white, 0.1em -0.1em 0.25em white, -0.1em 0.1em 0.25em white;
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .restaurants__card-comment {
+    background: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .restaurants__card-comment {
+    background: #212121;
+  }
+  .restaurants__card-comment h4 {
+    text-shadow: 0.2em 0 0.4em #212121, -0.2em 0 0.4em #212121, 0 0.2em 0.4em #212121, 0 -0.2em 0.4em #212121, 0.2em 0.2em 0.4em #212121, -0.2em -0.2em 0.4em #212121, 0.2em -0.2em 0.4em #212121, -0.2em 0.2em 0.4em #212121;
+  }
+  .restaurants__card-comment p {
+    text-shadow: 0.1em 0 0.25em #212121, -0.1em 0 0.25em #212121, 0 0.1em 0.25em #212121, 0 -0.1em 0.25em #212121, 0.1em 0.1em 0.25em #212121, -0.1em -0.1em 0.25em #212121, 0.1em -0.1em 0.25em #212121, -0.1em 0.1em 0.25em #212121;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .restaurants__card-comment {
+    background: #212121;
+  }
+  .restaurants__card-comment h4 {
+    text-shadow: 0.2em 0 0.4em #212121, -0.2em 0 0.4em #212121, 0 0.2em 0.4em #212121, 0 -0.2em 0.4em #212121, 0.2em 0.2em 0.4em #212121, -0.2em -0.2em 0.4em #212121, 0.2em -0.2em 0.4em #212121, -0.2em 0.2em 0.4em #212121;
+  }
+  .restaurants__card-comment p {
+    text-shadow: 0.1em 0 0.25em #212121, -0.1em 0 0.25em #212121, 0 0.1em 0.25em #212121, 0 -0.1em 0.25em #212121, 0.1em 0.1em 0.25em #212121, -0.1em -0.1em 0.25em #212121, 0.1em -0.1em 0.25em #212121, -0.1em 0.1em 0.25em #212121;
+  }
 }
 .restaurants__card-comment [class$=text] {
   flex: initial;
@@ -1043,7 +1404,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #99E2D0;
-  color: #008766;
+  color: #00684f;
   padding: 0.25em 0.5em;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
@@ -1052,7 +1413,36 @@ body {
      -moz-user-select: none;
           user-select: none;
 }
-
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .restaurants__thumbnail-new {
+    background: #99E2D0;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .restaurants__thumbnail-new {
+    background: #00684f;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .restaurants__thumbnail-new {
+    background: #00684f;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .restaurants__thumbnail-new {
+    color: #00684f;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: more) {
+  .restaurants__thumbnail-new {
+    color: #00684f;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .restaurants__thumbnail-new {
+    color: #99E2D0;
+  }
+}
 @media (min-width: 1024px) {
   main :only-of-type [class$=thumbnail-new] {
     animation-name: thumbnail-new;
@@ -1181,11 +1571,41 @@ body {
 .auxiliary-menu {
   display: flex;
   flex-direction: column;
-  background-color: #353535;
+  background: #353535;
   color: white;
   width: 100%;
   padding: calc(1em + 1vw) calc(1rem + 1.5vw);
   gap: 1em;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .auxiliary-menu {
+    background: #353535;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .auxiliary-menu {
+    background: #f7f7f7;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .auxiliary-menu {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .auxiliary-menu {
+    color: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .auxiliary-menu {
+    color: black;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .auxiliary-menu {
+    color: #212121;
+  }
 }
 @media (min-width: 768px) {
   .auxiliary-menu {
@@ -1207,7 +1627,6 @@ body {
 }
 .auxiliary-menu__all {
   display: flex;
-  /* flex: auto; */
   flex-direction: column;
   gap: 0.5em;
   /* white-space: nowrap; */
@@ -1242,6 +1661,27 @@ body {
 }
 .auxiliary-menu__icon {
   width: 2em;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .auxiliary-menu__icon {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .auxiliary-menu__icon {
+    color: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .auxiliary-menu__icon {
+    color: black;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .auxiliary-menu__icon {
+    color: #212121;
+  }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .auxiliary-menu__icon {
@@ -1976,6 +2416,16 @@ body {
   border-top-right-radius: 3rem;
   margin-top: -3rem;
 }
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .menu-restaurants {
+    background: #f7f7f7;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .menu-restaurants {
+    background: #353535;
+  }
+}
 @media (min-width: 768px) {
   .menu-restaurants {
     padding: calc(1em + 1vw) calc((100% - 750px) / 2 + 1rem);
@@ -2025,6 +2475,21 @@ body {
   border-bottom: 3px solid #99E2D0;
   width: 4ch !important;
 }
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .menu-restaurants__all-meal .entries__title-and-underline [class$=underline], .menu-restaurants__all-meal .main-course__title-and-underline [class$=underline], .menu-restaurants__all-meal .desserts__title-and-underline [class$=underline] {
+    border-bottom: 3px solid #99E2D0;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .menu-restaurants__all-meal .entries__title-and-underline [class$=underline], .menu-restaurants__all-meal .main-course__title-and-underline [class$=underline], .menu-restaurants__all-meal .desserts__title-and-underline [class$=underline] {
+    border-bottom: 3px solid #00684f;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .menu-restaurants__all-meal .entries__title-and-underline [class$=underline], .menu-restaurants__all-meal .main-course__title-and-underline [class$=underline], .menu-restaurants__all-meal .desserts__title-and-underline [class$=underline] {
+    border-bottom: 3px solid #00684f;
+  }
+}
 .menu-restaurants__all-meal .entries__cards, .menu-restaurants__all-meal .main-course__cards, .menu-restaurants__all-meal .desserts__cards {
   isolation: isolate;
   position: relative;
@@ -2044,6 +2509,38 @@ body {
   height: 100%;
   overflow: hidden;
   transition: opacity 0.75s ease-in-out;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .menu-restaurants__all-meal .entries__cards, .menu-restaurants__all-meal .main-course__cards, .menu-restaurants__all-meal .desserts__cards {
+    background: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .menu-restaurants__all-meal .entries__cards, .menu-restaurants__all-meal .main-course__cards, .menu-restaurants__all-meal .desserts__cards {
+    background: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .menu-restaurants__all-meal .entries__cards, .menu-restaurants__all-meal .main-course__cards, .menu-restaurants__all-meal .desserts__cards {
+    background: #212121;
+  }
+  .menu-restaurants__all-meal .entries__cards h4, .menu-restaurants__all-meal .main-course__cards h4, .menu-restaurants__all-meal .desserts__cards h4 {
+    text-shadow: 0.2em 0 0.4em #212121, -0.2em 0 0.4em #212121, 0 0.2em 0.4em #212121, 0 -0.2em 0.4em #212121, 0.2em 0.2em 0.4em #212121, -0.2em -0.2em 0.4em #212121, 0.2em -0.2em 0.4em #212121, -0.2em 0.2em 0.4em #212121;
+  }
+  .menu-restaurants__all-meal .entries__cards p, .menu-restaurants__all-meal .main-course__cards p, .menu-restaurants__all-meal .desserts__cards p {
+    text-shadow: 0.1em 0 0.25em #212121, -0.1em 0 0.25em #212121, 0 0.1em 0.25em #212121, 0 -0.1em 0.25em #212121, 0.1em 0.1em 0.25em #212121, -0.1em -0.1em 0.25em #212121, 0.1em -0.1em 0.25em #212121, -0.1em 0.1em 0.25em #212121;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .menu-restaurants__all-meal .entries__cards, .menu-restaurants__all-meal .main-course__cards, .menu-restaurants__all-meal .desserts__cards {
+    background: #212121;
+  }
+  .menu-restaurants__all-meal .entries__cards h4, .menu-restaurants__all-meal .main-course__cards h4, .menu-restaurants__all-meal .desserts__cards h4 {
+    text-shadow: 0.2em 0 0.4em #212121, -0.2em 0 0.4em #212121, 0 0.2em 0.4em #212121, 0 -0.2em 0.4em #212121, 0.2em 0.2em 0.4em #212121, -0.2em -0.2em 0.4em #212121, 0.2em -0.2em 0.4em #212121, -0.2em 0.2em 0.4em #212121;
+  }
+  .menu-restaurants__all-meal .entries__cards p, .menu-restaurants__all-meal .main-course__cards p, .menu-restaurants__all-meal .desserts__cards p {
+    text-shadow: 0.1em 0 0.25em #212121, -0.1em 0 0.25em #212121, 0 0.1em 0.25em #212121, 0 -0.1em 0.25em #212121, 0.1em 0.1em 0.25em #212121, -0.1em -0.1em 0.25em #212121, 0.1em -0.1em 0.25em #212121, -0.1em 0.1em 0.25em #212121;
+  }
 }
 .menu-restaurants__all-meal .entries__cards:hover, .menu-restaurants__all-meal .main-course__cards:hover, .menu-restaurants__all-meal .desserts__cards:hover {
   opacity: 0.8 !important;
@@ -2105,7 +2602,7 @@ body {
   opacity: 1;
 }
 .menu-restaurants__all-meal .entries__cards input:focus-visible, .menu-restaurants__all-meal .entries__cards input:-moz-focusring, .menu-restaurants__all-meal .main-course__cards input:focus-visible, .menu-restaurants__all-meal .main-course__cards input:-moz-focusring, .menu-restaurants__all-meal .desserts__cards input:focus-visible, .menu-restaurants__all-meal .desserts__cards input:-moz-focusring {
-  outline: 0.25rem solid #008766 !important;
+  outline: 0.25rem solid #00684f !important;
 }
 .menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked + [class$=menu-selected] {
   transform: translatex(0%);
@@ -2114,13 +2611,13 @@ body {
 }
 .menu-restaurants__all-meal .entries__cards .menu-choice-selected:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .entries__cards .menu-choice-selected:-moz-focusring + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:-moz-focusring + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:-moz-focusring + [class$=menu-selected] {
   opacity: 1;
-  background: #008766;
+  background: #00684f;
 }
 .menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked:-moz-focusring + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked:-moz-focusring + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked:-moz-focusring + [class$=menu-selected] {
   transform: translatex(0%);
   margin: 0;
   opacity: 1;
-  background: #008766;
+  background: #00684f;
 }
 .menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked:focus:hover + [class$=menu-selected], .menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked:focus:not(:focus-visible) + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked:focus:hover + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked:focus:not(:focus-visible) + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked:focus:hover + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked:focus:not(:focus-visible) + [class$=menu-selected] {
   transform: translatex(0%);
@@ -2152,6 +2649,21 @@ body {
   margin-right: calc(-1 * clamp(5rem, 16.6666666667%, 8rem));
   transform-origin: 0%;
   transition: all 1.5s 0.25s ease-in-out, opacity 1s ease-in-out, transform 1.5s 0.25s ease-in-out, border 0s;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .menu-restaurants__all-meal .entries__cards [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards [class$=menu-selected] {
+    background: #99E2D0;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .menu-restaurants__all-meal .entries__cards [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards [class$=menu-selected] {
+    background: #00684f;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .menu-restaurants__all-meal .entries__cards [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards [class$=menu-selected] {
+    background: #00684f;
+  }
 }
 .menu-restaurants__all-meal .entries__cards [class$=menu-selected] .material-symbols-outlined, .menu-restaurants__all-meal .main-course__cards [class$=menu-selected] .material-symbols-outlined, .menu-restaurants__all-meal .desserts__cards [class$=menu-selected] .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
@@ -2594,59 +3106,47 @@ body {
 }
 /* .day   { background: #eee; color: black; }
 .night { background: #333; color: white; } */
-@media (prefers-color-scheme: dark) {
-  /* .day.dark-scheme   { background:  #333; color: white; }
-  .night.dark-scheme { background: black; color:  #ddd; } */
-  body {
-    color: #cccccc !important;
-    background: #333333 !important;
+/* .day.dark-scheme   { background:  #333; color: white; }
+.night.dark-scheme { background: black; color:  #ddd; } */
+/* body {
+  color: $color-light-main_dark !important;
+  background: $color-dark-main_dark !important;
+
+  header {
+
   }
-  body main .discovery {
-    color: #cccccc !important;
-    background: #333333 !important;
+  main {
+    .discovery {
+      color: $color-light-main_dark !important;
+      background: $color-dark-main_dark !important;
+    }
+
+    .restaurants {
+      color: $color-light-main_dark !important;
+      background: $color-dark-main_dark !important;
+      &__card-comment {
+        background: $color-light-main_dark !important;
+      }
+
+    }
   }
-  body main .restaurants {
-    color: #cccccc !important;
-    background: #333333 !important;
+  footer {
+    color: $color-dark-main_dark !important;
+    background: $color-light-main_dark !important;
+    a {
+      color: $color-dark-main_dark !important;
+    }
+
+
   }
-  body main .restaurants__card-comment {
-    background: #cccccc !important;
-  }
-  body footer {
-    color: #333333 !important;
-    background: #cccccc !important;
-  }
-  body footer a {
-    color: #333333 !important;
-  }
-}
-@media (prefers-color-scheme: light) {
-  /* .day.light-scheme   { background: white; color:  #555; }
-  .night.light-scheme { background:  #eee; color: black; } */
-  /*  * {
-     color: pink ;
-     background: green;
-   } */
-  /*  $color-dark-main: grey; 
-   $color-light-main:pink; */
-}
-@media (prefers-contrast: more) {
-  /* .contrast {
-    outline: 2px solid black;
-  } */
-}
-@media screen and (-ms-high-contrast: active) {
-  /* Toutes les règles appliquées en contraste élevé */
-}
-@media (inverted-colors: inverted) {
-  /* p {
-    background: black;
-    color: yellow;
-  } */
-}
-@media (inverted-colors: none) {
-  /*  p {
-     background: #eee;
-     color: red;
-   } */
-}/*# sourceMappingURL=main.css.map */
+
+
+} */
+/* .day.light-scheme   { background: white; color:  #555; }
+.night.light-scheme { background:  #eee; color: black; } */
+/*  * {
+   color: pink ;
+   background: green;
+ } */
+/*  $color-dark-main: grey; 
+ $color-light-main:pink; *//*# sourceMappingURL=main.css.map */

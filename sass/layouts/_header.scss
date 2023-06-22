@@ -7,7 +7,8 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: $color-background_header;
+    //background-color: $color-background_header;
+    @include background_header;
     height: 113px;
     width: 100%;
     height: calc($logo-height * 3);
@@ -20,6 +21,7 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
         img {
             height: $default-height-for-olde-brothers; /* For old brothers */
             height: $logo-height;
+            @include font-logo_img-header;
         }
     }
 
@@ -53,10 +55,3 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
         }
     }
 }
-
-// Header
-//height: 113px;
-
-// logo ohmyfood 
-// mobile font-size: 30px;
-// desktop height: 34.2px;

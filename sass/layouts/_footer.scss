@@ -3,8 +3,10 @@
 .auxiliary-menu {
     display: flex;
     flex-direction: column;
-    background-color: $color-background_footer;
-    color: $color-font__footer;
+    //background-color: $color-background_footer;
+    @include background_footer;
+    //color: $color-font__footer;
+    @include font_footer;
     width: 100%;    
     @include padding_footer;
     gap: 1em;
@@ -16,13 +18,10 @@
             flex-direction: row-reverse;
             gap: 6rem;
         }
-    }
-
-    
+    }    
 
     &__all {
         display: flex;
-        /* flex: auto; */
         flex-direction: column;
         gap: 0.5em;
         /* white-space: nowrap; */
@@ -62,6 +61,7 @@
 
     &__icon {
         width: 2em;
+        @include font_footer; 
         @media (min-width: 768px) {
            
             @media (min-width:1024px) {

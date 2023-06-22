@@ -7,7 +7,8 @@
         animation-name: donwnload-img;
         animation-duration: 6s;
     }
-    background-color: $color-background_discovery;
+    //background-color: $color-background_discovery;
+    @include background_restaurants;
     display: flex;
     flex: auto;
     flex-direction: column;
@@ -44,17 +45,8 @@
                     min-width: calc((100% / 2) - 1em);
                 }
             } 
-            //  FOCUS | For not use tabindex="-1" on <a> with tabindex="0" on article
-            /* &:focus-visible {
-                [class$="card-comment"] {
-                    //opacity: 1;
-                    background: transparent; 
-                }
-                
-            }  */
         }       
     }    
-
     &__card {
         @include cards;
         position: relative;
@@ -65,12 +57,12 @@
         animation-timing-function: ease-in-out;    
         
         &:hover {
-            [class$="card-comment"] {
-                background: transparent;                
+            [class*="card-comment"] {
+                
+                background: transparent !important;                
             }       
         }
 
-        
         img {
             z-index: 1;
             margin-top: -4em;
@@ -108,19 +100,21 @@
             flex: auto;
             flex-direction: row;
             align-items: center;
-            background: $color-background_main;            
             border-bottom-right-radius: 1.2em;
             border-bottom-left-radius: 1.2em;
             width: 100%;
             padding: 0.5em 1em;
-            transition: background 0.4s ease-in-out;
+            //background: $color-background_main;
+            @include background_restaurants-cards;             
+            transition: background 0.4s ease-in-out;        
         
-            h4 {
+
+          /*   h4 {
                 text-shadow: 0.2em 0 0.4em white, -0.2em 0 0.4em white, 0 0.2em 0.4em white, 0 -0.2em 0.4em white, 0.2em 0.2em 0.4em  white, -0.2em -0.2em 0.4em white, 0.2em -0.2em 0.4em white, -0.2em 0.2em 0.4em white;
             }
             p {
                 text-shadow: 0.1em 0 0.25em white, -0.1em 0 0.25em white, 0 0.1em 0.25em white, 0 -0.1em 0.25em  white, 0.1em 0.1em 0.25em white, -0.1em -0.1em 0.25em white, 0.1em -0.1em 0.25em white, -0.1em 0.1em 0.25em white;
-            }
+            } */
 
             [class$="text"] {
                 flex: initial;
@@ -131,6 +125,12 @@
                 margin-right: 0.5em;
             }
         }
+       /*  &:hover {
+            [class$="card-comment"] {
+                background: transparent;
+                //@import background_restaurants-cards-hover;                
+            }       
+        } */
 
     }
 
@@ -142,8 +142,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: $color-background_thumbnail-new; 
-        color: $color-font_thumbnail-new;  
+        //background: $color-background_thumbnail-new;
+        @include  background_thumbnail-new;
+        //color: $color-font_thumbnail-new;
+        @include font_thumbnail-new;
         padding: 0.25em 0.5em;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
         border-radius: 2px;
@@ -171,11 +173,8 @@
     animation-delay: 0.4s;
 }
 
-
-
 $lag-btwn-thumbnail: 0.5;
 $time-befor-start: 7;
-
 @media (min-width:1024px) {
     main {        
         :only-of-type [class$="thumbnail-new"] {
@@ -227,10 +226,7 @@ $time-befor-start: 7;
 }
 
 
-
-
 @keyframes thumbnail-new{
-
     0% {
         transform: scale(1) translate(0 0);       
     }
@@ -295,5 +291,4 @@ $time-befor-start: 7;
         opacity: 1;
     }
 }
-
 

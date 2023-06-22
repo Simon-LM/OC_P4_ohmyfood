@@ -30,7 +30,8 @@
     z-index: 20;
     @include flex-column;
     justify-content: center ;
-    background: $color-background_restaurants;
+    //background: $color-background_restaurants;
+    @include background_restaurants;
     @include padding_section;
     max-width: 1055px;
     gap: 1em 4rem;
@@ -54,7 +55,8 @@
                 align-items: start;
 
                 [class$="underline"] {
-                    border-bottom: 3px solid $color-underline_menu-restaurants;
+                    //border-bottom: 3px solid $color-underline_menu-restaurants;
+                    @include  color-underline_menu-restaurants;
                     width: 4ch !important;
                 }
             } 
@@ -66,12 +68,13 @@
                 @include flex-row;
                 justify-content: space-between;            
                 @include cards;
-                background: $color-background_restaurants-cards;
+                //background: $color-background_restaurants-cards;
+                @include background_restaurants-cards;
                 height: 100%;
                 overflow: hidden;
                 transition: opacity 0.75s ease-in-out;
                 &:hover {
-                        opacity: 0.80 !important;
+                    opacity: 0.80 !important;
                 }          
                 
                 div {
@@ -168,7 +171,8 @@
                     right: 0;
                     @include flex-row;
                     flex: none;
-                    background: $color-background_restaurants-menu-selected;
+                    //background: $color-background_restaurants-menu-selected;
+                    @include  background_restaurants-menu-selected;
                     border-top-right-radius: 1.2rem;
                     border-bottom-right-radius: 1.2rem;
                     height: 100%;

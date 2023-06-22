@@ -112,6 +112,9 @@ $heart_desired-expansion: 1.2; /* For scale */
             text-shadow: initial;
             &--background {
                 opacity: 0 !important;
+                @media only screen and (prefers-color-scheme: dark) {
+                    opacity: 1 !important;
+                }
             }
             &--empty {
                 z-index: -1 !important;
