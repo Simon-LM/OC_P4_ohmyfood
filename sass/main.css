@@ -818,10 +818,13 @@ body {
 }
 /* || HEADER || */
 .visual-identity {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: white;
+  box-shadow: 0em 0.02em 0.5em #7e7e7e;
   height: 113px;
   width: 100%;
   height: calc(clamp(1.5rem, 5.4545454545vmin, 2.125rem) * 3);
@@ -829,21 +832,25 @@ body {
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .visual-identity {
     background: white;
+    box-shadow: 0em 0.02em 0.5em #7e7e7e;
   }
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
   .visual-identity {
     background: whitesmoke;
+    box-shadow: 0em 0.02em 0.5em #7e7e7e;
   }
 }
 @media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
   .visual-identity {
     background: #212121;
+    box-shadow: 0em 0.02em 0.6em #eaeaea;
   }
 }
 @media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
   .visual-identity {
     background: #212121;
+    box-shadow: 0em 0.02em 0.6em #eaeaea;
   }
 }
 .visual-identity__master-logo {
@@ -906,6 +913,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #eaeaea;
+  box-shadow: 1.3em 0em 1em black;
   height: calc(3 * 1rem);
   width: 100%;
   white-space: nowrap;
@@ -913,11 +921,23 @@ body {
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .find-a-place {
     background: #eaeaea;
+    box-shadow: 0.3em 0em 0 black;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .find-a-place {
+    box-shadow: 0.3em 0em 0 #212121;
   }
 }
 @media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
   .find-a-place {
     background: #7e7e7e;
+    box-shadow: 0.3em 0em 0 white;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .find-a-place {
+    box-shadow: 0.3em 0em 0 whitesmoke;
   }
 }
 .find-a-place form {
@@ -1360,10 +1380,22 @@ body {
   .restaurants__card-comment {
     background: white;
   }
+  .restaurants__card-comment h4 {
+    text-shadow: 0.2em 0 0.4em white, -0.2em 0 0.4em white, 0 0.2em 0.4em white, 0 -0.2em 0.4em white, 0.2em 0.2em 0.4em white, -0.2em -0.2em 0.4em white, 0.2em -0.2em 0.4em white, -0.2em 0.2em 0.4em white;
+  }
+  .restaurants__card-comment p {
+    text-shadow: 0.1em 0 0.25em white, -0.1em 0 0.25em white, 0 0.1em 0.25em white, 0 -0.1em 0.25em white, 0.1em 0.1em 0.25em white, -0.1em -0.1em 0.25em white, 0.1em -0.1em 0.25em white, -0.1em 0.1em 0.25em white;
+  }
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
   .restaurants__card-comment {
     background: whitesmoke;
+  }
+  .restaurants__card-comment h4 {
+    text-shadow: 0.2em 0 0.4em whitesmoke, -0.2em 0 0.4em whitesmoke, 0 0.2em 0.4em whitesmoke, 0 -0.2em 0.4em whitesmoke, 0.2em 0.2em 0.4em whitesmoke, -0.2em -0.2em 0.4em whitesmoke, 0.2em -0.2em 0.4em whitesmoke, -0.2em 0.2em 0.4em whitesmoke;
+  }
+  .restaurants__card-comment p {
+    text-shadow: 0.1em 0 0.25em whitesmoke, -0.1em 0 0.25em whitesmoke, 0 0.1em 0.25em whitesmoke, 0 -0.1em 0.25em whitesmoke, 0.1em 0.1em 0.25em whitesmoke, -0.1em -0.1em 0.25em whitesmoke, 0.1em -0.1em 0.25em whitesmoke, -0.1em 0.1em 0.25em whitesmoke;
   }
 }
 @media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
@@ -2514,10 +2546,22 @@ body {
   .menu-restaurants__all-meal .entries__cards, .menu-restaurants__all-meal .main-course__cards, .menu-restaurants__all-meal .desserts__cards {
     background: white;
   }
+  .menu-restaurants__all-meal .entries__cards h4, .menu-restaurants__all-meal .main-course__cards h4, .menu-restaurants__all-meal .desserts__cards h4 {
+    text-shadow: 0.2em 0 0.4em white, -0.2em 0 0.4em white, 0 0.2em 0.4em white, 0 -0.2em 0.4em white, 0.2em 0.2em 0.4em white, -0.2em -0.2em 0.4em white, 0.2em -0.2em 0.4em white, -0.2em 0.2em 0.4em white;
+  }
+  .menu-restaurants__all-meal .entries__cards p, .menu-restaurants__all-meal .main-course__cards p, .menu-restaurants__all-meal .desserts__cards p {
+    text-shadow: 0.1em 0 0.25em white, -0.1em 0 0.25em white, 0 0.1em 0.25em white, 0 -0.1em 0.25em white, 0.1em 0.1em 0.25em white, -0.1em -0.1em 0.25em white, 0.1em -0.1em 0.25em white, -0.1em 0.1em 0.25em white;
+  }
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
   .menu-restaurants__all-meal .entries__cards, .menu-restaurants__all-meal .main-course__cards, .menu-restaurants__all-meal .desserts__cards {
     background: whitesmoke;
+  }
+  .menu-restaurants__all-meal .entries__cards h4, .menu-restaurants__all-meal .main-course__cards h4, .menu-restaurants__all-meal .desserts__cards h4 {
+    text-shadow: 0.2em 0 0.4em whitesmoke, -0.2em 0 0.4em whitesmoke, 0 0.2em 0.4em whitesmoke, 0 -0.2em 0.4em whitesmoke, 0.2em 0.2em 0.4em whitesmoke, -0.2em -0.2em 0.4em whitesmoke, 0.2em -0.2em 0.4em whitesmoke, -0.2em 0.2em 0.4em whitesmoke;
+  }
+  .menu-restaurants__all-meal .entries__cards p, .menu-restaurants__all-meal .main-course__cards p, .menu-restaurants__all-meal .desserts__cards p {
+    text-shadow: 0.1em 0 0.25em whitesmoke, -0.1em 0 0.25em whitesmoke, 0 0.1em 0.25em whitesmoke, 0 -0.1em 0.25em whitesmoke, 0.1em 0.1em 0.25em whitesmoke, -0.1em -0.1em 0.25em whitesmoke, 0.1em -0.1em 0.25em whitesmoke, -0.1em 0.1em 0.25em whitesmoke;
   }
 }
 @media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {

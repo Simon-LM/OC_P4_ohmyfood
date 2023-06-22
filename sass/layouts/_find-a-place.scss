@@ -11,8 +11,8 @@ $font-size_research: rem(16);
     @include background_find-a-place;
     height: calc(3 * $font-size_research);
     width: 100%;
-    white-space: nowrap;
-    
+    white-space: nowrap;     
+
     & form {
         display: flex;       
         align-items: center;
