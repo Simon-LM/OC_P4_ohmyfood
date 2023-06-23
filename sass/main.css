@@ -2558,16 +2558,16 @@ body {
   background-size: cover;
 }
 .menu-restaurants__img-top-1 {
-  background-image: url(./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-image: url("./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 .menu-restaurants__img-top-2 {
-  background-image: url(./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-image: url("./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 .menu-restaurants__img-top-3 {
-  background-image: url(./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-image: url("./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
 .menu-restaurants__img-top-4 {
-  background-image: url(./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-image: url("./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
 .name-restaurants {
