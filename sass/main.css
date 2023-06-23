@@ -1889,6 +1889,9 @@ body {
 }
 
 /*** ||| PAGES RESTAURANTS ||| ***/
+.menu-restaurants__img-top {
+  background-image: url(../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
 .menu-restaurants .name-restaurants__title::after {
   content: "La palette du goût";
   -webkit-user-select: text;
@@ -2017,6 +2020,9 @@ body {
 }
 .menu-restaurants .desserts-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
+}
+.menu-restaurants-1__img-top {
+  background-image: url(../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 .menu-restaurants-1 .name-restaurants__title::after {
   content: "La palette du goût";
@@ -2147,6 +2153,9 @@ body {
 .menu-restaurants-1 .desserts-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
 }
+.menu-restaurants-2__img-top {
+  background-image: url(../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
 .menu-restaurants-2 .name-restaurants__title::after {
   content: "Le délice des sens";
   -webkit-user-select: text;
@@ -2275,6 +2284,9 @@ body {
 }
 .menu-restaurants-2 .desserts-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
+}
+.menu-restaurants-3__img-top {
+  background-image: url(../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 .menu-restaurants-3 .name-restaurants__title::after {
   content: "La note enchantée";
@@ -2417,6 +2429,9 @@ body {
 .menu-restaurants-3 .desserts-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
 }
+.menu-restaurants-4__img-top {
+  background-image: url(../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
 .menu-restaurants-4 .name-restaurants__title::after {
   content: "À la française";
   -webkit-user-select: text;
@@ -2556,18 +2571,18 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
-}
-.menu-restaurants__img-top-1 {
-  background-image: url("./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-.menu-restaurants__img-top-2 {
-  background-image: url("./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-}
-.menu-restaurants__img-top-3 {
-  background-image: url("./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-}
-.menu-restaurants__img-top-4 {
-  background-image: url("./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  /*  &-1 {
+       background-image: "./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg";
+   }
+   &-2 {
+       background-image: "./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg";
+   }
+   &-3 {
+       background-image: "./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg";
+   }
+   &-4 {
+       background-image: "./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg";
+   } */
 }
 
 .name-restaurants {
