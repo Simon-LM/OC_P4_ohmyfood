@@ -1,0 +1,96 @@
+
+.name-restaurants {
+    &__title {
+        @include img-and-name-restaurant;        
+    }
+    &__heart-like {
+        animation-delay: 8s; 
+        animation-name: heart-resto;
+        animation-duration: 5s;
+        animation-fill-mode: both;        
+    }
+}
+
+.menu-restaurants {
+    &__img-top {
+        @include img-and-name-restaurant; 
+    }
+    .entries {
+
+        .touch_app {
+            position: absolute;
+            z-index: 20;
+            top: 12rem;
+            right: 20%;
+            font-size: 3rem;
+            animation-name: finger-check;
+            animation-fill-mode: both; 
+            animation-duration: 8s;
+            animation-delay: 6s;            
+        }
+        
+        .entries-2 {
+            [class$="menu-selected"] {    
+                @include finger-check-menu;                
+            }
+            .menu-choice-selected:checked + [class$="menu-selected"] {
+                animation-duration: 0s;
+                animation-delay: 0s;                            
+            }
+        }
+    }   
+
+    $delay-title: 0.25;
+    $lag-btwn-title-and-underline: 0.25;
+    $max-nbr-of-menu: 5;
+    $time-lag: 0.75;
+
+    @for $order-place from 1 through $max-nbr-of-menu {
+        .entries {
+            &__title {
+                @include translatex-menu-title;
+                animation-delay: calc($delay-title)+s;
+            }
+            &__underline {
+                @include translatex-menu-title;
+                animation-delay:  calc($delay-title + $lag-btwn-title-and-underline)+s;
+            }
+            .animations-time-lag:nth-of-type(#{$order-place}) {
+                @include loading-menu;
+                animation-delay: calc($order-place * $time-lag)+s;    
+            }
+        }
+        .main-course {
+            &__title {
+                @include translatex-menu-title;
+                animation-delay:  calc($delay-title + ($max-nbr-of-menu * $time-lag))+s;
+            }
+            &__underline {
+                @include translatex-menu-title;
+                animation-delay: calc($delay-title + $lag-btwn-title-and-underline + ($max-nbr-of-menu * $time-lag))+s;
+            }
+            .animations-time-lag:nth-of-type(#{$order-place}) {
+                @include loading-menu;
+                animation-delay: calc(($max-nbr-of-menu * $time-lag) + $order-place * $time-lag)+s;    
+            }
+        }
+        .desserts {
+            &__title {
+                @include translatex-menu-title;
+                animation-delay: calc($delay-title + (($max-nbr-of-menu * $time-lag) * 2))+s;
+            }
+            &__underline {
+                @include translatex-menu-title;
+                animation-delay: calc($delay-title + $lag-btwn-title-and-underline + (($max-nbr-of-menu * $time-lag) * 2))+s;
+            }
+            .animations-time-lag:nth-of-type(#{$order-place}) {
+                @include loading-menu;
+                animation-delay: calc((($max-nbr-of-menu * $time-lag) * 2) + $order-place * $time-lag)+s;    
+            }
+        }
+        button {
+            @include translatex-button;
+            animation-delay: calc((($max-nbr-of-menu * $time-lag) * 3) + ($delay-title + $lag-btwn-title-and-underline))+s;
+        }
+    } 
+}

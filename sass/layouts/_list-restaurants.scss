@@ -1,0 +1,290 @@
+/* || RESTAURANTS || */
+
+.restaurants {
+    animation-name: donwnload-restaurants;
+    animation-duration: 3s;
+    img {
+        animation-name: donwnload-img;
+        animation-duration: 6s;
+    }
+    //background-color: $color-background_discovery;
+    @include background_restaurants;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+    @include padding_section;
+
+    &__all-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            flex-direction: column;        
+            @media (min-width:1024px) {
+               /*  flex-wrap: wrap;
+                justify-content: space-between; */
+                flex-direction: row;              
+            }
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            flex: auto;
+            border-radius: 1.2em;
+            width: 100%;
+            @media (min-width: 768px) { 
+                @media (min-width:1024px) {
+                    max-width: 100%;
+                    width: initial;
+                    min-width: calc((100% / 2) - 1em);
+                }
+            } 
+        }       
+    }    
+    &__card {
+        @include cards;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;   
+        animation-timing-function: ease-in-out;    
+        
+        &:hover {
+            [class*="card-comment"] {
+                
+                background: transparent !important;                
+            }       
+        }
+        img {
+            z-index: 1;
+            margin-top: -4em;
+            border-radius: 1.2em 1.2em 0 0;
+            border-bottom-right-radius: 1.2em;
+            border-bottom-left-radius: 1.2em;           
+            width: 100%;
+            min-height: 15rem;         
+            height: height_mm-to-vmin(100);
+            max-height: 320px;
+            transition: all 0.4s ease-in-out;           
+        
+            @media (min-width: 420px) {            
+                min-height: 18rem;   
+            
+                @media (min-width: 768px) {
+                    //min-height: 16rem; 
+                    height: height_mm-to-vmin(100);
+                
+                    @media (min-width:1024px) {
+                        min-height: 15rem;
+                        height: calc(height_mm-to-vw(28, 253) + 4em + 4em);
+                        //max-height: 18rem ;
+                        max-height: 288px;
+                    }
+                }
+            }
+        }
+    
+        &-comment {
+            z-index: 2;
+            position: absolute;
+            bottom: 0em;
+            display: flex;
+            flex: auto;
+            flex-direction: row;
+            align-items: center;
+            border-bottom-right-radius: 1.2em;
+            border-bottom-left-radius: 1.2em;
+            width: 100%;
+            padding: 0.5em 1em;
+            //background: $color-background_main;
+            @include background_restaurants-cards;             
+            transition: background 0.4s ease-in-out;        
+      
+            [class$="text"] {
+                flex: initial;
+            }
+        
+            [class$="like"] {
+                flex: auto;
+                margin-right: 0.5em;
+            }
+        }
+       /*  &:hover {
+            [class$="card-comment"] {
+                background: transparent;
+                //@import background_restaurants-cards-hover;                
+            }       
+        } */
+
+    }
+
+    &__thumbnail-new {
+        z-index: 3;
+        position: absolute;
+        top:1em;
+        right: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //background: $color-background_thumbnail-new;
+        @include  background_thumbnail-new;
+        //color: $color-font_thumbnail-new;
+        @include font_thumbnail-new;
+        padding: 0.25em 0.5em;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        transition: transform 0.4s 0.4s ease-in-out;        
+        user-select: none;
+    }    
+}  
+
+@mixin anim_thumbnail-new {
+    animation-name: thumbnail-new; 
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    //animation-iteration-count: 1;
+}
+
+@mixin anim_thumbnail-new_hover {
+    animation-name: thumbnail-new_hover; 
+    animation-duration: 1.8s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
+    //animation-play-state: paused;
+    animation-iteration-count: 1;
+    animation-delay: 0.4s;
+}
+
+$lag-btwn-thumbnail: 0.5;
+$time-befor-start: 7.5;
+
+.restaurants__card:hover [class*="thumbnail-new"] {
+    @include anim_thumbnail-new_hover;
+    //background: goldenrod;            
+}    
+
+@media (min-width:1024px) {
+    main {        
+        :only-of-type [class$="thumbnail-new"] {
+            //background-color: lightblue;
+            @include anim_thumbnail-new;
+            animation-delay: calc($time-befor-start + (3 * $lag-btwn-thumbnail))+s;        
+        }
+        :nth-of-type(3n+5) [class$="thumbnail-new"] {     
+            //background-color: thistle;
+            @include anim_thumbnail-new;
+            animation-delay: calc($time-befor-start + (4 * $lag-btwn-thumbnail))+s;
+        }
+        :nth-last-of-type(3n+4) [class$="thumbnail-new"] {       
+            //background-color: olive;
+            @include anim_thumbnail-new;
+            animation-delay:  calc($time-befor-start + (2 * $lag-btwn-thumbnail))+s;
+        }
+        :nth-of-type(2)  [class$="thumbnail-new"] {
+            //background-color:orangered;
+            @include anim_thumbnail-new;
+            animation-delay: calc($time-befor-start + (2.5 * $lag-btwn-thumbnail))+s;
+        }
+        :nth-of-type(3) [class$="thumbnail-new"] {
+            //background-color:peru;
+            @include anim_thumbnail-new;
+            animation-delay:  calc($time-befor-start + (1 * $lag-btwn-thumbnail))+s;
+        }
+        :nth-last-of-type(3) [class$="thumbnail-new"] {       
+            //background-color: pink;
+            @include anim_thumbnail-new;
+            animation-delay:  calc($time-befor-start + (5 * $lag-btwn-thumbnail))+s;
+        }
+        :nth-last-of-type(2) [class$="thumbnail-new"] {       
+            //background-color: palevioletred;
+            @include anim_thumbnail-new;
+            animation-delay: calc($time-befor-start + (6 * $lag-btwn-thumbnail))+s;
+        }
+        [class*="thumbnail-new start-lag" i] {
+            //background-color: orange;
+            @include anim_thumbnail-new;
+            animation-delay: calc($time-befor-start)+s;
+        }            
+        /* .restaurants__card:hover [class*="thumbnail-new"] {
+            @include anim_thumbnail-new_hover;
+            //background: goldenrod;            
+        }   */  
+    }
+}
+
+
+@keyframes thumbnail-new{
+    0% {
+        transform: scale(1) translate(0 0);       
+    }
+
+    33% {
+        transform: scale(1.2) translate(-0.5rem, 0.25rem );
+    }
+
+    66% {
+        transform: scale(1.25) translate(-0.5rem, 0.25rem );
+    }
+
+    100% {
+        transform: scale(1) translate(0 0);
+    }
+}
+
+@keyframes thumbnail-new_hover{
+
+    0% {
+        transform: scale(1) translate(0 0);       
+    }
+
+    33% {
+        transform: scale(1.2) translate(-0.5rem, 0.25rem );
+    }
+
+    66% {
+        transform: scale(1.25) translate(-0.5rem, 0.25rem );
+    }
+
+    100% {
+        transform: scale(1) translate(0 0);
+    }
+}
+
+@keyframes donwnload-restaurants{
+
+    0% {
+       opacity: 0;      
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes donwnload-img{
+    0% {
+       opacity: 0;      
+    }
+
+    66% {
+        opacity: 0;      
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+

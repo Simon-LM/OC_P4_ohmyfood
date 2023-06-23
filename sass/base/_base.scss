@@ -3,20 +3,27 @@
     box-sizing: border-box;
 }
 
+*:focus-visible {
+    border: none;
+    outline-offset: 2px;
+    outline-style: solid;
+    outline: 0.2rem solid $color-primairy !important;
+}
+
 html {
     display: flex;
     justify-content: center; 
 }
 
 body {
-    flex: auto; 
+    @include flex-column;
     margin: 0;
     max-width: 1440px;
-    width: 100%;
+    @include background_main;
 }
 
 main {
-    width: 100%;
+    @include flex-column;
 }
 
 img {
@@ -24,32 +31,16 @@ img {
     &[class*="heart"], &[src$=".svg"] {
         background-size: none;
     }
+}
 
-    &[src*="restaurants"] {
-        /* object-fit: cover; */
-        /* background-size: cover; */
-        
-   /*  clip-path: circle(200px at 50% 60%); */
-    /* margin-top: -2em; */
-    /* margin-bottom: -2em; */
-
-   /*  overflow: hidden;
-    margin-top: -5em;
- */
+input:hover, input:focus, a:hover, a:focus {
+    @include hover-links;
+   
+    &[class$="research"]:hover {
+        cursor: text;
     }
 }
 
-
-
-//.main-container {
-//    display: flex;
-//    flex-direction: column;
-//    flex: auto;
-//    /* width: 100%; */
-//    max-width: 1440px;
-//   /*  padding: 0 50px; */
-//    box-sizing: border-box;
-//}
 
 
 

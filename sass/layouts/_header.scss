@@ -4,10 +4,13 @@ $default-height-for-olde-brothers: rem(30);
 $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
 
 .visual-identity {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: $color-background_header;
+    //background-color: $color-background_header;
+    @include background_header;
     height: 113px;
     width: 100%;
     height: calc($logo-height * 3);
@@ -15,11 +18,10 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
     &__master-logo {
         display: flex;
         justify-content: center;
-       /*  height: $default-height-for-olde-brothers; */ /* For old brothers */
-        /* height: $logo-height; */
         img {
             height: $default-height-for-olde-brothers; /* For old brothers */
             height: $logo-height;
+            @include font-logo_img-header;
         }
     }
 
@@ -34,31 +36,21 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
         margin-top: calc($logo-height * -1); // Up arrow in the center of logo
                 
         & a {
+            justify-content: center;
             transition: all 0.3s ease-in-out;
+            border-radius: 50%;
+            height: 1rem;
+            width: 1rem;
             &:hover {
                transform: scale(1.2);
                & i {
                     transition: all 0.3s 0.1s ease-in-out;
-                    transform: translate(-0.75em, 0);
+                    transform: translatex(-0.25em);
                }
-            }
-
-           
-              
-            /* font-size: 1.2em; */
-            /*   margin-left: -0.3em; */
-            
-        }   
-
+            }            
+        }           
         &--hidden {
             visibility: hidden;
         }
     }
 }
-
-// Header
-//height: 113px;
-
-// logo ohmyfood 
-// mobile font-size: 30px;
-// desktop height: 34.2px;

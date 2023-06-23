@@ -1,224 +1,216 @@
 /* || FIND A PLACE || */
 
-$font-size_research: rem(16); 
 
+$font-size_research: rem(16); 
 
 .find-a-place {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $color-background_find-a-place;
+    //background-color: $color-background_find-a-place;
+    @include background_find-a-place;
     height: calc(3 * $font-size_research);
     width: 100%;
-    white-space: nowrap;
-    
+    white-space: nowrap;     
+
     & form {
         display: flex;       
         align-items: center;
         justify-content: center;
         margin-bottom: 1.1em;
-        &  span[class="research-1"] {
+        & span[class="research-1"] {
             transition: all 1.25s 0.1s ease-in-out;
         }
-        &:hover {
-            /* transition: all 0.9s 1.9s ease-out;
-            transform: translate(50vw, 0); */
-           /*  background-color: blue; */
-        }
-
-        label:active{
-            /* transform-origin: 50% 100%; */
-            transform: scale(3.3);    
-            transition: transform 1.6s cubic-bezier(.68,0,.05,.19);                      
-
-            span[class="location"] {
-                transition: opacity 0.15s 1.95s ease-out;
-                opacity: 0;
-            }
-        
-            i { 
-                transition: transform 1.25s 0.8s cubic-bezier(.88,.71,0,.92);
-                transform: scale(2.6, 0.75);               
-            }
-
-            & + span[class="research-1"]{
-               /*  transition: all 0.3s 1.5s ease-out;
-                transform: translate(20%, 0); */
-
-                transition: all 1.25s 1.125s cubic-bezier(.85,.5,1,-0.30);
-                transform: translate(60vw, 0);
-                /* background-color: green; */
-                /* transform: translate(50vw, 0); */
-            
-                //span[class="research-2"]
-                 /* &:last-child {
-                    transition: all 0.9s 2.9s ease-out;
-                    transform: translate(50vw, 0);
-                       
-                    background-color: red; 
-
-                    span[class="research-3"] {
-                        transform: translate(10%, 0);
-                        
-                        background-color: blue;
-
-                        span[class="research-4"] {
-                            transition: all 0.6s 1.125s ease-in-out;
-                                          
-                            background-color: yellow;    
-                                
-    
-                        }
-
-
-                    }
-
-
-                }  */
+        .find-a-place__location-icon:active{
+            transform-origin: bottom center;
+            animation-name: balloon;
+            animation-duration: 3s;
+           
+            & + label {
+                animation-name: input-slide;
+                animation-duration: 2.4s;
+                animation-delay: 1.2s;
             }
         }
-
     }
-
-
     &__location-icon {
         font-size: 1rem;
-        margin-right: 0.5em;
+        margin-right: 0.25em;
     }
 
-    &__research {
+    //&__research / input 
+    input {
         font-family: $font-main;
         font-size: $font-size_research;
         font-weight: 500;
-        color: $grayscale-1;
+        //color: $color-font-research;
+        @include font-research;
+        caret-color: $color-caret-research;
         border: none;
         background-color: transparent;
         height: 1.5em;
         width: 8rem;
-        padding-left: 0.5em;
-        transition: all 0.5s ease-in-out;
-        &:focus {
-            background-color: lighten($color-primairy, 33%);
+        padding-left: 0.25em;
+        transition: background 0.5s ease-in-out;
+        /* &:focus {
+            background: lighten($color-primairy, 35%);
+        } */
+    }  
+    label {
+        @include flex-row;
+        .menu-first-tab {  
+            isolation: isolate;          
+           position: absolute ;
+           z-index: 5;
+           top: 2%;
+           left: 2%;
+           max-width: 96%;
+           width: content;
+           @include flex-column;
+           align-items: flex-start;
+           justify-content: center;
+           border-radius: 1.6rem;
+           background: $color-secondary;           
+           padding: 1.5em 0.5em;
+           ol a{
+            @include flex-column;
+            border-radius: 0.6rem;
+            white-space: pre-line;          
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.5em;
+            padding: 0 0.25em;
+            //color: $color-light-main_less-contrast;
+           }         
         }
-    }   
+    }      
+    label ul:not(:focus-within) {
+        opacity: 0;  
+    }
+    label:hover ol {
+        visibility: collapse; 
+    }    
 
-    /*  label + i:hover {
-        input[class*="research"] {
-        background-color: transparent;
+    .balloon-dot {
+        position:relative;
+        right: 4.3em;
+        top: 0.4em;
+        opacity: 0;
+        //visibility: hidden;
+        transition: opacity 0.1s 3s ease-in-out; 
+        transition: transform 8s 3s ease-in-out; 
+
+        &__1 {
+            margin-right: -0.6em;
+            color: red;
         }
-    } */
-    
-
-
-
-    /* &:not(:focus):valid {
-         background: $color-tertiary;
-         border: 2px solid $color-primairy;
-         color: $color-primairy;
-     } */
-    /*  &:not(:focus):invalid {
-         background: $color-secondary;
-         border: 2px solid $color-primairy;
-         color: $color-primairy;
-     } */
-    /*  &:hover {
-         @keyframes identifier {
-             
-         }
-    } */
-    
-
-
-
-
-
-
-
-
-}
-
-
-.balloon-dot {
-    position:relative;
-    right: 4.2em;
-    top: 0.4em;
-    opacity: 0.2;
-    > :hover{
-        opacity: 1;
+        &__2 {
+            margin-right: -0.2em;
+            color: orangered;
+        }
+        &__3 {
+            margin-right: -0.2em;
+            color: orange;
+        }
+        &__4 {
+            margin-right: -0.2em;
+            color: yellow;
+        }
+        &__5 {
+            margin-right: -0.2em;
+            color: yellowgreen;
+        }
+        &__6 {
+            margin-right: -0.2em;
+            color: green;
+        }
+        &__7 {
+            margin-right: -0.2em;
+            color: turquoise;
+        }
+        &__8 {
+            margin-right: -0.2em;
+            color: lightblue;
+        }
+        &__9 {
+            margin-right: -0.2em;
+            color: blue;
+        }
+        &__10 {
+            margin-right: -0.2em;
+            color: darkblue;
+        }
+        &__11 {
+            margin-right: -0.2em;
+            color: rebeccapurple;
+        }
+        &__12 {
+            margin-right: -0.2em;
+            color: blueviolet;
+        }
+        
     }
-      
-    &__1 {
-        margin-right: -0.6em;
-        color: red;
+    &:active {        
+        .balloon-dot {
+            position:relative;
+            right: 4.3em;
+            top: 0.4em;
+            opacity: 0;
+                                 
+            &__1 {
+                margin-right: -0.6em;
+                transform: translate(-4rem, 2rem);
+                color: red;
+            }
+            &__2 {
+                margin-right: -0.2em;
+                transform: translate(-3rem, 2rem);
+                color: orangered;
+            }
+            &__3 {
+                margin-right: -0.2em;
+                transform: translate(-2rem, 2rem);
+                color: orange;
+            }
+            &__4 {
+                margin-right: -0.2em;
+                transform: translate(-1rem, 2rem);
+                color: yellow;
+            }
+            &__5 {
+                margin-right: -0.2em;
+                color: yellowgreen;
+            }
+            &__6 {
+                margin-right: -0.2em;
+                color: green;
+            }
+            &__7 {
+                margin-right: -0.2em;
+                color: turquoise;
+            }
+            &__8 {
+                margin-right: -0.2em;
+                color: lightblue;
+            }
+            &__9 {
+                margin-right: -0.2em;
+                color: blue;
+            }
+            &__10 {
+                margin-right: -0.2em;
+                color: darkblue;
+            }
+            &__11 {
+                margin-right: -0.2em;
+                color: rebeccapurple;
+            }
+            &__12 {
+                margin-right: -0.2em;
+                color: blueviolet;
+            }
+        }
     }
-    &__2 {
-        margin-right: -0.2em;
-        color: orangered;
-    }
-    &__3 {
-        margin-right: -0.2em;
-        color: orange;
-    }
-    &__4 {
-        margin-right: -0.2em;
-        color: yellow;
-    }
-    &__5 {
-        margin-right: -0.2em;
-        color: yellowgreen;
-    }
-    &__6 {
-        margin-right: -0.2em;
-        color: green;
-    }
-    &__7 {
-        margin-right: -0.2em;
-        color: turquoise;
-    }
-    &__8 {
-        margin-right: -0.2em;
-        color: lightblue;
-    }
-    &__9 {
-        margin-right: -0.2em;
-        color: blue;
-    }
-    &__10 {
-        margin-right: -0.2em;
-        color: darkblue;
-    }
-    &__11 {
-        margin-right: -0.2em;
-        color: rebeccapurple;
-    }
-    &__12 {
-        margin-right: -0.2em;
-        color: blueviolet;
-    }
+}   
 
-
-
-
-}
-
-
-
-
-
-// Location
-// Grey 2
-//background: #EAEAEA;
-
-// IconPin 
-//height: 16px;
-//background: #353535;
-
-// Paris, Belleville
-//width: 109px;
-//height: 19px;
-
-// Button
-//font-weight: 500;
-//font-size: 16px;
-//color: #353535;

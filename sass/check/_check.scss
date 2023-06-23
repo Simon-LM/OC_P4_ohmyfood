@@ -7,6 +7,7 @@ $check_border-color_yellow: yellow;
 $check_border-color_orange: orange;
 
 
+
 @function check_frame-dashed_brown($check_percentage-color) {
     $check_result-color: 5px dashed lighten($check_border-color_brown , $check_percentage-color);
     @return $check_result-color
@@ -127,6 +128,36 @@ div {
     }
 }
 
+div::after {
+    outline: check_frame-dashed_red(20%);
+
+    div::after {
+        outline: check_frame-dashed_red(30%);
+        div::after {
+            outline: check_frame-dashed_red(40%);
+            div::after {
+                outline: check_frame-dashed_red(50%);              
+            }
+        }
+    }
+}
+
+p::after {
+    outline: check_frame-dashed_red(20%);
+
+    p::after {
+        outline: check_frame-dashed_red(30%);
+        p::after {
+            outline: check_frame-dashed_red(40%);
+            p::after {
+                outline: check_frame-dashed_red(50%);              
+            }
+        }
+    }
+}
+
+
+
 div[class*="like"]:hover, nav div:hover {
     outline: none;
 }
@@ -158,7 +189,6 @@ nav {
         outline: check_frame-dashed_yellow(25%);
     }
 }
-
 
 span {
     outline: check_frame-dotted_red(25%);

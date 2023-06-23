@@ -1,0 +1,856 @@
+
+/*** COLOR ***/
+
+// LIGHT
+$color-dark-main: black; 
+$color-light-main: white;
+// LESS CONTRAST
+$color-dark-main_less-contrast: lighten(black , 13%);
+$color-light-main_less-contrast: darken(white, 4%);
+
+
+// LIGHT
+$grayscale_ref: gray;
+$grayscale-1: darken($grayscale_ref, 29.5%);
+$grayscale-2: darken($grayscale_ref , 0.8%);
+$grayscale-3: lighten($grayscale_ref , 41.5%);
+$grayscale-4: lighten($grayscale_ref , 46.7%);
+// MORE CONTRAST
+$grayscale-2_more-contrast: darken($grayscale_ref , 5.8%);
+
+
+// LIGHT
+$color-primairy: #9356DC;
+$color-secondary: #FF79DA; 
+$color-primairy-to-secondary: linear-gradient($color-primairy, $color-secondary);
+$color-secondary-to-primairy_h: linear-gradient(.25turn, $color-secondary, $color-primairy);
+$color-secondary-to-primairy: linear-gradient(.49turn, $color-secondary, $color-primairy);
+$color-tertiary: #99E2D0;
+$color-tertiary-font: darken(#008766, 6%);
+$color-dark-blue: #003A68;
+$color-light-blue: #89C8FA;
+// MORE CONTRAST
+$color-tertiary-font_more-contrast: darken(#008766, 6%);
+
+
+/*** FONT COLOR ***/
+
+$color-font-logo_header: $color-dark-main;
+@mixin font-logo_header {
+    color: $color-light-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-dark-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            color: $color-dark-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+            color: $color-light-main_less-contrast;
+        }
+    }
+}
+@mixin font-logo_img-header {
+    
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+           
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            filter: invert(5%);
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            filter: invert(100%);
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+            filter: invert(95%);
+        }
+    }
+}
+
+
+$color-font__main: $color-dark-main;
+@mixin font_main {
+    color: $color-dark-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-dark-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            color: $color-dark-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media (prefers-contrast: more) {
+            color: $color-light-main;
+        }
+        @media (prefers-contrast: less) {
+            color: $color-light-main_less-contrast;
+        }
+    }
+}
+
+$color-font-order-btn: $color-light-main;
+@mixin font_order-btn {
+    color: $color-light-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            color: $color-light-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+            color: $color-light-main_less-contrast;
+        }
+    }
+}
+@mixin font_discovery-subtitle {
+    color: $grayscale-1;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $grayscale-1;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $grayscale-4;
+        }
+        @media (prefers-contrast: more) {
+            
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+$color-font_explanation-circle: $color-light-main;
+@mixin font-explanation-circle {
+    color: $color-light-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            color: $color-light-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+            color: $color-light-main_less-contrast;
+        }
+    }
+}
+$color-font_thumbnail-new: $color-tertiary-font;
+@mixin font_thumbnail-new {
+    color: $color-tertiary-font;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-tertiary-font;
+        }
+        @media only screen and (prefers-contrast: more) {
+            color: $color-tertiary-font_more-contrast;
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-tertiary;
+        }
+        @media (prefers-contrast: more) {
+           
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+$color-font__cards-opacity: $color-light-main;
+@mixin font__cards-opacity {
+    color: $color-light-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            color: $color-light-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-dark-mainn_less-contrast;
+        }
+        @media (prefers-contrast: more) {
+           
+        }
+        @media (prefers-contrast: less) {
+            color: $color-dark-main_less-contrast; 
+        }
+    }
+}
+$color-font__footer: $color-light-main;
+@mixin font_footer {
+    color: $color-light-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            color: $color-light-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-dark-main;
+        }
+        @media (prefers-contrast: more) {
+            color: $color-dark-main_less-contrast;
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+$color-font-research: $grayscale-1;
+@mixin font-research {
+    color: $grayscale-1;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $grayscale-1;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $grayscale-4;
+        }
+        @media (prefers-contrast: more) {
+            
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+$color-caret-research: $color-primairy;
+@mixin font-caret-research {
+    color: $color-primairy;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-primairy;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-primairy;
+        }
+        @media (prefers-contrast: more) {
+            
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+$color-icons_explanation-drab: $grayscale-2;
+@mixin font-explanation-drab {
+    color: $grayscale-2;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $grayscale-2;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            color: $grayscale-2_more-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $grayscale-3;
+        }
+        @media (prefers-contrast: more) {
+            
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+$color-icons_explanation-bright: $color-primairy;
+@mixin font-icons_explanation-bright {
+    color: $color-primairy;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-primairy;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-primairy;
+        }
+        @media (prefers-contrast: more) {
+            
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+$color-icons-heart-unlike: $color-dark-main;
+@mixin font-icons-heart-unlike {
+    color: $color-dark-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-dark-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            color: $color-dark-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media (prefers-contrast: more) {
+            color: $color-light-main_less-contrast;
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+$color-icons_menu-restaurants-selected: $color-light-main;
+@mixin font_icons_menu-restaurants-selected {
+    color: $color-light-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-light-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            color: $color-light-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            color: $color-dark-main;
+        }
+        @media (prefers-contrast: more) {
+            color: $color-dark-main_less-contrast;
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+$color-underline_menu-restaurants: $color-tertiary;
+@mixin color-underline_menu-restaurants {
+    border-bottom: 3px solid $color-tertiary;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            border-bottom: 3px solid $color-tertiary;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            border-bottom: 3px solid $color-tertiary-font;
+        }
+        @media (prefers-contrast: more) {
+            
+        }
+        @media (prefers-contrast: less) {
+            border-bottom: 3px solid $color-tertiary-font_more-contrast;
+        }
+    }
+}
+
+
+$color-icons-heart-like: $color-primairy-to-secondary;
+
+
+
+/*** BACKGROUND COLOR ***/
+
+
+
+
+$color-background_main: $color-light-main;
+@mixin background_main {
+    background: $color-light-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-light-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            background: $color-light-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-dark-main;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+            background: $color-dark-main_less-contrast;
+        }
+    }
+}
+$color-background_header: $color-light-main;
+@mixin background_header {
+    background: $color-light-main;
+    box-shadow: 0em 0.02em 0.5em $grayscale-2;
+ 
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-light-main;
+            box-shadow: 0em 0.02em 0.5em $grayscale-2;
+ 
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            background: $color-light-main_less-contrast;
+            box-shadow: 0em 0.02em 0.5em $grayscale-2;
+ 
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-dark-main_less-contrast;
+            box-shadow: 0em 0.02em 0.6em $grayscale-3;
+ 
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+            background: $color-dark-main_less-contrast;
+            box-shadow: 0em 0.02em 0.6em $grayscale-3;
+ 
+        }
+    }
+}
+
+$color-background_find-a-place: $grayscale-3;
+@mixin background_find-a-place {
+    background: $grayscale-3;
+    box-shadow: 1.3em 0em 1em $color-dark-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-3;
+            box-shadow: 0.3em 0em 0 $color-dark-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            box-shadow: 0.3em 0em 0 $color-dark-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-2;
+            box-shadow: 0.3em 0em 0 $color-light-main;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+            box-shadow: 0.3em 0em 0 $color-light-main_less_contrast;           
+        }
+    }
+}
+
+$color-background_discovery: $grayscale-4;
+@mixin background_discovery {
+    background: $grayscale-4;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-4;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+           
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-1;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+@mixin background_explanation_cards {
+    background: $grayscale-4;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-4;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+           
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-1;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+$color-background_explanation: $color-light-main;
+@mixin background_explanation {
+    background: $color-light-main;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-light-main;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            background: $color-light-main_less-contrast;
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-dark-main_less-contrast;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+            background: $color-dark-main_less-contrast;
+        }
+    }
+}
+@mixin background_explanation-circle {
+    background: $color-primairy;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-primairy;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-primairy;
+        }
+        @media (prefers-contrast: more) {
+            
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+$color-background_restaurants: $grayscale-4;
+@mixin background_restaurants {
+    background: $grayscale-4;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-4;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+           
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-1;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+$color-background_restaurants-cards: $color-light-main;
+@mixin background_restaurants-cards {
+    background: $color-light-main;
+    
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-light-main;
+            h4 {
+                text-shadow: 0.2em 0 0.4em $color-light-main, -0.2em 0 0.4em $color-light-main, 0 0.2em 0.4em $color-light-main, 0 -0.2em 0.4em $color-light-main, 0.2em 0.2em 0.4em  $color-light-main, -0.2em -0.2em 0.4em $color-light-main, 0.2em -0.2em 0.4em $color-light-main, -0.2em 0.2em 0.4em $color-light-main;
+            }
+            p {
+                text-shadow: 0.1em 0 0.25em $color-light-main, -0.1em 0 0.25em $color-light-main, 0 0.1em 0.25em $color-light-main, 0 -0.1em 0.25em  $color-light-main, 0.1em 0.1em 0.25em $color-light-main, -0.1em -0.1em 0.25em $color-light-main, 0.1em -0.1em 0.25em $color-light-main, -0.1em 0.1em 0.25em $color-light-main;
+            }
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+            background: $color-light-main_less-contrast;
+            h4 {
+                text-shadow: 0.2em 0 0.4em $color-light-main_less-contrast, -0.2em 0 0.4em $color-light-main_less-contrast, 0 0.2em 0.4em $color-light-main_less-contrast, 0 -0.2em 0.4em $color-light-main_less-contrast, 0.2em 0.2em 0.4em  $color-light-main_less-contrast, -0.2em -0.2em 0.4em $color-light-main_less-contrast, 0.2em -0.2em 0.4em $color-light-main_less-contrast, -0.2em 0.2em 0.4em $color-light-main_less-contrast;
+            }
+            p {
+                text-shadow: 0.1em 0 0.25em $color-light-main_less-contrast, -0.1em 0 0.25em $color-light-main_less-contrast, 0 0.1em 0.25em $color-light-main_less-contrast, 0 -0.1em 0.25em  $color-light-main_less-contrast, 0.1em 0.1em 0.25em $color-light-main_less-contrast, -0.1em -0.1em 0.25em $color-light-main_less-contrast, 0.1em -0.1em 0.25em $color-light-main_less-contrast, -0.1em 0.1em 0.25em $color-light-main_less-contrast;
+            }
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-dark-main_less-contrast;
+            
+            h4 {
+                text-shadow: 0.2em 0 0.4em $color-dark-main_less-contrast, -0.2em 0 0.4em $color-dark-main_less-contrast, 0 0.2em 0.4em $color-dark-main_less-contrast, 0 -0.2em 0.4em $color-dark-main_less-contrast, 0.2em 0.2em 0.4em  $color-dark-main_less-contrast, -0.2em -0.2em 0.4em $color-dark-main_less-contrast, 0.2em -0.2em 0.4em $color-dark-main_less-contrast, -0.2em 0.2em 0.4em $color-dark-main_less-contrast;
+            }
+            p {
+                text-shadow: 0.1em 0 0.25em $color-dark-main_less-contrast, -0.1em 0 0.25em $color-dark-main_less-contrast, 0 0.1em 0.25em $color-dark-main_less-contrast, 0 -0.1em 0.25em  $color-dark-main_less-contrast, 0.1em 0.1em 0.25em $color-dark-main_less-contrast, -0.1em -0.1em 0.25em $color-dark-main_less-contrast, 0.1em -0.1em 0.25em $color-dark-main_less-contrast, -0.1em 0.1em 0.25em $color-dark-main_less-contrast;
+            }
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+            background: $color-dark-main_less-contrast;
+         
+            h4 {
+                text-shadow: 0.2em 0 0.4em $color-dark-main_less-contrast, -0.2em 0 0.4em $color-dark-main_less-contrast, 0 0.2em 0.4em $color-dark-main_less-contrast, 0 -0.2em 0.4em $color-dark-main_less-contrast, 0.2em 0.2em 0.4em  $color-dark-main_less-contrast, -0.2em -0.2em 0.4em $color-dark-main_less-contrast, 0.2em -0.2em 0.4em $color-dark-main_less-contrast, -0.2em 0.2em 0.4em $color-dark-main_less-contrast;
+            }
+            p {
+                text-shadow: 0.1em 0 0.25em $color-dark-main_less-contrast, -0.1em 0 0.25em $color-dark-main_less-contrast, 0 0.1em 0.25em $color-dark-main_less-contrast, 0 -0.1em 0.25em  $color-dark-main_less-contrast, 0.1em 0.1em 0.25em $color-dark-main_less-contrast, -0.1em -0.1em 0.25em $color-dark-main_less-contrast, 0.1em -0.1em 0.25em $color-dark-main_less-contrast, -0.1em 0.1em 0.25em $color-dark-main_less-contrast;
+            }
+        }
+    }
+}
+
+
+$color-background_restaurants-menu-selected: $color-tertiary;
+@mixin background_restaurants-menu-selected {
+    background: $color-tertiary;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-tertiary;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-tertiary-font;
+        }
+        @media (prefers-contrast: more) {
+            background: $color-tertiary-font_more-contrast;
+        }
+        @media (prefers-contrast: less) {
+            
+        }
+    }
+}
+
+$color-background_thumbnail-new: $color-tertiary;
+@mixin background_thumbnail-new {
+    background: $color-tertiary;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-tertiary;
+        }
+        @media only screen and (prefers-contrast: more) {
+            
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-tertiary-font;
+        }
+        @media (prefers-contrast: more) {
+            background: $color-tertiary-font_more-contrast;
+        }
+        @media (prefers-contrast: less) {
+            
+        }
+    }
+}
+
+$color-background_footer: $grayscale-1;
+@mixin background_footer {
+    background: $grayscale-1;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-1;
+        }
+        @media only screen and (prefers-contrast: more) {
+
+        }
+        @media only screen and (prefers-contrast: less) {
+           
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $grayscale-4;
+        }
+        @media (prefers-contrast: more) {
+        
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}
+
+@mixin background_order-btn {
+    background: $color-primairy;
+    @media only screen and (prefers-color-scheme: light) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-secondary-to-primairy;
+        }
+        @media only screen and (prefers-contrast: more) {
+            background: $color-primairy;
+        }
+        @media only screen and (prefers-contrast: less) {
+            
+        }
+    }
+    @media only screen and (prefers-color-scheme: dark) {
+        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+            background: $color-secondary-to-primairy;
+        }
+        @media (prefers-contrast: more) {
+            background: $color-primairy;
+        }
+        @media (prefers-contrast: less) {
+           
+        }
+    }
+}

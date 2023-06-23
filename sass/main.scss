@@ -1,14 +1,15 @@
 
 @import "./utils/functions";
 @import "./utils/variables";
+@import "./utils/var-mixin_colors";
 @import "./utils/mixins";
+@import "./utils/keyframes";
+
 
 //@import "./check/check";
 
 @import "./base/base";
 @import "./base/typography";
-
-@import "./components/buttons";
 @import "./components/order-button";
 @import "./components/like-heart";
 
@@ -21,27 +22,25 @@
 @import "./layouts/find-a-place";
 @import "./layouts/discovery";
 @import "./layouts/explanation";
-@import "./layouts/restaurants";
+@import "./layouts/list-restaurants";
 @import "./layouts/footer";
 
 
+/*** ||| PAGES RESTAURANTS ||| ***/
+@import "./pages/menu-by-restaurants/la-palette-du-gout";
+@import "./pages/menu-by-restaurants/le-delice-des-sens";
+@import "./pages/menu-by-restaurants/la-note-enchantee";
+@import "./pages/menu-by-restaurants/a-la-francaise";
+@import "./pages/content_restaurants-pages";
+@import "./layouts/menus-restaurants";
+
+@import "./themes/animation-menus-restaurants";
 
 
-//@import "./check/test";
+/*** ||| PAGES ACCESSIBILITY ||| ***/
+
+@import "./base/accessibility";
 
 
-
-
-//@import "./utils/variables";
-//@import "./utils/functions";
-//@import "./utils/extensions";
-//@import "./base/typography";
-//@import "./components/buttons";
-//@import "./layouts/nav";
-//@import "./layouts/container";
-//@import "./layouts/form";
-//@import "./pages/work";
-//@import "./pages/about";
-//@import "./pages/project";
 
 

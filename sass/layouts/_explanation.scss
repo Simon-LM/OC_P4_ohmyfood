@@ -3,7 +3,8 @@
 $circli-size: 1.35rem;
 
 .explanation {
-    background-color: $color-background_explanation;
+    //background-color: $color-background_explanation;
+    @include background_explanation;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -16,6 +17,7 @@ $circli-size: 1.35rem;
         justify-content: space-between;
         gap: 2em;
         flex-direction: column;
+        user-select: none;
         @media (min-width: 768px) {
             flex-direction: column;
         
@@ -24,18 +26,14 @@ $circli-size: 1.35rem;
             }
         }
     }
-
     &__card {
         @include cards;
         align-items: center;
-        background: $color-background_discovery;
+        //background: $color-background_discovery;
+        @include background_explanation_cards;
         height: 4em;
-        @media (min-width: 768px) {
-       
+        @media (min-width: 768px) {       
             @media (min-width:1024px) {
-                //max-width: 100%;
-                //width: initial;
-                //width: calc(22em + 1vw);
                 max-width: calc((100% / 2) - 1em);
                 min-width: calc((100% / 3) - 1.5em);
             }
@@ -45,7 +43,8 @@ $circli-size: 1.35rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: $color-primairy;
+            //background: $color-primairy;
+            @include background_explanation-circle;
             border-radius: 50%;
             height: $circli-size;
             width: $circli-size;
@@ -53,12 +52,8 @@ $circli-size: 1.35rem;
         }
 
         i {
-            color: $color-icons_explanation-drab;
-            
-            
-            /* &[class*="store"] {
-                color: $color-icons_explanation-bright;
-            } */
+            //color: $color-icons_explanation-drab;
+            @include font-explanation-drab;
             
             margin-left: 1em;
             width: 2em;
@@ -69,15 +64,14 @@ $circli-size: 1.35rem;
         }
 
         &:hover > i {
-            color: $color-icons_explanation-bright;
+            //color: $color-icons_explanation-bright;
+            @include font-icons_explanation-bright;
         }
-
         [class$="text"] {
             @media (min-width:1024px) {
                 margin: 0 calc(0.25em + 0.25vw);
             }
         }
-
     }
 }
 

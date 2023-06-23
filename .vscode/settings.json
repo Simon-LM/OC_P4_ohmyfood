@@ -1,0 +1,10 @@
+{
+    "window.autoDetectColorScheme": false,
+    "breadcrumbs.enabled": true,
+    "workbench.sideBar.location": "right",
+    "workbench.tree.expandMode": "doubleClick",
+    "explorer.compactFolders": true,
+    "workbench.iconTheme": "vs-seti",
+    "window.zoomLevel": 1,
+    "workbench.panel.defaultLocation": "right"
+}
