@@ -12,7 +12,7 @@
             <div class="loader__background-middle-center">
               <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="ohmyfood" aria-hidden="true">
               <div class="loader__progress-bar"></div> 
-              <img  class="nocolor" src="./assets/images/logo/ohmyfood_nocolor@2x.svg" alt="logo de ohmyfood" aria-hidden="true">
+              <img  class="nocolor" src="./assets/images/logo/ohmyfood_nocolor-with-border.png" alt="logo de ohmyfood" aria-hidden="true">
             </div>  
             <div class="loader__background-middle-right"></div>
           </div>
@@ -30,9 +30,9 @@
           <!-- <span class="research-1"><span class="research-2"><span class="research-3"><span class="research-4"> -->
           <label for="rechercher">
             <ul class="menu-first-tab">  
-            <ol><a href="#to-the-research">Contenu</a></ol>
-              <ol><a href="#to-the-research" id="to-the-research">Formulaire de recherche géographique</a></ol>
-              <ol><a href="#to-the-restaurants">Liste de restaurants</a></ol>
+            <ol><a href="#to-the-explanation">Contenu</a></ol>
+              <ol><a href="#rechercher" id="to-the-research">Formulaire de recherche géographique</a></ol>
+              <ol><a href="#to-the-restaurants_first-card">Liste de restaurants</a></ol>
               <ol><a href="#to-the-footer">Pied de page</a></ol>
             </ul>  
           <input class="find-a-place__research" type="search" name="ville" id="rechercher" placeholder="Quartier, ville" title="Vous pouvez indiquer un lieu où recherchez un restaurant" aria-labelledby="to-the-research" required>
@@ -45,7 +45,7 @@
         <p class="discovery__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
         <button class="order-btn if-prefers-reduced-motion" href="#to-the-restaurants">Explorer nos restaurants</button>
       </section>
-      <section class="explanation">
+      <section class="explanation" id="to-the-explanation">
         <h2 class="explanation__title">Fonctionnement</h2> 
         <div class="explanation__all-cards">
           <div class="explanation__card">
@@ -68,9 +68,9 @@
       <section class="restaurants" id="to-the-restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <nav class="restaurants__all-cards">
-          <a href="./la-palette-du-gout.php" title="Vers la page des menus du restaurants">
+          <a href="./la-palette-du-gout.php" title="Vers la page des menus du restaurants" id="to-the-restaurants_first-card">
           <article class="restaurants__card">
-            <span class="restaurants__thumbnail-new start-lag if-prefers-reduced-motion" aria-label="Restaurant nouvellement ajouté">Nouveau</span>
+            <span class="if-prefers-reduced-motion restaurants__thumbnail-new start-lag" aria-label="Restaurant nouvellement ajouté">Nouveau</span>
               <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'une entrée proposé par ce restaurant">
               <div class="restaurants__card-comment if-prefers-reduced-motion">
                 <div class="restaurants__card-text">
@@ -92,7 +92,7 @@
           </a> 
           <a href="./la-note-enchantee.php" title="Vers la page des menus du restaurants">
             <article class="restaurants__card">
-            <span class="restaurants__thumbnail-new if-prefers-reduced-motion" aria-label="Restaurant nouvellement ajouté">Nouveau</span>
+            <span class="if-prefers-reduced-motion restaurants__thumbnail-new" aria-label="Restaurant nouvellement ajouté">Nouveau</span>
               <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un plats de resitatance proposé par ce restaurant">
               <div class="restaurants__card-comment if-prefers-reduced-motion">
                 <div class="restaurants__card-text">

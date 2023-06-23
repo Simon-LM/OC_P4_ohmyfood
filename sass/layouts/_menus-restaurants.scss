@@ -131,16 +131,22 @@
                     border-radius: 0.85rem;
                     opacity: 1;
                     height: 90%;
-                    margin-left: 1.2%;                   
-                    width: 97.6%;                   
-                    @media (min-width: 768px) {
-                        margin-left: 0.8%;                   
-                        width: 98.2%;                       
-                        @media (min-width:1024px) {
-                            margin-left: 0.65%;                   
-                            width: 98.6%;
+                    margin-left: 1.8%;                   
+                    width: 96.6%;  
+                    @media (min-width: 450px) {
+                        margin-left: 1.2%;                   
+                        width: 97.6%; 
+                        @media (min-width: 768px) {
+                            margin-left: 0.8%;                   
+                            width: 98.2%;                       
+                            @media (min-width:1024px) {
+                                margin-left: 0.65%;                   
+                                width: 98.6%;
+                            }
                         }
                     }
+
+
                     &:focus-visible, &:-moz-focusring {
                         outline: 0.25rem solid $color-tertiary-font !important;
                     }

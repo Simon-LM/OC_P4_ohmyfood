@@ -174,7 +174,13 @@
 }
 
 $lag-btwn-thumbnail: 0.5;
-$time-befor-start: 7;
+$time-befor-start: 7.5;
+
+.restaurants__card:hover [class*="thumbnail-new"] {
+    @include anim_thumbnail-new_hover;
+    //background: goldenrod;            
+}    
+
 @media (min-width:1024px) {
     main {        
         :only-of-type [class$="thumbnail-new"] {
@@ -217,11 +223,10 @@ $time-befor-start: 7;
             @include anim_thumbnail-new;
             animation-delay: calc($time-befor-start)+s;
         }            
-        .restaurants__card:hover [class*="thumbnail-new"] {
+        /* .restaurants__card:hover [class*="thumbnail-new"] {
             @include anim_thumbnail-new_hover;
-            //color: red !important;
             //background: goldenrod;            
-        }    
+        }   */  
     }
 }
 

@@ -651,32 +651,31 @@ input:hover[class$=research]:hover, input:focus[class$=research]:hover, a:hover[
 body {
   position: relative;
   z-index: 0;
+  top: 0;
 }
 
 .loader {
   position: absolute;
   z-index: 20;
-  min-height: 100vh;
+  height: 100%;
+  /*  @media (min-width:1024px) {
+       max-height: 100%;
+   } */
   width: 100%;
   display: flex;
-  transform-origin: 50% 50%;
   animation: loader-kf 0.25s 5s;
   animation-fill-mode: both;
-}
-@media (min-width: 1024px) {
-  .loader {
-    max-height: 100%;
-  }
 }
 .loader [class*=background] {
   animation-name: opacity;
   animation-fill-mode: both;
-  animation-duration: 1s;
-  animation-delay: 4s;
+  animation-duration: 0.75s;
+  animation-delay: 4.25s;
 }
 .loader__background {
   position: absolute;
   z-index: 11;
+  top: 0;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -695,13 +694,13 @@ body {
   display: flex;
   flex-direction: row;
   flex: initial;
-  margin: -1px;
+  margin: -2px;
 }
 .loader__background-middle-left {
   position: relative;
   z-index: 11;
   flex: auto;
-  height: 15vw;
+  height: 20vw;
   max-height: 220px;
   width: 100%;
   background: white;
@@ -709,7 +708,7 @@ body {
 }
 .loader__background-middle-center {
   z-index: 11;
-  height: 15vw;
+  height: 20vw;
   width: 100%;
   max-height: 220px;
   opacity: 1;
@@ -718,7 +717,7 @@ body {
 .loader__background-middle-center [class*=progress-bar] {
   position: absolute;
   z-index: 11;
-  height: 14.9vw;
+  height: 19.8vw;
   max-height: 220px;
   max-width: 1340px;
   width: 100%;
@@ -730,7 +729,7 @@ body {
   animation-name: progress-bar-kf;
   animation-fill-mode: both;
   animation-duration: 2.75s;
-  animation-delay: 1.25s;
+  animation-delay: 1.5s;
 }
 .loader__background-middle-center img[src*=restaurant] {
   z-index: -1;
@@ -744,35 +743,35 @@ body {
 .loader__background-middle-center > [src*=restaurants] {
   animation-name: opacity;
   animation-fill-mode: both;
-  animation-duration: 1s;
-  animation-delay: 3.75s;
+  animation-duration: 0.75s;
+  animation-delay: 4.25s;
 }
 .loader__background-middle-center .nocolor {
   z-index: 13;
   position: relative;
-  height: 15vw;
+  height: 20vw;
   max-height: 220px;
   max-width: 1340px;
   flex: initial;
   opacity: 1;
-  margin-left: -2px;
+  margin-left: -3px;
 }
 .loader__background-middle-center [class*=nocolor] {
   animation-name: opacity;
   animation-fill-mode: both;
-  animation-duration: 1s;
-  animation-delay: 4s;
+  animation-duration: 0.75s;
+  animation-delay: 4.25s;
 }
 .loader__background-middle-right {
   position: relative;
   z-index: 11;
   flex: auto;
-  height: 15vw;
+  height: 20vw;
   max-height: 220px;
   width: 100%;
   background: white;
   opacity: 1;
-  margin-left: -1px;
+  margin-left: -3px;
 }
 .loader__background-bottom {
   z-index: 11;
@@ -1063,6 +1062,9 @@ body {
   width: 8rem;
   padding-left: 0.5em;
   transition: background 0.5s ease-in-out;
+  /* &:focus {
+      background: lighten($color-primairy, 35%);
+  } */
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .find-a-place input {
@@ -1073,9 +1075,6 @@ body {
   .find-a-place input {
     color: #f7f7f7;
   }
-}
-.find-a-place input:focus {
-  background: #f2eafb;
 }
 .find-a-place label {
   display: flex;
@@ -1608,16 +1607,23 @@ body {
     color: #99E2D0;
   }
 }
+.restaurants__card:hover [class*=thumbnail-new] {
+  animation-name: thumbnail-new_hover;
+  animation-duration: 1.8s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-delay: 0.4s;
+}
+
 @media (min-width: 1024px) {
-  main :only-of-type [class$=thumbnail-new] {
-    animation-name: thumbnail-new;
-    animation-duration: 1.8s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    animation-play-state: running;
-    animation-delay: 8.5s;
+  main {
+    /* .restaurants__card:hover [class*="thumbnail-new"] {
+        @include anim_thumbnail-new_hover;
+        //background: goldenrod;            
+    }   */
   }
-  main :nth-of-type(3n+5) [class$=thumbnail-new] {
+  main :only-of-type [class$=thumbnail-new] {
     animation-name: thumbnail-new;
     animation-duration: 1.8s;
     animation-fill-mode: both;
@@ -1625,31 +1631,7 @@ body {
     animation-play-state: running;
     animation-delay: 9s;
   }
-  main :nth-last-of-type(3n+4) [class$=thumbnail-new] {
-    animation-name: thumbnail-new;
-    animation-duration: 1.8s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    animation-play-state: running;
-    animation-delay: 8s;
-  }
-  main :nth-of-type(2) [class$=thumbnail-new] {
-    animation-name: thumbnail-new;
-    animation-duration: 1.8s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    animation-play-state: running;
-    animation-delay: 8.25s;
-  }
-  main :nth-of-type(3) [class$=thumbnail-new] {
-    animation-name: thumbnail-new;
-    animation-duration: 1.8s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-    animation-play-state: running;
-    animation-delay: 7.5s;
-  }
-  main :nth-last-of-type(3) [class$=thumbnail-new] {
+  main :nth-of-type(3n+5) [class$=thumbnail-new] {
     animation-name: thumbnail-new;
     animation-duration: 1.8s;
     animation-fill-mode: both;
@@ -1657,7 +1639,31 @@ body {
     animation-play-state: running;
     animation-delay: 9.5s;
   }
-  main :nth-last-of-type(2) [class$=thumbnail-new] {
+  main :nth-last-of-type(3n+4) [class$=thumbnail-new] {
+    animation-name: thumbnail-new;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-delay: 8.5s;
+  }
+  main :nth-of-type(2) [class$=thumbnail-new] {
+    animation-name: thumbnail-new;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-delay: 8.75s;
+  }
+  main :nth-of-type(3) [class$=thumbnail-new] {
+    animation-name: thumbnail-new;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-delay: 8s;
+  }
+  main :nth-last-of-type(3) [class$=thumbnail-new] {
     animation-name: thumbnail-new;
     animation-duration: 1.8s;
     animation-fill-mode: both;
@@ -1665,21 +1671,21 @@ body {
     animation-play-state: running;
     animation-delay: 10s;
   }
+  main :nth-last-of-type(2) [class$=thumbnail-new] {
+    animation-name: thumbnail-new;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-delay: 10.5s;
+  }
   main [class*="thumbnail-new start-lag" i] {
     animation-name: thumbnail-new;
     animation-duration: 1.8s;
     animation-fill-mode: both;
     animation-timing-function: ease-in-out;
     animation-play-state: running;
-    animation-delay: 7s;
-  }
-  main .restaurants__card:hover [class*=thumbnail-new] {
-    animation-name: thumbnail-new_hover;
-    animation-duration: 1.8s;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-delay: 0.4s;
+    animation-delay: 7.5s;
   }
 }
 @keyframes thumbnail-new {
@@ -2775,16 +2781,22 @@ body {
   border-radius: 0.85rem;
   opacity: 1;
   height: 90%;
-  margin-left: 1.2%;
-  width: 97.6%;
+  margin-left: 1.8%;
+  width: 96.6%;
 }
-@media (min-width: 768px) {
+@media (min-width: 450px) {
+  .menu-restaurants__all-meal .entries__cards input, .menu-restaurants__all-meal .main-course__cards input, .menu-restaurants__all-meal .desserts__cards input {
+    margin-left: 1.2%;
+    width: 97.6%;
+  }
+}
+@media (min-width: 450px) and (min-width: 768px) {
   .menu-restaurants__all-meal .entries__cards input, .menu-restaurants__all-meal .main-course__cards input, .menu-restaurants__all-meal .desserts__cards input {
     margin-left: 0.8%;
     width: 98.2%;
   }
 }
-@media (min-width: 768px) and (min-width: 1024px) {
+@media (min-width: 450px) and (min-width: 768px) and (min-width: 1024px) {
   .menu-restaurants__all-meal .entries__cards input, .menu-restaurants__all-meal .main-course__cards input, .menu-restaurants__all-meal .desserts__cards input {
     margin-left: 0.65%;
     width: 98.6%;
