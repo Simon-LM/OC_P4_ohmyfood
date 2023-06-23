@@ -8,20 +8,16 @@
     height: calc((100VW / 3) * 2);
     object-fit: cover;
     background-size: cover;  
-
-   /*  &-1 {
-        background-image: "./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg";
-    }
-    &-2 {
-        background-image: "./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg";
-    }
-    &-3 {
-        background-image: "./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg";
-    }
-    &-4 {
-        background-image: "./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg";
-    } */
 }
+
+$clip-top_img-3: 25rem;
+.menu-restaurants-3__img-top {
+    max-height: calc((( max-width / 3) * 2) + $clip-top_img-3);
+    height: calc(((100VW / 3) * 2) + $clip-top_img-3);
+    clip-path: inset($clip-top_img-3 0px 0px 0rem);
+    margin-top: calc($clip-top_img-3 * -1);
+}
+
 
 .name-restaurants {
     position: relative; 

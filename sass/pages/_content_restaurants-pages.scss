@@ -2,7 +2,6 @@
 @mixin each-page-of-restaurants-menus ($restaurant-nbr: $restaurant-1){
     &__img-top {
        background-image: #{map-get($restaurant-nbr, "img")};
-       //content: map-get($restaurant-nbr, "img");
     }
     .name-restaurants {      
         &__title::after {         
@@ -194,7 +193,6 @@
 .menu-restaurants  {
     @include each-page-of-restaurants-menus;
 }
-
 
 .menu-restaurants-1 {
     @include each-page-of-restaurants-menus($restaurant-nbr: $restaurant-1);

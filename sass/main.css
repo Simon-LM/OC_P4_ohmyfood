@@ -2571,18 +2571,14 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
-  /*  &-1 {
-       background-image: "./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg";
-   }
-   &-2 {
-       background-image: "./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg";
-   }
-   &-3 {
-       background-image: "./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg";
-   }
-   &-4 {
-       background-image: "./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg";
-   } */
+}
+
+.menu-restaurants-3__img-top {
+  max-height: calc(max-width / 3 * 2 + 25rem);
+  height: calc(66.6666666667VW + 25rem);
+  -webkit-clip-path: inset(25rem 0px 0px 0rem);
+          clip-path: inset(25rem 0px 0px 0rem);
+  margin-top: -25rem;
 }
 
 .name-restaurants {
