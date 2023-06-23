@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=1 interactive-widget=overlays-content">
+    <title lang="en" >ohmyfood</title>
+    <meta name="description" content="Commandez vos repas en ligne avec ohmyfood. Composez vos propres menus et reservez un horaire dans notre selection de restaurant gastronomiques. Rapide et simple, vos plats seront déja préparés et cela vous fera économiser du temps.">
+    <META NAME="robots" CONTENT="index, follow">
+    <link rel="stylesheet" href="./sass/main.css">    
+    <base target="_parent">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  </head>
+  <body>
+    <header class="visual-identity"> 
+      <div class="visual-identity__master-logo">
+        <img  src="./assets/images/logo/ohmyfood@2x.svg" alt="logo de ohmyfood">
+      </div>
+      <nav class="visual-identity__back-arrow if-prefers-reduced-motion">
+        <a href="./index.html" title="Page d'accueil"><i class="fa-solid fa-arrow-left"></i></a>
+      </nav>
+    </header>
+
+<!-- <?php include "./objects/header-with-arrow.php" ?> -->
+
+    <div class="menu-restaurants__img-top"></div>
+    <!-- <?php include "./objects/restaurants/img-top_menus-restaurants.php" ?> -->
+       
+    <main class="menu-restaurants menu-restaurants-1">
+    
+    <!-- <?php include "./objects/restaurants/main_menus-restaurants.php" ?> -->
+    
+    <section class="name-restaurants">
+        <h5 class="name-restaurants__title"></h5>
+        <!-- Like and unlike Restaurants | Heart empty or full -->
+        <div class="restaurants__heart-like if-prefers-reduced-motion">               
+          <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like" title="Icône en forme de coeur, que vous pouvez cochez pour enregistrer ce restaurant dans vos favoris" aria-label="Icône en forme de coeur, que vous pouvez cochez pour enregistrer ce restaurant dans vos favoris"> 
+          <label for="like_la-palette-du-gout" class="heart" >                  
+            <i class="restaurants__heart restaurants__heart--full material-symbols-outlined" aria-hidden="true">favorite</i>              
+          </label>
+         <i class="restaurants__heart restaurants__heart--empty material-symbols-outlined" aria-hidden="true">favorite</i>
+          <i class="restaurants__heart restaurants__heart--background material-symbols-outlined" aria-hidden="true">favorite</i>               
+        </div>          
+        <!-- End | Heart empty or full  -->   
+      </section>
+      <section  class="menu-restaurants__all-meal">
+        <ul class="entries animations-time-lag">
+          <div class="entries__title-and-underline">
+            <h6 class="entries__title if-prefers-reduced-motion">Entrées</h6>
+            <div class="entries__underline"></div>
+          </div>  
+          <li class="entries__cards entries-1 animations-time-lag if-prefers-reduced-motion">
+            <div class="entries__menu">
+              <p class="entries__menu-heavy"></p>
+              <p class="entries__menu-thin"></p>
+            </div>
+            <div>
+              <p class="entries__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="entrie-01" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="entries__menu-selected" for="entrie-01">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+          <li class="entries__cards entries-2 animations-time-lag if-prefers-reduced-motion">
+            <div class="entries__menu">
+              <p class="entries__menu-heavy"></p>
+              <p class="entries__menu-thin"></p>
+            </div>
+            <div>
+              <p class="entries__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="entrie-02" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="entries__menu-selected" for="entrie-02">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+          <span class="material-symbols-outlined touch_app">touch_app</span>
+          <li class="entries__cards entries-3 animations-time-lag if-prefers-reduced-motion">
+            <div class="entries__menu">
+              <p class="entries__menu-heavy"></p>
+              <p class="entries__menu-thin"></p>
+            </div>
+            <div>
+              <p class="entries__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="entrie-03" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="entries__menu-selected" for="entrie-03">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+          <li class="entries__cards entries-4 animations-time-lag if-prefers-reduced-motion">
+            <div class="entries__menu">
+              <p class="entries__menu-heavy"></p>
+              <p class="entries__menu-thin"></p>
+            </div>
+            <div>
+              <p class="entries__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="entrie-04" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="entries__menu-selected" for="entrie-04">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+        </ul>
+        <ul class="main-course animations-time-lag">
+          <div class="main-course__title-and-underline">
+            <h6 class="main-course__title if-prefers-reduced-motion">Plats</h6>
+            <div class="main-course__underline"></div>
+          </div>
+          <li class="main-course__cards main-course-1 animations-time-lag if-prefers-reduced-motion">
+            <div class="main-course__menu">
+              <p class="main-course__menu-heavy"></p>
+              <p class="main-course__menu-thin"></p>
+            </div>
+            <div>
+              <p class="main-course__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="main-course-01" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="main-course__menu-selected" for="main-course-01">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+          <li class="main-course__cards main-course-2 animations-time-lag if-prefers-reduced-motion">
+            <div class="main-course__menu">
+              <p class="main-course__menu-heavy"></p>
+              <p class="main-course__menu-thin"></p>
+            </div>
+            <div>
+              <p class="main-course__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="main-course-02" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="main-course__menu-selected" for="main-course-02">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+          <li class="main-course__cards main-course-3 animations-time-lag if-prefers-reduced-motion">
+            <div class="main-course__menu">
+              <p class="main-course__menu-heavy"></p>
+              <p class="main-course__menu-thin"></p>
+            </div>
+            <div>
+              <p class="main-course__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="main-course-03" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="main-course__menu-selected" for="main-course-03">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+          <li class="main-course__cards main-course-4 animations-time-lag if-prefers-reduced-motion">
+            <div class="main-course__menu">
+              <p class="main-course__menu-heavy"></p>
+              <p class="main-course__menu-thin"></p>
+            </div>
+            <div>
+              <p class="main-course__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="main-course-04" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="main-course__menu-selected" for="main-course-04">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+        </ul>
+        <ul  class="desserts">
+          <div class="desserts__title-and-underline  if-prefers-reduced-motion">
+            <h6 class="desserts__title if-prefers-reduced-motion">Desserts</h6>
+            <div class="desserts__underline"></div>
+          </div>
+          <li class="desserts__cards desserts-1 animations-time-lag if-prefers-reduced-motion">
+            <div class="desserts__menu">
+              <p class="desserts__menu-heavy"></p>
+              <p class="desserts__menu-thin"></p>
+            </div>  
+            <div>
+              <p class="desserts__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="desserts-01" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="desserts__menu-selected" for="desserts-01">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+          <li class="desserts__cards desserts-2 animations-time-lag if-prefers-reduced-motion">
+            <div class="desserts__menu">
+              <p class="desserts__menu-heavy"></p>
+              <p class="desserts__menu-thin"></p>
+            </div>  
+            <div>
+              <p class="desserts__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="desserts-02" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="desserts__menu-selected" for="desserts-02">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+          <li class="desserts__cards desserts-3 animations-time-lag if-prefers-reduced-motion">
+            <div class="desserts__menu">
+              <p class="desserts__menu-heavy"></p>
+              <p class="desserts__menu-thin"></p>
+            </div>  
+            <div>
+              <p class="desserts__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="desserts-03" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="desserts__menu-selected" for="desserts-03">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+          <li class="desserts__cards desserts-4 animations-time-lagif-prefers-reduced-motion">
+            <div class="desserts__menu">
+              <p class="desserts__menu-heavy"></p>
+              <p class="desserts__menu-thin"></p>
+            </div>  
+            <div>
+              <p class="desserts__price"></p>
+            </div>
+            <input type="checkbox" name="menu-choice" id="desserts-04 if-prefers-reduced-motion" class="menu-choice-selected" aria-label="Sélectionnez ou déselectionnez ce menu">
+            <div class="desserts__menu-selected" for="desserts-04">
+              <span class="material-symbols-outlined" aria-hidden="true"></span>
+            </div>
+          </li>
+        </ul>  
+      </section>
+      <button class="order-btn animations-time-lag if-prefers-reduced-motion">Commander</button>
+    </main>
+
+<!-- <?php include "./objects/footer.php" ?> -->
+
+<footer class="auxiliary-menu" id="to-the-footer">
+      <h3 class="auxiliary-menu__title" lang="en" >ohmyfood</h3>
+      <nav>
+        <ul class="auxiliary-menu__all">
+          <div class="auxiliary-menu__partnership">
+            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer" ref="noopener" id="to-the-footer-menu"><i class="auxiliary-menu__icon fa-solid fa-utensils" aria-hidden="true"></i>Proposer un restaurant</a></li>
+            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer" ref="noopener"><i class="auxiliary-menu__icon fa-solid fa-handshake-angle" aria-hidden="true"></i>Devenir partenaire</a></li>
+          </div>
+          <div class="auxiliary-menu__support">  
+            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer" ref="noopener">Mentions légales</a></li>
+            <li><a class="auxiliary-menu__link" href="mailto:simon.lm.dev@pm.me?subject=Contact%20depuis%20ohmyfood&body=Message%20predefini" target="_blank" rel="noreferrer" ref="noopener">Contact</a></li>
+          </div>
+        </ul>
+      </nav>
+    </footer>   
+  </body>
+</html>
