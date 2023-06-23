@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=1 interactive-widget=overlays-content">
-    <title>ohmyfood</title>
+    <title lang="en" >ohmyfood</title>
     <meta name="description" content="Commandez vos repas en ligne avec ohmyfood. Composez vos propres menus et reservez un horaire dans notre selection de restaurant gastronomiques. Rapide et simple, vos plats seront déja préparés et cela vous fera économiser du temps.">
     <META NAME="robots" CONTENT="index, follow">
     <link rel="stylesheet" href="./sass/main.css">    

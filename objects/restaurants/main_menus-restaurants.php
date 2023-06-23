@@ -4,7 +4,7 @@
         <h5 class="name-restaurants__title"></h5>
         <!-- Like and unlike Restaurants | Heart empty or full -->
         <div class="restaurants__heart-like if-prefers-reduced-motion">               
-          <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like" aria-label="Cochez pour enregistrer ce restaurant dans vos favoris"> 
+          <input type="checkbox" name="heart" id="like_la-palette-du-gout" class="restaurants__like" title="Icône en forme de coeur, que vous pouvez cochez pour enregistrer ce restaurant dans vos favoris" aria-label="Icône en forme de coeur, que vous pouvez cochez pour enregistrer ce restaurant dans vos favoris"> 
           <label for="like_la-palette-du-gout" class="heart" >                  
             <i class="restaurants__heart restaurants__heart--full material-symbols-outlined" aria-hidden="true">favorite</i>              
           </label>

@@ -129,10 +129,18 @@
                     appearance: none;
                     position: absolute;
                     border-radius: 0.85rem;
-                    height: 90%;
-                    width: 98.6%;
-                    margin-left: 0.65%;
                     opacity: 1;
+                    height: 90%;
+                    margin-left: 1.2%;                   
+                    width: 97.6%;                   
+                    @media (min-width: 768px) {
+                        margin-left: 0.8%;                   
+                        width: 98.2%;                       
+                        @media (min-width:1024px) {
+                            margin-left: 0.65%;                   
+                            width: 98.6%;
+                        }
+                    }
                     &:focus-visible, &:-moz-focusring {
                         outline: 0.25rem solid $color-tertiary-font !important;
                     }
@@ -183,7 +191,7 @@
                     margin-right: 6rem; /* For old brothers who doesn't know clamp() */
                     margin-right: calc(-1 * clamp( 5rem, (100% / 6), 8rem));
                     transform-origin: 0%;
-                    transition: all 1.5s 0.25s ease-in-out, opacity 1s ease-in-out, transform 1.5s 0.25s ease-in-out, border 0s;       
+                    transition: all 0.75s 0.25s ease-in-out, opacity 1s ease-in-out, transform 1.5s 0.25s ease-in-out, border 0s;       
 
                     .material-symbols-outlined {
                         font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;

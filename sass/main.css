@@ -503,7 +503,7 @@ input:hover[class$=research]:hover, input:focus[class$=research]:hover, a:hover[
   cursor: pointer;
   opacity: 0.85;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 @media (min-width: 1024px) {
   .order-btn {
@@ -608,7 +608,7 @@ input:hover[class$=research]:hover, input:focus[class$=research]:hover, a:hover[
 .restaurants__like + .heart, .restaurants__like:focus + .heart {
   opacity: 0;
   transform-origin: center bottom;
-  transition: opacity 1s ease-in;
+  transition: opacity 0.8s ease-in;
 }
 .restaurants__like:checked + .heart, .restaurants__like:checked:focus + .heart {
   opacity: 1;
@@ -917,6 +917,72 @@ body {
   height: calc(3 * 1rem);
   width: 100%;
   white-space: nowrap;
+  /* label {
+      opacity: 0;            
+  }  
+  input:focus-visible + label:focus-visible {
+      opacity: 1;
+
+  } 
+  input:focus:not(:-moz-focusring) + label {
+      opacity: 0;
+  }     
+  input:focus:not(:focus-visible) + label {
+      opacity: 0;
+  }   
+
+  input:focus:hover + label {
+      opacity: 1;
+      transition: opacity 0.4s 360s;        
+  } */
+  /* input:focus-visible + label {
+      opacity: 1;
+  } */
+  /* input:hover + label {
+      opacity: 0;
+  } */
+  /* input:active + label {
+         animation-name: mouse-focus;
+         //animation-delay: 360s;
+         animation-duration: 5s;
+         //animation-fill-mode: forwards;
+         animation-play-state: paused; 
+     }
+
+
+     @keyframes mouse-focus {
+         0%{
+          opacity: 0;   
+         }
+         97%{
+             opacity: 0;   
+            }  
+         98%{
+          opacity: 1;   
+         }        
+         99%{
+             opacity: 1;
+         }
+         100%{
+             opacity: 0.5;
+         }
+     }
+  */
+  /* input:focus-visible:not(:not(:hover)) + label {
+      opacity: 0;
+  }
+  input:focus-visible:not(:not(:hover)) + label {
+      opacity: 0;
+  } */
+  /* input:focus:not(:focus-visible):hover + label {
+      opacity: 0;
+  } */
+  /* input:focus:not(:focus-visible):hover + label {
+      opacity: 0;
+  } */
+  /* input:not(:hover:not(:focus-visible)) + label {
+      opacity: 0;
+  } */
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .find-a-place {
@@ -945,23 +1011,39 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 1.1em;
+  /* label:active{
+      transform: scale(3.3);    
+      transition: transform 1.6s cubic-bezier(.68,0,.05,.19);
+      span[class="location"] {
+          transition: opacity 0.15s 1.95s ease-out;
+          opacity: 0;
+      }        
+      i { 
+          transition: transform 1.25s 0.8s cubic-bezier(.88,.71,0,.92);
+          transform: scale(2.6, 0.75);               
+      }
+      & + span[class="research-1"]{
+          transition: all 1.25s 1.125s cubic-bezier(.85,.5,1,-0.30);
+          transform: translate(60vw, 0);  
+      }
+  } */
 }
 .find-a-place form span[class=research-1] {
   transition: all 1.25s 0.1s ease-in-out;
 }
-.find-a-place form label:active {
+.find-a-place form .find-a-place__location-icon:active {
   transform: scale(3.3);
   transition: transform 1.6s cubic-bezier(0.68, 0, 0.05, 0.19);
 }
-.find-a-place form label:active span[class=location] {
+.find-a-place form .find-a-place__location-icon:active span[class=location] {
   transition: opacity 0.15s 1.95s ease-out;
   opacity: 0;
 }
-.find-a-place form label:active i {
+.find-a-place form .find-a-place__location-icon:active i {
   transition: transform 1.25s 0.8s cubic-bezier(0.88, 0.71, 0, 0.92);
   transform: scale(2.6, 0.75);
 }
-.find-a-place form label:active + span[class=research-1] {
+.find-a-place form .find-a-place__location-icon:active + span[class=research-1] {
   transition: all 1.25s 1.125s cubic-bezier(0.85, 0.5, 1, -0.3);
   transform: translate(60vw, 0);
 }
@@ -969,7 +1051,7 @@ body {
   font-size: 1rem;
   margin-right: 0.5em;
 }
-.find-a-place__research {
+.find-a-place input {
   font-family: Roboto;
   font-size: 1rem;
   font-weight: 500;
@@ -983,17 +1065,65 @@ body {
   transition: background 0.5s ease-in-out;
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
-  .find-a-place__research {
+  .find-a-place input {
     color: #353535;
   }
 }
 @media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
-  .find-a-place__research {
+  .find-a-place input {
     color: #f7f7f7;
   }
 }
-.find-a-place__research:focus {
+.find-a-place input:focus {
   background: #f2eafb;
+}
+.find-a-place label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+}
+.find-a-place label .menu-first-tab {
+  isolation: isolate;
+  position: absolute;
+  z-index: 5;
+  top: 2%;
+  left: 2%;
+  max-width: 96%;
+  width: content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 1.6rem;
+  background: #FF79DA;
+  padding: 1.5em 0.5em;
+}
+.find-a-place label .menu-first-tab ol a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  border-radius: 0.6rem;
+  white-space: pre-line;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0 0.25em;
+}
+.find-a-place label ul:not(:focus-within) {
+  opacity: 0;
+}
+.find-a-place label:hover ol {
+  visibility: collapse;
 }
 
 .balloon-dot {
@@ -1054,6 +1184,9 @@ body {
   color: blueviolet;
 }
 
+/* body:hover input:focus + label {
+    color: transparent;
+} */
 /* || DISCOVERY || */
 .discovery {
   background: #f7f7f7;
@@ -2640,10 +2773,22 @@ body {
           appearance: none;
   position: absolute;
   border-radius: 0.85rem;
-  height: 90%;
-  width: 98.6%;
-  margin-left: 0.65%;
   opacity: 1;
+  height: 90%;
+  margin-left: 1.2%;
+  width: 97.6%;
+}
+@media (min-width: 768px) {
+  .menu-restaurants__all-meal .entries__cards input, .menu-restaurants__all-meal .main-course__cards input, .menu-restaurants__all-meal .desserts__cards input {
+    margin-left: 0.8%;
+    width: 98.2%;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .menu-restaurants__all-meal .entries__cards input, .menu-restaurants__all-meal .main-course__cards input, .menu-restaurants__all-meal .desserts__cards input {
+    margin-left: 0.65%;
+    width: 98.6%;
+  }
 }
 .menu-restaurants__all-meal .entries__cards input:focus-visible, .menu-restaurants__all-meal .entries__cards input:-moz-focusring, .menu-restaurants__all-meal .main-course__cards input:focus-visible, .menu-restaurants__all-meal .main-course__cards input:-moz-focusring, .menu-restaurants__all-meal .desserts__cards input:focus-visible, .menu-restaurants__all-meal .desserts__cards input:-moz-focusring {
   outline: 0.25rem solid #00684f !important;
@@ -2692,7 +2837,7 @@ body {
   margin-right: 6rem; /* For old brothers who doesn't know clamp() */
   margin-right: calc(-1 * clamp(5rem, 16.6666666667%, 8rem));
   transform-origin: 0%;
-  transition: all 1.5s 0.25s ease-in-out, opacity 1s ease-in-out, transform 1.5s 0.25s ease-in-out, border 0s;
+  transition: all 0.75s 0.25s ease-in-out, opacity 1s ease-in-out, transform 1.5s 0.25s ease-in-out, border 0s;
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .menu-restaurants__all-meal .entries__cards [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards [class$=menu-selected] {

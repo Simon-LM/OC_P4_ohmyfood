@@ -90,7 +90,7 @@ $heart_desired-expansion: 1.2; /* For scale */
     &__like + .heart, &__like:focus + .heart /* [class$="empty"] */ {
         opacity: 0;
         transform-origin: center bottom;  
-        transition: opacity 1s ease-in;        
+        transition: opacity 0.8s ease-in;        
     }
     &__like:checked + .heart, &__like:checked:focus + .heart  {
         opacity: 1;
