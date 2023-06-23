@@ -988,7 +988,6 @@ body {
   justify-content: center;
   align-items: center;
   background: #eaeaea;
-  box-shadow: 1.3em 0em 1em black;
   height: calc(3 * 1rem);
   width: 100%;
   white-space: nowrap;
@@ -996,23 +995,11 @@ body {
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .find-a-place {
     background: #eaeaea;
-    box-shadow: 0.3em 0em 0 black;
-  }
-}
-@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
-  .find-a-place {
-    box-shadow: 0.3em 0em 0 #212121;
   }
 }
 @media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
   .find-a-place {
     background: #7e7e7e;
-    box-shadow: 0.3em 0em 0 white;
-  }
-}
-@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
-  .find-a-place {
-    box-shadow: 0.3em 0em 0 whitesmoke;
   }
 }
 .find-a-place form {

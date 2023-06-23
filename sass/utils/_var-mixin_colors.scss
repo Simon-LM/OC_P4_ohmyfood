@@ -534,29 +534,29 @@ $color-background_header: $color-light-main;
 $color-background_find-a-place: $grayscale-3;
 @mixin background_find-a-place {
     background: $grayscale-3;
-    box-shadow: 1.3em 0em 1em $color-dark-main;
+    //box-shadow: 1.3em 0em 1em $color-dark-main;
     @media only screen and (prefers-color-scheme: light) {
         @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
             background: $grayscale-3;
-            box-shadow: 0.3em 0em 0 $color-dark-main;
+            //box-shadow: 0.3em 0em 0 $color-dark-main;
         }
         @media only screen and (prefers-contrast: more) {
 
         }
         @media only screen and (prefers-contrast: less) {
-            box-shadow: 0.3em 0em 0 $color-dark-main_less-contrast;
+            //box-shadow: 0.3em 0em 0 $color-dark-main_less-contrast;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
         @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
             background: $grayscale-2;
-            box-shadow: 0.3em 0em 0 $color-light-main;
+            //box-shadow: 0.3em 0em 0 $color-light-main;
         }
         @media (prefers-contrast: more) {
         
         }
         @media (prefers-contrast: less) {
-            box-shadow: 0.3em 0em 0 $color-light-main_less_contrast;           
+            //box-shadow: 0.3em 0em 0 $color-light-main_less_contrast;           
         }
     }
 }
