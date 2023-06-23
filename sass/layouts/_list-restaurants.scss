@@ -62,7 +62,6 @@
                 background: transparent !important;                
             }       
         }
-
         img {
             z-index: 1;
             margin-top: -4em;
@@ -107,15 +106,7 @@
             //background: $color-background_main;
             @include background_restaurants-cards;             
             transition: background 0.4s ease-in-out;        
-        
-
-          /*   h4 {
-                text-shadow: 0.2em 0 0.4em white, -0.2em 0 0.4em white, 0 0.2em 0.4em white, 0 -0.2em 0.4em white, 0.2em 0.2em 0.4em  white, -0.2em -0.2em 0.4em white, 0.2em -0.2em 0.4em white, -0.2em 0.2em 0.4em white;
-            }
-            p {
-                text-shadow: 0.1em 0 0.25em white, -0.1em 0 0.25em white, 0 0.1em 0.25em white, 0 -0.1em 0.25em  white, 0.1em 0.1em 0.25em white, -0.1em -0.1em 0.25em white, 0.1em -0.1em 0.25em white, -0.1em 0.1em 0.25em white;
-            } */
-
+      
             [class$="text"] {
                 flex: initial;
             }

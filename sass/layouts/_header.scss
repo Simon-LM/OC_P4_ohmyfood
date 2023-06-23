@@ -14,13 +14,10 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
     height: 113px;
     width: 100%;
     height: calc($logo-height * 3);
-    //box-shadow: 0em 0.02em 0.5em $grayscale-2;
  
     &__master-logo {
         display: flex;
         justify-content: center;
-       /*  height: $default-height-for-olde-brothers; */ /* For old brothers */
-        /* height: $logo-height; */
         img {
             height: $default-height-for-olde-brothers; /* For old brothers */
             height: $logo-height;
@@ -51,8 +48,7 @@ $logo-height: clamp(1.5rem , height_mm-to-vmin(12) , rem(34)); // or 30px
                     transform: translatex(-0.25em);
                }
             }            
-        }   
-        
+        }           
         &--hidden {
             visibility: hidden;
         }

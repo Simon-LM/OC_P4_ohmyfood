@@ -5,12 +5,11 @@
 @import "./utils/mixins";
 @import "./utils/keyframes";
 
+
 //@import "./check/check";
 
 @import "./base/base";
 @import "./base/typography";
-
-@import "./components/buttons";
 @import "./components/order-button";
 @import "./components/like-heart";
 
@@ -38,18 +37,10 @@
 @import "./themes/animation-menus-restaurants";
 
 
+/*** ||| PAGES ACCESSIBILITY ||| ***/
 
 @import "./base/accessibility";
 
 
-
-//@import "./check/test";
-
-
-
-
-//@import "./layouts/nav";
-
-//@import "./pages/about";
 
 

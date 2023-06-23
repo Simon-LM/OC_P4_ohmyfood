@@ -17,16 +17,13 @@ html {
 
 body {
     @include flex-column;
-    //flex: auto; 
     margin: 0;
     max-width: 1440px;
-    //width: 100%;
     @include background_main;
 }
 
 main {
     @include flex-column;
-    //width: 100%;
 }
 
 img {
@@ -34,18 +31,13 @@ img {
     &[class*="heart"], &[src$=".svg"] {
         background-size: none;
     }
+}
 
-    &[src*="restaurants"] {
-        /* object-fit: cover; */
-        /* background-size: cover; */
-        
-   /*  clip-path: circle(200px at 50% 60%); */
-    /* margin-top: -2em; */
-    /* margin-bottom: -2em; */
-
-   /*  overflow: hidden;
-    margin-top: -5em;
- */
+input:hover, input:focus, a:hover, a:focus {
+    @include hover-links;
+   
+    &[class$="research"]:hover {
+        cursor: text;
     }
 }
 

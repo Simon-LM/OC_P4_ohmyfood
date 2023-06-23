@@ -18,16 +18,12 @@
             flex-direction: row-reverse;
             gap: 6rem;
         }
-    }    
+    }   
 
     &__all {
         display: flex;
         flex-direction: column;
         gap: 0.5em;
-        /* white-space: nowrap; */
-        /* overflow: hidden; */
-        /* text-overflow: ellipsis; */
-       /*  max-width: 90%; */
         @media (min-width: 768px) {
            
             @media (min-width:1024px) {
@@ -42,9 +38,6 @@
         flex-direction: column;
         gap: 0.5em;
         white-space: nowrap;
-        /* overflow: hidden; */
-        /* text-overflow: ellipsis; */
-        /* min-width: 10%; */ 
         @media (min-width: 768px) {
            
             @media (min-width:1024px) {

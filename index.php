@@ -3,7 +3,6 @@
     include "./objects/header.php"
     ?>
 
-
       <aside class="loader">
         <div class="loader__background">
           <div class="loader__background-top"></div>
@@ -22,22 +21,28 @@
     
     <main>         
       <section class="find-a-place if-prefers-reduced-motion">
+          
           <div class="balloon-dot">
           <span class="balloon-dot__1">.</span><span class="balloon-dot__2">.</span><span class="balloon-dot__3">.</span><span class="balloon-dot__4">.</span><span class="balloon-dot__5">.</span><span class="balloon-dot__6">.</span><span class="balloon-dot__7">.</span><span class="balloon-dot__8">.</span><span class="balloon-dot__9">.</span><span class="balloon-dot__10">.</span><span class="balloon-dot__11">.</span><span class="balloon-dot__12">.</span>
           </div>
+
+
         <form method="get" action="/action_file.php">
-         <span class="location find-a-place__location-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></span></i><!-- <label class="find-a-place__location-icon" title="Pressez-moi !"></label> -->
-          <!-- <span class="research-1"><span class="research-2"><span class="research-3"><span class="research-4"> -->
+
+          <span class="location find-a-place__location-icon" aria-hidden="true">
+            <i class="fa-solid fa-location-dot"></i>
+          </span>
+         
           <label for="rechercher">
             <ul class="menu-first-tab">  
-            <ol><a href="#to-the-explanation">Contenu</a></ol>
+              <ol><a href="#to-the-explanation">Contenu</a></ol>
               <ol><a href="#rechercher" id="to-the-research">Formulaire de recherche géographique</a></ol>
               <ol><a href="#to-the-restaurants_first-card">Liste de restaurants</a></ol>
               <ol><a href="#to-the-footer">Pied de page</a></ol>
-            </ul>  
-          <input class="find-a-place__research" type="search" name="ville" id="rechercher" placeholder="Quartier, ville" title="Vous pouvez indiquer un lieu où recherchez un restaurant" aria-labelledby="to-the-research" required>
-        <!--   </span></span></span></span> -->
-         </label>
+            </ul>
+            <input class="find-a-place__research" type="search" name="ville" id="rechercher" placeholder="Quartier, ville" title="Vous pouvez indiquer un lieu où recherchez un restaurant" aria-labelledby="to-the-research" required>
+          </label>
+
         </form>
       </section>
       <section class="discovery"> 

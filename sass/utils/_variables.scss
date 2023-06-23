@@ -24,7 +24,7 @@ $font-title-restaurants: Shrikhand;
 $font-main: Roboto;
 
 /*** COLOR ***/
-
+/* 
 // LIGHT
 $color-dark-main: black; 
 $color-light-main: white;
@@ -39,8 +39,8 @@ $grayscale-1: darken($grayscale_ref, 29.5%);
 $grayscale-2: darken($grayscale_ref , 0.8%);
 $grayscale-3: lighten($grayscale_ref , 41.5%);
 $grayscale-4: lighten($grayscale_ref , 46.7%);
-
-
+ */
+/* 
 // LIGHT
 $color-primairy: #9356DC;
 $color-secondary: #FF79DA; 
@@ -51,13 +51,13 @@ $color-tertiary: #99E2D0;
 $color-tertiary-font:  darken(#008766, 6%); // 6%
 $color-dark-blue: #003A68;
 $color-light-blue: #89C8FA;
-
+ */
 
 
 
 
 /*** FONT COLOR ***/
-
+/* 
 // LIGHT
 $color-font-logo__header: $color-dark-main;
 $color-font__main: $color-dark-main;
@@ -76,9 +76,9 @@ $color-icons-heart-unlike: $color-dark-main;
 $color-icons-heart-like: $color-primairy-to-secondary;
 $color-underline_menu-restaurants: $color-tertiary;
 $color-icons_menu-restaurants-selected: $color-light-main;
-
+ */
 /*** BACKGROUND COLOR ***/
-
+/* 
 // LIGHT
 $color-background_main: $color-light-main;
 $color-background_header: $color-light-main;
@@ -90,7 +90,7 @@ $color-background_restaurants-cards: $color-light-main;
 $color-background_restaurants-menu-selected: $color-tertiary;
 $color-background_thumbnail-new: $color-tertiary;
 $color-background_footer: $grayscale-1;
-
+ */
 
 /***IMG RESTAURANTS ***/
 
