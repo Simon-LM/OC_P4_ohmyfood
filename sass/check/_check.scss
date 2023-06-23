@@ -7,6 +7,7 @@ $check_border-color_yellow: yellow;
 $check_border-color_orange: orange;
 
 
+
 @function check_frame-dashed_brown($check_percentage-color) {
     $check_result-color: 5px dashed lighten($check_border-color_brown , $check_percentage-color);
     @return $check_result-color
