@@ -1395,6 +1395,8 @@ body {
   width: 100%;
   gap: 1em;
   padding: calc(2em + 2vw) calc(1rem + 1.5vw) calc(3em + 2vw) calc(1rem + 1.5vw);
+  /* TEMP */
+  /* TEMP */
 }
 .restaurants img {
   animation-name: donwnload-img;
@@ -1454,6 +1456,22 @@ body {
 }
 @media (min-width: 768px) and (min-width: 1024px) {
   .restaurants__all-cards a {
+    max-width: 100%;
+    width: initial;
+    min-width: calc(50% - 1em);
+  }
+}
+.restaurants__card-link {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  border-radius: 1.2em;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.85;
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .restaurants__card-link {
     max-width: 100%;
     width: initial;
     min-width: calc(50% - 1em);

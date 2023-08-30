@@ -45,8 +45,31 @@
                     min-width: calc((100% / 2) - 1em);
                 }
             } 
-        }       
-    }    
+        }
+    }
+    
+
+    /* TEMP */
+    &__card-link {
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        border-radius: 1.2em;
+        width: 100%;
+
+        @include hover-links;
+
+        @media (min-width: 768px) { 
+            @media (min-width:1024px) {
+                max-width: 100%;
+                width: initial;
+                min-width: calc((100% / 2) - 1em);
+            }
+        } 
+    }
+    /* TEMP */
+
+
     &__card {
         @include cards;
         position: relative;
