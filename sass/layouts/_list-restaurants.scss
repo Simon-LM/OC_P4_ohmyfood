@@ -141,7 +141,6 @@
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
         border-radius: 2px;
         transition: transform 0.4s 0.4s ease-in-out;        
-        user-select: none;
     }    
 }  
 
@@ -224,7 +223,7 @@ $time-befor-start: 7.5;
 
 @keyframes thumbnail-new{
     0% {
-        transform: scale(1) translate(0 0);       
+        transform: scale(1) translate(0, 0);       
     }
 
     33% {
@@ -236,14 +235,14 @@ $time-befor-start: 7.5;
     }
 
     100% {
-        transform: scale(1) translate(0 0);
+        transform: scale(1) translate(0, 0);
     }
 }
 
 @keyframes thumbnail-new_hover{
 
     0% {
-        transform: scale(1) translate(0 0);       
+        transform: scale(1) translate(0, 0);       
     }
 
     33% {
@@ -255,7 +254,7 @@ $time-befor-start: 7.5;
     }
 
     100% {
-        transform: scale(1) translate(0 0);
+        transform: scale(1) translate(0, 0);
     }
 }
 

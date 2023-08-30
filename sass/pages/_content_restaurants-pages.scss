@@ -6,11 +6,11 @@
     .name-restaurants {      
         &__title::after {         
             content: map-get($restaurant-nbr, "name-restaurant");
-            user-select: text;  
+            //user-select: text;  
         }   
     }   
     .entries {    
-        user-select: none;
+        //user-select: none;
         &-1 {
             [class$="heavy"]::after {
                 content: map-get($restaurant-nbr, "entries-1", "heavy" );
@@ -70,7 +70,7 @@
         }
     }
     .main-course {
-        user-select: none;
+        //user-select: none;
         &-1 {
             [class$="heavy"]::after {
                 content: map-get($restaurant-nbr, "main-course-1", "heavy" );
@@ -129,7 +129,7 @@
         }       
     }
     .desserts {
-        user-select: none;
+        //user-select: none;
         &-1 {
             [class$="heavy"]::after {
                 content: map-get($restaurant-nbr, "desserts-1", "heavy" );

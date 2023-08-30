@@ -1,10 +1,12 @@
 {
     "window.autoDetectColorScheme": false,
     "breadcrumbs.enabled": true,
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
     "workbench.tree.expandMode": "doubleClick",
     "explorer.compactFolders": true,
     "workbench.iconTheme": "vs-seti",
     "window.zoomLevel": 1,
-    "workbench.panel.defaultLocation": "right"
+    "workbench.panel.defaultLocation": "right",
+    "workbench.editor.openPositioning": "right",
+    "files.autoSave": "off"
 }
