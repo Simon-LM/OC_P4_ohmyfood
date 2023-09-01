@@ -49,23 +49,7 @@
     }
     
 
-    /* TEMP */
-    &__card-link {
-        display: flex;
-        flex-direction: column;
-        flex: auto;
-        border-radius: 1.2em;
-        width: 100%;
-
-        @include hover-links;
-
-        &:focus-visible {
-            outline: 1px solid red;
-        }
-       
-    }
-    /* TEMP */
-
+   
 
     &__card {
         @include cards;
@@ -81,13 +65,27 @@
                 width: initial;
                 min-width: calc((100% / 2) - 1em);
             }
-        }     
-
+        }
         &:hover {
             [class*="card-comment"] {
                 
                 background: transparent !important;                
             }       
+        }
+        &-link {
+            display: flex;
+            flex-direction: column;
+            flex: auto;
+            border-radius: 1.2em;
+            width: 100%;
+            background: $color-primairy;
+            @include hover-links;
+            &:focus-visible img {                
+                opacity: 0.3;                
+            }  
+            &:focus-visible [class*="card-comment"] {
+                background: transparent;
+            }      
         }
         img {
             z-index: 1;
