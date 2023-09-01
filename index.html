@@ -46,7 +46,15 @@
         </div>
       </aside>
     
-    <main>         
+    <main>        
+      <!-- <nav class="menu-accessibility"> -->
+        <menu class="menu-first-tab">  
+          <li><a href="#to-the-explanation">Contenu</a></li>
+          <li><a href="#rechercher" id="to-the-research">Formulaire de recherche géographique</a></li>
+          <li><a href="#to-the-restaurants_first-card">Liste de restaurants</a></li>
+          <li><a href="#to-the-footer">Pied de page</a></li>
+        </menu>
+      <!-- </nav> -->
       <section class="find-a-place if-prefers-reduced-motion">        
           <div class="balloon-dot">
           <span class="balloon-dot__1">.</span><span class="balloon-dot__2">.</span><span class="balloon-dot__3">.</span><span class="balloon-dot__4">.</span><span class="balloon-dot__5">.</span><span class="balloon-dot__6">.</span><span class="balloon-dot__7">.</span><span class="balloon-dot__8">.</span><span class="balloon-dot__9">.</span><span class="balloon-dot__10">.</span><span class="balloon-dot__11">.</span><span class="balloon-dot__12">.</span>
@@ -56,29 +64,14 @@
             <i class="fa-solid fa-location-dot"></i>
           </span>         
           <label for="rechercher">
-            <ul class="menu-first-tab">  
-              <ol><a href="#to-the-explanation">Contenu</a></ol>
-              <ol><a href="#rechercher" id="to-the-research">Formulaire de recherche géographique</a></ol>
-              <ol><a href="#to-the-restaurants_first-card">Liste de restaurants</a></ol>
-              <ol><a href="#to-the-footer">Pied de page</a></ol>
-            </ul>
             <input class="find-a-place__research" type="search" name="ville" id="rechercher" placeholder="Quartier, ville" title="Vous pouvez indiquer un lieu où recherchez un restaurant" aria-labelledby="to-the-research" required>
           </label>
         </form>
       </section>
       <section class="discovery"> 
         <h1 class="discovery__title">Réservez le menu qui vous convient</h1>
-        <p class="discovery__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-
-
-        <!-- <button class="order-btn if-prefers-reduced-motion">Explorer nos restaurants</button> -->
-
-
-        <!-- <a href="#to-the-restaurants" title="Vers la liste des restaurants"> -->
+        <p class="discovery__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>        
           <a class="order-btn if-prefers-reduced-motion" href="#to-the-restaurants" title="Vers la liste des restaurants">Explorer nos restaurants</a>
-        <!-- </a> -->
-
-
       </section>
       <section class="explanation" id="to-the-explanation">
         <h2 class="explanation__title">Fonctionnement</h2> 
@@ -100,7 +93,6 @@
           </div>
         </div>
       </section>
-
       <section class="restaurants" id="to-the-restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <nav class="restaurants__all-cards">
@@ -200,36 +192,13 @@
       
     <footer class="auxiliary-menu" id="to-the-footer">
       <h3 class="auxiliary-menu__title" lang="en" >ohmyfood</h3>
-      <nav>
         <ul class="auxiliary-menu__all">
-          <!-- <div class="auxiliary-menu__partnership"> -->
-            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer noopener" id="to-the-footer-menu"><i class="auxiliary-menu__icon fa-solid fa-utensils" aria-hidden="true"></i>Proposer un restaurant</a></li>
-            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer noopener"><i class="auxiliary-menu__icon fa-solid fa-handshake-angle" aria-hidden="true"></i>Devenir partenaire</a></li>
-          <!-- </div> -->
-          <!-- <div class="auxiliary-menu__support">   -->
-            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer noopener">Mentions légales</a></li>
-            <li><a class="auxiliary-menu__link" href="mailto:simon.lm.dev@pm.me?subject=Contact%20depuis%20ohmyfood&body=Message%20predefini" target="_blank" rel="noreferrer noopener">Contact</a></li>
-          <!-- </div> -->
+          <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer noopener" id="to-the-footer-menu"><i class="auxiliary-menu__icon fa-solid fa-utensils" aria-hidden="true"></i>Proposer un restaurant</a></li>
+          <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer noopener"><i class="auxiliary-menu__icon fa-solid fa-handshake-angle" aria-hidden="true"></i>Devenir partenaire</a></li>
+          <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer noopener">Mentions légales</a></li>
+          <li><a class="auxiliary-menu__link" href="mailto:simon.lm.dev@pm.me?subject=Contact%20depuis%20ohmyfood&body=Message%20predefini" target="_blank" rel="noreferrer noopener">Contact</a></li>
         </ul>
-      </nav>
-    </footer>   
-
-   <!-- <footer class="auxiliary-menu" id="to-the-footer">
-      <h3 class="auxiliary-menu__title" lang="en" >ohmyfood</h3>
-      <nav>
-        <ul class="auxiliary-menu__all">
-          <div class="auxiliary-menu__partnership">
-            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer" ref="noopener" id="to-the-footer-menu"><i class="auxiliary-menu__icon fa-solid fa-utensils" aria-hidden="true"></i>Proposer un restaurant</a></li>
-            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer" ref="noopener"><i class="auxiliary-menu__icon fa-solid fa-handshake-angle" aria-hidden="true"></i>Devenir partenaire</a></li>
-          </div>
-          <div class="auxiliary-menu__support">  
-            <li><a class="auxiliary-menu__link" href="#" target="_blank" rel="noreferrer" ref="noopener">Mentions légales</a></li>
-            <li><a class="auxiliary-menu__link" href="mailto:simon.lm.dev@pm.me?subject=Contact%20depuis%20ohmyfood&body=Message%20predefini" target="_blank" rel="noreferrer" ref="noopener">Contact</a></li>
-          </div>
-        </ul>
-      </nav>
-    </footer> -->
-
+    </footer>
   </body>
 </html>
 
