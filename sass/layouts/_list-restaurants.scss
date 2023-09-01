@@ -32,7 +32,7 @@
                 flex-direction: row;              
             }
         }
-        a {
+       /*  a {
             display: flex;
             flex-direction: column;
             flex: auto;
@@ -45,7 +45,7 @@
                     min-width: calc((100% / 2) - 1em);
                 }
             } 
-        }
+        } */
     }
     
 
@@ -59,13 +59,10 @@
 
         @include hover-links;
 
-        @media (min-width: 768px) { 
-            @media (min-width:1024px) {
-                max-width: 100%;
-                width: initial;
-                min-width: calc((100% / 2) - 1em);
-            }
-        } 
+        &:focus-visible {
+            outline: 1px solid red;
+        }
+       
     }
     /* TEMP */
 
@@ -77,8 +74,15 @@
         align-items: center;
         width: 100%;
         overflow: hidden;   
-        animation-timing-function: ease-in-out;    
-        
+        animation-timing-function: ease-in-out;
+        @media (min-width: 768px) { 
+            @media (min-width:1024px) {
+                max-width: 100%;
+                width: initial;
+                min-width: calc((100% / 2) - 1em);
+            }
+        }     
+
         &:hover {
             [class*="card-comment"] {
                 

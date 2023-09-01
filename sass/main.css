@@ -1434,6 +1434,20 @@ body {
   align-items: center;
   gap: 2em;
   flex-direction: column;
+  /*  a {
+       display: flex;
+       flex-direction: column;
+       flex: auto;
+       border-radius: 1.2em;
+       width: 100%;
+       @media (min-width: 768px) { 
+           @media (min-width:1024px) {
+               max-width: 100%;
+               width: initial;
+               min-width: calc((100% / 2) - 1em);
+           }
+       } 
+   } */
 }
 @media (min-width: 768px) {
   .restaurants__all-cards {
@@ -1447,20 +1461,6 @@ body {
     flex-direction: row;
   }
 }
-.restaurants__all-cards a {
-  display: flex;
-  flex-direction: column;
-  flex: auto;
-  border-radius: 1.2em;
-  width: 100%;
-}
-@media (min-width: 768px) and (min-width: 1024px) {
-  .restaurants__all-cards a {
-    max-width: 100%;
-    width: initial;
-    min-width: calc(50% - 1em);
-  }
-}
 .restaurants__card-link {
   display: flex;
   flex-direction: column;
@@ -1470,12 +1470,8 @@ body {
   cursor: pointer;
   opacity: 0.85;
 }
-@media (min-width: 768px) and (min-width: 1024px) {
-  .restaurants__card-link {
-    max-width: 100%;
-    width: initial;
-    min-width: calc(50% - 1em);
-  }
+.restaurants__card-link:focus-visible {
+  outline: 1px solid red;
 }
 .restaurants__card {
   display: flex;
@@ -1494,6 +1490,13 @@ body {
            //@import background_restaurants-cards-hover;                
        }       
    } */
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .restaurants__card {
+    max-width: 100%;
+    width: initial;
+    min-width: calc(50% - 1em);
+  }
 }
 .restaurants__card:hover [class*=card-comment] {
   background: transparent !important;
