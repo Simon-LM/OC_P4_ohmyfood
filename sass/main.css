@@ -977,16 +977,14 @@ body {
   visibility: hidden;
 }
 
-/* .menu-first-tab {
-opacity: 0;
-} */
-.menu-first-tab {
+.menu-accessibility {
+  visibility: visible;
   opacity: 1;
   isolation: isolate;
   position: absolute;
   z-index: 5;
   top: 2%;
-  left: 2%;
+  left: 200%;
   max-width: 96%;
   width: -moz-fit-content;
   width: fit-content;
@@ -999,10 +997,13 @@ opacity: 0;
   align-items: flex-start;
   justify-content: center;
   border-radius: 1.6rem;
-  background: #FF79DA;
+  background: #212121;
   padding: 1.5em 0.5em;
 }
-.menu-first-tab li a {
+.menu-accessibility:focus-within {
+  left: 2%;
+}
+.menu-accessibility li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1011,21 +1012,20 @@ opacity: 0;
   width: 100%;
   border-radius: 0.6rem;
   white-space: pre-line;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1.5em;
+  line-height: 1.75em;
   padding: 0 0.25em;
+  color: #FF79DA;
 }
-
-.menu-first-tab:not(:focus-within) {
+.menu-accessibility:not(:focus-within) {
   opacity: 0;
 }
 
-.menu-first-tab:hover li {
-  visibility: collapse;
-}
-
 /* || FIND A PLACE || */
+/* main:hover label div {
+    visibility: collapse; 
+}   */
 .find-a-place {
   display: flex;
   flex-direction: column;
@@ -1035,6 +1035,9 @@ opacity: 0;
   height: calc(3 * 1rem);
   width: 100%;
   white-space: nowrap;
+  /*  label:hover div {
+       visibility: collapse; 
+   } */
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .find-a-place {
@@ -1095,11 +1098,99 @@ opacity: 0;
     color: #f7f7f7;
   }
 }
-.find-a-place label ul:not(:focus-within) {
-  opacity: 0;
+.find-a-place__thumbnail {
+  opacity: 1;
+  isolation: isolate;
+  position: absolute;
+  z-index: 5;
+  top: 10rem;
+  left: 2%;
+  max-width: 96%;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 0.25rem;
+  background: #9356DC;
+  padding: 1em 0.5em;
+  align-items: center;
 }
-.find-a-place label:hover ol {
-  visibility: collapse;
+@media (min-width: 768px) {
+  .find-a-place__thumbnail {
+    top: 1%;
+    left: 10%;
+    max-width: 80%;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .find-a-place__thumbnail {
+    top: 2%;
+    left: 20%;
+    max-width: 60%;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .find-a-place__thumbnail {
+    background: linear-gradient(0.49turn, #FF79DA, #9356DC);
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: more) {
+  .find-a-place__thumbnail {
+    background: #9356DC;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .find-a-place__thumbnail {
+    background: linear-gradient(0.49turn, #FF79DA, #9356DC);
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .find-a-place__thumbnail {
+    background: #9356DC;
+  }
+}
+.find-a-place__thumbnail span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  white-space: pre-line;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.5em;
+  padding: 0 0.25em;
+  color: white;
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .find-a-place__thumbnail span {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .find-a-place__thumbnail span {
+    color: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .find-a-place__thumbnail span {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .find-a-place__thumbnail span {
+    color: whitesmoke;
+  }
+}
+.find-a-place label:not(:focus-within) span {
+  opacity: 0;
 }
 .find-a-place .balloon-dot {
   position: relative;
