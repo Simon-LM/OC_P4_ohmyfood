@@ -28,6 +28,16 @@
         padding: 0 0.25em;
         color: $color-secondary;
     }
+    li .contrasts{
+        letter-spacing: 0.25rem;
+        color: $color-light-main_less-contrast;
+        color: lightyellow;
+        &:focus-visible, &:hover {
+            color: yellow;
+            outline-color: yellow !important; 
+            outline-width: 0.25rem !important;
+        }
+    }
     &:not(:focus-within) {
         opacity: 0;
     }       

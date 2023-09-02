@@ -1019,6 +1019,16 @@ body {
   padding: 0 0.25em;
   color: #FF79DA;
 }
+.menu-accessibility li .contrasts {
+  letter-spacing: 0.25rem;
+  color: whitesmoke;
+  color: lightyellow;
+}
+.menu-accessibility li .contrasts:focus-visible, .menu-accessibility li .contrasts:hover {
+  color: yellow;
+  outline-color: yellow !important;
+  outline-width: 0.25rem !important;
+}
 .menu-accessibility:not(:focus-within) {
   opacity: 0;
 }
