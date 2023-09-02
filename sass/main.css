@@ -998,7 +998,8 @@ body {
   justify-content: center;
   border-radius: 1.6rem;
   background: #212121;
-  padding: 1.5em 0.5em;
+  padding: 1.5em 1em;
+  outline: 0.3rem solid #FF79DA;
 }
 .menu-accessibility:focus-within {
   left: 2%;
@@ -1163,8 +1164,8 @@ body {
   flex: auto;
   width: 100%;
   white-space: pre-line;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 500;
   line-height: 1.5em;
   padding: 0 0.25em;
   color: white;

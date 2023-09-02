@@ -17,7 +17,7 @@
     justify-content: center;
     border-radius: 1.6rem;
     background: $color-dark-main_less-contrast;           
-    padding: 1.5em 0.5em;
+    padding: 1.5em 1em;
     li a{
         @include flex-column;
         border-radius: 0.6rem;
@@ -31,5 +31,7 @@
     &:not(:focus-within) {
         opacity: 0;
     }       
+
+    outline: 0.3rem solid $color-secondary;
 }
 

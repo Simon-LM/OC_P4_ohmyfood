@@ -39,7 +39,7 @@ $color-font-logo_header: $color-dark-main;
 @mixin font-logo_header {
     color: $color-light-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-dark-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -50,7 +50,7 @@ $color-font-logo_header: $color-dark-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media (prefers-contrast: more) {
@@ -64,7 +64,7 @@ $color-font-logo_header: $color-dark-main;
 @mixin font-logo_img-header {
     
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
            
         }
         @media only screen and (prefers-contrast: more) {
@@ -75,7 +75,7 @@ $color-font-logo_header: $color-dark-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             filter: invert(100%);
         }
         @media (prefers-contrast: more) {
@@ -92,7 +92,7 @@ $color-font__main: $color-dark-main;
 @mixin font_main {
     color: $color-dark-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-dark-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -103,7 +103,7 @@ $color-font__main: $color-dark-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media (prefers-contrast: more) {
@@ -119,7 +119,7 @@ $color-font-order-btn: $color-light-main;
 @mixin font_order-btn {
     color: $color-light-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -130,7 +130,7 @@ $color-font-order-btn: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media (prefers-contrast: more) {
@@ -144,7 +144,7 @@ $color-font-order-btn: $color-light-main;
 @mixin font_discovery-subtitle {
     color: $grayscale-1;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $grayscale-1;
         }
         @media only screen and (prefers-contrast: more) {
@@ -155,7 +155,7 @@ $color-font-order-btn: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $grayscale-4;
         }
         @media (prefers-contrast: more) {
@@ -170,7 +170,7 @@ $color-font_explanation-circle: $color-light-main;
 @mixin font-explanation-circle {
     color: $color-light-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -181,7 +181,7 @@ $color-font_explanation-circle: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media (prefers-contrast: more) {
@@ -196,7 +196,7 @@ $color-font_thumbnail-new: $color-tertiary-font;
 @mixin font_thumbnail-new {
     color: $color-tertiary-font;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-tertiary-font;
         }
         @media only screen and (prefers-contrast: more) {
@@ -207,7 +207,7 @@ $color-font_thumbnail-new: $color-tertiary-font;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-tertiary;
         }
         @media (prefers-contrast: more) {
@@ -222,7 +222,7 @@ $color-font__cards-opacity: $color-light-main;
 @mixin font__cards-opacity {
     color: $color-light-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -233,7 +233,7 @@ $color-font__cards-opacity: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-dark-mainn_less-contrast;
         }
         @media (prefers-contrast: more) {
@@ -248,7 +248,7 @@ $color-font__footer: $color-light-main;
 @mixin font_footer {
     color: $color-light-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -259,7 +259,7 @@ $color-font__footer: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-dark-main;
         }
         @media (prefers-contrast: more) {
@@ -274,7 +274,7 @@ $color-font-research: $grayscale-1;
 @mixin font-research {
     color: $grayscale-1;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $grayscale-1;
         }
         @media only screen and (prefers-contrast: more) {
@@ -285,7 +285,7 @@ $color-font-research: $grayscale-1;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $grayscale-4;
         }
         @media (prefers-contrast: more) {
@@ -301,7 +301,7 @@ $color-caret-research: $color-primairy;
 @mixin font-caret-research {
     color: $color-primairy;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-primairy;
         }
         @media only screen and (prefers-contrast: more) {
@@ -312,7 +312,7 @@ $color-caret-research: $color-primairy;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-primairy;
         }
         @media (prefers-contrast: more) {
@@ -328,7 +328,7 @@ $color-icons_explanation-drab: $grayscale-2;
 @mixin font-explanation-drab {
     color: $grayscale-2;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $grayscale-2;
         }
         @media only screen and (prefers-contrast: more) {
@@ -339,7 +339,7 @@ $color-icons_explanation-drab: $grayscale-2;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $grayscale-3;
         }
         @media (prefers-contrast: more) {
@@ -355,7 +355,7 @@ $color-icons_explanation-bright: $color-primairy;
 @mixin font-icons_explanation-bright {
     color: $color-primairy;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-primairy;
         }
         @media only screen and (prefers-contrast: more) {
@@ -366,7 +366,7 @@ $color-icons_explanation-bright: $color-primairy;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-primairy;
         }
         @media (prefers-contrast: more) {
@@ -381,7 +381,7 @@ $color-icons-heart-unlike: $color-dark-main;
 @mixin font-icons-heart-unlike {
     color: $color-dark-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-dark-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -392,7 +392,7 @@ $color-icons-heart-unlike: $color-dark-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media (prefers-contrast: more) {
@@ -408,7 +408,7 @@ $color-icons_menu-restaurants-selected: $color-light-main;
 @mixin font_icons_menu-restaurants-selected {
     color: $color-light-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-light-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -419,7 +419,7 @@ $color-icons_menu-restaurants-selected: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             color: $color-dark-main;
         }
         @media (prefers-contrast: more) {
@@ -435,7 +435,7 @@ $color-underline_menu-restaurants: $color-tertiary;
 @mixin color-underline_menu-restaurants {
     border-bottom: 3px solid $color-tertiary;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             border-bottom: 3px solid $color-tertiary;
         }
         @media only screen and (prefers-contrast: more) {
@@ -446,7 +446,7 @@ $color-underline_menu-restaurants: $color-tertiary;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             border-bottom: 3px solid $color-tertiary-font;
         }
         @media (prefers-contrast: more) {
@@ -472,7 +472,7 @@ $color-background_main: $color-light-main;
 @mixin background_main {
     background: $color-light-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-light-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -483,7 +483,7 @@ $color-background_main: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-dark-main;
         }
         @media (prefers-contrast: more) {
@@ -500,7 +500,7 @@ $color-background_header: $color-light-main;
     box-shadow: 0em 0.02em 0.5em $grayscale-2;
  
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-light-main;
             box-shadow: 0em 0.02em 0.5em $grayscale-2;
  
@@ -515,7 +515,7 @@ $color-background_header: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-dark-main_less-contrast;
             box-shadow: 0em 0.02em 0.6em $grayscale-3;
  
@@ -536,7 +536,7 @@ $color-background_find-a-place: $grayscale-3;
     background: $grayscale-3;
     //box-shadow: 1.3em 0em 1em $color-dark-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-3;
             //box-shadow: 0.3em 0em 0 $color-dark-main;
         }
@@ -548,7 +548,7 @@ $color-background_find-a-place: $grayscale-3;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-2;
             //box-shadow: 0.3em 0em 0 $color-light-main;
         }
@@ -565,7 +565,7 @@ $color-background_discovery: $grayscale-4;
 @mixin background_discovery {
     background: $grayscale-4;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-4;
         }
         @media only screen and (prefers-contrast: more) {
@@ -576,7 +576,7 @@ $color-background_discovery: $grayscale-4;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-1;
         }
         @media (prefers-contrast: more) {
@@ -591,7 +591,7 @@ $color-background_discovery: $grayscale-4;
 @mixin background_explanation_cards {
     background: $grayscale-4;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-4;
         }
         @media only screen and (prefers-contrast: more) {
@@ -602,7 +602,7 @@ $color-background_discovery: $grayscale-4;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-1;
         }
         @media (prefers-contrast: more) {
@@ -618,7 +618,7 @@ $color-background_explanation: $color-light-main;
 @mixin background_explanation {
     background: $color-light-main;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-light-main;
         }
         @media only screen and (prefers-contrast: more) {
@@ -629,7 +629,7 @@ $color-background_explanation: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-dark-main_less-contrast;
         }
         @media (prefers-contrast: more) {
@@ -643,7 +643,7 @@ $color-background_explanation: $color-light-main;
 @mixin background_explanation-circle {
     background: $color-primairy;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-primairy;
         }
         @media only screen and (prefers-contrast: more) {
@@ -654,7 +654,7 @@ $color-background_explanation: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-primairy;
         }
         @media (prefers-contrast: more) {
@@ -670,7 +670,7 @@ $color-background_restaurants: $grayscale-4;
 @mixin background_restaurants {
     background: $grayscale-4;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-4;
         }
         @media only screen and (prefers-contrast: more) {
@@ -681,7 +681,7 @@ $color-background_restaurants: $grayscale-4;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-1;
         }
         @media (prefers-contrast: more) {
@@ -698,7 +698,7 @@ $color-background_restaurants-cards: $color-light-main;
     background: $color-light-main;
     
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-light-main;
             h4 {
                 text-shadow: 0.2em 0 0.4em $color-light-main, -0.2em 0 0.4em $color-light-main, 0 0.2em 0.4em $color-light-main, 0 -0.2em 0.4em $color-light-main, 0.2em 0.2em 0.4em  $color-light-main, -0.2em -0.2em 0.4em $color-light-main, 0.2em -0.2em 0.4em $color-light-main, -0.2em 0.2em 0.4em $color-light-main;
@@ -721,7 +721,7 @@ $color-background_restaurants-cards: $color-light-main;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-dark-main_less-contrast;
             
             h4 {
@@ -752,7 +752,7 @@ $color-background_restaurants-menu-selected: $color-tertiary;
 @mixin background_restaurants-menu-selected {
     background: $color-tertiary;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-tertiary;
         }
         @media only screen and (prefers-contrast: more) {
@@ -763,7 +763,7 @@ $color-background_restaurants-menu-selected: $color-tertiary;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-tertiary-font;
         }
         @media (prefers-contrast: more) {
@@ -779,7 +779,7 @@ $color-background_thumbnail-new: $color-tertiary;
 @mixin background_thumbnail-new {
     background: $color-tertiary;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-tertiary;
         }
         @media only screen and (prefers-contrast: more) {
@@ -790,7 +790,7 @@ $color-background_thumbnail-new: $color-tertiary;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-tertiary-font;
         }
         @media (prefers-contrast: more) {
@@ -806,7 +806,7 @@ $color-background_footer: $grayscale-1;
 @mixin background_footer {
     background: $grayscale-1;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-1;
         }
         @media only screen and (prefers-contrast: more) {
@@ -817,7 +817,7 @@ $color-background_footer: $grayscale-1;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $grayscale-4;
         }
         @media (prefers-contrast: more) {
@@ -832,7 +832,7 @@ $color-background_footer: $grayscale-1;
 @mixin background_order-btn {
     background: $color-primairy;
     @media only screen and (prefers-color-scheme: light) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-secondary-to-primairy;
         }
         @media only screen and (prefers-contrast: more) {
@@ -843,7 +843,7 @@ $color-background_footer: $grayscale-1;
         }
     }
     @media only screen and (prefers-color-scheme: dark) {
-        @media (prefers-contrast: no-preference), all screen and (min-width: 240px) {
+        @media (prefers-contrast: no-preference),  screen and (min-width: 240px) {
             background: $color-secondary-to-primairy;
         }
         @media (prefers-contrast: more) {
