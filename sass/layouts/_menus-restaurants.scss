@@ -3,8 +3,9 @@
 .menu-restaurants__img-top {   
     padding: 0;    
     max-width: 100%;
-    width: 100vw;        
-    max-height: calc(( max-width / 3) * 2);
+    width: 100vw;
+    //max-height: calc(( max-width / 3) * 2);
+    max-height: calc(( 100% / 3) * 2);
     height: calc((100VW / 3) * 2);
     object-fit: cover;
     background-size: cover;  
@@ -12,7 +13,8 @@
 
 $clip-top_img-3: 25rem;
 .menu-restaurants-3__img-top {
-    max-height: calc((( max-width / 3) * 2) + $clip-top_img-3);
+    //max-height: calc((( max-width / 3) * 2) + $clip-top_img-3);
+    max-height: calc((( 100% / 3) * 2) + $clip-top_img-3);
     height: calc(((100VW / 3) * 2) + $clip-top_img-3);
     clip-path: inset($clip-top_img-3 0px 0px 0rem);
     margin-top: calc($clip-top_img-3 * -1);
@@ -156,7 +158,7 @@ $clip-top_img-3: 25rem;
                     }
 
 
-                    &:focus-visible, &:-moz-focusring {
+                    &:focus-visible {
                         outline: 0.25rem solid $color-tertiary-font !important;
                     }
                 }
@@ -167,12 +169,12 @@ $clip-top_img-3: 25rem;
                     opacity: 1;
                 }
 
-                .menu-choice-selected:focus-visible + [class$="menu-selected"], .menu-choice-selected:-moz-focusring + [class$="menu-selected"], {
+                .menu-choice-selected:focus-visible + [class$="menu-selected"] {
                     opacity: 1;
                     background: $color-tertiary-font;                   
                 }
 
-                .menu-choice-selected:checked:focus-visible + [class$="menu-selected"], .menu-choice-selected:checked:-moz-focusring + [class$="menu-selected"], {
+                .menu-choice-selected:checked:focus-visible + [class$="menu-selected"] {
                     transform: translatex(0%);
                     margin: 0;
                     opacity: 1;   

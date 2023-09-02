@@ -3,6 +3,11 @@
 
 $font-size_research: rem(16); 
 
+/* main:hover label div {
+    visibility: collapse; 
+}   */     
+
+
 .find-a-place {
     display: flex;
     flex-direction: column;
@@ -57,41 +62,53 @@ $font-size_research: rem(16);
             background: lighten($color-primairy, 35%);
         } */
     }  
-    label {
-        @include flex-row;
-        .menu-first-tab {  
-            isolation: isolate;          
-           position: absolute ;
-           z-index: 5;
-           top: 2%;
-           left: 2%;
-           max-width: 96%;
-           width: content;
-           @include flex-column;
-           align-items: flex-start;
-           justify-content: center;
-           border-radius: 1.6rem;
-           background: $color-secondary;           
-           padding: 1.5em 0.5em;
-           ol a{
-            @include flex-column;
-            border-radius: 0.6rem;
-            white-space: pre-line;          
-            font-size: 1.3rem;
-            font-weight: 600;
-            line-height: 1.5em;
-            padding: 0 0.25em;
-            //color: $color-light-main_less-contrast;
-           }         
+    &__thumbnail {
+        opacity: 1;  
+        isolation: isolate;          
+        position: absolute ;
+        z-index: 5;
+        top: 10rem;
+        left: 2%;
+        max-width: 96%;
+        width: fit-content ;
+        @media (min-width: 768px) {
+            top: 1%;
+            left: 10%;
+            max-width: 80%;
+            @media (min-width:1024px) {
+                top: 2%;
+                left: 20%;
+                max-width: 60%;
+            }
         }
+        @include flex-column;
+        align-items: flex-start;
+        justify-content: center;
+        border-radius: 0.25rem;
+        //background: $color-secondary;
+        @include background_order-btn;     
+        padding: 1em 0.5em;
+        align-items: center;
+        span {
+        @include flex-row;
+        //border-radius: 50%;
+        white-space: pre-line;          
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 1.5em;
+        padding: 0 0.25em;
+        //color: $color-light-main_less-contrast;
+        @include font_order-btn;
+    }         
+       
     }      
-    label ul:not(:focus-within) {
+    label:not(:focus-within) span {
         opacity: 0;  
     }
-    label:hover ol {
+   /*  label:hover div {
         visibility: collapse; 
-    }    
-
+    } */
+    
     .balloon-dot {
         position:relative;
         right: 4.3em;

@@ -8,12 +8,11 @@ body {
 }
 
 .loader {
-    position: absolute;
+    position: fixed;
     z-index: 20;
+    top: 0;
+    right: 0;
     height: 100%;
-   /*  @media (min-width:1024px) {
-        max-height: 100%;
-    } */
     width: 100%;
     display: flex;
     //transform-origin: 50% 50%;
@@ -84,7 +83,6 @@ body {
                     max-width: 1340px;
                     width: 100%;
                     background: $color-secondary-to-primairy_h;
-                    /* margin:0px; */
                 }
                 > [class*="progress-bar"] {        
                     transform-origin: 100% 50%;

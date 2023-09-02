@@ -32,7 +32,7 @@
                 flex-direction: row;              
             }
         }
-        a {
+       /*  a {
             display: flex;
             flex-direction: column;
             flex: auto;
@@ -45,8 +45,12 @@
                     min-width: calc((100% / 2) - 1em);
                 }
             } 
-        }       
-    }    
+        } */
+    }
+    
+
+   
+
     &__card {
         @include cards;
         position: relative;
@@ -54,13 +58,34 @@
         align-items: center;
         width: 100%;
         overflow: hidden;   
-        animation-timing-function: ease-in-out;    
-        
+        animation-timing-function: ease-in-out;
+        @media (min-width: 768px) { 
+            @media (min-width:1024px) {
+                max-width: 100%;
+                width: initial;
+                min-width: calc((100% / 2) - 1em);
+            }
+        }
         &:hover {
             [class*="card-comment"] {
                 
                 background: transparent !important;                
             }       
+        }
+        &-link {
+            display: flex;
+            flex-direction: column;
+            flex: auto;
+            border-radius: 1.2em;
+            width: 100%;
+            background: $color-primairy;
+            @include hover-links;
+            &:focus-visible img {                
+                opacity: 0.3;                
+            }  
+            &:focus-visible [class*="card-comment"] {
+                background: transparent;
+            }      
         }
         img {
             z-index: 1;
@@ -141,7 +166,6 @@
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
         border-radius: 2px;
         transition: transform 0.4s 0.4s ease-in-out;        
-        user-select: none;
     }    
 }  
 
@@ -224,7 +248,7 @@ $time-befor-start: 7.5;
 
 @keyframes thumbnail-new{
     0% {
-        transform: scale(1) translate(0 0);       
+        transform: scale(1) translate(0, 0);       
     }
 
     33% {
@@ -236,14 +260,14 @@ $time-befor-start: 7.5;
     }
 
     100% {
-        transform: scale(1) translate(0 0);
+        transform: scale(1) translate(0, 0);
     }
 }
 
 @keyframes thumbnail-new_hover{
 
     0% {
-        transform: scale(1) translate(0 0);       
+        transform: scale(1) translate(0, 0);       
     }
 
     33% {
@@ -255,7 +279,7 @@ $time-befor-start: 7.5;
     }
 
     100% {
-        transform: scale(1) translate(0 0);
+        transform: scale(1) translate(0, 0);
     }
 }
 

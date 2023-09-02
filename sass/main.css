@@ -308,7 +308,7 @@ img {
      object-fit: cover;
 }
 img[class*=heart], img[src$=".svg"] {
-  background-size: none;
+  background-size: initial;
 }
 
 input:hover, input:focus, a:hover, a:focus {
@@ -628,8 +628,7 @@ footer {
 }
 .restaurants__like:focus {
   opacity: 1;
-  color: transparent;
-  background: transparent;
+  background: transparent; /* CSS VALIDATOR background-color et color sont de la même couleur */
   border: none;
 }
 .restaurants__like:hover {
@@ -676,7 +675,6 @@ footer {
   width: 1.6rem;
   position: relative;
   z-index: 11;
-  background-color: linear-gradient(#9356DC, #FF79DA);
   font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 48;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
@@ -733,12 +731,11 @@ body {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   z-index: 20;
+  top: 0;
+  right: 0;
   height: 100%;
-  /*  @media (min-width:1024px) {
-       max-height: 100%;
-   } */
   width: 100%;
   display: flex;
   animation: loader-kf 0.25s 5s;
@@ -800,7 +797,6 @@ body {
   max-width: 1340px;
   width: 100%;
   background: linear-gradient(0.25turn, #FF79DA, #9356DC);
-  /* margin:0px; */
 }
 .loader__background-middle-center > [class*=progress-bar] {
   transform-origin: 100% 50%;
@@ -981,7 +977,55 @@ body {
   visibility: hidden;
 }
 
+.menu-accessibility {
+  visibility: visible;
+  opacity: 1;
+  isolation: isolate;
+  position: absolute;
+  z-index: 5;
+  top: 2%;
+  left: 200%;
+  max-width: 96%;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 1.6rem;
+  background: #212121;
+  padding: 1.5em 0.5em;
+}
+.menu-accessibility:focus-within {
+  left: 2%;
+}
+.menu-accessibility li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  width: 100%;
+  border-radius: 0.6rem;
+  white-space: pre-line;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75em;
+  padding: 0 0.25em;
+  color: #FF79DA;
+}
+.menu-accessibility:not(:focus-within) {
+  opacity: 0;
+}
+
 /* || FIND A PLACE || */
+/* main:hover label div {
+    visibility: collapse; 
+}   */
 .find-a-place {
   display: flex;
   flex-direction: column;
@@ -991,6 +1035,9 @@ body {
   height: calc(3 * 1rem);
   width: 100%;
   white-space: nowrap;
+  /*  label:hover div {
+       visibility: collapse; 
+   } */
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .find-a-place {
@@ -1051,22 +1098,16 @@ body {
     color: #f7f7f7;
   }
 }
-.find-a-place label {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex: auto;
-  width: 100%;
-}
-.find-a-place label .menu-first-tab {
+.find-a-place__thumbnail {
+  opacity: 1;
   isolation: isolate;
   position: absolute;
   z-index: 5;
-  top: 2%;
+  top: 10rem;
   left: 2%;
   max-width: 96%;
-  width: content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1075,29 +1116,81 @@ body {
   width: 100%;
   align-items: flex-start;
   justify-content: center;
-  border-radius: 1.6rem;
-  background: #FF79DA;
-  padding: 1.5em 0.5em;
+  border-radius: 0.25rem;
+  background: #9356DC;
+  padding: 1em 0.5em;
+  align-items: center;
 }
-.find-a-place label .menu-first-tab ol a {
+@media (min-width: 768px) {
+  .find-a-place__thumbnail {
+    top: 1%;
+    left: 10%;
+    max-width: 80%;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .find-a-place__thumbnail {
+    top: 2%;
+    left: 20%;
+    max-width: 60%;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .find-a-place__thumbnail {
+    background: linear-gradient(0.49turn, #FF79DA, #9356DC);
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: more) {
+  .find-a-place__thumbnail {
+    background: #9356DC;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .find-a-place__thumbnail {
+    background: linear-gradient(0.49turn, #FF79DA, #9356DC);
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  .find-a-place__thumbnail {
+    background: #9356DC;
+  }
+}
+.find-a-place__thumbnail span {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex: auto;
   width: 100%;
-  border-radius: 0.6rem;
   white-space: pre-line;
   font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.5em;
   padding: 0 0.25em;
+  color: white;
 }
-.find-a-place label ul:not(:focus-within) {
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
+  .find-a-place__thumbnail span {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
+  .find-a-place__thumbnail span {
+    color: whitesmoke;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
+  .find-a-place__thumbnail span {
+    color: white;
+  }
+}
+@media only screen and (prefers-color-scheme: dark) and (prefers-contrast: less) {
+  .find-a-place__thumbnail span {
+    color: whitesmoke;
+  }
+}
+.find-a-place label:not(:focus-within) span {
   opacity: 0;
-}
-.find-a-place label:hover ol {
-  visibility: collapse;
 }
 .find-a-place .balloon-dot {
   position: relative;
@@ -1285,9 +1378,6 @@ body {
   justify-content: space-between;
   gap: 2em;
   flex-direction: column;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 @media (min-width: 768px) {
   .explanation__all-cards {
@@ -1438,6 +1528,20 @@ body {
   align-items: center;
   gap: 2em;
   flex-direction: column;
+  /*  a {
+       display: flex;
+       flex-direction: column;
+       flex: auto;
+       border-radius: 1.2em;
+       width: 100%;
+       @media (min-width: 768px) { 
+           @media (min-width:1024px) {
+               max-width: 100%;
+               width: initial;
+               min-width: calc((100% / 2) - 1em);
+           }
+       } 
+   } */
 }
 @media (min-width: 768px) {
   .restaurants__all-cards {
@@ -1449,20 +1553,6 @@ body {
     /*  flex-wrap: wrap;
      justify-content: space-between; */
     flex-direction: row;
-  }
-}
-.restaurants__all-cards a {
-  display: flex;
-  flex-direction: column;
-  flex: auto;
-  border-radius: 1.2em;
-  width: 100%;
-}
-@media (min-width: 768px) and (min-width: 1024px) {
-  .restaurants__all-cards a {
-    max-width: 100%;
-    width: initial;
-    min-width: calc(50% - 1em);
   }
 }
 .restaurants__card {
@@ -1483,8 +1573,31 @@ body {
        }       
    } */
 }
+@media (min-width: 768px) and (min-width: 1024px) {
+  .restaurants__card {
+    max-width: 100%;
+    width: initial;
+    min-width: calc(50% - 1em);
+  }
+}
 .restaurants__card:hover [class*=card-comment] {
   background: transparent !important;
+}
+.restaurants__card-link {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  border-radius: 1.2em;
+  width: 100%;
+  background: #9356DC;
+  cursor: pointer;
+  opacity: 0.85;
+}
+.restaurants__card-link:focus-visible img {
+  opacity: 0.3;
+}
+.restaurants__card-link:focus-visible [class*=card-comment] {
+  background: transparent;
 }
 .restaurants__card img {
   z-index: 1;
@@ -1595,9 +1708,6 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   transition: transform 0.4s 0.4s ease-in-out;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .restaurants__thumbnail-new {
@@ -1712,7 +1822,7 @@ body {
 }
 @keyframes thumbnail-new {
   0% {
-    transform: scale(1) translate(0 0);
+    transform: scale(1) translate(0, 0);
   }
   33% {
     transform: scale(1.2) translate(-0.5rem, 0.25rem);
@@ -1721,12 +1831,12 @@ body {
     transform: scale(1.25) translate(-0.5rem, 0.25rem);
   }
   100% {
-    transform: scale(1) translate(0 0);
+    transform: scale(1) translate(0, 0);
   }
 }
 @keyframes thumbnail-new_hover {
   0% {
-    transform: scale(1) translate(0 0);
+    transform: scale(1) translate(0, 0);
   }
   33% {
     transform: scale(1.2) translate(-0.5rem, 0.25rem);
@@ -1735,7 +1845,7 @@ body {
     transform: scale(1.25) translate(-0.5rem, 0.25rem);
   }
   100% {
-    transform: scale(1) translate(0 0);
+    transform: scale(1) translate(0, 0);
   }
 }
 @keyframes donwnload-restaurants {
@@ -1815,7 +1925,7 @@ body {
     align-items: end;
     height: 7rem;
     flex-direction: row-reverse;
-    gap: 6rem;
+    gap: 3rem;
   }
 }
 .auxiliary-menu__all {
@@ -1826,51 +1936,51 @@ body {
 @media (min-width: 768px) and (min-width: 1024px) {
   .auxiliary-menu__all {
     flex-direction: row;
-    gap: 3em;
+    gap: 2em;
   }
 }
-.auxiliary-menu__partnership, .auxiliary-menu__support {
+.auxiliary-menu__link {
   display: flex;
-  flex-direction: column;
-  gap: 0.5em;
+  flex-direction: row;
+  gap: 0;
   white-space: nowrap;
 }
 @media (min-width: 768px) and (min-width: 1024px) {
-  .auxiliary-menu__partnership, .auxiliary-menu__support {
+  .auxiliary-menu__link {
     flex-direction: row;
-    gap: 1.5em;
+    gap: 1em;
   }
-  .auxiliary-menu__partnership a, .auxiliary-menu__support a {
+  .auxiliary-menu__link a {
     display: flex;
-    gap: 0.5em;
+    gap: 0;
   }
 }
-.auxiliary-menu__icon {
+a .auxiliary-menu__icon {
   width: 2em;
   color: white;
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
-  .auxiliary-menu__icon {
+  a .auxiliary-menu__icon {
     color: white;
   }
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: less) {
-  .auxiliary-menu__icon {
+  a .auxiliary-menu__icon {
     color: whitesmoke;
   }
 }
 @media only screen and (prefers-color-scheme: dark) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: dark) and (min-width: 240px) {
-  .auxiliary-menu__icon {
+  a .auxiliary-menu__icon {
     color: black;
   }
 }
 @media only screen and (prefers-color-scheme: dark) and (prefers-contrast: more) {
-  .auxiliary-menu__icon {
+  a .auxiliary-menu__icon {
     color: #212121;
   }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
-  .auxiliary-menu__icon {
+  a .auxiliary-menu__icon {
     width: initial;
   }
 }
@@ -1881,14 +1991,6 @@ body {
 }
 .menu-restaurants .name-restaurants__title::after {
   content: "La palette du goût";
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
-}
-.menu-restaurants .entries {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants .entries-1 [class$=heavy]::after {
   content: "Fricassée d'escargots";
@@ -1926,11 +2028,6 @@ body {
 .menu-restaurants .entries-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
 }
-.menu-restaurants .main-course {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
 .menu-restaurants .main-course-1 [class$=heavy]::after {
   content: "Filet de bœuf aux herbes";
 }
@@ -1966,11 +2063,6 @@ body {
 }
 .menu-restaurants .main-course-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
-}
-.menu-restaurants .desserts {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants .desserts-1 [class$=heavy]::after {
   content: "Paris-Brest";
@@ -2013,14 +2105,6 @@ body {
 }
 .menu-restaurants-1 .name-restaurants__title::after {
   content: "La palette du goût";
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
-}
-.menu-restaurants-1 .entries {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants-1 .entries-1 [class$=heavy]::after {
   content: "Fricassée d'escargots";
@@ -2058,11 +2142,6 @@ body {
 .menu-restaurants-1 .entries-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
 }
-.menu-restaurants-1 .main-course {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
 .menu-restaurants-1 .main-course-1 [class$=heavy]::after {
   content: "Filet de bœuf aux herbes";
 }
@@ -2098,11 +2177,6 @@ body {
 }
 .menu-restaurants-1 .main-course-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
-}
-.menu-restaurants-1 .desserts {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants-1 .desserts-1 [class$=heavy]::after {
   content: "Paris-Brest";
@@ -2145,14 +2219,6 @@ body {
 }
 .menu-restaurants-2 .name-restaurants__title::after {
   content: "Le délice des sens";
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
-}
-.menu-restaurants-2 .entries {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants-2 .entries-1 [class$=heavy]::after {
   content: "Tartare de thon";
@@ -2190,11 +2256,6 @@ body {
 .menu-restaurants-2 .entries-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
 }
-.menu-restaurants-2 .main-course {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
 .menu-restaurants-2 .main-course-1 [class$=heavy]::after {
   content: "Poulet rôti aux herbes de Provence";
 }
@@ -2230,11 +2291,6 @@ body {
 }
 .menu-restaurants-2 .main-course-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
-}
-.menu-restaurants-2 .desserts {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants-2 .desserts-1 [class$=heavy]::after {
   content: "Farandole de desserts";
@@ -2277,14 +2333,6 @@ body {
 }
 .menu-restaurants-3 .name-restaurants__title::after {
   content: "La note enchantée";
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
-}
-.menu-restaurants-3 .entries {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants-3 .entries-1 [class$=heavy]::after {
   content: "Ravioles de foie gras";
@@ -2334,11 +2382,6 @@ body {
 .menu-restaurants-3 .entries-4 [class$=material-symbols-outlined]::after {
   content: "check_circle";
 }
-.menu-restaurants-3 .main-course {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
 .menu-restaurants-3 .main-course-1 [class$=heavy]::after {
   content: "Noix de coquilles Saint-Jacques";
 }
@@ -2374,11 +2417,6 @@ body {
 }
 .menu-restaurants-3 .main-course-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
-}
-.menu-restaurants-3 .desserts {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants-3 .desserts-1 [class$=heavy]::after {
   content: "Macaron noisette et chocolat";
@@ -2421,14 +2459,6 @@ body {
 }
 .menu-restaurants-4 .name-restaurants__title::after {
   content: "À la française";
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
-}
-.menu-restaurants-4 .entries {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants-4 .entries-1 [class$=heavy]::after {
   content: "Tartare de poulpe acidulé";
@@ -2466,11 +2496,6 @@ body {
 .menu-restaurants-4 .entries-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
 }
-.menu-restaurants-4 .main-course {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
 .menu-restaurants-4 .main-course-1 [class$=heavy]::after {
   content: "Coquilles Saint-Jacques";
 }
@@ -2506,11 +2531,6 @@ body {
 }
 .menu-restaurants-4 .main-course-3 [class$=material-symbols-outlined]::after {
   content: "check_circle";
-}
-.menu-restaurants-4 .desserts {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 .menu-restaurants-4 .desserts-1 [class$=heavy]::after {
   content: "Pétales de violettes glacés";
@@ -2553,7 +2573,7 @@ body {
   padding: 0;
   max-width: 100%;
   width: 100vw;
-  max-height: calc(max-width / 3 * 2);
+  max-height: 66.6666666667%;
   height: 66.6666666667VW;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2561,7 +2581,7 @@ body {
 }
 
 .menu-restaurants-3__img-top {
-  max-height: calc(max-width / 3 * 2 + 25rem);
+  max-height: calc(66.6666666667% + 25rem);
   height: calc(66.6666666667VW + 25rem);
   -webkit-clip-path: inset(25rem 0px 0px 0rem);
           clip-path: inset(25rem 0px 0px 0rem);
@@ -2825,7 +2845,7 @@ body {
     width: 98.6%;
   }
 }
-.menu-restaurants__all-meal .entries__cards input:focus-visible, .menu-restaurants__all-meal .entries__cards input:-moz-focusring, .menu-restaurants__all-meal .main-course__cards input:focus-visible, .menu-restaurants__all-meal .main-course__cards input:-moz-focusring, .menu-restaurants__all-meal .desserts__cards input:focus-visible, .menu-restaurants__all-meal .desserts__cards input:-moz-focusring {
+.menu-restaurants__all-meal .entries__cards input:focus-visible, .menu-restaurants__all-meal .main-course__cards input:focus-visible, .menu-restaurants__all-meal .desserts__cards input:focus-visible {
   outline: 0.25rem solid #00684f !important;
 }
 .menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked + [class$=menu-selected] {
@@ -2833,11 +2853,11 @@ body {
   margin: 0;
   opacity: 1;
 }
-.menu-restaurants__all-meal .entries__cards .menu-choice-selected:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .entries__cards .menu-choice-selected:-moz-focusring + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:-moz-focusring + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:-moz-focusring + [class$=menu-selected] {
+.menu-restaurants__all-meal .entries__cards .menu-choice-selected:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:focus-visible + [class$=menu-selected] {
   opacity: 1;
   background: #00684f;
 }
-.menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked:-moz-focusring + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked:-moz-focusring + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked:-moz-focusring + [class$=menu-selected] {
+.menu-restaurants__all-meal .entries__cards .menu-choice-selected:checked:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .main-course__cards .menu-choice-selected:checked:focus-visible + [class$=menu-selected], .menu-restaurants__all-meal .desserts__cards .menu-choice-selected:checked:focus-visible + [class$=menu-selected] {
   transform: translatex(0%);
   margin: 0;
   opacity: 1;

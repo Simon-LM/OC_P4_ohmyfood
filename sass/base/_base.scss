@@ -29,7 +29,7 @@ main {
 img {
     object-fit: cover;
     &[class*="heart"], &[src$=".svg"] {
-        background-size: none;
+        background-size: initial;
     }
 }
 

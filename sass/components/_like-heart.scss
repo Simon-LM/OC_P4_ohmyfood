@@ -36,8 +36,8 @@ $heart_desired-expansion: 1.2; /* For scale */
         }       
         &:focus {           
             opacity: 1;
-            color: transparent;
-            background: transparent;
+            //color: transparent; /* CSS VALIDATOR background-color et color sont de la même couleur */
+            background: transparent; /* CSS VALIDATOR background-color et color sont de la même couleur */
             border: none;            
         }
         &:hover {          
@@ -79,7 +79,7 @@ $heart_desired-expansion: 1.2; /* For scale */
             width: 1.6rem; 
             position: relative;
             z-index: 11;
-            background-color: $color-icons-heart-like;
+            //background-color: $color-icons-heart-like;
             font-variation-settings: 'FILL' 1, 'wght' 200, 'GRAD' 0, 'opsz' 48;       
             background: $color-icons-heart-like;
             background-clip: text;        
