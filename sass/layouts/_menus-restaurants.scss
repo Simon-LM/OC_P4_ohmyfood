@@ -1,23 +1,42 @@
 /* STYLE RESTAURANTS */
 
+$clip-top_img-desktop: clamp(15rem , 25vw , 22rem);
+$clip-top_img-tablette: 4rem;
 .menu-restaurants__img-top {   
     padding: 0;    
     max-width: 100%;
     width: 100vw;
-    //max-height: calc(( max-width / 3) * 2);
     max-height: calc(( 100% / 3) * 2);
     height: calc((100VW / 3) * 2);
     object-fit: cover;
-    background-size: cover;  
+    background-size: cover;
+    @media (min-width: 768px) {
+        margin-top: calc($clip-top_img-tablette * -1);
+        max-height: calc(( 100% / 9) * 2);
+        @media (min-width:1024px) {
+            margin-top: calc($clip-top_img-desktop * -1);
+            max-height: clamp(35rem, 52vw, 46rem);
+        }
+    }     
 }
 
-$clip-top_img-3: 25rem;
+$clip-top_img-3: 12rem;
+$clip-top_img-tablette-3: 25rem;
+$clip-top_img-desktop-3: clamp(35rem , 55vw , 50rem);
 .menu-restaurants-3__img-top {
     //max-height: calc((( max-width / 3) * 2) + $clip-top_img-3);
     max-height: calc((( 100% / 3) * 2) + $clip-top_img-3);
     height: calc(((100VW / 3) * 2) + $clip-top_img-3);
     clip-path: inset($clip-top_img-3 0px 0px 0rem);
     margin-top: calc($clip-top_img-3 * -1);
+    @media (min-width: 768px) {
+        margin-top: calc($clip-top_img-tablette-3 * -1);
+        max-height: calc(( 100% / 5) * 2);
+        @media (min-width:1024px) {
+            margin-top: calc($clip-top_img-desktop-3 * -1);
+            max-height: clamp(55rem, 80vw, 70rem);
+        }
+    }     
 }
 
 

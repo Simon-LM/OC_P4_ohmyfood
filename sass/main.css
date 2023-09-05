@@ -2582,13 +2582,37 @@ a .auxiliary-menu__icon {
      object-fit: cover;
   background-size: cover;
 }
+@media (min-width: 768px) {
+  .menu-restaurants__img-top {
+    margin-top: -4rem;
+    max-height: 22.2222222222%;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .menu-restaurants__img-top {
+    margin-top: calc(clamp(15rem, 25vw, 22rem) * -1);
+    max-height: clamp(35rem, 52vw, 46rem);
+  }
+}
 
 .menu-restaurants-3__img-top {
-  max-height: calc(66.6666666667% + 25rem);
-  height: calc(66.6666666667VW + 25rem);
-  -webkit-clip-path: inset(25rem 0px 0px 0rem);
-          clip-path: inset(25rem 0px 0px 0rem);
-  margin-top: -25rem;
+  max-height: calc(66.6666666667% + 12rem);
+  height: calc(66.6666666667VW + 12rem);
+  -webkit-clip-path: inset(12rem 0px 0px 0rem);
+          clip-path: inset(12rem 0px 0px 0rem);
+  margin-top: -12rem;
+}
+@media (min-width: 768px) {
+  .menu-restaurants-3__img-top {
+    margin-top: -25rem;
+    max-height: 40%;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .menu-restaurants-3__img-top {
+    margin-top: calc(clamp(35rem, 55vw, 50rem) * -1);
+    max-height: clamp(55rem, 80vw, 70rem);
+  }
 }
 
 .name-restaurants {
