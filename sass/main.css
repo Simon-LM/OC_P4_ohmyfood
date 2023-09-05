@@ -977,6 +977,7 @@ body {
   visibility: hidden;
 }
 
+/* || MENU ACCESSIBILITY || */
 .menu-accessibility {
   visibility: visible;
   opacity: 1;
@@ -1034,9 +1035,6 @@ body {
 }
 
 /* || FIND A PLACE || */
-/* main:hover label div {
-    visibility: collapse; 
-}   */
 .find-a-place {
   display: flex;
   flex-direction: column;
@@ -1046,9 +1044,6 @@ body {
   height: calc(3 * 1rem);
   width: 100%;
   white-space: nowrap;
-  /*  label:hover div {
-       visibility: collapse; 
-   } */
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .find-a-place {
@@ -1095,9 +1090,6 @@ body {
   width: 8rem;
   padding-left: 0.25em;
   transition: background 0.5s ease-in-out;
-  /* &:focus {
-      background: lighten($color-primairy, 35%);
-  } */
 }
 @media only screen and (prefers-color-scheme: light) and (prefers-contrast: no-preference), only screen and (prefers-color-scheme: light) and (min-width: 240px) {
   .find-a-place input {

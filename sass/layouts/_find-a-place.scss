@@ -1,19 +1,12 @@
 /* || FIND A PLACE || */
 
-
 $font-size_research: rem(16); 
-
-/* main:hover label div {
-    visibility: collapse; 
-}   */     
-
 
 .find-a-place {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //background-color: $color-background_find-a-place;
     @include background_find-a-place;
     height: calc(3 * $font-size_research);
     width: 100%;
@@ -43,13 +36,10 @@ $font-size_research: rem(16);
         font-size: 1rem;
         margin-right: 0.25em;
     }
-
-    //&__research / input 
     input {
         font-family: $font-main;
         font-size: $font-size_research;
         font-weight: 500;
-        //color: $color-font-research;
         @include font-research;
         caret-color: $color-caret-research;
         border: none;
@@ -58,9 +48,6 @@ $font-size_research: rem(16);
         width: 8rem;
         padding-left: 0.25em;
         transition: background 0.5s ease-in-out;
-        /* &:focus {
-            background: lighten($color-primairy, 35%);
-        } */
     }  
     &__thumbnail {
         opacity: 1;  
@@ -85,39 +72,29 @@ $font-size_research: rem(16);
         align-items: flex-start;
         justify-content: center;
         border-radius: 0.25rem;
-        //background: $color-secondary;
         @include background_order-btn;     
         padding: 1em 0.5em;
         align-items: center;
         span {
         @include flex-row;
-        //border-radius: 50%;
         white-space: pre-line;          
         font-size: 1.2rem;
         font-weight: 500;
         line-height: 1.5em;
         padding: 0 0.25em;
-        //color: $color-light-main_less-contrast;
         @include font_order-btn;
-    }         
-       
+    }       
     }      
     label:not(:focus-within) span {
         opacity: 0;  
-    }
-   /*  label:hover div {
-        visibility: collapse; 
-    } */
-    
+    }   
     .balloon-dot {
         position:relative;
         right: 4.3em;
         top: 0.4em;
         opacity: 0;
-        //visibility: hidden;
         transition: opacity 0.1s 3s ease-in-out; 
-        transition: transform 8s 3s ease-in-out; 
-
+        transition: transform 8s 3s ease-in-out;
         &__1 {
             margin-right: -0.6em;
             color: red;
@@ -165,8 +142,7 @@ $font-size_research: rem(16);
         &__12 {
             margin-right: -0.2em;
             color: blueviolet;
-        }
-        
+        }        
     }
     &:active {        
         .balloon-dot {
