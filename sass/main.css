@@ -983,9 +983,9 @@ body {
   opacity: 1;
   isolation: isolate;
   position: absolute;
-  z-index: 5;
+  z-index: -1;
   top: 2%;
-  left: 200%;
+  left: 2%;
   max-width: 96%;
   width: -moz-fit-content;
   width: fit-content;
@@ -1003,7 +1003,7 @@ body {
   outline: 0.3rem solid #FF79DA;
 }
 .menu-accessibility:focus-within {
-  left: 2%;
+  z-index: 5;
 }
 .menu-accessibility li a {
   display: flex;
@@ -1031,7 +1031,7 @@ body {
   outline-width: 0.25rem !important;
 }
 .menu-accessibility:not(:focus-within) {
-  opacity: 0;
+  opacity: 0.2;
 }
 
 /* || FIND A PLACE || */
